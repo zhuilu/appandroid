@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/itemRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7FCFF"
+            android:paddingBottom="5dp">
+            <RelativeLayout
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_logo_rl">
+                    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+                        android:id="@+id/imgLogo"
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:src="@mipmap/ic_launcher"
+                        />
+                    <ImageView
+                        android:id="@+id/is_add_v"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom|right"
+                        android:src="@mipmap/is_add_v"/>
+
+                </FrameLayout>
+                <LinearLayout
+                    android:id="@+id/llname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/img_logo_rl"
+                    android:paddingBottom="2dp"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="周慧敏"
+                        android:textSize="14sp"
+                        />
+                    <com.xinniu.android.qiqueqiao.widget.VipTextView
+                        android:id="@+id/vip_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vip"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:layout_marginLeft="5dp"/>
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/star_view"
+                        android:paddingLeft="2dp"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="3"
+                        android:progressTint="#FFE01C"
+                        android:rating="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/llname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/img_logo_rl"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/company_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="10sp"
+                        android:text="company_info"/>
+                    <TextView
+                        android:id="@+id/tvInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="10sp"
+                        android:text="company_info"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/fragment_item_close"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/_1c91ff"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_below="@id/view10"
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fff"
+                android:padding="@dimen/dp_10"
+                >
+                <TextView
+                    android:id="@+id/tvOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="我提供：500w母婴行业25岁-35岁女性APP线上资源女性APP线上资源" />
+
+                <TextView
+                    android:id="@+id/tvNeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="我需要：500w母婴行业25岁-35岁女性APP线上资源女性APP线上资源" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="合作方式：500w母婴行业25岁-35岁女性APP线上资源女性APP线上资源"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tvLookNum"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_below="@+id/view1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/tvTalkNum"
+                android:layout_toStartOf="@+id/tvTalkNum"
+                android:drawableLeft="@mipmap/resouce_see_num"
+                android:gravity="center_vertical"
+                android:text="123"
+                android:padding="2dp"
+                android:textColor="#999999"
+                android:textSize="10sp"
+                android:drawablePadding="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvTalkNum"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view1"
+                android:drawableLeft="@mipmap/resouce_talk_num"
+                android:gravity="center_vertical"
+                android:text="123"
+                android:padding="2dp"
+                android:textSize="10sp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:drawablePadding="10dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

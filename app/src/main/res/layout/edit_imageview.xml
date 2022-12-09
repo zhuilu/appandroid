@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ >
+
+    <com.xinniu.android.qiqueqiao.richtexteditor.DataImageView
+        android:id="@+id/edit_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:scaleType="centerCrop" />
+
+
+    <ImageView
+        android:id="@+id/image_close"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@mipmap/icon_close" />
+
+</RelativeLayout>

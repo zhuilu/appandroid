@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/speed_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#66000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+              android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:text="@string/alivc_speed_twice_times"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/one_halff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="@string/alivc_speed_optff_times"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/one_half"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="@string/alivc_speed_opt_times"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+            />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/one_quartern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/alivc_speed_optf_times"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/alivc_check_bg_blue"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/alivc_speed_one_times"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/normal_fu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:paddingRight="@dimen/dp_11"
+                android:paddingLeft="@dimen/dp_11"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="@string/alivc_speed_times"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</merge>

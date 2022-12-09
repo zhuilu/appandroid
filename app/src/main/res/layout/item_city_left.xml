@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvItem_city_left"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="城市"
+        android:gravity="center"
+        android:textSize="@dimen/sp_13"
+        android:textColor="@drawable/selector_textcolor_city_57blue"
+        android:background="@drawable/selector_bg_city_f2white"
+        />
+
+</RelativeLayout>

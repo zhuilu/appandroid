@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mitem_connect_Rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_95">
+
+    <FrameLayout
+        android:id="@+id/mitem_connect_fl"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <com.xinniu.android.qiqueqiao.widget.CircleImageView
+            android:id="@+id/mitem_connect_img"
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_46" />
+
+        <ImageView
+            android:id="@+id/mitem_is_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/head_is_v32_32"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_avatar"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/bg_cricle_blue"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_name_avtar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_21"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/item_connect_add"
+        android:layout_width="@dimen/dp_63"
+        android:layout_height="@dimen/dp_25"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_20"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:background="@drawable/shape_connect_addfriend"
+        android:text="加好友"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_14" />
+
+
+    <TextView
+        android:id="@+id/mitem_connect_nametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_13"
+        android:includeFontPadding="false"
+        android:layout_toRightOf="@id/mitem_connect_fl"
+        android:text="客服经理"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/sp_15"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mitem_connect_nametv"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_toRightOf="@id/mitem_connect_fl"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_4"
+            android:visibility="gone"
+            android:src="@mipmap/connect_phone" />
+
+        <TextView
+            android:id="@+id/mitem_connect_positiontv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="企鹊桥|客服经理"
+            android:textColor="@color/text_color_AA"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout
+        android:id="@+id/mitem_connect_potentialtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_toRightOf="@id/mitem_connect_fl" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color" />
+
+
+</RelativeLayout>

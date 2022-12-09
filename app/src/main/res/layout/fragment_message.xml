@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mtool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@color/white"
+        >
+
+
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        >
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_tool_bar_message_title_bg"
+        android:padding="1dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/message_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="聊天"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/selector_tool_bar_tilter_chat_bg"
+            android:textColor="@drawable/selector_tool_bar_tilter_textcolor"/>
+        <TextView
+            android:id="@+id/message_interact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="互动"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/selector_tool_bar_tilter_interact_bg"
+            android:textColor="@drawable/selector_tool_bar_tilter_textcolor"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/child_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_80">
+
+    <RelativeLayout
+        android:id="@+id/brecommend_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/mrecommendImg"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_15"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mrecommendImg"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        >
+        <RelativeLayout
+            android:id="@+id/mrecommendRl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_27">
+            <TextView
+                android:id="@+id/mrecommendnameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/sp_17"
+                android:textColor="@color/text_color_1"
+                />
+            <TextView
+                android:id="@+id/mrecommendtypetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/mrecommendnameTv"
+                android:textColor="@color/text_color_green_30A94D"
+                android:textSize="@dimen/sp_10"
+                android:background="@drawable/bg_itemgroup_pernum"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/mrecommendnoticetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mrecommendRl"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/_999"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp_80"
+        />
+
+</RelativeLayout>

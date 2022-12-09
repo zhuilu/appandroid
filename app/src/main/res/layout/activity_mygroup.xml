@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin"
+        >
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron"
+                />
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的群组"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/circle_functionLl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_below="@id/title_Rl"
+        >
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:id="@+id/bcircle_addgroupRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/add_group"
+                    android:text="添加群组"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/text_color_1"
+                    android:drawablePadding="@dimen/dp_10"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="0.25dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:background="@color/line_color"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/bcircle_creategroupRl"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <View
+                android:layout_width="0.25dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_alignParentLeft="true"
+                android:background="@color/line_color"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/create_group"
+                android:text="创建群组"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/text_color_1"
+                android:drawablePadding="@dimen/dp_10"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:layout_below="@id/circle_functionLl"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mrecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_8"
+            ></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

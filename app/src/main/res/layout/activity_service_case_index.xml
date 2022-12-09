@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mpublish_titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="服务案例"
+            android:textColor="@color/_333"
+            android:textSize="@dimen/sp_18" />
+
+
+        <TextView
+            android:id="@+id/tv_release_template"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_14"
+            android:drawableLeft="@mipmap/publicsh"
+            android:drawablePadding="@dimen/dp_3"
+            android:gravity="center"
+            android:text="新增案例"
+            android:textColor="#ff4b96f3"
+            android:textSize="@dimen/sp_13" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:layout_below="@+id/tool_bar"
+        android:background="#ffececec" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshIndexCell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        android:visibility="gone">
+
+        <include layout="@layout/view_headview_refresh_two" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerIndexCell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_111"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_193"
+                android:layout_height="@dimen/dp_144"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/zw_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="暂无服务案例"
+                android:textColor="@color/search_text_color_gray"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="添加服务案例，可让您的服务获取到更多客源"
+                android:textColor="#ff4b96f3"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="@dimen/dp_124"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/bg_vip_right"
+                android:gravity="center"
+                android:textSize="@dimen/sp_13"
+                android:text="+ 新增案例"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

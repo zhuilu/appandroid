@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/dp_17">
+    <View
+        android:id="@+id/v"
+        android:layout_width="@dimen/dp_9"
+        android:layout_height="@dimen/dp_112"
+        android:visibility="visible"/>
+
+    <com.xinniu.android.qiqueqiao.customs.ShadowViewCard
+        android:id="@+id/rtv_msg_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFEFEFE"
+        app:shadowRound="@dimen/dp_4"
+        app:shadowCardColor="#12000000"
+        app:shadowColor="#12000000"
+        app:shadowOffsetX="0dp"
+        app:shadowTopHeight="@dimen/dp_12"
+        app:shadowBottomHeight="@dimen/dp_12"
+        app:shadowOffsetY="@dimen/dp_2"
+        app:shadowRadius="40">
+
+        <LinearLayout
+            android:id="@+id/llayout_default"
+            android:layout_width="@dimen/dp_159"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.xinniu.android.qiqueqiao.utils.RoundImageView
+                android:id="@+id/mindex_actone_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_96"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/mindex_act_onetitletv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mindex_actone_img"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginRight="@dimen/dp_9"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/dp_3"
+                android:lines="2"
+                android:text=""
+                android:maxLines="2"
+                android:textColor="@color/_333"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_13" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/mindex_act_onetitletv"
+                android:layout_marginLeft="@dimen/dp_9"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/mindex_act_oneplacetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/_777"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/mindex_act_onetimetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/_777"
+                    android:textSize="@dimen/sp_12"
+
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </com.xinniu.android.qiqueqiao.customs.ShadowViewCard>
+</LinearLayout>

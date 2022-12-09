@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/toast_loading_book"
+        android:layout_width="@dimen/book_width"
+        android:layout_height="@dimen/book_height"
+        android:src="@drawable/book_loadinggif"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/dp_55"
+        />
+
+</RelativeLayout>

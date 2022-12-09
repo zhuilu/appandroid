@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#80000000"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/dp_275"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_bg_shape"
+        android:layout_marginBottom="@dimen/dp_100"
+        >
+        <TextView
+            android:id="@+id/successtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到成功"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_18"
+            android:layout_marginTop="@dimen/dp_28"
+            />
+        <TextView
+            android:id="@+id/successtva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/successtv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:textSize="@dimen/sp_18"
+            android:text="赠送"
+            android:textColor="@color/_666"
+            />
+        <TextView
+            android:id="@+id/successtvx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/successtva"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/king_color"
+            android:text="沟通权限+1"
+            android:textSize="@dimen/sp_18"
+            />
+        <TextView
+            android:id="@+id/bsureTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_below="@id/successtvx"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@drawable/bg_dialog_govip"
+            android:layout_marginLeft="@dimen/dp_35"
+            android:layout_marginRight="@dimen/dp_35"
+            android:text="确定"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_20"
+            />
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+</RelativeLayout>

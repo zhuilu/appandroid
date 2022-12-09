@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_top_height"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height"
+            android:background="@color/tool_bar_color"
+            android:paddingLeft="@dimen/padding_left_and_right"
+            android:paddingRight="@dimen/padding_left_and_right"
+            android:layout_alignParentBottom="true"
+            >
+            <ImageView
+                android:id="@+id/bt_return"
+                android:layout_width="@dimen/tool_bar_head_long"
+                android:layout_height="@dimen/tool_bar_head_long"
+                android:src="@mipmap/img_tool_bar_close"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:text="城市选择"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tool_bar_text_color"
+                android:textSize="@dimen/tool_bar_text_size"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_below="@id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.xinniu.android.qiqueqiao.widget.IndexBar
+            android:id="@+id/indexBar"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:paddingTop="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:indexBarPressBackground="@color/partTranslucent"
+            app:indexBarTextSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tvSideBarHint"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_side_bar_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:visibility="gone"
+            tools:text="A"
+            tools:visibility="visible"/>
+
+
+    </FrameLayout>
+</LinearLayout>

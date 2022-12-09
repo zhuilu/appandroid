@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/new_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin">
+
+        <RelativeLayout
+            android:id="@+id/bBack_Rl"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布成功"
+            android:textColor="@color/_333"
+            android:textSize="@dimen/sp_17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:layout_alignParentBottom="true"
+            android:background="#ffececec" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/dp_193"
+            android:layout_height="@dimen/dp_144"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/push_success" />
+
+        <TextView
+            android:id="@+id/titlex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:text="发布成功"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textColor="@color/_666"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/msuccess_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlex"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="信息正在审核中"
+            android:textColor="@color/push_color_orange"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/bsuccessbtn"
+            android:layout_width="@dimen/dp_124"
+            android:layout_height="@dimen/dp_35"
+            android:layout_below="@id/msuccess_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_14"
+            android:background="@drawable/bg_lx_detail"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

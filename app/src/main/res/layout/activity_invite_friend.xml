@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        android:paddingRight="@dimen/padding_left_and_right"
+
+        >
+        <RelativeLayout
+            android:id="@+id/bt_close"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="@dimen/tool_bar_head_long"
+            android:layout_height="@dimen/tool_bar_head_long"
+            android:src="@mipmap/chevron"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/title"
+            android:text="邀请有礼"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/tool_bar_text_size"/>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:progressDrawable="@drawable/pg_progress"
+        android:visibility="gone"
+        />
+
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+        android:id="@+id/invide_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </com.github.lzyzsd.jsbridge.BridgeWebView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

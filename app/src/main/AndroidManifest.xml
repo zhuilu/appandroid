@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xinniu.android.qiqueqiao">
+
+
+    <!--适配全面屏-->
+    <meta-data
+        android:name="android.max_aspect"
+        android:value="ratio_float" />
+
+
+    <!--Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.xinniu.android.qiqueqiao.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--<uses-permission android:name="android.permission.VIBRATE" />-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/launchStyle"
+        tools:replace="android:allowBackup">
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace">
+
+        </service>
+        <!--高德地图-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="48090691cad94d53b87187e07383faba" />
+
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a08f53bf43e48447b000069"></meta-data>
+
+
+        <!-- 微博分享-->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <!-- 钉钉享-->
+        <activity
+            android:name=".ddshare.DDShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- QQ分享-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106451375" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!--Rich push 核心功能 since 2.0.6 -->
+        <!--<activity-->
+        <!--android:name="cn.jpush.android.ui.PopWinActivity"-->
+        <!--android:exported="false"-->
+        <!--android:theme="@style/MyDialogStyle" />-->
+
+        <!--Required SDK核心功能 -->
+        <!--<activity-->
+        <!--android:name="cn.jpush.android.ui.PushActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:exported="false"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.ui.PushActivity" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="com.xinniu.android.qiqueqiao" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <receiver
+            android:name=".fragment.message.QQQConversationListFragment$SetNewsBroadCast"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.xinniu.android.qiqueqiao.abc" />
+            </intent-filter>
+
+        </receiver>
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.xinniu.android.qiqueqiao" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!--User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.JGPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.xinniu.android.qiqueqiao" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 这个Service要继承JCommonService -->
+        <service
+            android:name=".receiver.PushService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.MyJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.xinniu.android.qiqueqiao" />
+            </intent-filter>
+        </receiver>
+
+        <!--<activity-->
+        <!--android:name=".activity.SplashActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/QQQActivityTheme"-->
+        <!--android:windowSoftInputMode="stateHidden|stateUnchanged">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+
+        <activity
+            android:name=".activity.SplashTwoActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.AdsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ResourceReleaseSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.ServiceReleaseSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.AboutQQQActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.ImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.qiqueqiao"
+                    android:path="/main"
+                    android:scheme="lzq" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CircleNoticeListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.AgreeMentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme"></activity>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"></activity>
+        <activity
+            android:name=".activity.HelpAndFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.CompanyMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.ViewpagerImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".activity.BindPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SreachActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SreachListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CircleInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CircleSuggestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CircleNewApplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CircleResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.QrCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.GroupMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.PersonCentetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.AppointmentTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name=".base.NetInfoActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" />
+
+        <activity
+            android:name=".base.ProhibitInfoActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.xinniu.android.qiqueqiao"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".common.WindowDialogService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".common.WindowDialogTwoService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.xinniu.android.qiqueqiao.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/rc_file_path" />-->
+        </provider>
+
+
+        <activity
+            android:name=".activity.EditCompanyCenterImgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.EditCompanyChildActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.EditCompanyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="设置界面"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CommentLanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.TakePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQTheme" />
+        <activity
+            android:name=".activity.TakePhotoTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQTheme" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:label="反馈意见"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.MineInfoActivity"
+            android:label="个人资料"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MineCircleActivity"
+            android:label="我的圈子"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.EditMineInfoActivity"
+            android:label="修改个人信息"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.InputServiceTitleActivity"
+            android:label="服务标题"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ServiceDetailDescriptioActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.InputResourceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.PublishServiceSelectTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompanyIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.AllServiceTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.IndexServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ServiceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.FoucesActivity"
+            android:label="关注"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MyPushActivity"
+            android:label="我的发布"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SystemMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:label="帮助"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.GreetingsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.CircleTipActivity"
+            android:label="群公告"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.AddPictruActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.TakePhotoThreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+
+        <activity
+            android:name=".activity.CoopWayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CoopDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+
+            >
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xinniu.com"
+                    android:pathPrefix="/sourceDetail"
+                    android:scheme="qiqueqiao" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ResourceTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.VipV3ListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme">
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xinniu.com"
+                    android:pathPrefix="/vipCenter"
+                    android:scheme="qiqueqiao" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.VipV4ListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme">
+            <intent-filter>
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xinniu.com"
+                    android:pathPrefix="/vipCenter"
+                    android:scheme="qiqueqiao" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.AccountPswActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <!--nosensor忽略物理感应器，这样就不会随着用户旋转设备而更改了（"unspecified"设置除外）。-->
+        <activity
+            android:name=".activity.ClassRoomDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ResgisterNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompleteInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CompanyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.AuthenticationSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.AuthenticationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.CertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompanyEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CompanyEditinfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CircleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CompanyNameInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompanySearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.MyCollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ReportListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.InviteFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme">
+
+        </activity>
+        <activity
+            android:name=".activity.IndexCellActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ServiceCaseIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.AddCaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CaseDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ServiceCategoryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompanyAllServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+
+        <activity
+            android:name=".activity.IndexAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ApproveCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xinniu.com"
+                    android:pathPrefix="/homeEventDetail"
+                    android:scheme="qiqueqiao" />
+
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activity.ShareNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.ShareNewTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.ShareNewThreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.ShareClassRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.RewardShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.HuntServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CompanyCellActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQTheme" />
+        <activity
+            android:name=".activity.NewResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CircleNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.AddGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CreateGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CreateGroupNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.PerfectGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.MyGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.GroupDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.GroupMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xinniu.com"
+                    android:pathPrefix="/groupDetailNormal"
+                    android:scheme="qiqueqiao" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GroupMemberManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.EditGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.GroupMessagemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.GroupNewNoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.EditGroupDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.CoopCommunicationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.InteractInformActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.MakeConvertcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+        <activity
+            android:name=".activity.ActMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.FriendLxActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.GroupFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MoveGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.LxSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PublishSelectTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PublishNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.PublishingServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ChooseLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.LoginNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.LoginYzmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity
+            android:name=".activity.ChangeCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.WelfareAgencyAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MyCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.HotResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SelectionResourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MyActListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.GoseeBillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.IndexClassifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.GroupQrcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ConnectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.DataPlusBuyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PropStoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SuperExposureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CardingCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.TopCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SendCoopInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.LaunchTransactionAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activity.PayDespositActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PayDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PayDespositAfterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.SettlementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ApplicatuinCustomeServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.RefusalRefundActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.ApplicationRefundAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.RefundDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CustomeServiceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MyBillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.WalletDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.MyDiscountRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CashWithdrawalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.MyTransactionOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.TransactionDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LucencyTheme" />
+
+        <activity
+            android:name=".activity.PublicRewardAvtivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.PayRewardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.RewardListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.RewardDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.RewardOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.MyRewardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ClassRoomDetailTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.PotentualPeoplesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <activity
+            android:name=".activity.GuaranteeAreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.CommunicationRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.RewardCustomeServiceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ApplicatuinRewardCustomeServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.AcceptedOrdersPersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ExchangeTransPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+        <activity
+            android:name=".activity.ClassRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QQQActivityTheme" />
+
+        <receiver
+            android:name=".DemoNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+
+</manifest>

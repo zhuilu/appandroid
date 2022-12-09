@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_top_height"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height"
+            android:background="@color/tool_bar_color"
+            android:paddingLeft="@dimen/padding_left_and_right"
+            android:paddingRight="@dimen/padding_left_and_right">
+            <ImageView
+                android:id="@+id/bt_return"
+                android:layout_width="@dimen/tool_bar_head_long"
+                android:layout_height="@dimen/tool_bar_head_long"
+                android:src="@mipmap/img_title_back"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/tool_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tool_bar_text_color"
+                android:textSize="@dimen/tool_bar_text_size"
+                android:text="系统消息"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="暂无系统消息"
+            android:textSize="@dimen/sp_14"
+            android:drawableTop="@mipmap/perchx_1"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp_30"
+            android:textColor="@color/text_color_AA"
+            android:paddingBottom="@dimen/dp_70"
+            />
+
+    </RelativeLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/system_smartrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@id/recyclerView"
+            android:background="@color/white"
+            >
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loaddown_more"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                />
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

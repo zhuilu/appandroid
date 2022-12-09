@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:background="#fff">
+
+    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+        android:id="@+id/item_talk_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/item_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_talk_iv"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:maxLength="16"/>
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_margin="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+
+
+
+</RelativeLayout>

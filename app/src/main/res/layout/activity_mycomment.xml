@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        >
+        
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+            
+            
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的留言"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color"
+            />
+        
+        
+        
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        >
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mrefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                ></androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@color/white">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:src="@drawable/loaddown_more" />
+            </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/titleRl"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无留言"
+            android:layout_centerInParent="true"
+            android:drawableTop="@mipmap/perchx_2"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:drawablePadding="@dimen/dp_30"
+            android:textColor="@color/text_color_AA"
+            android:paddingBottom="@dimen/dp_70"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_heiget"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="@dimen/login_item_icon_dp"
+            android:layout_height="@dimen/login_item_icon_dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:src="@mipmap/login_phone" />
+
+        <com.xinniu.android.qiqueqiao.customs.ClearEditText
+            android:id="@+id/ed_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:maxLength="11"
+            android:textColor="@color/_333"
+            android:textColorHint="@color/_999"
+            android:textSize="@dimen/login_edit_hint_text_size" />
+    </LinearLayout>
+
+    <View
+        style="@style/l_hor"
+        android:layout_marginLeft="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_item_heiget"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="@dimen/login_item_icon_dp"
+            android:layout_height="@dimen/login_item_icon_dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:src="@mipmap/login_yzm" />
+
+        <EditText
+            android:id="@+id/ed_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/head"
+            android:background="@null"
+            android:hint="请输入短信验证码"
+            android:maxLength="6"
+            android:textColor="@color/_333"
+            android:textColorHint="@color/_999"
+            android:textSize="@dimen/login_edit_hint_text_size" />
+
+        <TextView
+            android:id="@+id/get_code"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_get_yzm_bg"
+            android:gravity="center"
+            android:maxLength="6"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="获取验证码"
+            android:textColor="#4C8CF8" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_34"
+        android:background="@color/_2DA0FB"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center"
+        android:text="更换手机号码后，可以使用新手机号码登录企鹊桥
+聊天时“换电话”功能的手机号会一同修改"
+        android:textSize="@dimen/sp_11" />
+
+</LinearLayout>

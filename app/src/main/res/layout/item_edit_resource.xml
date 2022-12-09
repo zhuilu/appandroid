@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/item_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_resouce_add_pic_bg"
+        android:layout_margin="@dimen/dp_5">
+        <ImageView
+            android:id="@+id/item_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/delete_item"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/delete_img"
+            android:layout_gravity="top|right"
+            />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:background="#59000000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="封面"/>
+    </FrameLayout>
+
+
+</FrameLayout>

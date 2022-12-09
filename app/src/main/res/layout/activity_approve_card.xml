@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/back_title"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mtvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="名片认证"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+        <ImageView
+            android:id="@+id/bshare_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/zhuan_intransit"
+            android:visibility="gone"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:progressDrawable="@drawable/pg_progress"
+        android:visibility="visible"
+        android:layout_below="@id/tool_bar"
+        />
+    <com.github.lzyzsd.jsbridge.BridgeWebView
+        android:id="@+id/mbridgeWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar1"
+        >
+
+    </com.github.lzyzsd.jsbridge.BridgeWebView>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

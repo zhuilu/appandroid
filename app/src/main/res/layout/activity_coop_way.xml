@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_margin"
+        android:background="@color/colorPrimary"
+        ></RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/tool_bar_color"
+        android:paddingLeft="@dimen/padding_left_and_right"
+        android:paddingRight="@dimen/padding_left_and_right"
+        android:layout_alignParentTop="true"
+        >
+        <ImageView
+            android:id="@+id/bt_close"
+            android:layout_width="@dimen/tool_bar_head_long"
+            android:layout_height="@dimen/tool_bar_head_long"
+
+            android:src="@mipmap/back_new"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:text="@string/coop_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/tool_bar_text_color"
+            android:textSize="@dimen/tool_bar_text_size"/>
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_coop_way_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:id="@+id/tool_bar"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height"
+            android:id="@+id/bt_finish">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            android:text="精选资源"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        >
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mrefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+           <include layout="@layout/view_headview_refresh_two"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                ></androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/titleRl"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无精选资源"
+            android:layout_centerInParent="true"
+            android:drawableTop="@mipmap/perchx_2"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:drawablePadding="@dimen/dp_30"
+            android:textColor="@color/text_color_AA"
+            android:paddingBottom="@dimen/dp_70"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

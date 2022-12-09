@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/tool_bar_color">
+        <ImageView
+            android:id="@+id/bt_return"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@mipmap/img_title_back"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:text="合作方式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/tool_bar_text_color"
+            android:textSize="@dimen/tool_bar_text_size"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/tool_bar1"
+        android:id="@+id/release_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="11"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="① 我提供"
+            android:textColor="@color/_1c91ff"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="0.5dp"
+            android:background="@color/_1c91ff"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="② 我需要"
+            android:textColor="@color/_1c91ff"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="0.5dp"
+            android:background="@color/_1c91ff"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="③ 合作方式"
+            android:textColor="@color/_1c91ff"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:text="保存"
+        style="@style/CommonBtn2"
+        android:clickable="false"/>
+</LinearLayout>

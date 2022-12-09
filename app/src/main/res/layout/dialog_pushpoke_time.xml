@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        >
+
+
+    <LinearLayout
+        android:id="@+id/timeRl"
+        android:layout_width="@dimen/dp_275"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_timeshape_dialog"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启推送通知"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/_333"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp_25"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不错过任何一次合作的机会"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/_666"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tuisong_pic"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginRight="@dimen/dp_17"
+            />
+
+        <TextView
+            android:id="@+id/bGoto_poke"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            android:text="开启推送通知"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:gravity="center"
+            android:background="@drawable/bg_push_poke"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginBottom="@dimen/dp_25"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bfinishImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/close_tuisong"
+        android:layout_below="@id/timeRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_24"
+        />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

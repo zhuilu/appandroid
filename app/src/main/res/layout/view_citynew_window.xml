@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:id="@+id/view_city_window"
+    >
+
+    <LinearLayout
+        android:id="@+id/citynewLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_gray"
+        >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_left_recycler"
+        android:layout_width="@dimen/dp_125"
+        android:layout_height="match_parent"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_right_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/coop_reply_comrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_53"
+        android:layout_marginRight="@dimen/dp_15">
+
+
+        <RelativeLayout
+            android:id="@+id/thecoopRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_coop_comment_reply">
+
+            <View
+                android:id="@+id/ychildview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_blue_FAFEFF"
+                android:minHeight="@dimen/dp_60"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/coop_reply_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_5">
+
+                <LinearLayout
+                    android:id="@+id/llayout_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/coop_reply_nametv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_coop_comment_reply"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_15" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_2_5" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/coop_reply_timetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textColor="@color/text_color_AA"
+                    android:textSize="@dimen/sp_12" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/coop_reply_timetv"
+                    android:layout_toRightOf="@id/llayout_name">
+
+
+                    <TextView
+                        android:id="@+id/coop_reply_positiontv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:background="@drawable/bg_coop_comment_reply"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_AA"
+                        android:textSize="@dimen/sp_13" />
+
+                    <TextView
+                        android:id="@+id/coop_reply_ispushtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toRightOf="@id/coop_reply_positiontv"
+                        android:background="@drawable/bg_coop_comment"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_10" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/coop_reply_commentRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coop_reply_info"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_7"
+
+                >
+
+                <TextView
+                    android:id="@+id/item_is_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="回复"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/item_reply_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@id/item_is_reply"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/coop_reply_commenttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_toRightOf="@id/item_reply_name"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="@dimen/sp_15" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/comment_moreRl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_42"
+            android:layout_below="@id/thecoopRl"
+            android:background="@color/bg_color_gray_F7F7F7">
+
+            <TextView
+                android:id="@+id/comment_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/_999"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_below="@id/thecoopRl"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+</RelativeLayout>

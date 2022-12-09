@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_295"
+        android:layout_height="@dimen/dp_300"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_timeshape_dialog">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="新增常用语"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_20" />
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_34"
+            android:background="@null"
+            android:hint="请输入内容"
+            android:maxLength="100"
+            android:textColor="#ff333333"
+            android:textColorHint="#ffaaaaaa"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_below="@+id/edit_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_19"
+            android:background="#ffececec" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view"
+            android:layout_marginRight="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_14"
+            android:text="0/100"
+            android:textColor="#ffcccccc"
+            android:textSize="@dimen/sp_14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_19"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cl_cancle"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#ff4b96f3"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cl_save"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

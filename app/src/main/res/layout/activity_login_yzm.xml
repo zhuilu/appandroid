@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+  >
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:id="@+id/bt_finish"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/chevron"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/yzm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入验证码"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/sp_28"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_below="@id/bt_finish"
+        />
+
+    <TextView
+        android:id="@+id/myzm_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/yzm_title"
+        android:layout_below="@+id/yzm_title"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/_999999"
+        android:textSize="@dimen/sp_14" />
+
+
+    <com.xinniu.android.qiqueqiao.widget.VerificationCodeEditText
+        android:id="@+id/yzmVerEdit"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:inputType="number"
+        android:textColor="#333333"
+        android:textSize="32sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:bottomLineHeight="1dp"
+        app:bottomLineNormalColor="@color/_333"
+        app:bottomLineSelectedColor="@color/colorAccent"
+        app:cursorColor="@color/vip_info_color"
+        app:cursorWidth="2dp"
+        app:figures="6"
+        app:selectedBackgroundColor="@android:color/white"
+        app:verCodeMargin="14dp"
+        android:layout_below="@id/myzm_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        />
+
+    <com.xinniu.android.qiqueqiao.widget.CountDownTextView
+        android:id="@+id/bsendYzmtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/vip_info_color"
+        android:textSize="@dimen/sp_14"
+        android:layout_below="@id/yzmVerEdit"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_24"
+        />
+
+    <TextView
+        android:id="@+id/mvoiceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bsendYzmtv"
+        android:layout_marginTop="@dimen/dp_46"
+        android:layout_centerHorizontal="true"
+        android:text="没有收到短信验证码? 请尝试获取语音验证码"
+        android:textSize="@dimen/sp_14"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/magreementTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:layout_centerHorizontal="true"
+        android:text="登录即表示已经阅读并同意《企鹊桥服务协议》"
+        />
+
+
+
+
+</RelativeLayout>

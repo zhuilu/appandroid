@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yindex_actoneRl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <LinearLayout
+        android:id="@+id/llayout_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_190"
+        android:orientation="vertical"
+        android:background="@drawable/shadow_index_act"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/more_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_125"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/zw_activity" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:drawableRight="@mipmap/arrow_blue"
+                android:text="查看更多优质活动"
+                android:textColor="@color/blue_bg_4B96F3"
+                android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_190"
+        android:orientation="vertical"
+        android:background="@drawable/shadow_index_act">
+
+        <ImageView
+            android:id="@+id/mindex_actone_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/mindex_act_onetitletv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mindex_actone_img"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_9"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/_333"
+            android:textSize="@dimen/sp_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mindex_act_onetitletv"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/mindex_act_oneplacetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/index_actplace"
+                android:textColor="@color/_999"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/mindex_act_onetimetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/_999"
+                android:textSize="@dimen/sp_10"
+
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

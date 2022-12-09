@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/big_image_bg_rl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/m_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.xinniu.android.qiqueqiao.customs.SimpleColorViewIndicate
+        android:id="@+id/id_new_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_20"
+        android:layout_margin="@dimen/dp_10"
+        app:icon_color_normal="#A2A2A2"
+        app:icon_color_selected="@color/white"
+        app:icon_radius="@dimen/dp_3"></com.xinniu.android.qiqueqiao.customs.SimpleColorViewIndicate>
+
+
+
+</RelativeLayout>

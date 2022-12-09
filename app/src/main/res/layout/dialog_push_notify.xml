@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/timeRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_50"
+        android:background="@drawable/bg_timeshape_dialog"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:id="@+id/bfinishImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/dialog_chat" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bfinishImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:src="@mipmap/notify_tb" />
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_below="@+id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_18"
+            android:gravity="center"
+            android:text="开启推送通知"
+            android:textColor="#FF3B3B4D"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_01"
+            android:layout_marginTop="@dimen/dp_m_5"
+            android:text="第一时间收到对方回复你的消息"
+            android:textColor="#ff6c758a"
+            android:layout_marginBottom="@dimen/dp_23"
+            android:textSize="@dimen/sp_12" />
+
+
+        <ImageView
+            android:id="@+id/img_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:layout_marginRight="@dimen/dp_27"
+            android:src="@mipmap/open_notify"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:layout_below="@+id/tv_02"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

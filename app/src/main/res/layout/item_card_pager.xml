@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_194"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.percentlayout.widget.PercentFrameLayout
+        android:id="@+id/minivipRF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+        <ImageView
+            android:id="@+id/item_card_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_16"
+            android:src="@mipmap/vip_mini"
+            />
+
+
+
+        <TextView
+            android:id="@+id/btext_bug_minivip"
+            android:layout_width="@dimen/dp_83"
+            android:layout_height="@dimen/dp_30"
+            android:text="立即续费"
+            android:gravity="center"
+            android:textColor="@color/mini_vip_yellow"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_30"
+            app:layout_marginTopPercent="61%"
+            android:textSize="@dimen/sp_14"
+            android:background="@drawable/shape_vipmini_btn"
+            />
+
+        <TextView
+            android:id="@+id/mpricetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            />
+
+        <TextView />
+        <TextView
+            android:id="@+id/moriginalpricetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            app:layout_marginTopPercent="25%"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            />
+
+        <TextView />
+
+
+
+        <TextView
+            android:id="@+id/mtimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="32%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp_30"
+
+            />
+
+    </androidx.percentlayout.widget.PercentFrameLayout>
+
+
+</RelativeLayout>

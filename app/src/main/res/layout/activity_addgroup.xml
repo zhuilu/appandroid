@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin"
+        android:focusableInTouchMode="true"
+        >
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="群组"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_groupRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_below="@id/tool_bar"
+        >
+        <TextView
+            android:id="@+id/bcanceltv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_alignParentRight="true"
+            android:text="取消"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/_999"
+            android:layout_marginRight="@dimen/dp_15"
+            android:visibility="gone"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_search_graybg"
+            android:layout_toLeftOf="@id/bcanceltv"
+            >
+
+            <ImageView
+                android:id="@+id/addgroup_img"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@mipmap/search_head_viewx"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                />
+
+
+            <com.xinniu.android.qiqueqiao.customs.ClearEditText
+                android:id="@+id/mSearch_groupEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingRight="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:imeOptions="actionSearch"
+                android:hint="搜索群组关键字或群号"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_1"
+                android:textColorHint="@color/_666"
+                android:layout_toRightOf="@id/addgroup_img"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/classifyRecyclerRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_77"
+        android:layout_below="@id/search_groupRl"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mclassifyRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/addgroupSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/classifyRecyclerRl"
+        android:background="@color/bg_gray">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mgroupRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+        <include layout="@layout/view_footview_loadmore"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</RelativeLayout>

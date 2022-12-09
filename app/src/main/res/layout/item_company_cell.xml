@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bitem_company_go"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88">
+
+        <com.xinniu.android.qiqueqiao.utils.RoundImageView
+            android:id="@+id/mitem_company_cell_headImg"
+            android:layout_width="@dimen/dp_58"
+            android:layout_height="@dimen/dp_58"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default1_icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/eddsmall" />
+
+
+        <RelativeLayout
+            android:id="@+id/bitem_company_coopint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_toRightOf="@id/mitem_company_cell_headImg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mitem_company_cell_nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="企鹊桥"
+                android:textColor="@color/text_color_1"
+                android:textSize="@dimen/sp_17" />
+
+            <TextView
+                android:id="@+id/mitem_company_cell_companyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mitem_company_cell_nameTv"
+                android:layout_marginTop="@dimen/dp_3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="杭州那啥科技有限公司"
+                android:textColor="@color/text_color_57"
+                android:textSize="@dimen/sp_13" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mitem_company_cell_companyTv"
+                android:layout_marginTop="@dimen/dp_4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mnum_coop_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#659FE2"
+                    android:textSize="@dimen/sp_13"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="条合作信息 · "
+                    android:textColor="@color/text_color_57"
+                    android:textSize="@dimen/sp_13"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/mnum_coop_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#659FE2"
+                    android:textSize="@dimen/sp_13"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人 · "
+                    android:textColor="@color/text_color_57"
+                    android:textSize="@dimen/sp_13"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/mnum_coop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_color_57"
+                    android:textSize="@dimen/sp_13"
+
+
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="#EEEEEE" />
+</LinearLayout>

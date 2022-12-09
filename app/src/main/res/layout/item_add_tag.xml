@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="40dp">
+    <TextView android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/itmeResourceStyle"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textSize="12sp"
+        android:layout_margin="2dp"/>
+    <ImageView
+        android:id="@+id/delete_button"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/search_clear_pressed"
+        android:layout_gravity="top|right"
+        android:visibility="gone"/>
+</FrameLayout>

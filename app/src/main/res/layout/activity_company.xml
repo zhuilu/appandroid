@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:lzq="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/tool_bar_color"
+        android:paddingLeft="@dimen/padding_left_and_right"
+        android:paddingRight="@dimen/padding_left_and_right"
+        >
+
+        <ImageView
+            android:id="@+id/bt_return"
+            android:layout_width="@dimen/tool_bar_head_long"
+            android:layout_height="@dimen/tool_bar_head_long"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/img_title_back" />
+
+        <TextView
+            android:id="@+id/tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="企业主页"
+            android:textColor="@color/tool_bar_text_color"
+            android:textSize="@dimen/tool_bar_text_size" />
+
+
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f3f6f7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp">
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/company_img_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp" />
+                    <com.xinniu.android.qiqueqiao.widget.ViewPagerIndicate
+                        android:id="@+id/id_viewpagerindicate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        lzq:item_count="4">
+
+                    </com.xinniu.android.qiqueqiao.widget.ViewPagerIndicate>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/person_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+                        android:id="@+id/compay_tag_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/company_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:textColor="#333333"/>
+
+                        <TextView
+                            android:id="@+id/company_url"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/tool_bar_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/company_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:textColor="#666666"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/tool_bar_color"
+                app:tabIndicatorColor="@color/tool_bar_color"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabTextColor="#333333"
+                app:tabTextAppearance ="@style/CustomTabTextAppearanceStyle"
+                app:tabBackground="@drawable/tab_backgroud"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white"/>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+</LinearLayout>

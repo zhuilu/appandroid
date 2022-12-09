@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/mindex_matypetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_5"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_13" />
+
+
+    <TextView
+        android:id="@+id/index_push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_18"
+        android:layout_toLeftOf="@+id/mindex_matypetv"
+        android:text="刚刚发布了"
+        android:textColor="@color/_555"
+        android:textSize="@dimen/sp_13" />
+
+    <TextView
+        android:id="@+id/mindex_nametv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/index_push"
+        android:gravity="left"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold" />
+</RelativeLayout>

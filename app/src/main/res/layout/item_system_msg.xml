@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_system_content"
+    android:layout_marginTop="@dimen/dp_6"
+    android:id="@+id/item_system_Rl"
+    >
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-02-02 09:30"
+        android:layout_margin="@dimen/dp_15"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/_999999"
+        />
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加V申请"
+        android:layout_below="@id/time"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/text_color_1"
+        android:layout_marginBottom="@dimen/dp_15"
+        />
+    <TextView
+        android:id="@+id/contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:text="您发布的合作信息已审核通过"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:visibility="visible"
+        />
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/system_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:layout_below="@id/contentTv"
+        android:visibility="gone"
+        >
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/line_color"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            />
+        <TextView
+            android:id="@+id/gotosee"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_37"
+            android:layout_below="@id/line_view"
+            android:text="@string/goto_see"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center"
+            />
+
+
+
+    </RelativeLayout>
+    
+    
+    
+    
+    
+    
+
+</RelativeLayout>

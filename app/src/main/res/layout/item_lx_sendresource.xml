@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/positionRl"
+        android:layout_width="@dimen/dp_215"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/send_titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="合作信息"
+            android:textColor="@color/_999"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/send_contenttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/send_titletv"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="你好的需求等等等等"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_below="@id/send_contenttv"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_below="@id/line">
+
+            <com.xinniu.android.qiqueqiao.widget.CircleImageView
+                android:id="@+id/mhead_img"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/msend_nametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/mhead_img"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/msend_positiontv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_toRightOf="@id/msend_nametv"
+                android:textColor="@color/text_color_AA"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

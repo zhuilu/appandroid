@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    
+    <TextView
+        android:id="@+id/tvItemCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_service_tags"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@drawable/select_text_cell"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="测试数据"
+        android:layout_marginRight="@dimen/dp_10"
+        />
+    
+    
+    
+
+</RelativeLayout>

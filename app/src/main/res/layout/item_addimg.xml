@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+    <FrameLayout
+        android:id="@+id/item_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_resouce_add_pic_bg"
+        android:layout_margin="5dp">
+        <ImageView
+            android:id="@+id/item_addiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/circle_addimg"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</FrameLayout>

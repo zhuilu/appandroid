@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/positionRlayout"
+        android:layout_width="@dimen/dp_206"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/bg_chat">
+
+        <TextView
+            android:id="@+id/send_titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="我发起了担保交易请求"
+            android:textColor="@color/_333"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:id="@+id/llayout_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/send_titletv"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="担保金额"
+                android:textColor="#ff777777"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/send_contenttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="￥1000"
+                android:textColor="#FFDE6654"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llayout_price"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_13"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:maxLines="2"
+            android:text="企鹊桥用户交流群企鹊桥用户交流群，交流群企鹊桥用户交，交流群桥用交流群企鹊桥用户交"
+            android:textColor="@color/_999"
+            android:textSize="@dimen/sp_11" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:layout_below="@id/tv_content"
+            android:background="#ffececec" />
+
+        <TextView
+            android:id="@+id/tv_look_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_33"
+            android:layout_below="@+id/line"
+            android:gravity="center"
+            android:text="查看详情"
+            android:textColor="@color/_999"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+</FrameLayout>

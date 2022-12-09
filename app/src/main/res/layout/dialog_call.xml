@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_264"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <LinearLayout
+            android:id="@+id/timeRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_timeshape_dialog"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_24"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用"
+                    android:textColor="@color/_333"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:id="@+id/tv_myphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_bg_4B96F3"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拨打"
+                    android:textStyle="bold"
+                    android:textColor="@color/_333"
+                    android:textSize="@dimen/sp_18" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dp_193"
+                android:layout_height="@dimen/dp_144"
+                android:layout_marginLeft="@dimen/dp_37"
+                android:layout_marginRight="@dimen/dp_37"
+                android:layout_marginTop="@dimen/dp_20"
+                android:scaleType="centerCrop"
+               android:src="@mipmap/phone_call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="手机号码保护中"
+                android:textStyle="bold"
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_7"
+                android:text="拨打号码为隐私号，对方看不到您的真实手机号"
+                android:textColor="#ff666666"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tv_call"
+                android:layout_width="@dimen/dp_206"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:text="立即呼叫"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/bg_call"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bfinishImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeRl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_29"
+            android:src="@mipmap/close_tuisong_11" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

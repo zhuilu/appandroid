@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_share_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/share_text"
+        android:textColor="@color/_333"
+        android:textSize="@dimen/sp_14" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/yhandleHScroll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/bshare_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/share_friend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:text="@string/share_friend"
+                    android:textColor="@color/_666"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bshare_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/share_weixin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:text="@string/wx_text"
+                    android:textColor="@color/_666"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bshare_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_23"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/share_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:text="@string/pcircle_text"
+                    android:textColor="@color/_666"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bshare_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_23"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/share_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:text="@string/qq_friend"
+                    android:textColor="@color/_666"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bshare_dd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_23"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/share_dd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:text="@string/dd"
+                    android:textColor="@color/_666"
+                    android:textSize="@dimen/sp_11" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:background="#ffececec"
+        android:layout_marginTop="@dimen/dp_20"/>
+
+
+    <LinearLayout
+        android:id="@+id/llayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_9"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/breport_Ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_43"
+                android:layout_height="@dimen/dp_43"
+                android:layout_gravity="center"
+                android:src="@mipmap/report_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_1"
+                android:text="@string/report_text"
+                android:textColor="@color/_666"
+                android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bdelete_Ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_43"
+                android:layout_height="@dimen/dp_43"
+                android:layout_gravity="center"
+                android:src="@mipmap/delete_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_1"
+                android:text="删除好友"
+                android:textColor="@color/_666"
+                android:textSize="@dimen/sp_11" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginBottom="@dimen/dp_9"
+        android:padding="@dimen/dp_10"
+        android:text="取消"
+        android:textColor="#ff4b96f3"
+        android:textSize="@dimen/sp_17" />
+
+</LinearLayout>

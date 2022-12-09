@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height">
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="激活会员"
+            android:textSize="@dimen/tool_bar_text_size"
+            android:textColor="@color/text_color_1"
+            />
+
+        <TextView
+            android:id="@+id/b_rightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:text="使用兑换码"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color_1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_color"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mact_memberRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/perchImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/perchx_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_50"
+            />
+
+        <TextView
+            android:id="@+id/mact_member_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/perchImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="您的账号已经成功购买企鹊桥SVIP一年\n点击下方按钮立即激活会员权益"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginRight="@dimen/dp_60"
+            android:gravity="center"
+            android:textColor="@color/_666"
+            android:textSize="@dimen/sp_13"
+            android:lineSpacingExtra="@dimen/dp_3"
+            />
+        
+        <TextView
+            android:id="@+id/bact_member_summit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_61"
+            android:layout_marginRight="@dimen/dp_61"
+            android:layout_below="@id/mact_member_tv"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="激活会员"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_login_rec"
+            android:textSize="@dimen/sp_15"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bact_member_summit"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_centerHorizontal="true"
+            android:text="会员到期时间，将于激活之日起计算"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorPrimary"
+            />
+        
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mno_memberRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/perchxImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/perchx_5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_120"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/perchxImg"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_centerHorizontal="true"
+            android:text="暂无需要激活的会员权益"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/_666"
+            />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

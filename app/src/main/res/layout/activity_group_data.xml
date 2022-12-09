@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_top_height"
+        android:id="@+id/tool_bar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_margin">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height"
+            android:id="@+id/bt_finish">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群组资料"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+
+            />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/mremindRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_below="@id/tool_bar"
+        android:background="@drawable/bg_group_status">
+        <TextView
+            android:id="@+id/mremindTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="该群组正在审核中，暂时无法使用"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/king_color"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mremindRl"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+
+    <RelativeLayout
+        android:id="@+id/nameRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+        <TextView
+            android:id="@+id/mgroupName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:textSize="@dimen/sp_17"
+            android:layout_centerVertical="true"
+
+            />
+        <TextView
+            android:id="@+id/mgroup_pernumtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/mgroup_pernumtv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_6"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/group_Rlx"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_22"
+        android:layout_below="@id/nameRl">
+        <TextView
+            android:id="@+id/mgroupCodeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/_666"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/mgroup_typeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mgroupCodeTv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/bg_itemgroup_pernum"
+            android:textColor="@color/text_color_green_30A94D"
+            />
+        <TextView
+            android:id="@+id/mgroup_cityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mgroup_typeTv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/bg_itemgroup_city"
+            android:textColor="@color/vip_info_color"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_contentRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_22"
+        android:layout_below="@id/group_Rlx"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        >
+        <TextView
+            android:id="@+id/mgroupnoticeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/_666"
+            android:lineSpacingExtra="@dimen/dp_5"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_below="@id/group_contentRl"
+        android:background="@color/bg_gray"
+        >
+        <TextView
+            android:id="@+id/bgroup_cacelcreate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_next_shape"
+            android:text="取消创建"
+            android:gravity="center"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

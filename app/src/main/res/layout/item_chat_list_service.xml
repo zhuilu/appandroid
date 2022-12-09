@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_chat_headRl"
+    >
+    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+        android:id="@+id/left_head_img_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentLeft="true"/>
+    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+        android:id="@+id/right_head_img_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <LinearLayout
+        android:layout_toRightOf="@id/left_head_img_iv"
+        android:layout_toLeftOf="@id/right_head_img_iv"
+        android:id="@+id/root_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5">
+        <TextView
+            android:id="@+id/head_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            android:visibility="gone"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/itemRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardCornerRadius="@dimen/dp_4"
+            card_view:cardElevation="@dimen/dp_2"
+            >
+
+            <RelativeLayout
+                android:id="@+id/card_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="5dp">
+                <com.xinniu.android.qiqueqiao.utils.RoundImageView
+                    android:id="@+id/mcoop_detail_companyImg"
+                    android:layout_width="@dimen/dp_58"
+                    android:layout_height="@dimen/dp_58"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default1_icon" />
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:layout_toRightOf="@+id/mcoop_detail_companyImg"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/dp_3"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/_444"
+                    android:textSize="@dimen/sp_13"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_alignBottom="@+id/mcoop_detail_companyImg"
+                    android:layout_toRightOf="@+id/mcoop_detail_companyImg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tag_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/bg_service_biaoqian"
+                        android:includeFontPadding="false"
+                        android:paddingRight="@dimen/dp_4"
+                        android:paddingLeft="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:text=""
+                        android:textColor="@color/_555"
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@drawable/bg_service_biaoqian"
+                        android:includeFontPadding="false"
+                        android:paddingRight="@dimen/dp_4"
+                        android:paddingLeft="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:text=""
+                        android:textColor="@color/_555"
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@drawable/bg_service_biaoqian"
+                        android:includeFontPadding="false"
+                        android:paddingRight="@dimen/dp_4"
+                        android:paddingLeft="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:text=""
+                        android:textColor="@color/_555"
+                        android:textSize="@dimen/sp_11" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

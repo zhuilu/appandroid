@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/leftListView"
+        android:layout_above="@+id/tvSubmit"
+        android:scrollbars="none"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="none"
+        android:divider="@android:color/transparent"
+        android:layout_toRightOf="@+id/leftListView"
+        android:layout_above="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:padding="10dp"
+        android:text="12121212"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

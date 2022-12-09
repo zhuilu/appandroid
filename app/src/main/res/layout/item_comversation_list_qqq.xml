@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xinniu.android.qiqueqiao.widget.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/swipe_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/care_tv"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:background="#CCCCCC"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/delete_tv"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:background="#FE4646"
+            android:text="删除"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/rc_item_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#fff"
+        android:gravity="center_vertical">
+
+        <com.xinniu.android.qiqueqiao.widget.CircleImageView
+            android:id="@+id/head_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:layout_toRightOf="@id/head_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp">
+            <RelativeLayout
+                android:id="@+id/nameRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+               >
+                <TextView
+                    android:id="@+id/name"
+                    android:textSize="@dimen/dp_15"
+                    android:textColor="@color/text_color_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:ellipsize="middle"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/imgRl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/time"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/name"
+
+                    >
+                    <TextView
+                        android:id="@+id/compay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="12sp"
+                        android:textColor="#999999"
+                        android:singleLine="true"
+                        android:ellipsize="middle"
+                        android:text=""
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_alignParentLeft="true"
+                        android:maxEms="15"
+                        />
+                <ImageView
+                    android:id="@+id/imgIsVip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/compay"
+                    />
+                    <ImageView
+                        android:id="@+id/item_index_new_company_v"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toRightOf="@id/imgIsVip"
+                        android:scaleType="matrix"
+                        android:src="@mipmap/vip_new_icon_company"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/un_read_msg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/shape_red_point"
+                android:text="19"
+                android:textSize="@dimen/sp_9"
+                android:layout_below="@id/nameRl"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/nameRl"
+                android:layout_toLeftOf="@id/un_read_msg"
+                >
+
+                <TextView
+                    android:id="@+id/item_unread"
+                    android:layout_width="@dimen/dp_27"
+                    android:layout_height="@dimen/dp_13"
+                    android:textSize="@dimen/sp_9"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_qqqconversation_status"
+                    android:layout_centerVertical="true"
+                    android:text="已读"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/dp_8"
+                    />
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/item_unread"
+                android:textSize="13sp"
+                android:textColor="#999999"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</com.xinniu.android.qiqueqiao.widget.SwipeMenuLayout>

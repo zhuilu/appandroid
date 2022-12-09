@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_left_and_right"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/padding_left_and_right"
+        android:paddingBottom="@dimen/dp_5">
+
+        <LinearLayout
+            android:id="@+id/bt_return"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="@dimen/tool_bar_head_long"
+                android:layout_height="@dimen/tool_bar_head_long"
+                android:layout_gravity="center"
+                android:src="@mipmap/chevron" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/srearch_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="搜索"
+            android:textColor="@color/text_color_1"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@id/srearch_tv"
+            android:layout_toRightOf="@id/bt_return"
+            android:background="@drawable/shape_search_graybg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/search_black" />
+
+            <com.xinniu.android.qiqueqiao.customs.ClearEditText
+                android:id="@+id/sreach_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="找渠道，找资源，找企业，来搜一下！"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingTop="2dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_1"
+                android:textColorHint="#ffbbbbbb"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/last_search_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="最近搜索"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/delete_tag"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/delete_search_tag" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/last_search_div"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:background="#EBEBEB"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="5dp"
+            android:text="热门搜索"
+            android:textColor="#408AF6"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:background="#EBEBEB"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="5dp"
+            android:text="热门企业"
+            android:textColor="#408AF6"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:background="#EBEBEB"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hot_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rlayout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_15">
+
+            <TextView
+                android:id="@+id/tv_title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/padding_left_and_right"
+                android:text=""
+                android:textColor="@color/_666"
+                android:textSize="@dimen/sp_13" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/dp_16"
+                android:src="@mipmap/goto_new" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_toLeftOf="@+id/img"
+                android:textColor="@color/search_text_color_gray"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:layout_marginLeft="@dimen/padding_left_and_right"
+            android:layout_marginRight="@dimen/padding_left_and_right"
+            android:background="#ececec" />
+
+        <RelativeLayout
+            android:id="@+id/rlayout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_15">
+
+            <TextView
+                android:id="@+id/tv_title_search_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/padding_left_and_right"
+                android:text=""
+                android:textColor="@color/_666"
+                android:textSize="@dimen/sp_13" />
+
+            <ImageView
+                android:id="@+id/img_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/dp_16"
+                android:src="@mipmap/goto_new" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:layout_marginLeft="@dimen/padding_left_and_right"
+            android:layout_marginRight="@dimen/padding_left_and_right"
+            android:background="#ececec" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/result_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_and_right"
+            android:paddingRight="@dimen/padding_left_and_right" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

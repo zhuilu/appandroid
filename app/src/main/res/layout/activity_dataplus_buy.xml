@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height">
+
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购买加油包"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_color_1"
+            />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_13"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="当前剩余沟通权限"
+                android:textColor="@color/text_color_1"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_18"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/msurplus_linktv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textSize="@dimen/sp_20"
+                android:textColor="@color/colorPrimary"
+                android:text="200"
+                android:textStyle="bold"
+                />
+
+
+
+
+
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_116"
+            android:background="@mipmap/dataplus_icon"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+
+
+            <TextView
+                android:id="@+id/mdata_plustv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_19"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_20"
+                />
+
+            <TextView
+                android:id="@+id/bdataplus_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_19"
+                android:layout_marginRight="@dimen/dp_19"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/data_plus_color"
+                android:text="立即购买"
+                android:background="@drawable/shape_dataplus_buy"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </LinearLayout>
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

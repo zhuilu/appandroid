@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/baddgroupway1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        >
+        <TextView
+            android:id="@+id/mmanagerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="无需验证"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_17"
+            />
+
+    </RelativeLayout>
+    <include layout="@layout/view_line"/>
+    <RelativeLayout
+        android:id="@+id/baddgroupway2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_color_1"
+            android:text="需要身份验证"
+            android:textSize="@dimen/sp_17"
+            />
+
+
+    </RelativeLayout>
+    <include layout="@layout/view_line"/>
+    <RelativeLayout
+        android:id="@+id/baddgroupway3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="不允许任何人加群"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_17"
+            />
+
+
+    </RelativeLayout><include layout="@layout/view_line"/>
+    <RelativeLayout
+        android:id="@+id/baddgroupway4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="取消"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_17"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

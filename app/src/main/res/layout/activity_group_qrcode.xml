@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height">
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群组二维码"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:layout_below="@id/tool_bar"
+        >
+        <RelativeLayout
+            android:id="@+id/group_qrcodeRl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_135"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:id="@+id/qrcode_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_19">
+
+                <TextView
+                    android:id="@+id/qrcode_sharetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即分享"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/colorPrimary"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/line_color"
+                    android:layout_toLeftOf="@id/qrcode_sharetv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_28"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/line_color"
+                    android:layout_toRightOf="@id/qrcode_sharetv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_28"
+                    android:layout_marginRight="@dimen/dp_20"
+                    />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_7"
+                android:layout_below="@id/qrcode_share"
+                >
+
+                <TextView
+                    android:id="@+id/bshare_wechat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="微信"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/share_weixin"
+                    android:drawablePadding="@dimen/dp_9"
+                    />
+                <TextView
+                    android:id="@+id/bshare_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="朋友圈"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/share_circle"
+                    android:drawablePadding="@dimen/dp_9"/>
+
+                <TextView
+                    android:id="@+id/bshare_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="保存到相册"
+                    android:gravity="center"
+                    android:drawableTop="@mipmap/share_photo_lan"
+                    android:drawablePadding="@dimen/dp_9"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+        <ScrollView
+            android:id="@+id/mthescroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/group_qrcodeRl"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/mgroup_imgLl"
+                android:minHeight="500dp"
+                android:minWidth="350dp"
+                >
+
+
+            <RelativeLayout
+                android:id="@+id/mgroup_qrcodeRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_group_qrcode"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginRight="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_20"
+                >
+                
+                <RelativeLayout
+                    android:id="@+id/group_messageRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_114"
+                    >
+                    <ImageView
+                        android:id="@+id/mgroup_headImg"
+                        android:layout_width="@dimen/dp_64"
+                        android:layout_height="@dimen/dp_64"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        />
+
+                    <TextView
+                        android:id="@+id/mgroup_nametv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mgroup_headImg"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_marginRight="@dimen/dp_25"
+                        />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group_messageRl"
+                    android:layout_marginTop="@dimen/dp_5"
+                    >
+                    
+                    <ImageView
+                        android:id="@+id/mgroup_qrcodeImg"
+                        android:layout_width="@dimen/dp_229"
+                        android:layout_height="@dimen/dp_229"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mgroup_qrcodeImg"
+                        android:text="扫一扫加入群聊"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/_999"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_30"
+                        android:layout_marginTop="@dimen/dp_30"
+                        />
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

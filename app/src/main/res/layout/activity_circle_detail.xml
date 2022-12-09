@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height"
+            android:paddingLeft="@dimen/padding_left_and_right"
+            android:paddingRight="@dimen/padding_left_and_right">
+
+            <ImageView
+                android:id="@+id/tb_return"
+                android:layout_width="@dimen/tool_bar_head_long"
+                android:layout_height="@dimen/tool_bar_head_long"
+                 android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/tb_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_15"
+                android:layout_marginTop="@dimen/dp_2"
+                />
+
+            <TextView
+                android:id="@+id/mgroup_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tb_title"
+                android:textSize="@dimen/sp_11"
+                android:drawableLeft="@mipmap/navi_group_num"
+                android:layout_marginTop="@dimen/dp_4"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/tb_member"
+                        android:layout_width="@dimen/tool_bar_head_long_add_1"
+                        android:layout_height="@dimen/tool_bar_head_long_add_1"
+                        android:src="@mipmap/group_twopeopleimg"
+                        android:layout_gravity="center" />
+                    <ImageView
+                        android:id="@+id/tb_member_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|top"
+                        android:src="@mipmap/red_point"
+                        android:visibility="gone"/>
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/rong_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</LinearLayout>

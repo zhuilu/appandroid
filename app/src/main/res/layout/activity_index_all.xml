@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/thetitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height">
+
+        <RelativeLayout
+            android:id="@+id/bt_close"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/all_text"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_17" />
+
+        <RelativeLayout
+            android:id="@+id/bsearch_Rl"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/search_head_viewx" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/theselect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_below="@id/thetitle">
+
+        <TextView
+            android:id="@+id/btvSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableRight="@drawable/select_down_sx"
+            android:text="最新资源"
+            android:textColor="@drawable/common_resource_text"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/btvScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableRight="@drawable/select_down_right"
+            android:text="筛选"
+            android:textColor="@drawable/common_text_select"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/btvPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_toLeftOf="@id/btvScreen"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableRight="@drawable/select_down_sx"
+            android:text="合作地区"
+            android:textColor="@drawable/common_text_select"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/theselect">
+
+        <include layout="@layout/view_headview_refresh_two" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:src="@drawable/loaddown_more" />
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/theselect"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@mipmap/perchthree"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_100"
+            android:text="暂无合作信息"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_11" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

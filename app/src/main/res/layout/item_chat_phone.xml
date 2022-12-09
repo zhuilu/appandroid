@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    >
+
+
+
+    <TextView
+        android:id="@+id/item_chat_phone_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_36"
+        android:layout_weight="1"
+        android:text="对方未及时回复？可直接拨打隐私号"
+        android:background="@drawable/bg_chat_phone"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/dp_35"
+        android:paddingRight="@dimen/dp_35"
+        android:textSize="@dimen/sp_14"
+        android:maxLines="1"
+        />
+    <ImageView
+        android:id="@+id/item_chat_phone_whyImg"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_2"
+        android:src="@mipmap/why"
+        />
+
+
+</LinearLayout>

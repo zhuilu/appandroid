@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_35"
+        android:src="@mipmap/icon_logo_splash" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_logo">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/tv_ads"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_17"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:background="@drawable/bg_jump_gray"
+                android:gravity="center"
+                android:text="跳过"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

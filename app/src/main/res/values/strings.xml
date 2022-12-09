@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">企鹊桥</string>
+
+    <!--首页tab-->
+    <string name="tab_main">谈合作</string>
+    <string name="tab_circle">圈子</string>
+    <string name="tab_publish">发布</string>
+    <string name="tab_message">消息</string>
+    <string name="tab_mine">我的</string>
+    <string name="tab_class">课堂</string>
+    <string name="tab_company">找企业</string>
+
+    <string name="index_res_num">实时资源更新 %d 条</string>
+    <string name="index_topic">企鹊桥头条</string>
+    <string name="guess_info">猜你喜欢</string>
+    <!--<string name="index_grid_item">%s\n%d</string>-->
+
+
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+    <string name="join">加入</string>
+
+    <!--权限申请-->
+    <string name="need_permission_setting_title">需要权限</string>
+    <string name="need_permission_setting_content">你拒绝了我们的权限申请，我们不能进行正常的操作，是否去设置权限？</string>
+    <string name="permission_need_save_bitmap">需要保存图片到您的手机中</string>
+    <string name="permission_need_toke_photo">需要获取你的照片和相机</string>
+    <string name="save_bitmap_success">已经保存到相册中</string>
+    <!--圈子权限不足弹窗信息-->
+    <string name="tip_is_vip">你的权限不足\n升级权限即可加入圈子畅聊</string>
+    <string name="cancel">取消</string>
+    <string name="upgrade_immediately">立即升级</string>
+    <string name="my_vip">会员中心</string>
+    <string name="member_center_empty_tip">先给自己定个小目标\n去买一个会员吧～</string>
+    <string name="mine_circle">我的圈子</string>
+    <string name="mine_info">个人资料</string>
+
+    <string name="encode_qrcode">生成二维码</string>
+    <string name="dencode_qrcode">扫描二维码</string>
+    <string name="code_text">请输入生成二维码的文本信息</string>
+    <string name="qrcodetext">这里显示扫描结果</string>
+
+    <string name="pub_title">合作标题</string>
+    <string name="pub_title_content">请输入标题内容(30字以内)</string>
+    <string name="pub_coop">合作方式</string>
+    <string name="pub_coop_content">请选择</string>
+    <string name="pub_demand">资源供求</string>
+    <string name="pub_demand_content">选择资源类型，建议供求全部填写</string>
+    <string name="pub_supply">提供资源</string>
+    <string name="pub_supply_detail">提供资源详情</string>
+    <string name="pub_supply_content">请选择类型</string>
+    <string name="pub_supply_contentx">请尽可能多的展示贵公司提供的市场优势资源，以便增加更多的商业合作机会\n例如：\n1.资源亮点...\n2.客户群体...\n3.合作详情...\n\n</string>
+
+    <string name="pub_demand_x">需求资源</string>
+    <string name="pub_demand_x_detail">需求资源详情</string>
+    <string name="up_photo">上传资源图片</string>
+    <string name="pub_sendtv">确定发布</string>
+    <string name="text_finish">完成</string>
+    <string name="text_other">其他</string>
+    <string name="coop_way">合作方式</string>
+    <string name="other_titleed">请描述资源类型和特点</string>
+    <string name="other_titleed_info">如: 10万大学生用户公众号流量资源</string>
+    <string name="other_titleed_content">请输入文字内容 (最多15个字)</string>
+
+    <string name="view_custom">自定义资源类型</string>
+    <string name="coop_place">合作地区</string>
+    <string name="view_other_type">输入资源类型,6个字以内</string>
+    <string name="add">添加</string>
+    <string name="doing_title">自定义标签</string>
+    <string name="reset_tag">重置</string>
+    <string name="sure_tag">确定</string>
+    <string name="offer_need">供求都有</string>
+
+    <!--vip中心-->
+    <string name="vip_center">会员中心</string>
+    <string name="tellnum">剩余沟通次数</string>
+    <string name="telltime">剩余通话时长(分)</string>
+    <string name="vip_meal">会员套餐</string>
+    <string name="svip_meal">超级会员套餐</string>
+    <string name="vip_privilege">VIP特权</string>
+    <string name="vipx_tv">专属VIP标识</string>
+    <string name="vipx_text">名字升级为红色,专属身份标识!</string>
+    <string name="tellx_tv">增加沟通次数</string>
+    <string name="tellx_text">及时联系,合作沟通畅聊无阻!</string>
+    <string name="wxx_tv">直接获取微信号</string>
+    <string name="wxx_text">未及时回复,直接获取微信号!</string>
+    <string name="phonex_tv">直接拨打电话</string>
+    <string name="phonex_text">拨打隐私号,快速联系合作方!</string>
+    <string name="zbug_text">总价</string>
+    <string name="select_way">选择支付方式</string>
+    <string name="tellphone_text">拨打隐私号</string>
+    <string name="pill_info">如需开具发票，请联系客服经理</string>
+    <string name="wx_login">微信登录</string>
+    <string name="account_psw_login">账号密码登录</string>
+    <string name="phone_res_login">手机号登录/注册</string>
+    <string name="phone_login">手机号登录</string>
+    <string name="bussiness">企业</string>
+    <string name="edit_companyinfo">编辑资料</string>
+    <string name="company_introduce">公司简介</string>
+    <string name="company_net">公司官网</string>
+    <string name="company_resource">公司资源</string>
+    <string name="edit_company_title">编辑企业资料</string>
+    <string name="save">保存</string>
+    <string name="brand_logo">品牌LOGO</string>
+    <string name="company_brand_name">公司简称/产品名</string>
+    <string name="company_industry">公司行业</string>
+    <string name="please_write">请填写</string>
+    <string name="company_intro">公司介绍</string>
+    <string name="company_place">所在地区</string>
+    <string name="all_city">全国</string>
+    <string name="industry">行业</string>
+    <string name="company_nameall">公司全称</string>
+    <string name="edit">编辑</string>
+    <string name="bussiness_info">公司信息</string>
+    <string name="goto_see">去查看</string>
+    <string name="search_company">搜公司</string>
+    <string name="search_text">搜索</string>
+    <string name="my_search">我的收藏</string>
+    <string name="report_text">举报</string>
+    <string name="commit_text">提交</string>
+    <string name="reportinfo_text">请输入您的举报原因，不超过100个字符</string>
+    <string name="month">月</string>
+    <string name="all_text">全部</string>
+    <string name="my_push">我的发布</string>
+    <string name="addvapprove">职业身份认证</string>
+    <string name="untell_text">剩余沟通权限</string>
+    <string name="times">次</string>
+    <string name="equity_text">VIP特权</string>
+    <string name="svip_text_x">SVIP特权</string>
+    <string name="share_text">分享</string>
+    <string name="collect_text">收藏</string>
+    <string name="top_text">一键刷新</string>
+    <string name="leaving_message_text">开启留言</string>
+    <string name="close_leaving_message_text">关闭留言</string>
+    <string name="downre_text">下架</string>
+    <string name="delete_text">删除</string>
+    <string name="wx_text">微信</string>
+    <string name="wb_text">微博</string>
+    <string name="pcircle_text">朋友圈</string>
+    <string name="qq_friend">QQ好友</string>
+    <string name="dd">钉钉</string>
+    <string name="create_photo">生成海报</string>
+    <string name="task_ceter">任务中心</string>
+    <string name="vip_stringcontent">当前为 VIP 共可创建5个200人群组\n开通SVIP，即可享受创建500人群组特权</string>
+    <string name="svip_stringcontent">当前为 SVIP 共可创建5个500人群</string>
+    <string name="novip_stringcontent">当前为 普通用户 仅可创建3个100人群\n开通VIP，即可享受创建高级群组特权</string>
+    <string name="buy">购买</string>
+    <string name="send_card">发送名片</string>
+    <string name="share_friend">站内好友</string>
+    <string name="publish_title">请认真填写您的供需合作资源，以确保能通过审核</string>
+    <string name="coop_title">请输入标题，例如：提供XX资源，寻找XX资源合作</string>
+    <string name="offer_resource_type">提供资源类型</string>
+    <string name="need_resource_type">需求资源类型</string>
+    <string name="resource_photo">资源图片（选填）</string>
+    <string name="edit_phonenum">请输入手机号码</string>
+    <string name="gain_yzmcode">获取短信验证码</string>
+
+    <string name="yzm_content">验证码已经通过短信发送至</string>
+    <string name="my_act">我的活动</string>
+    <string name="xuantian">选填</string>
+    <string name="read_contacts">“企鹊桥”想访问您的通讯录</string>
+
+    <string name="title">主\n题</string>
+
+    <string name="alivc_left_side">左侧</string>
+    <string name="alivc_brightness">亮度</string>
+    <string name="alivc_control">调节</string>
+    <string name="alivc_center">中心</string>
+    <string name="alivc_progress">进度</string>
+    <string name="alivc_right_side">右侧</string>
+    <string name="alivc_volume">音量</string>
+    <string name="alivc_speed_times">0.75X</string>
+    <string name="alivc_speed_one_times">1.0X</string>
+    <string name="alivc_speed_optf_times">1.25X</string>
+    <string name="alivc_speed_opt_times">1.5X</string>
+    <string name="alivc_speed_optff_times">1.75X</string>
+    <string name="alivc_speed_twice_times">2.0X</string>
+    <string name="alivc_speed_mode">倍速播放</string>
+    <string name="alivc_speed_tips">当前视频已切换为%1$s播放</string>
+    <string name="alivc_error_msg">错误消息</string>
+    <string name="alivc_error_code">错误码:</string>
+    <string name="alivc_retry">重试</string>
+    <string name="alivc_loading">视频正在加载中..</string>
+    <string name="alivc_net_state_mobile">当前为移动网络，请点击播放</string>
+    <string name="alivc_net_state_mobile_yes">继续播放</string>
+    <string name="alivc_net_state_mobile_no">退出播放</string>
+    <string name="alivc_alivc_replay_msg">视频播放结束</string>
+    <string name="alivc_replay">重播</string>
+    <string name="log_change_quality_success">&#160;切换清晰度成功</string>
+    <string name="log_change_quality_fail">&#160;切换清晰度失败</string>
+    <string name="toast_prepare_success">准备成功</string>
+    <string name="toast_play_compleion">播放结束</string>
+    <string name="log_play_stopped">&#160;播放停止</string>
+
+    <string name="time_tips">每个板块每日仅可有两条置顶合作信息\n置顶时间将从选择日期00:00开始，到24:00结束</string>
+
+    <string name="carding">使用专业梳理卡后，将由企鹊桥专业合作信息梳理官为您梳理完善合作信息，让潜在的合作伙伴更快的捕捉到您的合作需求点，避免合作需求不够清晰明确所带来的商业合作损失</string>
+    <string name="trans_memo">1、合作内容：\n2、甲方要求：\n3、结算条件：\n4、其他补充：</string>
+</resources>

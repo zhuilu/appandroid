@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#268FF5</color>
+    <color name="colorPrimaryDark">#2DA0FB</color>
+    <color name="colorAccent">#2DA0FB</color>
+    <color name="_408AF6">#408AF6</color>
+    <color name="main_color">#2692ff</color>
+    <color name="white">#ffffff</color>
+    <color name="_white">#ccffffff</color>
+    <color name="_eee">#eeeeee</color>
+    <color name="_bbb">#bbbbbb</color>
+    <color name="main_gray">#9A9A9A</color>
+    <color name="_666">#666666</color>
+    <color name="_888">#888888</color>
+    <color name="_333">#333333</color>
+    <color name="_cc333">#cc333333</color>
+    <color name="_838383">#838383</color>
+    <color name="_f1f1f1">#f1f1f1</color>
+    <color name="_525252">#525252</color>
+    <color name="_999">#999999</color>
+    <color name="_777">#777777</color>
+    <color name="_f7f7f7">#f7f7f7</color>
+    <color name="_444">#444444</color>
+    <color name="_009a44">#009a44</color>
+    <color name="_007744">#007744</color>
+    <color name="_555">#555555</color>
+    <color name="_ed6d00">#ed6d00</color>
+    <color name="_eb3c42">#eb3c42</color>
+    <color name="_ebebeb">#EBEBEB</color>
+    <color name="_fefefe">#fefefe</color>
+    <color name="_ff2c4f">#ff2c4f</color>
+    <color name="_808080">#808080</color>
+    <color name="_88000000">#88000000</color>
+    <color name="_D8D8D8">#D8D8D8</color>
+    <color name="_b0b0b0">#b0b0b0</color>
+    <color name="_ee8e3d">#ee8e3d</color>
+    <color name="_f5f4f9">#f5f4f9</color>
+    <color name="_f5f5f5">#f5f5f5</color>
+    <color name="_fc6751">#fc6751</color>
+    <color name="_fffefe">#fffefe</color>
+    <color name="_fd7065">#fd7065</color>
+    <color name="_c4c4c4">#c4c4c4</color>
+    <color name="_e5e5e5">#e5e5e5</color>
+    <color name="_666562">#666562</color>
+    <color name="_f3f5f6">#f3f5f6</color>
+    <color name="_7cb2ff">#7cb2ff</color>
+    <color name="_66e04a">#66e04a</color>
+    <color name="_ffa04c">#ffa04c</color>
+    <color name="_ff8519">#ff8519</color>
+    <color name="_ff230a">#ff230a</color>
+    <color name="_63b1ff">#63b1ff</color>
+    <color name="_86d982">#86d982</color>
+    <color name="_2692ff">#2692ff</color>
+
+    <color name="_1c91ff">#1c91ff</color>
+    <color name="_70bcff">#70bcff</color>
+    <color name="tool_bar_color">#268FF5</color>
+    <color name="_fa3719">#fa3719</color>
+    <color name="_f97661">#f97661</color>
+    <color name="text_color_FD">#FD486F</color>
+
+    <color name="_3cb021">#3cb021</color>
+    <color name="_83d471">#83d471</color>
+    <color name="_999999">#999999</color>
+
+    <color name="_CC99FF">#CC99FF</color>
+
+    <color name="_7ffffffff">#7fffffff</color>
+
+
+    <color name="color_aaaaaa">#FFAAAAAA</color>
+    <color name="_ffF44336">#ffF44336</color>
+    <color name="_ff4CAF50">#ff4CAF50</color>
+    <color name="tool_bar_text_color">#ffffff</color>
+    <color name="partTranslucent">#39000000</color>
+    <color name="translucent">#00000000</color>
+
+    <color name="_64A0F8">#64A0F8</color>
+    <color name="gray_light">#EBEBEB</color>
+    <color name="_D79D29">#D79D29</color>
+    <color name="_FEFCEC">#FEFCEC</color>
+    <color name="_FF7132">#FF7132</color>
+    <color name="_FADE66">#FADE66</color>
+    <color name="_2DA0FB">#2DA0FB</color>
+    <color name="_B5B5B5">#B5B5B5</color>
+    <color name="_F2F6F7">#F2F6F7</color>
+
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+    <color name="text_color_1">#343434</color>
+    <color name="text_color_5">#555555</color>
+    <color name="text_color_search">#BBBBBB</color>
+
+
+    <color name="bg_gray">#F2F2F2</color>
+    <color name="text_gray_color">#535353</color>
+    <color name="text_gray_color2">#A6A6A6</color>
+    <color name="text_gray_color92">#929292</color>
+    <color name="text_color_87">#878787</color>
+    <color name="text_color_AE">#AEAEAE</color>
+    <color name="text_color_AF">#AFAFAF</color>
+    <color name="bg_color_FA">#FAFAFA</color>
+
+    <color name="king_color">#FA604F</color>
+    <color name="bg_item_grayd4">#D4D4D4</color>
+    <color name="bg_gray_add_CC">#CCCCCC</color>
+    <color name="vip_color_bug_fa">#FA604F</color>
+    <color name="vip_color_buy_f1">#F1794A</color>
+    <color name="pay_text_6F">#6F6F6F</color>
+    <color name="bg_gray_D3">#D3D3D3</color>
+    <color name="text_color_1E">#1E1E1E</color>
+    <color name="text_color_16">#161616</color>
+    <color name="bg_text_gray_65">#656565</color>
+    <color name="wx_green_color">#3FB344</color>
+    <color name="line_color">#EEEEEE</color>
+    <color name="text_color_22">#222222</color>
+    <color name="warning_color">#E0ACAE</color>
+    <color name="search_bg">#4EB4FE</color>
+    <color name="tab_color">#B2B2B2</color>
+    <color name="text_color_57">#575757</color>
+    <color name="text_color_green">#5DB863</color>
+    <color name="text_color_red">#F26B6B</color>
+    <color name="bg_color_yellow">#F49742</color>
+    <color name="bg_color_green">#6CAD7C</color>
+    <color name="text_color_7B">#7B7B7B</color>
+    <color name="bg_blue_cell">#E3F0FC</color>
+    <color name="text_color_0605">#060506</color>
+    <color name="bg_color_DF">#DCD5FF</color>
+    <color name="text_color_5A">#5451BA</color>
+    <color name="bg_color_E6">#EBC496</color>
+    <color name="mini_vip_yellow">#FF7432</color>
+    <color name="vip_blue">#2A5ABB</color>
+    <color name="vip_info_color">#4791FF</color>
+    <color name="vip_info_bg">#EEF6FF</color>
+    <color name="push_color_orange">#FF6D00</color>
+    <color name="search_text_color_gray">#AAAAAA</color>
+    <color name="bg_frame">#F2F1F6</color>
+    <color name="bg_gray_ea">#EAEAEA</color>
+    <color name="bg_green_E7FFE8">#E7FFE8</color>
+    <color name="text_color_green_30A94D">#30A94D</color>
+    <color name="bg_gray_F8">#F8F8F8</color>
+    <color name="bg_gray_7F">#7F7F7F</color>
+    <color name="text_color_AA">#AAAAAA</color>
+    <color name="bg_gray_F5F6FA">#F5F6FA</color>
+    <color name="bg_color_5A9FFF">#5A9FFF</color>
+    <color name="bg_color_3583FF">#3583FF</color>
+    <color name="bg_color_comment_F4F9FF">#F4F9FF</color>
+    <color name="bg_color_gray_F7F7F7">#F7F7F7</color>
+    <color name="bg_color_gray_F6F6F6">#F6F6F6</color>
+    <color name="bg_color_gray_F0">#F0F0F0</color>
+    <color name="bg_color_gray_F7">#F7F7F7</color>
+    <color name="bg_color_blue_FAFEFF">#F6FDFF</color>
+    <color name="bg_color_blue_E5F0FF">#E5F0FF</color>
+    <color name="bg_color_blue_EDF4FF">#EDF4FF</color>
+
+    <color name="bg_color_red_DE6654">#DE6654</color>
+    <color name="test_color">#FF2DA0FB</color>
+    <color name="bg_publish_title">#EDF4FE</color>
+    <color name="blue_the_bg_chat">#F8FDFF</color>
+    <color name="vip_plus_yellow_FFF3C2">#FFF3C2</color>
+    <color name="vip_plus_yellow_FFE1A2">#FFE1A2</color>
+    <color name="vip_plus_bug_66301B">#66301B</color>
+
+    <color name="data_plus_color">#89746C</color>
+    <color name="data_plus_buy">#A7A7A7</color>
+
+    <color name="mine_num_color">#FFCC7B</color>
+    <color name="mine_card_text">#FA6F4F</color>
+    <color name="blue_bg_4B96F3">#4B96F3</color>
+    <color name="green_bg_6CAD7C">#6CAD7C</color>
+    <color name="yellow_bg_D5AD83">#D5AD83</color>
+    <!-- QRCode scanner color end -->
+    <color name="alivc_color_rate_item">#4c000000</color>
+
+    <color name="blue_bg_418CFF">#418CFF</color>
+
+    <color name="orange">#F3AF7E</color>
+    <color name="orange_ffa34a">#ffa34a</color>
+    <color name="_ee634e">#ee634e</color>
+    <color name="_969696">#969696</color>
+    <color name="_2e82ea">#2e82ea</color>
+    <color name="shadow_default_color">#12000000</color>
+    <color name="shadow_card_default_color">#FFFEFEFE</color>
+</resources>

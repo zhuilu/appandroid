@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin"
+        android:id="@+id/tool_bar"
+        >
+        <RelativeLayout
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height"
+            android:id="@+id/bt_finish">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_marginTop="@dimen/dp_108"
+        android:layout_centerHorizontal="true"
+        android:text="请填写群名称"
+        android:textSize="@dimen/sp_17"
+        android:textColor="@color/text_color_1"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/namecontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:text="群名称需要审核，请认真说明群主题"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_14"
+        android:textColor="@color/colorPrimary"
+        />
+    <RelativeLayout
+        android:id="@+id/createRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@id/namecontent"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        >
+
+        <TextView
+            android:id="@+id/mcreatenameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color_search"
+            android:text="30"
+            />
+
+
+
+
+
+        <EditText
+            android:id="@+id/mcreatenameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="填写群名称"
+            android:textSize="@dimen/sp_14"
+            android:layout_toLeftOf="@id/mcreatenameTv"
+
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            />
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/bnextgoTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/createRl"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="@drawable/bg_next_shape"
+        android:text="下一步"
+        android:gravity="center"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/white"
+        />
+
+
+
+
+
+</RelativeLayout>

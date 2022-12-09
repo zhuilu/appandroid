@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:background="#fff">
+
+    <com.xinniu.android.qiqueqiao.widget.CircleImageView
+        android:id="@+id/item_talk_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/item_talk_iv">
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="11"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:maxLength="16"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/item_work"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="22"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_15"
+        android:src="@mipmap/ic_arraw_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

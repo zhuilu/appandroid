@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff6f6f6">
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/dp_38"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bfragment_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/bt_finish"
+            android:text="@string/all_city"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center"
+            android:drawableEnd="@mipmap/city_cornor"
+            android:drawablePadding="@dimen/dp_5"
+            android:textColor="@color/_333"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/bsearch_company"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/bfragment_city"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@drawable/shape_search_companybg"
+            >
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_17"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:src="@mipmap/search_gray"
+                android:layout_marginRight="@dimen/dp_8"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_company"
+                android:textColor="@color/text_color_search"
+                android:textSize="@dimen/sp_12"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/search_img"
+                />
+
+        </RelativeLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_0_2_5"
+    android:background="#ffececec"
+    android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/companySwipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar">
+        <com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="#fff6f6f6">
+        </com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+                <fj.mtsortbutton.lib.DynamicSoreView
+                    android:id="@+id/mCompanyDySoreView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_160"
+                    android:background="@color/white"
+                    app:SoreRadioSelect="@mipmap/lan_chose"
+                    app:SoreRadioUnselected="@mipmap/lan_chose_2"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    app:SoreNumber="10"
+                    app:SoreDistance="5"
+                    ></fj.mtsortbutton.lib.DynamicSoreView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff6f6f6"
+                    >
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mfragment_company_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_0_5"
+                        android:background="#fff6f6f6"
+                        >
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            >
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loaddown_more"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                />
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无公司信息"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_11"
+            android:layout_centerInParent="true"
+            android:drawableTop="@mipmap/perchthree"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_100"
+            />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_2_5"
+            android:layout_alignParentBottom="true"
+            android:background="#ffececec" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rlayout_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_14">
+
+            <TextView
+                android:id="@+id/tv_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_14"
+                android:text="最新"
+                android:textColor="@color/blue_bg_4B96F3"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:id="@+id/view_02"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_2"
+                android:layout_below="@+id/tv_new"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="#ff4791ff"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlayout_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_19">
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_14"
+                android:text="最热"
+                android:textColor="@color/_999"
+                android:textSize="@dimen/sp_13" />
+
+            <View
+                android:id="@+id/view_01"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_2"
+                android:layout_below="@+id/tv_hot"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"
+                android:background="#ff4791ff" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:background="#ffececec"
+        android:layout_below="@+id/llayout_top"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mrecyclerSth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@+id/view_line"
+        android:layout_marginBottom="@dimen/dp_10">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshIndexCell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mrecyclerSth"
+        >
+        <include layout="@layout/view_headview_refresh_two"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerIndexCell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            >
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loaddown_more"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                />
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/yperch_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/mrecyclerSth"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无相关服务信息"
+            android:drawableTop="@mipmap/perchthree"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_11"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

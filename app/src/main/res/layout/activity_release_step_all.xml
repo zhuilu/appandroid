@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/tool_bar_color">
+
+        <ImageView
+            android:id="@+id/bt_return"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/img_title_back" />
+
+        <TextView
+            android:id="@+id/tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/tool_bar_text_color"
+            android:textSize="@dimen/tool_bar_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/release_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:weightSum="11"
+        android:layout_below="@+id/tool_bar1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/offer_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="① 资源供求"
+            android:textColor="@color/_1c91ff"
+            android:textSize="13sp"/>
+
+
+        <View
+            android:id="@+id/need_tv_1"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="0.5"
+            android:background="@color/_1c91ff" />
+
+
+        <TextView
+            android:id="@+id/need_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="② 资源详情"
+
+            android:textSize="13sp"/>
+
+        <View
+            android:id="@+id/offer_tv_1"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="0.5"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="③ 合作方式"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_bg2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <com.xinniu.android.qiqueqiao.customs.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/release_step"
+        android:layout_above="@id/tvSubmit"/>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fragment_cotent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/release_step"-->
+        <!--android:layout_above="@id/tvSubmit"-->
+        <!--android:background="#ff0"/>-->
+        <!--android:background="#F8F8F8"/>-->
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+        <!--android:id="@+id/rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/release_step"-->
+        <!--android:layout_above="@id/tvSubmit"-->
+        <!--android:visibility="gone"-->
+        <!--android:padding="10dp"-->
+        <!--android:background="#F8F8F8"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/offer_rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/release_step"-->
+        <!--android:layout_above="@id/tvSubmit"-->
+        <!--android:background="#F8F8F8">-->
+        <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/leftListView"-->
+            <!--android:layout_width="@dimen/dp_94"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:divider="@android:color/transparent"-->
+            <!--android:dividerHeight="0dp"-->
+            <!--android:scrollbars="none"-->
+           <!--/>-->
+
+        <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/rightListView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:layout_toRightOf="@+id/leftListView"-->
+            <!--android:background="#F8F8F8"-->
+            <!--android:paddingRight="16dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+
+
+
+</RelativeLayout>

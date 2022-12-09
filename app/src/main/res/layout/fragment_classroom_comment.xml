@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mcoop_perchRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_323"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/detail_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="还没有人评论，快来抢沙发吧..."
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/bleavewordx_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/bg_leaveword_sp"
+                android:text="评论"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+            android:layout_below="@+id/rl"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/mscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView
+                android:id="@+id/mcoop_comment_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView>
+
+        </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

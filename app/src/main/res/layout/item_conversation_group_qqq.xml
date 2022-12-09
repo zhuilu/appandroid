@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xinniu.android.qiqueqiao.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_80"
+    android:id="@+id/swipe_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_80"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/delete_tv"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_80"
+            android:background="#FE4646"
+            android:text="删除"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/rc_item_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="#fff"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/head_Fl"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/head_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            />
+            <TextView
+                android:id="@+id/mtellnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_11"
+                android:background="@drawable/bg_group_dian"
+                android:layout_gravity="top|right"
+                android:text="···"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                />
+            <ImageView
+                android:id="@+id/mtelldian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_group_diandian"
+                android:layout_gravity="top|right"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_toRightOf="@id/head_Fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp">
+
+            <RelativeLayout
+                android:id="@+id/groupinfoRl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25">
+                <TextView
+                    android:id="@+id/mgroupNametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/text_color_1"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+                <TextView
+                    android:id="@+id/mgroupTimetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_23"
+                android:layout_below="@id/groupinfoRl"
+                >
+                <TextView
+                    android:id="@+id/newremind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/mremindcontenttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/newremind"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/_999"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</com.xinniu.android.qiqueqiao.widget.SwipeMenuLayout>

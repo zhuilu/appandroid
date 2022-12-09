@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/baccountpsw_finishImg"
+        >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/arrow_left_xx"
+        android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:layout_below="@+id/baccountpsw_finishImg"
+        android:background="#ffececec" />
+    <TextView
+        android:id="@+id/accountpsw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账号密码登录"
+        android:textColor="@color/text_color_1"
+        android:textSize="@dimen/sp_28"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_below="@id/view"
+        />
+
+    <com.xinniu.android.qiqueqiao.widget.ZpPhoneEditText
+        android:id="@+id/maccpsw_account_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accountpsw_title"
+        android:layout_marginTop="@dimen/dp_42"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="@null"
+        android:textSize="@dimen/sp_18"
+        android:hint="请输入手机号"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:digits="0123456789"
+        android:inputType="phone"
+        android:maxLength="11"
+        />
+    <View
+        android:id="@+id/view_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="#ffececec"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_below="@+id/maccpsw_account_et"/>
+    <EditText
+        android:id="@+id/maccpsw_psw_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_01"
+        android:layout_marginTop="@dimen/dp_26"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_36"
+        android:background="@null"
+        android:textSize="@dimen/sp_18"
+        android:hint="请输入登录密码"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:digits="1234567890qwertyuiopasdfghjklzxcvbnm"
+        android:singleLine="true"
+        />
+    <View
+        android:id="@+id/view_02"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="#ffececec"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_below="@+id/maccpsw_psw_et"/>
+
+
+    <TextView
+        android:id="@+id/baccpsw_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:text="登录"
+        android:textSize="@dimen/sp_17"
+        android:gravity="center"
+        android:background="@drawable/bg_login_rec"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_below="@id/view_02"
+        android:layout_marginTop="@dimen/dp_23"
+        />
+
+    <TextView
+        android:id="@+id/bgoToYzmLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baccpsw_login"
+        android:text="手机验证码登录"
+        android:textSize="@dimen/sp_14"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:textColor="@color/vip_info_color"
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

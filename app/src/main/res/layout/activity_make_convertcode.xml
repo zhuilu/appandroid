@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/chevron"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="使用兑换码"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_0_5"
+    android:background="@color/line_color"
+    android:layout_alignParentBottom="true"
+    />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_138"
+        android:layout_below="@id/tool_bar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20">
+
+            <com.xinniu.android.qiqueqiao.customs.ClearEditText
+                android:id="@+id/mcode_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textSize="@dimen/sp_14"
+                android:layout_centerVertical="true"
+                android:hint="请输入兑换码"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="@color/line_color"
+                android:layout_alignParentBottom="true"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+            <TextView
+                android:id="@+id/bsummit_data"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_login_rec"
+                android:text="立即兑换"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="@dimen/sp_15"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="什么是兑换码?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_14"
+        />
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info1"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="兑换码是由企鹊桥推出的16位数字密码，使用兑换码，可以换取相应的会员套餐。"
+        android:textColor="@color/_666"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginRight="@dimen/dp_20"
+        />
+    <TextView
+        android:id="@+id/info3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info2"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="兑换码的用途？"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_14"/>
+    <TextView
+        android:id="@+id/info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info3"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="兑换码可用于企业购买后分配给员工开通会员套餐，也可购买后赠与他人使用。"
+        android:textColor="@color/_666"
+        android:layout_marginRight="@dimen/dp_20"
+        android:textSize="@dimen/sp_14"/>
+    <TextView
+        android:id="@+id/info5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info4"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="如何购买兑换码？"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_14"/>
+    <TextView
+        android:id="@+id/info6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info5"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="当前仅限购买SVIP兑换码，价格为1998元/个，请联系服务经理仅限购买。"
+        android:textColor="@color/_666"
+        android:layout_marginRight="@dimen/dp_20"
+        android:textSize="@dimen/sp_14"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bgoTobuy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/info6"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/bg_make_convert"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_9"
+            android:layout_centerVertical="true"
+            android:text="兑换码 ¥1998"
+            android:textColor="@color/_666"
+            android:textSize="@dimen/sp_14"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:drawableRight="@mipmap/goto_snew"
+            android:text="立即购买"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/_666"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

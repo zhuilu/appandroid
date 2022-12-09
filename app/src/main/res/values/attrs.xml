@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeDragLayout">
+        <attr name="need_offset" format="float"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="click_to_close" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="TextViewBorder">
+        <attr name="borderColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+    <!--corner_color 边角颜色，
+        scanner_color 扫描线颜色
+        possible_result_color 扫描点颜色
+        frame_color 扫描框边线颜色
+        mask_color 模糊区域颜色
+        label_text  框上方提示
+    -->
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+    <attr name="item_count" format="integer"></attr>
+    <declare-styleable name="ViewPagerIndicate">
+        <attr name="item_count"/>
+    </declare-styleable>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--验证码的属性-->
+    <declare-styleable name="VerCodeEditText">
+        <attr name="figures" format="integer" />
+        <attr name="verCodeMargin" format="dimension" />
+        <attr name="bottomLineSelectedColor" format="reference" />
+        <attr name="bottomLineNormalColor" format="reference" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="selectedBackgroundColor" format="reference" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="iosTwo" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CalendarView">
+        <!--是否显示农历-->
+        <attr name="show_lunar" format="boolean" />
+        <!--是否显示上月和下月-->
+        <attr name="show_last_next" format="boolean" />
+        <!--是否显示节假日-->
+        <attr name="show_holiday" format="boolean" />
+        <!--是否显示节气-->
+        <attr name="show_term" format="boolean" />
+        <!--阳历的日期颜色-->
+        <attr name="solar_color" format="color" />
+        <!--阳历的日期尺寸-->
+        <attr name="solar_size" format="integer" />
+        <!--农历的日期颜色-->
+        <attr name="lunar_color" format="color" />
+        <!--农历的日期尺寸-->
+        <attr name="lunar_size" format="integer" />
+        <!--节日文字颜色-->
+        <attr name="holiday_color" format="color" />
+        <!--选中的日期文字颜色-->
+        <attr name="choose_color" format="color" />
+        <!--选中的日期背景-->
+        <attr name="day_bg" format="reference" />
+        <!--单选时切换月份，是否选中上次的日期-->
+        <attr name="switch_choose" format="boolean" />
+        <!--设置单选、多选-->
+        <attr name="choose_type" format="enum">
+            <enum name="single" value="0" />
+            <enum name="multi" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="WeekView">
+        <!--周的表示形式（x.x.x.x.x.x.x）-->
+        <attr name="week_str" format="string" />
+        <!--周的文字颜色-->
+        <attr name="week_color" format="color" />
+        <!--周的文字大小-->
+        <attr name="week_size" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="YBRenPageIndicator">
+        <!--圆点半径-->
+        <attr name="icon_radius" format="dimension" />
+        <!--相邻俩个圆的距离-->
+        <attr name="icon_distance" format="dimension" />
+        <!--圆点未选中颜色-->
+        <attr name="icon_color_normal" format="color" />
+        <!--圆点已选中颜色-->
+        <attr name="icon_color_selected" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color"/>
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ShadowViewCard">
+        <!--圆角度-->
+        <attr name="shadowRound" format="dimension" />
+        <!--阴影的高度-->
+        <attr name="shadowLeftHeight" format="dimension" />
+        <attr name="shadowTopHeight" format="dimension" />
+        <attr name="shadowRightHeight" format="dimension" />
+        <attr name="shadowBottomHeight" format="dimension" />
+        <!--上方阴影的偏离度-->
+        <attr name="shadowOffsetY" format="dimension" />
+        <attr name="shadowOffsetX" format="dimension" />
+        <!--阴影颜色-->
+        <attr name="shadowCardColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <!--阴影颜色模糊度，越大越模糊-->
+        <attr name="shadowRadius" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="NiceImageView">
+    <attr name="is_circle" format="boolean"/>
+    <attr name="is_cover_src" format="boolean"/>
+    <attr name="corner_radius" format="dimension"/>
+    <attr name="corner_top_left_radius" format="dimension"/>
+    <attr name="corner_top_right_radius" format="dimension"/>
+    <attr name="corner_bottom_left_radius" format="dimension"/>
+    <attr name="corner_bottom_right_radius" format="dimension"/>
+    <attr name="border_width_two" format="dimension"/>
+    <attr name="border_color_two" format="color"/>
+    <attr name="inner_border_width" format="dimension"/>
+    <attr name="inner_border_color" format="color"/>
+    <attr name="mask_color_two" format="color"/>
+
+</declare-styleable>
+</resources>

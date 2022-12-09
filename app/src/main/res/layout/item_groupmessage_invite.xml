@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_75" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/member_circleImg"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_1"
+        android:src="@mipmap/group_invite_img"
+        />
+    <TextView
+        android:id="@+id/member_nametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/member_circleImg"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/colorPrimary"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxEms="5"
+        android:text="邀请成员"
+        />
+
+
+
+
+</RelativeLayout>

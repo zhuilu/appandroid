@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_marginTop="@dimen/top_margin"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/bt_finish"
+            android:layout_width="@dimen/tool_bar_height"
+            android:layout_height="@dimen/tool_bar_height">
+            <ImageView
+                android:id="@+id/bt_finishImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/chevron"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/bt_finishTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="取消"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_color_1"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/medit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/text_color_1"
+            />
+
+        <TextView
+            android:id="@+id/mright_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/sp_14"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mapply_forRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar"
+        android:visibility="gone"
+        android:background="@color/white"
+        >
+        <EditText
+            android:id="@+id/mapply_fored"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textSize="@dimen/sp_14"
+            android:layout_margin="@dimen/dp_20"
+            android:hint="说说你的加群理由"
+            android:textColor="@color/text_color_1"
+            android:maxEms="30"
+            android:gravity="top"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mgroup_nameRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:visibility="gone"
+        android:background="@color/bg_gray">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_8"
+        >
+        <com.xinniu.android.qiqueqiao.customs.ClearEditText
+            android:id="@+id/mgroup_nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_18"
+            android:maxLines="1"
+            android:hint="请输入群组名称"
+            android:layout_marginRight="@dimen/dp_10"
+            />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mgroup_introRl"
+        android:layout_below="@id/tool_bar"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <EditText
+            android:id="@+id/mgroup_introEd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:hint="群介绍不能少于15个字或者多于500个字"
+            android:background="@null"
+            android:gravity="top"
+            />
+
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mgroup_announcementRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/tool_bar"
+        >
+        <EditText
+            android:id="@+id/mgroup_announcementEd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textColor="@color/text_color_1"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:gravity="top"
+            android:textSize="@dimen/sp_17"
+            android:hint="请输入群组公告"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llayout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlayout_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_77">
+
+        <FrameLayout
+            android:id="@+id/mitem_connect_fl"
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_46"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_19">
+
+            <com.xinniu.android.qiqueqiao.widget.CircleImageView
+                android:id="@+id/mitem_connect_img"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44" />
+
+            <ImageView
+                android:id="@+id/mitem_is_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:src="@mipmap/head_is_v32_32"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/llayout_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:visibility="gone"
+            android:orientation="horizontal">
+        <com.xinniu.android.qiqueqiao.utils.RoundImageView
+            android:id="@+id/img_01"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="@dimen/dp_10"/>
+            <com.xinniu.android.qiqueqiao.utils.RoundImageView
+                android:id="@+id/img_02"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="@dimen/dp_10"/>
+            <com.xinniu.android.qiqueqiao.utils.RoundImageView
+                android:id="@+id/img_03"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/mitem_connect_nametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_21"
+            android:includeFontPadding="false"
+            android:layout_toRightOf="@id/mitem_connect_fl"
+            android:text="客服经理"
+            android:textColor="@color/_333"
+            android:textSize="@dimen/sp_14"
+
+            />
+
+        <TextView
+            android:id="@+id/mitem_connect_positiontv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mitem_connect_fl"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_alignParentBottom="true"
+            android:includeFontPadding="false"
+            android:text="企鹊桥客服经理"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/img_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_20"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_19"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="已消耗沟通权限 "
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_11"
+                />
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="1"
+                android:textColor="#FF4B96F3"
+                android:textSize="@dimen/sp_11"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text=" 次"
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_11"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_0_2_5"
+    android:layout_marginLeft="@dimen/dp_19"
+    android:layout_marginRight="@dimen/dp_19"
+    android:background="#FFEEEEEE"/>
+
+
+</LinearLayout>

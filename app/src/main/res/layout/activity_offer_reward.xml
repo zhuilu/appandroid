@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_left_and_right"
+        android:paddingRight="@dimen/padding_left_and_right">
+
+        <RelativeLayout
+            android:id="@+id/bt_return"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/tool_bar_head_long"
+                android:layout_height="@dimen/tool_bar_head_long"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/chevron" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布悬赏求助"
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/tool_bar_text_size" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_2_5"
+        android:layout_below="@+id/tool_bar"
+        android:background="#FFE5E5E5" />
+
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_19"
+        android:layout_marginTop="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_19"
+        android:layout_marginBottom="@dimen/dp_31"
+        android:background="@drawable/bg_tran_pay"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_submit"
+        android:layout_below="@+id/view"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_19"
+                android:background="@null"
+                android:hint="请输入悬赏标题"
+                android:maxLength="30"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textColor="@color/_333"
+                android:textColorHint="#ff999999"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_2_5"
+                android:layout_below="@+id/edit_title"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_9"
+                android:layout_marginRight="@dimen/dp_19"
+                android:background="#FFE5E5E5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_18"
+                android:text="选择悬赏类型"
+
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xinniu.android.qiqueqiao.customs.NestedRecyclerView
+                    android:id="@+id/moffer_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_19"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginRight="@dimen/dp_9">
+
+
+                </com.xinniu.android.qiqueqiao.customs.NestedRecyclerView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_27"
+                android:text="求助说明："
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/yofferEtRl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_155"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_19">
+
+                <TextView
+                    android:id="@+id/mpublish_offeret"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_public_edit_bg"
+                    android:gravity="left|top"
+                    android:hint="详情描述~"
+                    android:lineSpacingExtra="@dimen/dp_7"
+                    android:paddingLeft="@dimen/dp_13"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_13"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:textColor="@color/_333"
+                    android:textColorHint="@color/_999"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yofferEtRl"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_30"
+                android:text="悬赏金额"
+                android:textColor="@color/_333"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginBottom="@dimen/dp_53">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/_333"
+                    android:textSize="@dimen/sp_15"
+                    android:includeFontPadding="false"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_19"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_154"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_2">
+                    <EditText
+                        android:id="@+id/tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入悬赏金额"
+                        android:textColorHint="@color/color_aaaaaa"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:textColor="@color/_333"
+                        android:inputType="number"
+                        android:textSize="@dimen/sp_14"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_2_5"
+                        android:background="#FFE5E5E5"
+                        android:layout_below="@+id/tv_price"
+                        android:layout_marginTop="@dimen/dp_7"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:textColor="@color/_333"
+                    android:textSize="@dimen/sp_15"
+                    android:paddingBottom="@dimen/dp_2"
+                    android:includeFontPadding="false"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_19"
+                    android:layout_marginLeft="@dimen/dp_2">
+                    <EditText
+                        android:id="@+id/tv_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="份数"
+                        android:textColorHint="@color/color_aaaaaa"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:textColor="@color/_333"
+                        android:inputType="number"
+                        android:textSize="@dimen/sp_14"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0_2_5"
+                        android:background="#FFE5E5E5"
+                        android:layout_below="@+id/tv_number"
+                        android:layout_marginTop="@dimen/dp_7"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
