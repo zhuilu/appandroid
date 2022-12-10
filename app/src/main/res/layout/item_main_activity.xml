@@ -43,7 +43,7 @@
                 android:id="@+id/mindex_act_onetitletv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/mindex_actone_img"
+                android:layout_below="@+id/mindex_actone_img"
                 android:layout_marginLeft="@dimen/dp_9"
                 android:layout_marginTop="@dimen/dp_7"
                 android:layout_marginRight="@dimen/dp_9"
@@ -59,7 +59,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/mindex_act_onetitletv"
+                android:layout_below="@+id/mindex_act_onetitletv"
                 android:layout_marginLeft="@dimen/dp_9"
                 android:layout_marginTop="@dimen/dp_13"
                 android:layout_marginRight="@dimen/dp_8"

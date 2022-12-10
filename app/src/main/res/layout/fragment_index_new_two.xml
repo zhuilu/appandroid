@@ -35,7 +35,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/qrcode_white" />
+                app:srcCompat="@mipmap/qrcode_white" />
 
             <RelativeLayout
                 android:id="@+id/sreach_content_ll"
@@ -53,7 +53,7 @@
                     android:layout_height="17dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_8"
-                    android:src="@mipmap/search_gray"
+                    app:srcCompat="@mipmap/search_gray"
 
                     />
 
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_34"
                     android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_toRightOf="@id/glassImg"
+                    android:layout_toRightOf="@+id/glassImg"
                     android:background="@null"
                     android:editable="false"
                     android:ellipsize="end"

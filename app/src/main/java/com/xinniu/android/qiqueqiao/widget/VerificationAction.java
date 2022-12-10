@@ -2,6 +2,8 @@ package com.xinniu.android.qiqueqiao.widget;
 
 //import android.support.annotation.ColorRes;
 
+import androidx.annotation.ColorRes;
+
 /**
  * 填写验证码支持的Action
  * Created by yj on 2017/5/11.

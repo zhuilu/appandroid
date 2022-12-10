@@ -1,7 +1,10 @@
 package com.xinniu.android.qiqueqiao.widget;
 
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.xinniu.android.qiqueqiao.utils.Logger;
 

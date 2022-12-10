@@ -1,7 +1,7 @@
 package com.xinniu.android.qiqueqiao.widget;
 
 import android.content.Context;
-//import android.support.v7.widget.AppCompatEditText;
+//import AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;

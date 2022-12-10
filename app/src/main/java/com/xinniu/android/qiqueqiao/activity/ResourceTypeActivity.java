@@ -1,11 +1,8 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,19 +11,17 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.OtherTagAdapter;
 import com.xinniu.android.qiqueqiao.adapter.ResourceTypeAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.bean.SeclectCateBean;
-import com.xinniu.android.qiqueqiao.bean.SelectCategory;
 import com.xinniu.android.qiqueqiao.customs.NestedRecyclerView;
 import com.xinniu.android.qiqueqiao.customs.label.FlowLayoutManager;
-import com.xinniu.android.qiqueqiao.customs.label.TypeTagAdapter;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.request.callback.AddTagCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetSelectCateCallback;
-import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.utils.wxpay.NoReuseRecyclerView;
 
@@ -34,8 +29,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by yuchance on 2018/4/12.
@@ -302,7 +299,7 @@ public class ResourceTypeActivity extends BaseActivity {
 //            }
 //        });
     }
-    public static void showSoftInputFromWindow(Activity activity, EditText editText) {
+    public static void showSoftInputFromWindow(AppCompatActivity activity, EditText editText) {
         editText.setFocusable(true);
         editText.setFocusableInTouchMode(true);
         editText.requestFocus();

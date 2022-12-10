@@ -3,12 +3,13 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,13 +18,9 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.CellTagsAdapter;
-import com.xinniu.android.qiqueqiao.adapter.CellTagxAdapter;
-import com.xinniu.android.qiqueqiao.adapter.IndexNewAdapter;
 import com.xinniu.android.qiqueqiao.adapter.IndexServiceAdapter;
 import com.xinniu.android.qiqueqiao.adapter.ServiceTagsAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.CellTagsBean;
 import com.xinniu.android.qiqueqiao.bean.IndexServiceBean;
 import com.xinniu.android.qiqueqiao.bean.ServiceCategoryAndTag;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
@@ -35,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ServiceCategoryListActivity extends BaseActivity {

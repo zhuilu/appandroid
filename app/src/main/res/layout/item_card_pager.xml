@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/dp_16"
-            android:src="@mipmap/vip_mini"
+            app:srcCompat="@mipmap/vip_mini"
             />
 
 

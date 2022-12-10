@@ -2,11 +2,13 @@ package com.xinniu.android.qiqueqiao.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.litao.android.lib.BaseGalleryActivity;
 import com.litao.android.lib.Configuration;

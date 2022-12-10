@@ -3,9 +3,6 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -30,8 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * 群组成员
@@ -147,7 +149,7 @@ public class GroupMemberManageActivity extends BaseActivity {
                                         goMemberMange(userId, identity, 2, Integer.parseInt(code), mobile);
                                     }
                                 });
-                                dialog.show(getFragmentManager(), "group");
+                                dialog.show(getSupportFragmentManager(), "group");
                                 break;
                             case BANNER1:
                                 goMemberMange(userId, identity, 3, 0, "");

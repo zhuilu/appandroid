@@ -1,22 +1,21 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ServiceDetailActivity;
-import com.xinniu.android.qiqueqiao.bean.IndexServiceBean;
 import com.xinniu.android.qiqueqiao.bean.MainBean;
 import com.xinniu.android.qiqueqiao.customs.NiceImageView;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/3/30.
@@ -25,9 +24,9 @@ import java.util.List;
 public class MainServiceAdapter extends BaseQuickAdapter<MainBean.ServiceProviderBean, BaseViewHolder> {
 
 
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainServiceAdapter(Activity context, int layoutResId, @Nullable List<MainBean.ServiceProviderBean> data) {
+    public MainServiceAdapter(AppCompatActivity context, int layoutResId, @Nullable List<MainBean.ServiceProviderBean> data) {
         super(layoutResId, data);
         this.context = context;
 

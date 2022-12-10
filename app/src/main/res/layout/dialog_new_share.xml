@@ -39,7 +39,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_friend" />
+                    app:srcCompat="@mipmap/share_friend" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_weixin" />
+                    app:srcCompat="@mipmap/share_weixin" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_circle" />
+                    app:srcCompat="@mipmap/share_circle" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_qq" />
+                    app:srcCompat="@mipmap/share_qq" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_dd" />
+                    app:srcCompat="@mipmap/share_dd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -173,7 +173,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/alc_sicon" />
+                    app:srcCompat="@mipmap/alc_sicon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/copy_url" />
+                    app:srcCompat="@mipmap/copy_url" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +221,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/collect_icon" />
+                    app:srcCompat="@mipmap/collect_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -243,7 +243,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/report_icon" />
+                    app:srcCompat="@mipmap/report_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -266,7 +266,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/close_message" />
+                    app:srcCompat="@mipmap/close_message" />
 
                 <TextView
                     android:id="@+id/tv_message"
@@ -289,7 +289,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/top_icon" />
+                    app:srcCompat="@mipmap/top_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -312,7 +312,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/editx_icon" />
+                    app:srcCompat="@mipmap/editx_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -334,7 +334,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/down_reicon" />
+                    app:srcCompat="@mipmap/down_reicon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -356,7 +356,7 @@
                     android:layout_width="@dimen/dp_45"
                     android:layout_height="@dimen/dp_45"
                     android:layout_gravity="center"
-                    android:src="@mipmap/delete_icon" />
+                    app:srcCompat="@mipmap/delete_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -380,6 +380,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp_18"
         android:layout_marginBottom="@dimen/dp_18"
-        android:src="@mipmap/cacel_x_icon" />
+        app:srcCompat="@mipmap/cacel_x_icon" />
 
 </LinearLayout>

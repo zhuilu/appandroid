@@ -9,19 +9,14 @@ buildscript {
         maven {
             url 'https://maven.aliyun.com/repository/public/'
         }
-        //融云
-        maven { url "https://maven.rongcloud.cn/repository/maven-releases/" }
-        jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.1'
     }
 
 }
@@ -37,13 +32,7 @@ allprojects {
         }
         //融云
         maven { url "https://maven.rongcloud.cn/repository/maven-releases/" }
-        mavenCentral()
-        jcenter()
         maven { url 'https://jitpack.io' }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
 
     }
 

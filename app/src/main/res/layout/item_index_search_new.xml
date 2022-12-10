@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:background="@color/white">
 
@@ -46,7 +47,7 @@
                         android:id="@+id/index_new_isv"
                         android:layout_width="10dp"
                         android:layout_height="10dp"
-                        android:src="@mipmap/head_is_v20_20"
+                        app:srcCompat="@mipmap/head_is_v20_20"
                         android:layout_gravity="bottom|right"
                         android:visibility="gone"
                         />
@@ -60,7 +61,7 @@
                     android:id="@+id/item_index_nameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/item_index_recycler_Fl"
+                    android:layout_toRightOf="@+id/item_index_recycler_Fl"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:text="张飞"
@@ -72,7 +73,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/item_index_nameTv"
+                    android:layout_toRightOf="@+id/item_index_nameTv"
                     android:layout_centerVertical="true"
                     android:orientation="horizontal"
                     >
@@ -95,16 +96,16 @@
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/dp_5"
-                        android:layout_toRightOf="@id/item_index_position"
+                        android:layout_toRightOf="@+id/item_index_position"
                         android:scaleType="matrix"
-                        android:src="@mipmap/vip_new_icon_company"
+                        app:srcCompat="@mipmap/vip_new_icon_company"
                         android:visibility="gone" />
                     <ImageView
                         android:id="@+id/item_index_new_kingimg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/item_index_position"
+                        android:layout_toRightOf="@+id/item_index_position"
                         android:layout_marginLeft="@dimen/dp_5"
                         android:layout_marginRight="@dimen/dp_10"
                         android:layout_gravity="center"
@@ -117,9 +118,9 @@
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/dp_5"
-                        android:layout_toRightOf="@id/item_index_new_kingimg"
+                        android:layout_toRightOf="@+id/item_index_new_kingimg"
                         android:scaleType="matrix"
-                        android:src="@mipmap/re_list"
+                        app:srcCompat="@mipmap/re_list"
                         android:visibility="gone" />
                 </LinearLayout>
             </RelativeLayout>
@@ -163,7 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/offer_search"
+                        app:srcCompat="@mipmap/offer_search"
                         />
                     <com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout
                         android:id="@+id/coop_moffer_label"
@@ -171,7 +172,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="@dimen/dp_5"
                         android:layout_marginRight="@dimen/dp_5"
-                        android:layout_toRightOf="@id/offerImg"
+                        android:layout_toRightOf="@+id/offerImg"
 
                         />
 
@@ -193,7 +194,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
 
-                        android:src="@mipmap/need_search"/>
+                        app:srcCompat="@mipmap/need_search"/>
 
                     <com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout
                         android:id="@+id/coop_mneed_label"
@@ -201,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_5"
                         android:layout_marginRight="@dimen/dp_5"
-                        android:layout_toRightOf="@id/needImg"
+                        android:layout_toRightOf="@+id/needImg"
                         />
 
                 </RelativeLayout>
@@ -291,9 +292,9 @@
                     android:id="@+id/item_index_recycler_answer_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/tell_cion"
+                    app:srcCompat="@mipmap/tell_cion"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/item_index_recycler_answer"
+                    android:layout_toLeftOf="@+id/item_index_recycler_answer"
                     android:layout_marginLeft="5dp"
                     android:scaleType="centerCrop"
                     />
@@ -303,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:text="123"
                     android:textSize="@dimen/sp_11"
-                    android:layout_toLeftOf="@id/item_index_recycler_answer_icon"
+                    android:layout_toLeftOf="@+id/item_index_recycler_answer_icon"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_14"
                     android:layout_marginLeft="@dimen/dp_6"
@@ -312,10 +313,10 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/eye_icon"
+                    app:srcCompat="@mipmap/eye_icon"
                     android:layout_centerVertical="true"
                     android:scaleType="centerCrop"
-                    android:layout_toLeftOf="@id/item_index_recycler_see"
+                    android:layout_toLeftOf="@+id/item_index_recycler_see"
                     />
 
             </RelativeLayout>

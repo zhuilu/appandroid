@@ -3,10 +3,11 @@ package com.xinniu.android.qiqueqiao.widget;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.UserFollowBean;

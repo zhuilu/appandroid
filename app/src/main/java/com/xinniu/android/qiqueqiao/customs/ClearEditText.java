@@ -3,7 +3,7 @@ package com.xinniu.android.qiqueqiao.customs;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-//import android.support.v7.widget.AppCompatEditText;
+//import AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;

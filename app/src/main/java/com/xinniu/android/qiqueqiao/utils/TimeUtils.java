@@ -1,17 +1,15 @@
 package com.xinniu.android.qiqueqiao.utils;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
-import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import io.rong.imkit.RongContext;
+
 
 /**
  * Created by lzq on 2017/12/18.
@@ -145,9 +143,9 @@ public class TimeUtils {
             if (targetDay == nowDay) {
                 result = fromatDate(timeMillis, "HH:mm");
             } else if (targetDay + 1 == nowDay) {
-                Context context = RongContext.getInstance().getBaseContext();
-                String formatString = context.getResources().getString(io.rong.imkit.R.string.rc_yesterday_format);
-                result = String.format(formatString, new Object[]{fromatDate(timeMillis, "HH:mm")});
+//                Context context = RongContext.getInstance().getBaseContext();
+//                String formatString = context.getResources().getString(io.rong.imkit.R.string.rc_yesterday_format);
+//                result = String.format(formatString, new Object[]{fromatDate(timeMillis, "HH:mm")});
             } else {
                 result = fromatDate(timeMillis, "yyyy-MM-dd");
             }

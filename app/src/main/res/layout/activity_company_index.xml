@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
 
 
         </RelativeLayout>
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_30"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/bfragment_city"
+            android:layout_toRightOf="@+id/bfragment_city"
             android:layout_marginLeft="@dimen/dp_8"
             android:layout_marginRight="@dimen/dp_14"
             android:background="@drawable/shape_search_companybg"
@@ -55,7 +55,7 @@
                 android:layout_height="@dimen/dp_17"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_8"
-                android:src="@mipmap/search_gray"
+                app:srcCompat="@mipmap/search_gray"
                 android:layout_marginRight="@dimen/dp_8"
                 />
 
@@ -66,7 +66,7 @@
                 android:textColor="@color/text_color_search"
                 android:textSize="@dimen/sp_12"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/search_img"
+                android:layout_toRightOf="@+id/search_img"
                 />
 
         </RelativeLayout>
@@ -81,7 +81,7 @@
         android:id="@+id/companySwipe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/title_bar">
+        android:layout_below="@+id/title_bar">
         <com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_50"
@@ -151,7 +151,7 @@
         android:id="@+id/yperch_Rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/title_bar"
+        android:layout_below="@+id/title_bar"
         android:background="@color/white"
         android:visibility="gone"
         >

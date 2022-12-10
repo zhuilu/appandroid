@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/white">
 
@@ -18,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 />
 
 
@@ -56,7 +57,7 @@
                 android:background="@drawable/selector_connection"
                 android:button="@null"
                 android:textSize="@dimen/sp_15"
-                android:layout_toRightOf="@id/b_recommendtv"
+                android:layout_toRightOf="@+id/b_recommendtv"
                 android:gravity="center"
                 android:layout_marginRight="@dimen/dp_20"
                 android:textColor="@drawable/selector_connect_type"
@@ -72,7 +73,7 @@
         android:id="@+id/mconnect_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/connect_Rl"
+        android:layout_below="@+id/connect_Rl"
         ></com.xinniu.android.qiqueqiao.customs.ViewPager>
 
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_comment_infoRl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|bottom"
-                android:src="@mipmap/head_is_v20_20"
+                app:srcCompat="@mipmap/head_is_v20_20"
                 android:visibility="gone" />
 
         </FrameLayout>
@@ -62,8 +63,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/item_comment_timetv"
-            android:layout_toRightOf="@id/item_comment_headFl"
+            android:layout_toLeftOf="@+id/item_comment_timetv"
+            android:layout_toRightOf="@+id/item_comment_headFl"
             android:background="@drawable/selector_coop_reply_control">
 
             <LinearLayout
@@ -96,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
-                android:layout_toRightOf="@id/llayout_name">
+                android:layout_toRightOf="@+id/llayout_name">
 
 
                 <TextView
@@ -118,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_5"
-                    android:layout_toRightOf="@id/item_comment_positiontv"
+                    android:layout_toRightOf="@+id/item_comment_positiontv"
                     android:background="@drawable/bg_coop_comment"
                     android:gravity="left"
                     android:singleLine="true"
@@ -135,7 +136,7 @@
         android:id="@+id/item_commenttv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/goRl"
+        android:layout_below="@+id/goRl"
         android:layout_marginLeft="@dimen/dp_53"
         android:layout_marginRight="@dimen/dp_15"
         android:layout_marginBottom="@dimen/dp_11"

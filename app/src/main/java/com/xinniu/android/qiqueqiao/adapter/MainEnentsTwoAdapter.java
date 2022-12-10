@@ -1,10 +1,11 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -12,13 +13,13 @@ import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.bean.ActivityListBean;
-import com.xinniu.android.qiqueqiao.bean.MainBean;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 
 import java.util.List;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/3/30.
@@ -27,9 +28,9 @@ import java.util.List;
 public class MainEnentsTwoAdapter extends BaseQuickAdapter<ActivityListBean.ListBean, BaseViewHolder> {
 
 
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainEnentsTwoAdapter(Activity context, int layoutResId, @Nullable List<ActivityListBean.ListBean> data) {
+    public MainEnentsTwoAdapter(AppCompatActivity context, int layoutResId, @Nullable List<ActivityListBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
 

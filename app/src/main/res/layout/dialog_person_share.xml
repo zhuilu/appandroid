@@ -40,7 +40,7 @@
                     android:layout_width="@dimen/dp_43"
                     android:layout_height="@dimen/dp_43"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_friend" />
+                    app:srcCompat="@mipmap/share_friend" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                     android:layout_width="@dimen/dp_43"
                     android:layout_height="@dimen/dp_43"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_weixin" />
+                    app:srcCompat="@mipmap/share_weixin" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                     android:layout_width="@dimen/dp_43"
                     android:layout_height="@dimen/dp_43"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_circle" />
+                    app:srcCompat="@mipmap/share_circle" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
                     android:layout_width="@dimen/dp_43"
                     android:layout_height="@dimen/dp_43"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_qq" />
+                    app:srcCompat="@mipmap/share_qq" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
                     android:layout_width="@dimen/dp_43"
                     android:layout_height="@dimen/dp_43"
                     android:layout_gravity="center"
-                    android:src="@mipmap/share_dd" />
+                    app:srcCompat="@mipmap/share_dd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -177,7 +177,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/report_icon" />
+                app:srcCompat="@mipmap/report_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -202,7 +202,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/delete_icon" />
+                app:srcCompat="@mipmap/delete_icon" />
 
             <TextView
                 android:layout_width="wrap_content"

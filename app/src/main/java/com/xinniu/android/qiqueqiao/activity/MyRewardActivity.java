@@ -3,21 +3,17 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 //import android.support.v4.app.FragmentManager;
 //import android.support.v4.app.FragmentPagerAdapter;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;
 import com.xinniu.android.qiqueqiao.customs.ViewPager;
-import com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment;
-import com.xinniu.android.qiqueqiao.fragment.push.ServicePushFragment;
 import com.xinniu.android.qiqueqiao.fragment.reward.PublicRewardFragment;
 import com.xinniu.android.qiqueqiao.fragment.reward.TakeRewardFragment;
 
@@ -27,8 +23,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODE;
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETWO;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 
 /**

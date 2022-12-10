@@ -1,17 +1,15 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
-import android.widget.ImageView;
+
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.CoopCommunicationActivity;
-import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
-import com.xinniu.android.qiqueqiao.bean.AddGroupClassifyBean;
 import com.xinniu.android.qiqueqiao.bean.CoopDetailBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;

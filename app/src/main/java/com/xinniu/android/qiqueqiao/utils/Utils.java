@@ -2,13 +2,11 @@ package com.xinniu.android.qiqueqiao.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Application;
 import android.content.ActivityNotFoundException;
 import android.content.ClipboardManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -16,18 +14,19 @@ import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.xinniu.android.qiqueqiao.activity.AddPictruActivity;
-import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipTwoDialog;
-import com.xinniu.android.qiqueqiao.dialog.AlertDialogUtils;
 
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 import java.util.List;
+
+//import android.support.annotation.NonNull;
 
 /**
  * Created by lzq on 2017/12/16.
@@ -174,7 +173,7 @@ public class Utils {
 
     private static void setTopActivityWeakRef(Activity activity) {
         if (sTopActivityWeakRef == null || !activity.equals(sTopActivityWeakRef.get())) {
-            sTopActivityWeakRef = new WeakReference<>(activity);
+            sTopActivityWeakRef = new WeakReference<Activity>(activity);
         }
     }
 
@@ -215,7 +214,7 @@ public class Utils {
 
                     }
                 })
-                .show((Activity) context);
+                .show((AppCompatActivity) context);
 
     }
 

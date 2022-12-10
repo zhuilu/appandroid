@@ -10,7 +10,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-//import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -26,10 +25,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.bean.UploadBean;
-import com.xinniu.android.qiqueqiao.customs.qldialog.QLBottomDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
@@ -56,6 +57,8 @@ import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 import top.zibin.luban.OnRenameListener;
+
+//import android.support.annotation.NonNull;
 
 public class PayDespositAfterActivity extends BaseActivity implements EasyPermissions.PermissionCallbacks {
     @BindView(R.id.tv_price)
@@ -102,7 +105,7 @@ public class PayDespositAfterActivity extends BaseActivity implements EasyPermis
     private String imgUrl = "";
 
 
-    public static void startSimpleEidtForResult(Activity context, int id, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int id, int requestCode) {
         Intent intent = new Intent(context, PayDespositAfterActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);

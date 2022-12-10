@@ -1,10 +1,13 @@
 package com.xinniu.android.qiqueqiao.widget;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.xinniu.android.qiqueqiao.R;
 
@@ -12,7 +15,7 @@ import com.xinniu.android.qiqueqiao.R;
  * Created by lzq on 2018/2/1.
  */
 
-public class QQQCheckBox extends android.support.v7.widget.AppCompatImageView{
+public class QQQCheckBox extends AppCompatImageView {
     private boolean isCheck;
     public QQQCheckBox(Context context) {
         super(context);

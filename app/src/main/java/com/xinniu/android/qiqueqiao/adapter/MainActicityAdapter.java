@@ -1,21 +1,18 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.umeng.analytics.MobclickAgent;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.IndexCellActivity;
 import com.xinniu.android.qiqueqiao.bean.ActivityColumnListBean;
-import com.xinniu.android.qiqueqiao.bean.MainBean;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by yuchance on 2018/12/27.
@@ -23,10 +20,10 @@ import java.util.List;
 
 public class MainActicityAdapter extends BaseQuickAdapter<ActivityColumnListBean.ListBean, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
     private List<ActivityColumnListBean.ListBean> mData = new ArrayList<>();
 
-    public MainActicityAdapter(Activity context, int layoutResId, @Nullable List<ActivityColumnListBean.ListBean> data) {
+    public MainActicityAdapter(AppCompatActivity context, int layoutResId, @Nullable List<ActivityColumnListBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
         this.mData = data;

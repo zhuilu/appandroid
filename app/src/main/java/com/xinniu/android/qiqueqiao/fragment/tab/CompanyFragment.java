@@ -2,15 +2,17 @@ package com.xinniu.android.qiqueqiao.fragment.tab;
 
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -249,7 +251,7 @@ public class CompanyFragment extends LazyBaseFragment implements IDynamicSore {
 
 
     private void showCity(final List<CityV2Bean> leftList) {
-        cityNewWindow = new CityNewWindow(getActivity(), leftList, leftSelectCity);
+        cityNewWindow = new CityNewWindow((AppCompatActivity) getActivity(), leftList, leftSelectCity);
         if (cityIdx != 0) {
             for (int i = 0; i < leftList.get(leftSelectCity).getZlist().size(); i++) {
                 if (leftList.get(leftSelectCity).getZlist().get(i).getId() == cityIdx) {

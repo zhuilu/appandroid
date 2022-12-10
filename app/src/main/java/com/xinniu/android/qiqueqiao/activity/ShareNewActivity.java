@@ -5,11 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.v4.app.ActivityCompat;
-//import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,23 +19,22 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.CallBackFunction;
 import com.google.gson.Gson;
-import com.sina.weibo.sdk.web.client.DefaultWebViewClient;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.request.RetrofitHelper;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ShareUtils;
-import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.WebViewScreenShotUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

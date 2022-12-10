@@ -15,7 +15,9 @@ import com.xinniu.android.qiqueqiao.R;
 
 import static android.graphics.Paint.ANTI_ALIAS_FLAG;
 
-public class PayPsdInputView extends  android.support.v7.widget.AppCompatEditText {
+import androidx.appcompat.widget.AppCompatEditText;
+
+public class PayPsdInputView extends AppCompatEditText {
 
     private Context mContext;
     /**

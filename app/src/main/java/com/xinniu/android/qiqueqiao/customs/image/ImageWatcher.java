@@ -14,7 +14,7 @@ import android.os.Handler;
 import android.os.Message;
 //import android.support.annotation.NonNull;
 //import android.support.v4.view.PagerAdapter;
-//import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -32,6 +32,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.xinniu.android.qiqueqiao.R;
 
@@ -1337,7 +1341,7 @@ public class ImageWatcher extends FrameLayout implements GestureDetector.OnGestu
     }
 
     /**
-     * 当界面处于图片查看状态需要在Activity中的{@link Activity#onBackPressed()}
+     * 当界面处于图片查看状态需要在Activity中的
      * 将事件传递给ImageWatcher优先处理<br/>
      * *ImageWatcher并没有从父View中移除
      * *当处于收尾动画执行状态时，消费返回键事件<br/>

@@ -1,27 +1,22 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.v7.widget.GridLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.PopupWindow;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.IndexTypeSelectAdapter;
 import com.xinniu.android.qiqueqiao.adapter.StepModeAdapter;
 import com.xinniu.android.qiqueqiao.bean.SelectCategory;
-import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
-import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,11 +30,11 @@ public class SelectedItemWindow extends PopupWindow implements  PopupWindow.OnDi
     private View animTargetView;
     View contentView;
     private List<SelectCategory> categoryList = new ArrayList<>();
-    private Activity activity;
+    private AppCompatActivity activity;
     private RecyclerView mRecyclerView;
     private StepModeAdapter mModeAdapter;
 
-    public SelectedItemWindow(Activity activity, List<SelectCategory> categoryList){
+    public SelectedItemWindow(AppCompatActivity activity, List<SelectCategory> categoryList){
         this.activity = activity;
         this.categoryList = categoryList;
         initView();

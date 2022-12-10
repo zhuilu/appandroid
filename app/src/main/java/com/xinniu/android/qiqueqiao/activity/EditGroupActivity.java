@@ -1,12 +1,9 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -15,6 +12,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -25,8 +26,9 @@ import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/10/15.
@@ -78,7 +80,7 @@ public class EditGroupActivity extends BaseActivity {
         intent.putExtras(bundle);
         context.startActivity(intent, bundle);
     }
-    public static void start(Activity context, String from, int groupId,String groupName) {
+    public static void start(AppCompatActivity context, String from, int groupId, String groupName) {
         Intent intent = new Intent(context, EditGroupActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("from", from);
@@ -87,7 +89,7 @@ public class EditGroupActivity extends BaseActivity {
         intent.putExtras(bundle);
         context.startActivityForResult(intent,501,bundle);
     }
-    public static void start(Activity context, String from,String groupIntro) {
+    public static void start(AppCompatActivity context, String from, String groupIntro) {
         Intent intent = new Intent(context, EditGroupActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("from", from);
@@ -95,7 +97,7 @@ public class EditGroupActivity extends BaseActivity {
         intent.putExtras(bundle);
         context.startActivityForResult(intent,601,bundle);
     }
-    public static void start(Activity context,String from,int groupId,String name,String content){
+    public static void start(AppCompatActivity context, String from, int groupId, String name, String content){
         Intent intent = new Intent(context,EditGroupActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("from",from);

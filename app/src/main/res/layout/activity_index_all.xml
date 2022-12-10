@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -18,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
 
 
         </RelativeLayout>
@@ -41,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/search_head_viewx" />
+                app:srcCompat="@mipmap/search_head_viewx" />
 
         </RelativeLayout>
 
@@ -52,7 +53,7 @@
         android:id="@+id/theselect"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_35"
-        android:layout_below="@id/thetitle">
+        android:layout_below="@+id/thetitle">
 
         <TextView
             android:id="@+id/btvSort"
@@ -87,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_15"
-            android:layout_toLeftOf="@id/btvScreen"
+            android:layout_toLeftOf="@+id/btvScreen"
             android:drawablePadding="@dimen/dp_5"
             android:drawableRight="@drawable/select_down_sx"
             android:text="合作地区"
@@ -99,7 +100,7 @@
         android:id="@+id/mrefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/theselect">
+        android:layout_below="@+id/theselect">
 
         <include layout="@layout/view_headview_refresh_two" />
 
@@ -127,7 +128,7 @@
         android:id="@+id/yperch_Rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/theselect"
+        android:layout_below="@+id/theselect"
         android:background="@color/white"
         android:visibility="gone">
 

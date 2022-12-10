@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
 
@@ -21,7 +22,7 @@
             android:id="@+id/delete_item"
             android:layout_width="13dp"
             android:layout_height="13dp"
-            android:src="@mipmap/delete_img"
+            app:srcCompat="@mipmap/delete_img"
             android:layout_gravity="top|right"
             />
         <TextView

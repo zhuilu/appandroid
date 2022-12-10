@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.annotation.RequiresApi;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -26,8 +27,6 @@ import com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
-import com.xinniu.android.qiqueqiao.utils.TimeUtils;
-import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;

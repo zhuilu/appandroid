@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/rc_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rc_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="27dp"
             android:layout_gravity="center_vertical"
-            android:indeterminateDrawable="@drawable/rc_notification_network_available"/>
+           />
         <TextView
             android:id="@+id/rc_status_bar_text"
             android:layout_width="wrap_content"
@@ -29,13 +30,12 @@
     </LinearLayout>
 
     <ListView
-        android:id="@id/rc_list"
+        android:id="@+id/rc_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rc_status_bar"
-
         android:dividerHeight="0.25dp"
-        android:background="@color/rc_text_color_primary_inverse" />
+       />
 
 
     <LinearLayout
@@ -50,7 +50,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rc_conversation_list_empty"/>
+            />
 
         <TextView
             android:id="@+id/rc_empty_tv"

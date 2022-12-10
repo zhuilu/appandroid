@@ -7,6 +7,9 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.ExpandableListView;
 
+import androidx.core.view.NestedScrollingChild;
+import androidx.core.view.NestedScrollingChildHelper;
+
 /**
  * Author: Moos
  * E-mail: moosphon@gmail.com

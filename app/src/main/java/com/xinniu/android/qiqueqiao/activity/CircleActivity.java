@@ -1,21 +1,22 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
+import static com.umeng.socialize.utils.ContextUtil.getContext;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.widget.SwipeRefreshLayout;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.google.gson.Gson;
-import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.RedPointHelper;
 import com.xinniu.android.qiqueqiao.adapter.CircleFragmentAdapter;
@@ -31,7 +32,6 @@ import com.xinniu.android.qiqueqiao.request.callback.CommonCallback;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.request.converter.ResultDO;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import org.json.JSONException;
@@ -41,17 +41,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.Conversation;
 import retrofit2.Call;
 
-import static com.umeng.socialize.utils.ContextUtil.getContext;
-
+//import android.support.v4.widget.SwipeRefreshLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * Created by yuchance on 2018/5/14.

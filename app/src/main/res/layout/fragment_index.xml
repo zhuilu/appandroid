@@ -31,7 +31,7 @@
                 android:id="@+id/indexScroll"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/line"
+                android:layout_below="@+id/line"
                 android:overScrollMode="never"
                 android:scrollbars="none">
 
@@ -59,7 +59,7 @@
                         android:id="@+id/mrecyclerWindow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mindex_ban"
+                        android:layout_below="@+id/mindex_ban"
                         android:layout_marginLeft="@dimen/dp_7"
                         android:layout_marginRight="@dimen/dp_7"
                         android:visibility="gone">
@@ -70,7 +70,7 @@
                         android:id="@+id/mCompanyDySoreView_index"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_171"
-                        android:layout_below="@id/mindex_ban"
+                        android:layout_below="@+id/mindex_ban"
                         android:layout_marginLeft="@dimen/dp_7"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="@dimen/dp_7"
@@ -85,7 +85,7 @@
                         android:id="@+id/thecoopRl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mCompanyDySoreView_index"
+                        android:layout_below="@+id/mCompanyDySoreView_index"
                         android:orientation="vertical">
 
                         <View
@@ -106,7 +106,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="@dimen/dp_15"
                                 android:layout_marginRight="@dimen/dp_9"
-                                android:src="@mipmap/group" />
+                                app:srcCompat="@mipmap/group" />
 
                             <View
                                 android:id="@+id/view"
@@ -124,14 +124,14 @@
                                 android:layout_alignParentRight="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="@dimen/dp_15"
-                                android:src="@mipmap/goto_new" />
+                                app:srcCompat="@mipmap/goto_new" />
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
-                                android:layout_toLeftOf="@id/goto_imgx"
-                                android:layout_toRightOf="@id/view">
+                                android:layout_toLeftOf="@+id/goto_imgx"
+                                android:layout_toRightOf="@+id/view">
 
                                 <com.stx.xmarqueeview.XMarqueeView
                                     android:id="@+id/mMarqueeView"
@@ -423,7 +423,7 @@
                                     android:layout_alignEnd="@+id/textView2"
                                     android:layout_alignParentBottom="true"
                                     android:layout_marginBottom="125dp"
-                                    android:src="@mipmap/goto_new" />
+                                    app:srcCompat="@mipmap/goto_new" />
 
                             </RelativeLayout>
 
@@ -499,7 +499,7 @@
                         android:id="@+id/rlIndexblank"
                         android:layout_width="match_parent"
                         android:layout_height="700dp"
-                        android:layout_below="@id/rlayout_1"
+                        android:layout_below="@+id/rlayout_1"
                         android:visibility="gone">
 
                         <ImageView
@@ -508,12 +508,12 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="@dimen/dp_32"
-                            android:src="@mipmap/blank_icon" />
+                            app:srcCompat="@mipmap/blank_icon" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/indexnoImg"
+                            android:layout_below="@+id/indexnoImg"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="@dimen/dp_5"
                             android:text="暂无相关合作信息"
@@ -527,7 +527,7 @@
                         android:id="@+id/recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/rlayout_1"
+                        android:layout_below="@+id/rlayout_1"
                         android:background="@color/bg_gray"
                         android:clipToPadding="false"
 
@@ -543,7 +543,7 @@
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_50"
-            android:layout_below="@id/recyclerView"
+            android:layout_below="@+id/recyclerView"
             android:background="@color/white">
 
             <pl.droidsonroids.gif.GifImageView
@@ -586,7 +586,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/qrcode_white" />
+                app:srcCompat="@mipmap/qrcode_white" />
 
             <RelativeLayout
                 android:id="@+id/sreach_content_ll"
@@ -595,7 +595,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_toLeftOf="@id/qrBt"
+                android:layout_toLeftOf="@+id/qrBt"
                 android:background="@mipmap/search_bg">
 
                 <ImageView
@@ -604,7 +604,7 @@
                     android:layout_height="17dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_8"
-                    android:src="@mipmap/search_gray"
+                    app:srcCompat="@mipmap/search_gray"
 
                     />
 
@@ -613,7 +613,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_30"
                     android:layout_marginLeft="@dimen/dp_15"
-                    android:layout_toRightOf="@id/glassImg"
+                    android:layout_toRightOf="@+id/glassImg"
                     android:background="@null"
                     android:editable="false"
                     android:ellipsize="end"
@@ -646,7 +646,7 @@
         android:id="@+id/xtopTabLinear"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
-        android:layout_below="@id/r_search"
+        android:layout_below="@+id/r_search"
         android:background="#fff"
         android:gravity="center_vertical"
         android:orientation="horizontal"

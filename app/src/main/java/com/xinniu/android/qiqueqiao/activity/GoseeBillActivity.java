@@ -1,14 +1,15 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -27,10 +28,11 @@ import com.xinniu.android.qiqueqiao.utils.TokePhotoUtils;
 import com.xinniu.android.qiqueqiao.zxing.activity.CaptureActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
+
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2019/1/9.
@@ -75,7 +77,7 @@ public class GoseeBillActivity extends BaseActivity {
     public final static int REQUEST_CODE = 0x01;
     private String actUrl;
 
-    public static void start(Activity context, int actId) {
+    public static void start(AppCompatActivity context, int actId) {
         Intent intent = new Intent(context, GoseeBillActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("actId", actId);

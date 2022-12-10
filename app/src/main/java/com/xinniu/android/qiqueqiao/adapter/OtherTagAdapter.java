@@ -1,13 +1,15 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -159,11 +161,11 @@ public class OtherTagAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
     class AddHolder extends RecyclerView.ViewHolder{
 
-        ImageView addImg;
+        TextView addImg;
 
         public AddHolder(View itemView) {
             super(itemView);
-            addImg = (ImageView) itemView.findViewById(R.id.addImg);
+            addImg = (TextView) itemView.findViewById(R.id.addImg);
         }
     }
 

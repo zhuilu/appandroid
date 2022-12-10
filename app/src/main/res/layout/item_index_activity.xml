@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/yindex_actoneRl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +21,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:scaleType="fitXY"
-            android:src="@mipmap/zw_activity" />
+            app:srcCompat="@mipmap/zw_activity" />
 
 
 
@@ -54,7 +55,7 @@
             android:id="@+id/mindex_act_onetitletv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/mindex_actone_img"
+            android:layout_below="@+id/mindex_actone_img"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:layout_marginTop="@dimen/dp_9"
@@ -67,7 +68,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/mindex_act_onetitletv"
+            android:layout_below="@+id/mindex_act_onetitletv"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:layout_marginBottom="@dimen/dp_10">

@@ -1,13 +1,15 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+
 import android.os.Bundle;
-//import android.support.v4.app.FragmentManager;
-//import android.support.v4.app.FragmentPagerAdapter;
 import android.view.View;
 import android.widget.RadioButton;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -20,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -85,7 +86,7 @@ public class ConnectionActivity extends BaseActivity {
         }
 
         @Override
-        public android.support.v4.app.Fragment getItem(int position) {
+        public Fragment getItem(int position) {
             return fragmentList.get(position);
         }
 

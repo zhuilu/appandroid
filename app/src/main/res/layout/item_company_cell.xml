@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerVertical="true"
@@ -27,7 +28,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_15"
-            android:src="@mipmap/eddsmall" />
+            app:srcCompat="@mipmap/eddsmall" />
 
 
         <RelativeLayout
@@ -38,7 +39,7 @@
             android:layout_marginLeft="@dimen/dp_16"
             android:layout_marginTop="@dimen/dp_4"
             android:layout_marginBottom="@dimen/dp_12"
-            android:layout_toRightOf="@id/mitem_company_cell_headImg"
+            android:layout_toRightOf="@+id/mitem_company_cell_headImg"
             android:orientation="horizontal">
 
             <TextView
@@ -56,7 +57,7 @@
                 android:id="@+id/mitem_company_cell_companyTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/mitem_company_cell_nameTv"
+                android:layout_below="@+id/mitem_company_cell_nameTv"
                 android:layout_marginTop="@dimen/dp_3"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -67,7 +68,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/mitem_company_cell_companyTv"
+                android:layout_below="@+id/mitem_company_cell_companyTv"
                 android:layout_marginTop="@dimen/dp_4"
                 android:orientation="horizontal">
 

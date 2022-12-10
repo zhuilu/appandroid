@@ -1,31 +1,24 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.annotation.RequiresApi;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.RewardOrderDetailActivity;
-import com.xinniu.android.qiqueqiao.activity.ServiceCaseIndexActivity;
-import com.xinniu.android.qiqueqiao.activity.ServiceDetailActivity;
-import com.xinniu.android.qiqueqiao.bean.MyServicePushBean;
 import com.xinniu.android.qiqueqiao.bean.TakeRewardBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
-import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
-import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.List;
+//import android.support.annotation.RequiresApi;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by qinlei
@@ -35,9 +28,9 @@ import java.util.List;
 
 public class MyTakeRewardAdapter extends BaseQuickAdapter<TakeRewardBean.ListBean, BaseViewHolder> {
     private Callback callback;
-    private Activity mContext;
+    private AppCompatActivity mContext;
 
-    public MyTakeRewardAdapter(Activity context, int layoutResId, @Nullable List<TakeRewardBean.ListBean> data) {
+    public MyTakeRewardAdapter(AppCompatActivity context, int layoutResId, @Nullable List<TakeRewardBean.ListBean> data) {
         super(layoutResId, data);
         this.mContext = context;
     }

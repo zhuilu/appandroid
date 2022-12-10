@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -18,7 +19,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/arrow_left_xx"
+                app:srcCompat="@mipmap/arrow_left_xx"
                 android:layout_centerInParent="true"
                 />
 
@@ -49,7 +50,7 @@
 
 
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -101,7 +102,7 @@
                     android:id="@+id/mtv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/nametv"
+                    android:layout_below="@+id/nametv"
                     android:layout_marginTop="@dimen/dp_10"
                     android:textSize="@dimen/sp_16"
                     android:maxLength="5"
@@ -118,7 +119,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/goto_new"
+                    app:srcCompat="@mipmap/goto_new"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -148,7 +149,7 @@
                     android:id="@+id/mtv_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/phonetv"
+                    android:layout_below="@+id/phonetv"
                     android:layout_marginTop="@dimen/dp_10"
                     android:textSize="@dimen/sp_16"
                     android:maxLength="11"
@@ -165,7 +166,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/goto_new"
+                    app:srcCompat="@mipmap/goto_new"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -195,7 +196,7 @@
                     android:id="@+id/mtv_weixin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/wechattv"
+                    android:layout_below="@+id/wechattv"
                     android:layout_marginTop="@dimen/dp_10"
                     android:textSize="@dimen/sp_16"
                     android:textColor="@color/text_color_1"
@@ -211,7 +212,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/goto_new"
+                    app:srcCompat="@mipmap/goto_new"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -241,7 +242,7 @@
                     android:id="@+id/mtv_company_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/companytv"
+                    android:layout_below="@+id/companytv"
                     android:layout_marginTop="@dimen/dp_10"
                     android:textSize="@dimen/sp_16"
                     android:textColor="@color/text_color_1"
@@ -257,7 +258,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/goto_new"
+                    app:srcCompat="@mipmap/goto_new"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -287,7 +288,7 @@
                     android:id="@+id/mtv_position"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/positiontv"
+                    android:layout_below="@+id/positiontv"
                     android:layout_marginTop="@dimen/dp_10"
                     android:textSize="@dimen/sp_16"
                     android:textColor="@color/text_color_1"
@@ -303,7 +304,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/goto_new"
+                    app:srcCompat="@mipmap/goto_new"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -325,7 +326,7 @@
 
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

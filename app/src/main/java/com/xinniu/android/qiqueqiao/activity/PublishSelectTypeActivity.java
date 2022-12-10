@@ -1,14 +1,12 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.umeng.analytics.MobclickAgent;
@@ -31,8 +29,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//import android.support.v7.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * 发布-选择资源类型
@@ -46,7 +48,7 @@ public class PublishSelectTypeActivity extends BaseActivity {
     private PublishSelectTypeAdapter adapter;
 
 
-    public static void start(Activity context) {
+    public static void start(AppCompatActivity context) {
         Intent intent = new Intent(context, PublishSelectTypeActivity.class);
 
         context.startActivity(intent);

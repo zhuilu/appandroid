@@ -1,9 +1,6 @@
 package com.xinniu.android.qiqueqiao.vodplayer.view.quality;
 
 import android.content.Context;
-//import android.support.annotation.AttrRes;
-//import android.support.annotation.NonNull;
-//import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -18,6 +15,10 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.aliyun.vodplayer.media.IAliyunVodPlayer;
 import com.xinniu.android.qiqueqiao.R;

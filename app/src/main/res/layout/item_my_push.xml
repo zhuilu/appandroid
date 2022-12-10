@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_resource_ll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@id/item_typeimg"
+                android:layout_toRightOf="@+id/item_typeimg"
                 android:textColor="@color/text_color_1"
                 android:textSize="@dimen/sp_15" />
 
@@ -121,7 +122,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/eye_icon" />
+                    app:srcCompat="@mipmap/eye_icon" />
 
                 <TextView
                     android:id="@+id/resource_eyeTv"
@@ -129,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_5"
-                    android:layout_toRightOf="@id/resource_eyeImg"
+                    android:layout_toRightOf="@+id/resource_eyeImg"
                     android:text="1323"
                     android:textColor="@color/text_gray_color2"
                     android:textSize="@dimen/sp_10" />
@@ -140,9 +141,9 @@
                     android:layout_height="@dimen/dp_13"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_12"
-                    android:layout_toRightOf="@id/resource_eyeTv"
+                    android:layout_toRightOf="@+id/resource_eyeTv"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/tell_cion" />
+                    app:srcCompat="@mipmap/tell_cion" />
 
                 <TextView
                     android:id="@+id/resource_tellTv"
@@ -203,7 +204,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_refreshTv"
+                android:layout_toLeftOf="@+id/bresource_refreshTv"
                 android:background="@drawable/seletor_textblue"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"
@@ -223,7 +224,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_top"
+                android:layout_toLeftOf="@+id/bresource_top"
                 android:background="@drawable/selector_textgreen"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"
@@ -243,7 +244,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_editTv"
+                android:layout_toLeftOf="@+id/bresource_editTv"
                 android:background="@drawable/seletor_textred"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"

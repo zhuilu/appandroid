@@ -165,36 +165,36 @@ public class BindPhoneActivity extends BaseActivity {
 
                             }
                         });
-                        //IMUtils.connectIM(bean.getRong_token(), true, new ResultCallback<String>() {
-
-
-                            @Override
-                            public void onFail(int errorCode) {
-                                ToastUtils.showCentetToast(BindPhoneActivity.this, "聊天服务器连接失败");
-                                dismissBookingToast();
-                            }
-
-                            @Override
-                            public void onSuccess(String s) {
-                                UserInfoHelper.getIntance().setUsername(username);
-                                UserInfoHelper.getIntance().setUserId(bean.getUser_id());
-                                UserInfoHelper.getIntance().setToken(bean.getToken());
-                                UserInfoHelper.getIntance().setRongyunToken(bean.getRong_token());
-                                if (JPushInterface.isPushStopped(getApplicationContext())) {
-                                    Set<String> PushArray = new HashSet<>();
-                                    int userId = UserInfoHelper.getIntance().getUserId();
-                                    PushArray.add(userId + "");
-                                    JPushInterface.resumePush(getApplicationContext());
-                                    JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
-                                    JPushInterface.setTags(getApplicationContext(), 0, PushArray);
-                                }
-                                dismissBookingToast();
-                                startActivity(new Intent(BindPhoneActivity.this, MainActivity.class));
-                                ComUtils.finishshortAll();
-
-                            }
-
-                        });
+//                        IMUtils.connectIM(bean.getRong_token(), true, new ResultCallback<String>() {
+//
+//
+//                            @Override
+//                            public void onFail(int errorCode) {
+//                                ToastUtils.showCentetToast(BindPhoneActivity.this, "聊天服务器连接失败");
+//                                dismissBookingToast();
+//                            }
+//
+//                            @Override
+//                            public void onSuccess(String s) {
+//                                UserInfoHelper.getIntance().setUsername(username);
+//                                UserInfoHelper.getIntance().setUserId(bean.getUser_id());
+//                                UserInfoHelper.getIntance().setToken(bean.getToken());
+//                                UserInfoHelper.getIntance().setRongyunToken(bean.getRong_token());
+//                                if (JPushInterface.isPushStopped(getApplicationContext())) {
+//                                    Set<String> PushArray = new HashSet<>();
+//                                    int userId = UserInfoHelper.getIntance().getUserId();
+//                                    PushArray.add(userId + "");
+//                                    JPushInterface.resumePush(getApplicationContext());
+//                                    JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
+//                                    JPushInterface.setTags(getApplicationContext(), 0, PushArray);
+//                                }
+//                                dismissBookingToast();
+//                                startActivity(new Intent(BindPhoneActivity.this, MainActivity.class));
+//                                ComUtils.finishshortAll();
+//
+//                            }
+//
+//                        });
                     } else if (status == 1) {
                         Constants.newcomer_package = bean.getNewcomer_package();//是否有新人礼包
                         UserInfoHelper.getIntance().setUsername(username);

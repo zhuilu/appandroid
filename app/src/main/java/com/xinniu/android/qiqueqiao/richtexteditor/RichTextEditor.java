@@ -19,9 +19,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
+
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.scwang.smartrefresh.layout.util.DensityUtil;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.ImageBean;
@@ -344,11 +348,14 @@ public class RichTextEditor extends ScrollView {
 //        Bitmap bmp = BitmapFactory.decodeFile(imagePath);
 
         Glide.with(getContext())
-                .load(imagePath)
                 .asBitmap()
+                .load(imagePath)
+
                 .into(new SimpleTarget<Bitmap>() {
+
+
                     @Override
-                    public void onResourceReady(Bitmap bitmap, GlideAnimation<? super Bitmap> glideAnimation) {
+                    public void onResourceReady(@NonNull Bitmap bitmap, @Nullable Transition<? super Bitmap> transition) {
                         //加载完成后的处理
                         imageView.setImageBitmap(bitmap);
                         int imageHeight = DensityUtil.dp2px(200);

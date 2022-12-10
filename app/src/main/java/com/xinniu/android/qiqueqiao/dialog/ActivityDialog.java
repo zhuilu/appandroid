@@ -1,20 +1,21 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
@@ -24,6 +25,8 @@ import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/9/25.

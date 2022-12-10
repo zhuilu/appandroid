@@ -1,20 +1,20 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-import android.content.Context;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.VipV3Bean;
-import com.xinniu.android.qiqueqiao.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/4/19.
@@ -22,11 +22,11 @@ import java.util.List;
 
 public class VipTwoAdapter extends BaseQuickAdapter<VipV3Bean.SvipListBean,BaseViewHolder>  {
 
-    private Activity mContext;
+    private AppCompatActivity mContext;
     private List<VipV3Bean.SvipListBean> data = new ArrayList<>();
     private List<VipV3Bean.VipListBean> datax = new ArrayList<>();
 
-    public VipTwoAdapter(Activity context, int layoutResId, @Nullable List<VipV3Bean.SvipListBean> data, List<VipV3Bean.VipListBean> datax) {
+    public VipTwoAdapter(AppCompatActivity context, int layoutResId, @Nullable List<VipV3Bean.SvipListBean> data, List<VipV3Bean.VipListBean> datax) {
         super(layoutResId, data);
         this.mContext = context;
         this.data = data;

@@ -1,6 +1,6 @@
 package com.xinniu.android.qiqueqiao.bean;
 
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 

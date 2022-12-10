@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="80dp"
     >
@@ -14,7 +15,7 @@
         android:textSize="20sp"
         android:textColor="#000"/>
     <TextView
-        android:layout_below="@id/name"
+        android:layout_below="@+id/name"
         android:id="@+id/desc"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
 
     <TextView
         android:id="@+id/price"
-        android:layout_toRightOf="@id/name"
+        android:layout_toRightOf="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="￥199"
@@ -36,7 +37,7 @@
         android:layout_marginLeft="5dp"/>
     <TextView
         android:id="@+id/premium_pirce"
-        android:layout_toRightOf="@id/price"
+        android:layout_toRightOf="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="￥199"
@@ -46,11 +47,11 @@
         android:layout_marginLeft="5dp"/>
     <ImageView
         android:id="@+id/recommon"
-        android:layout_toRightOf="@id/premium_pirce"
+        android:layout_toRightOf="@+id/premium_pirce"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:src="@mipmap/vip_list_recommand"
+        app:srcCompat="@mipmap/vip_list_recommand"
         android:layout_marginLeft="5dp"/>
     <TextView
         android:id="@+id/bug_bt"

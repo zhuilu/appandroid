@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|right"
-                    android:src="@mipmap/head_is_v20_20"
+                    app:srcCompat="@mipmap/head_is_v20_20"
                     android:visibility="gone" />
 
 
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/item_index_recycler_Fl"
+                android:layout_toRightOf="@+id/item_index_recycler_Fl"
                 android:orientation="vertical">
 
                 <TextView
@@ -89,7 +89,7 @@
                     android:includeFontPadding="false"
                     android:layout_gravity="center_vertical"
                     android:text=""
-                    android:layout_toRightOf="@id/item_index_recycler_Fl"
+                    android:layout_toRightOf="@+id/item_index_recycler_Fl"
                     android:textColor="@color/_999999"
                     android:textSize="@dimen/sp_11" />
                 <View
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@id/llayout_line"
+                    android:layout_toRightOf="@+id/llayout_line"
                     android:includeFontPadding="false"
                     android:ellipsize="middle"
                     android:singleLine="true"

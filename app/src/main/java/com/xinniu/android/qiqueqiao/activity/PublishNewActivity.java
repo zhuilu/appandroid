@@ -1,18 +1,11 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-//import android.support.annotation.RequiresApi;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
-import android.util.ArraySet;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -22,6 +15,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.umeng.analytics.MobclickAgent;
 import com.xinniu.android.qiqueqiao.EditResouceInfoHelper;
@@ -39,7 +37,6 @@ import com.xinniu.android.qiqueqiao.bean.PublicSelectTagBean;
 import com.xinniu.android.qiqueqiao.bean.ReleaseTemplateBean;
 import com.xinniu.android.qiqueqiao.bean.ResourceReleaseBean;
 import com.xinniu.android.qiqueqiao.bean.UploadBean;
-import com.xinniu.android.qiqueqiao.customs.label.FlowLayoutManager;
 import com.xinniu.android.qiqueqiao.customs.qldialog.ReleaseTemplateDialog;
 import com.xinniu.android.qiqueqiao.dialog.AlertDialogUtils;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
@@ -61,7 +58,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -156,7 +152,7 @@ public class PublishNewActivity extends BaseActivity implements EditResouceAdapt
     private int mNum = 0;
     private int is_transaction = -1;//是否使用担保交易
 
-    public static void start(Activity context, String title, int typeId, int gotoCode) {
+    public static void start(AppCompatActivity context, String title, int typeId, int gotoCode) {
         Intent intent = new Intent(context, PublishNewActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("title", title);
@@ -166,7 +162,7 @@ public class PublishNewActivity extends BaseActivity implements EditResouceAdapt
         context.startActivityForResult(intent, MainActivity.RELEASE_SUCCESS, bundle);
     }
 
-    public static void start(Activity context, int resourceId, String title, int typeId, int gotoCode) {
+    public static void start(AppCompatActivity context, int resourceId, String title, int typeId, int gotoCode) {
         Intent intent = new Intent(context, PublishNewActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("resourceId", resourceId);

@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/chevron"
+            app:srcCompat="@mipmap/chevron"
             android:layout_centerVertical="true" />
         </RelativeLayout>
         <TextView
@@ -95,9 +95,9 @@
         android:id="@+id/vip_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:scrollbars="none"
-        android:layout_above="@id/vip_bottomRl"
+        android:layout_above="@+id/vip_bottomRl"
         >
 
 
@@ -138,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|right"
-                        android:src="@mipmap/head_is_v32_32" />
+                        app:srcCompat="@mipmap/head_is_v32_32" />
                 </FrameLayout>
 
                     <RelativeLayout
@@ -165,8 +165,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/times"
-                            android:layout_alignRight="@id/untell_text"
-                            android:layout_below="@id/untell_text"
+                            android:layout_alignRight="@+id/untell_text"
+                            android:layout_below="@+id/untell_text"
                             android:textColor="@color/text_color_16"
                             android:textSize="@dimen/sp_12"
                             android:layout_alignParentBottom="true"
@@ -178,8 +178,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-                            android:layout_toLeftOf="@id/thetimes"
-                            android:layout_below="@id/untell_text"
+                            android:layout_toLeftOf="@+id/thetimes"
+                            android:layout_below="@+id/untell_text"
                             android:layout_marginRight="@dimen/dp_4"
                             android:textColor="@color/text_color_1"
                             android:textSize="@dimen/sp_17"
@@ -203,9 +203,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/dp_10"
-                    android:layout_toRightOf="@id/vip_view_headfl"
+                    android:layout_toRightOf="@+id/vip_view_headfl"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/un_timesRl"
+                    android:layout_toLeftOf="@+id/un_timesRl"
                     >
 
                     <TextView
@@ -224,9 +224,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_10"
                         android:layout_marginTop="@dimen/dp_8"
-                        android:layout_toRightOf="@id/mvip_name"
+                        android:layout_toRightOf="@+id/mvip_name"
                         android:scaleType="matrix"
-                        android:src="@mipmap/vip_iconx"
+                        app:srcCompat="@mipmap/vip_iconx"
                         android:visibility="visible"
                         android:paddingTop="@dimen/dp_2"
                         />
@@ -235,7 +235,7 @@
                         android:id="@+id/mtvVipTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mvip_name"
+                        android:layout_below="@+id/mvip_name"
                         android:layout_marginLeft="@dimen/dp_15"
                         android:layout_marginTop="@dimen/dp_5"
                         android:text="会员到期时间:"
@@ -246,10 +246,10 @@
                         android:id="@+id/mvip_totime_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mvip_name"
+                        android:layout_below="@+id/mvip_name"
                         android:layout_marginLeft="@dimen/dp_8"
                         android:layout_marginTop="@dimen/dp_5"
-                        android:layout_toRightOf="@id/mtvVipTime"
+                        android:layout_toRightOf="@+id/mtvVipTime"
                         android:text="2018-10-09"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/sp_11" />
@@ -262,7 +262,7 @@
                     android:id="@+id/vip_line"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_0_5"
-                    android:layout_below="@id/vip_info_Rl"
+                    android:layout_below="@+id/vip_info_Rl"
                     android:layout_marginTop="@dimen/dp_15"
                     android:background="@color/line_color"
                     />
@@ -271,7 +271,7 @@
                     android:id="@+id/mvip_screenrg"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_29"
-                    android:layout_below="@id/vip_line"
+                    android:layout_below="@+id/vip_line"
                     android:orientation="horizontal"
                     android:gravity="center"
                     android:layout_marginTop="@dimen/dp_15"
@@ -311,7 +311,7 @@
                     android:id="@+id/scrollRl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/mvip_screenrg"
+                    android:layout_below="@+id/mvip_screenrg"
                     android:clipChildren="false">
 
 
@@ -333,7 +333,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_194"
-                    android:layout_below="@id/mvip_screenrg"
+                    android:layout_below="@+id/mvip_screenrg"
                     android:scrollbars="none"
                     android:visibility="gone"
 
@@ -353,7 +353,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@mipmap/vip_mini"
+                                app:srcCompat="@mipmap/vip_mini"
                                 />
 
 
@@ -426,7 +426,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@mipmap/vip_card"
+                                app:srcCompat="@mipmap/vip_card"
                                 />
 
                             <TextView
@@ -466,7 +466,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@mipmap/svip_card"
+                                app:srcCompat="@mipmap/svip_card"
                                 />
 
                             <TextView
@@ -513,7 +513,7 @@
                     android:id="@+id/mvip_plusRl"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_44"
-                    android:layout_below="@id/scrollRl"
+                    android:layout_below="@+id/scrollRl"
                     android:layout_marginTop="-3dp"
                     android:background="@drawable/shape_vip_plus"
                     android:layout_marginLeft="@dimen/dp_27"
@@ -540,7 +540,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/vip_plus_tv"
+                        android:layout_toRightOf="@+id/vip_plus_tv"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/sp_13"
                         />
@@ -580,7 +580,7 @@
                     android:textColor="@color/text_color_1"
                     android:layout_marginLeft="@dimen/dp_28"
                     android:textStyle="bold"
-                    android:layout_below="@id/mvip_plusRl"
+                    android:layout_below="@+id/mvip_plusRl"
                     />
 
 
@@ -594,7 +594,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_below="@id/mvip_to_svip"
+                    android:layout_below="@+id/mvip_to_svip"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginLeft="@dimen/dp_27"
                     android:layout_marginRight="@dimen/dp_27"
@@ -611,14 +611,14 @@
                             android:id="@+id/imgblacks"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/black_s"
+                            app:srcCompat="@mipmap/black_s"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvblacks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgblacks"
+                            android:layout_toRightOf="@+id/imgblacks"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="专属资源猎头服务"
                             android:textSize="@dimen/sp_15"
@@ -629,8 +629,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvblacks"
-                            android:layout_toRightOf="@id/imgblacks"
+                            android:layout_below="@+id/tvblacks"
+                            android:layout_toRightOf="@+id/imgblacks"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="20次人工对接"
                             android:textSize="@dimen/sp_11"
@@ -640,7 +640,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/goto_new"
+                            app:srcCompat="@mipmap/goto_new"
                             android:layout_centerVertical="true"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="@dimen/dp_17"
@@ -651,7 +651,7 @@
                             android:layout_height="@dimen/dp_0_5"
                             android:background="@color/line_color"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignLeft="@id/tvblacks"
+                            android:layout_alignLeft="@+id/tvblacks"
                             />
 
 
@@ -666,14 +666,14 @@
                             android:id="@+id/imgMsg"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/message_icon"
+                            app:srcCompat="@mipmap/message_icon"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvMsg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgMsg"
+                            android:layout_toRightOf="@+id/imgMsg"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="500次沟通次数"
                             android:textSize="@dimen/sp_15"
@@ -685,8 +685,8 @@
                             android:id="@+id/tvMsginfo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvMsg"
-                            android:layout_toRightOf="@id/imgMsg"
+                            android:layout_below="@+id/tvMsg"
+                            android:layout_toRightOf="@+id/imgMsg"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="可以与500位BOSS直聊合作"
                             android:textSize="@dimen/sp_11"
@@ -698,7 +698,7 @@
                             android:layout_height="@dimen/dp_0_5"
                             android:background="@color/line_color"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignLeft="@id/tvMsg"
+                            android:layout_alignLeft="@+id/tvMsg"
                             />
 
 
@@ -711,14 +711,14 @@
                             android:id="@+id/imggroup"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/middle_group"
+                            app:srcCompat="@mipmap/middle_group"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvgroup"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imggroup"
+                            android:layout_toRightOf="@+id/imggroup"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="500人群组"
                             android:textSize="@dimen/sp_15"
@@ -730,8 +730,8 @@
                             android:id="@+id/tvgroupin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvgroup"
-                            android:layout_toRightOf="@id/imggroup"
+                            android:layout_below="@+id/tvgroup"
+                            android:layout_toRightOf="@+id/imggroup"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="可创建5个500人群组"
                             android:textColor="@color/text_color_87"
@@ -747,14 +747,14 @@
                             android:id="@+id/imgtop"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/viptop_icon"
+                            app:srcCompat="@mipmap/viptop_icon"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvtop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgtop"
+                            android:layout_toRightOf="@+id/imgtop"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="一键置顶"
                             android:textSize="@dimen/sp_15"
@@ -765,8 +765,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvtop"
-                            android:layout_toRightOf="@id/imgtop"
+                            android:layout_below="@+id/tvtop"
+                            android:layout_toRightOf="@+id/imgtop"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="每日可享受3次一键置顶特权！"
                             android:textColor="@color/text_color_87"
@@ -782,14 +782,14 @@
                             android:id="@+id/imgWxx"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/wxxx_icon"
+                            app:srcCompat="@mipmap/wxxx_icon"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvWxx"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgWxx"
+                            android:layout_toRightOf="@+id/imgWxx"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="直接获取微信号"
                             android:textSize="@dimen/sp_15"
@@ -799,8 +799,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvWxx"
-                            android:layout_toRightOf="@id/imgWxx"
+                            android:layout_below="@+id/tvWxx"
+                            android:layout_toRightOf="@+id/imgWxx"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="未及时回复，直接获取微信号！"
                             android:textSize="@dimen/sp_11"
@@ -812,7 +812,7 @@
                             android:layout_height="@dimen/dp_0_5"
                             android:background="@color/line_color"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignLeft="@id/tvWxx"
+                            android:layout_alignLeft="@+id/tvWxx"
                             />
 
 
@@ -825,14 +825,14 @@
                             android:id="@+id/imgPhone"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/phone_icon"
+                            app:srcCompat="@mipmap/phone_icon"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvPhone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgPhone"
+                            android:layout_toRightOf="@+id/imgPhone"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="直接拨打电话"
                             android:textSize="@dimen/sp_15"
@@ -843,8 +843,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvPhone"
-                            android:layout_toRightOf="@id/imgPhone"
+                            android:layout_below="@+id/tvPhone"
+                            android:layout_toRightOf="@+id/imgPhone"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="拨打隐私号，快速联系合作方！"
                             android:textColor="@color/text_color_87"
@@ -864,14 +864,14 @@
                             android:id="@+id/imgVip"
                             android:layout_width="@dimen/dp_32"
                             android:layout_height="@dimen/dp_32"
-                            android:src="@mipmap/vipx_icon"
+                            app:srcCompat="@mipmap/vipx_icon"
                             android:layout_centerVertical="true"
                             />
                         <TextView
                             android:id="@+id/tvVip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/imgVip"
+                            android:layout_toRightOf="@+id/imgVip"
                             android:layout_marginTop="@dimen/dp_10"
                             android:text="专属VIP标识"
                             android:layout_marginLeft="@dimen/dp_15"
@@ -881,8 +881,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvVip"
-                            android:layout_toRightOf="@id/imgVip"
+                            android:layout_below="@+id/tvVip"
+                            android:layout_toRightOf="@+id/imgVip"
                             android:layout_marginLeft="@dimen/dp_15"
                             android:text="名字升级为红色，专属身份标识！"
                             android:textSize="@dimen/sp_11"
@@ -894,7 +894,7 @@
                             android:layout_height="@dimen/dp_0_5"
                             android:background="@color/line_color"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignLeft="@id/tvVip"
+                            android:layout_alignLeft="@+id/tvVip"
                             />
 
                         <LinearLayout
@@ -939,7 +939,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_100"
-                    android:layout_below="@id/linearLayout"
+                    android:layout_below="@+id/linearLayout"
                     android:background="@color/bg_gray"
                     >
 
@@ -947,7 +947,7 @@
                         android:id="@+id/bcompanyvip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/vip_banner"
+                        app:srcCompat="@mipmap/vip_banner"
                         android:layout_centerInParent="true"
                         />
 

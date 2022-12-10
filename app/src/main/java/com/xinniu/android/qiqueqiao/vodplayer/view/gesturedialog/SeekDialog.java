@@ -1,6 +1,7 @@
 package com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.vodplayer.utils.TimeFormater;
 /*
@@ -15,7 +16,7 @@ public class SeekDialog extends BaseGestureDialog {
     private int mInitPosition = 0;
     private int mFinalPosition = 0;
 
-    public SeekDialog(Activity activity, int position) {
+    public SeekDialog(AppCompatActivity activity, int position) {
         super(activity);
         mInitPosition = position;
         updatePosition(mInitPosition);

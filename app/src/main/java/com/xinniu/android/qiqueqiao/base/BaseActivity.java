@@ -1,15 +1,11 @@
 package com.xinniu.android.qiqueqiao.base;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.annotation.RequiresApi;
-//import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -39,6 +35,8 @@ import com.xinniu.android.qiqueqiao.utils.StatusBarUtil;
 import java.util.ArrayList;
 
 import butterknife.ButterKnife;
+//import android.support.annotation.RequiresApi;
+
 
 
 /**
@@ -53,7 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected Context mContext;
     protected boolean isFinish = false;
 
-    ArrayList<Activity> activities = new ArrayList<>();
+    ArrayList<AppCompatActivity> activities = new ArrayList<>();
     private ACProgressFlower progressDialog;
     private boolean progressShow;
     public View popview;

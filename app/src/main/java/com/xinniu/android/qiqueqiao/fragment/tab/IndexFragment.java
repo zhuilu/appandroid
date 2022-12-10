@@ -4,10 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +16,12 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -36,14 +38,10 @@ import com.stx.xmarqueeview.XMarqueeView;
 import com.umeng.analytics.MobclickAgent;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
-import com.xinniu.android.qiqueqiao.activity.CompanyIndexActivity;
 import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
-import com.xinniu.android.qiqueqiao.activity.HotResourceActivity;
 import com.xinniu.android.qiqueqiao.activity.IndexCellActivity;
 import com.xinniu.android.qiqueqiao.activity.IndexClassifyActivity;
-import com.xinniu.android.qiqueqiao.activity.IndexServiceActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
-import com.xinniu.android.qiqueqiao.activity.SelectionResourceActivity;
 import com.xinniu.android.qiqueqiao.activity.SreachActivity;
 import com.xinniu.android.qiqueqiao.adapter.IndexActivityCellAdapter;
 import com.xinniu.android.qiqueqiao.adapter.IndexCellTwoAdapter;
@@ -338,12 +336,12 @@ public class IndexFragment extends LazyBaseFragment {
                     qrBt.setImageResource(R.mipmap.qrcode_gray);
                     linearLayout.setBackground(ContextCompat.getDrawable(mContext, R.drawable.shape_circle_search));
                     rSearch.setBackground(ContextCompat.getDrawable(mContext, R.drawable.shape_white_bg));
-                    StatusBarUtil.StatusBarLightMode(getActivity(), true);
+                    StatusBarUtil.StatusBarLightMode((AppCompatActivity) getActivity(), true);
                 } else {
                     rSearch.setBackground(null);
                     qrBt.setImageResource(R.mipmap.qrcode_white);
                     linearLayout.setBackground(ContextCompat.getDrawable(mContext, R.mipmap.search_bg));
-                    StatusBarUtil.StatusBarLightMode(getActivity(), false);
+                    StatusBarUtil.StatusBarLightMode((AppCompatActivity) getActivity(), false);
 
                 }
             }
@@ -636,7 +634,7 @@ public class IndexFragment extends LazyBaseFragment {
     }
 
     private void showSort() {
-        final SortWindow sortWindow = new SortWindow(getActivity(), mSearchSortOrder);
+        final SortWindow sortWindow = new SortWindow((AppCompatActivity) getActivity(), mSearchSortOrder);
         sortWindow.showAsDropDown(xtopTabLinear);
         sortWindow.setFinish(new SortWindow.finish() {
             @Override
@@ -901,7 +899,7 @@ public class IndexFragment extends LazyBaseFragment {
                 screenBean.getCompany_list().get(i).setCheck(false);
             }
         }
-        screenWindow = new CellScreenWindow(getActivity(), screenBean);
+        screenWindow = new CellScreenWindow((AppCompatActivity) getActivity(), screenBean);
         screenWindow.showAsDropDown(xtopTabLinear);
 
         screenWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {

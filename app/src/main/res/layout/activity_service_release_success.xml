@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -20,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
 
 
         </RelativeLayout>
@@ -53,13 +54,13 @@
             android:layout_width="@dimen/dp_193"
             android:layout_height="@dimen/dp_144"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/push_success" />
+            app:srcCompat="@mipmap/push_success" />
 
         <TextView
             android:id="@+id/titlex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/img"
+            android:layout_below="@+id/img"
             android:layout_centerHorizontal="true"
             android:text="发布成功"
             android:layout_marginTop="@dimen/dp_5"
@@ -70,7 +71,7 @@
             android:id="@+id/msuccess_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/titlex"
+            android:layout_below="@+id/titlex"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_12"
             android:text="信息正在审核中"
@@ -81,7 +82,7 @@
             android:id="@+id/bsuccessbtn"
             android:layout_width="@dimen/dp_124"
             android:layout_height="@dimen/dp_35"
-            android:layout_below="@id/msuccess_title"
+            android:layout_below="@+id/msuccess_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_14"
             android:background="@drawable/bg_lx_detail"

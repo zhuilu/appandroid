@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@id/msend_coopimg"
+                android:layout_toRightOf="@+id/msend_coopimg"
                 android:textColor="@color/text_color_1"
                 android:textSize="@dimen/sp_15"
 

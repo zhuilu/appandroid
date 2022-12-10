@@ -11,15 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-//import android.support.v4.os.ParcelableCompat;
-//import android.support.v4.os.ParcelableCompatCreatorCallbacks;
-//import android.support.v4.view.AccessibilityDelegateCompat;
-//import android.support.v4.view.PagerAdapter;
-//import android.support.v4.view.ViewCompat;
-//import android.support.v4.view.accessibility.AccessibilityEventCompat;
-//import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
-//import android.support.v4.view.accessibility.AccessibilityRecordCompat;
-//import android.support.v4.widget.EdgeEffectCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -31,6 +22,7 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.core.os.ParcelableCompat;
 import androidx.core.os.ParcelableCompatCreatorCallbacks;
 import androidx.core.view.AccessibilityDelegateCompat;
@@ -39,12 +31,23 @@ import androidx.core.view.accessibility.AccessibilityEventCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import androidx.core.widget.EdgeEffectCompat;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.PagerAdapter;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+//import android.support.v4.os.ParcelableCompat;
+//import android.support.v4.os.ParcelableCompatCreatorCallbacks;
+//import android.support.v4.view.AccessibilityDelegateCompat;
+//import android.support.v4.view.PagerAdapter;
+//import android.support.v4.view.ViewCompat;
+//import android.support.v4.view.accessibility.AccessibilityEventCompat;
+//import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
+//import android.support.v4.view.accessibility.AccessibilityRecordCompat;
+//import android.support.v4.widget.EdgeEffectCompat;
 
 /**
  * Created by Baymax on 2015/3/17.
@@ -75,12 +78,12 @@ import java.util.Comparator;
  * the compatibility library, requiring changes to the source code
  * of apps when they are compiled against the newer version.</p>
  * <p/>
- * <p>ViewPager is most often used in conjunction with {@link android.app.Fragment},
+ * <p>ViewPager is most often used in conjunction with {@link Fragment},
  * which is a convenient way to supply and manage the lifecycle of each page.
  * There are standard adapters implemented for using fragments with the ViewPager,
  * which cover the most common use cases.  These are
- * {@link android.support.v4.app.FragmentPagerAdapter} and
- * {@link android.support.v4.app.FragmentStatePagerAdapter}; each of these
+ * {@link androidx.core.app.FragmentPagerAdapter} and
+ * {@link androidx.core.app.FragmentStatePagerAdapter}; each of these
  * classes have simple code showing how to build a full user interface
  * with them.
  * <p/>
@@ -89,7 +92,7 @@ import java.util.Comparator;
  * Tabs</a>.</p>
  * <p/>
  * <p>Below is a more complicated example of ViewPager, using it in conjunction
- * with {@link android.app.ActionBar} tabs.  You can find other examples of using
+ * with {@link ActionBar} tabs.  You can find other examples of using
  * ViewPager in the API 4+ Support Demos and API 13+ Support Demos sample code.
  * <p/>
  * {@sample development/samples/Support13Demos/src/com/example/android/supportv13/app/ActionBarTabsPager.java

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     >
@@ -13,7 +15,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/arrow_left_xx"
+        app:srcCompat="@mipmap/arrow_left_xx"
         android:layout_centerInParent="true"
         />
     </RelativeLayout>
@@ -32,14 +34,14 @@
         android:textSize="@dimen/sp_28"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_marginLeft="@dimen/dp_30"
-        android:layout_below="@id/view"
+        android:layout_below="@+id/view"
         />
 
     <com.xinniu.android.qiqueqiao.widget.ZpPhoneEditText
         android:id="@+id/maccpsw_account_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/accountpsw_title"
+        android:layout_below="@+id/accountpsw_title"
         android:layout_marginTop="@dimen/dp_42"
         android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_30"
@@ -65,7 +67,7 @@
         android:id="@+id/maccpsw_psw_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_01"
+        android:layout_below="@+id/view_01"
         android:layout_marginTop="@dimen/dp_26"
         android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_36"
@@ -100,7 +102,7 @@
         android:textColor="@color/white"
         android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_30"
-        android:layout_below="@id/view_02"
+        android:layout_below="@+id/view_02"
         android:layout_marginTop="@dimen/dp_23"
         />
 
@@ -108,7 +110,7 @@
         android:id="@+id/bgoToYzmLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/baccpsw_login"
+        android:layout_below="@+id/baccpsw_login"
         android:text="手机验证码登录"
         android:textSize="@dimen/sp_14"
         android:paddingTop="@dimen/dp_14"

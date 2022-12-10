@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.alipay.sdk.app.PayTask;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
@@ -33,7 +35,6 @@ import com.xinniu.android.qiqueqiao.request.callback.GetCombingCardCallback;
 import com.xinniu.android.qiqueqiao.request.callback.PayCallback;
 import com.xinniu.android.qiqueqiao.request.callback.VipBugCallback;
 import com.xinniu.android.qiqueqiao.request.callback.WechatPayCallback;
-import com.xinniu.android.qiqueqiao.utils.ComUtils;
 import com.xinniu.android.qiqueqiao.utils.Logger;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
@@ -100,7 +101,7 @@ public class CardingCardActivity extends BaseActivity {
         context.startActivity(intent);
     }
 
-    public static void start(Activity context, int requestCode) {
+    public static void start(AppCompatActivity context, int requestCode) {
         Intent intent = new Intent(context, CardingCardActivity.class);
         context.startActivityForResult(intent, requestCode);
     }

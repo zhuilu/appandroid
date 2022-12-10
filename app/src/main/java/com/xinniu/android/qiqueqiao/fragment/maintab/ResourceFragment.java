@@ -3,14 +3,9 @@ package com.xinniu.android.qiqueqiao.fragment.maintab;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.GridLayoutManager;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +15,12 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -42,7 +43,6 @@ import com.xinniu.android.qiqueqiao.bean.SourceScreenBean;
 import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.customs.CellScreenWindow;
 import com.xinniu.android.qiqueqiao.customs.MyScrollView;
-import com.xinniu.android.qiqueqiao.customs.ScrollLinearLayoutManager;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.GetConfigCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetResourceListCallback;
@@ -54,7 +54,6 @@ import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 import com.xinniu.android.qiqueqiao.utils.ServiceBannerImgLoader;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
-import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.listener.OnBannerListener;
@@ -660,7 +659,7 @@ public class ResourceFragment extends LazyBaseFragment {
                 screenBean.getCompany_list().get(i).setCheck(false);
             }
         }
-        screenWindow = new CellScreenWindow(getActivity(), screenBean);
+        screenWindow = new CellScreenWindow((AppCompatActivity) getActivity(), screenBean);
         screenWindow.showAsDropDown(xtopTabLinear);
 
         screenWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {

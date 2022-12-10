@@ -1,19 +1,20 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-//import android.support.annotation.NonNull;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -105,7 +106,7 @@ public class PublishingServiceActivity extends BaseActivity implements EditResou
         context.startActivity(intent);
     }
 
-    public static void start(Activity context, int resourceId, String title, int typeId, int gotoCode) {
+    public static void start(AppCompatActivity context, int resourceId, String title, int typeId, int gotoCode) {
         Intent intent = new Intent(context, PublishingServiceActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("serviceId", resourceId);

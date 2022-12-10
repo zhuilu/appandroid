@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layout_alignParentTop="true"
-        android:layout_above="@id/view_source_Ll"
+        android:layout_above="@+id/view_source_Ll"
         >
 
 
@@ -91,7 +91,7 @@
         android:layout_marginLeft="@dimen/dp_5"
         android:layout_marginRight="@dimen/dp_10"
         android:layout_marginBottom="@dimen/dp_20"
-        android:layout_below="@id/tvWindow"
+        android:layout_below="@+id/tvWindow"
         >
 
     </com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView>

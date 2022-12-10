@@ -52,7 +52,7 @@
                     android:id="@+id/mCompanyDySoreView_index"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_159"
-                    android:layout_below="@id/mindex_ban"
+                    android:layout_below="@+id/mindex_ban"
                     android:layout_marginLeft="@dimen/dp_7"
                     android:layout_marginTop="@dimen/dp_9"
                     android:layout_marginRight="@dimen/dp_7"
@@ -148,7 +148,7 @@
                     android:id="@+id/rlIndexblank"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:layout_below="@id/rlayout_1"
+                    android:layout_below="@+id/rlayout_1"
                     android:visibility="gone">
 
                     <ImageView
@@ -157,12 +157,12 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_100"
-                        android:src="@mipmap/blank_icon" />
+                        app:srcCompat="@mipmap/blank_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/indexnoImg"
+                        android:layout_below="@+id/indexnoImg"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_5"
                         android:text="暂无相关合作信息"
@@ -176,7 +176,7 @@
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/rlayout_1"
+                    android:layout_below="@+id/rlayout_1"
                     android:clipToPadding="false"
 
                     />
@@ -205,7 +205,7 @@
         android:id="@+id/xtopTabLinear"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
-        android:layout_below="@id/r_search"
+        android:layout_below="@+id/r_search"
         android:background="#fff"
         android:gravity="center_vertical"
         android:orientation="horizontal"

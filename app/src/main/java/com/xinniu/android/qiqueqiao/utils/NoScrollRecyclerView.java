@@ -1,9 +1,12 @@
 package com.xinniu.android.qiqueqiao.utils;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Reborn on 2018-01-17.

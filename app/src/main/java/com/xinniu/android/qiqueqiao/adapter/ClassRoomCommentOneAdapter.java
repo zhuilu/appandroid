@@ -1,33 +1,21 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.Html;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.MyCollectActivity;
-import com.xinniu.android.qiqueqiao.adapter.base.BDRecyclerViewAdapter;
-import com.xinniu.android.qiqueqiao.adapter.base.BDRecylerViewHolder;
-import com.xinniu.android.qiqueqiao.bean.CircleBean;
 import com.xinniu.android.qiqueqiao.bean.CommentBean;
-import com.xinniu.android.qiqueqiao.bean.CompanyNameBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
-import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.List;
 

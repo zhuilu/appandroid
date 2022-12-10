@@ -2,7 +2,7 @@ package com.xinniu.android.qiqueqiao.dialog;
 
 import android.content.Context;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;

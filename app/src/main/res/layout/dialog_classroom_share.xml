@@ -37,7 +37,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/tupian" />
+                app:srcCompat="@mipmap/tupian" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/weixin_c" />
+                app:srcCompat="@mipmap/weixin_c" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/pengyouquan_c" />
+                app:srcCompat="@mipmap/pengyouquan_c" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/qq_c" />
+                app:srcCompat="@mipmap/qq_c" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                 android:layout_width="@dimen/dp_43"
                 android:layout_height="@dimen/dp_43"
                 android:layout_gravity="center"
-                android:src="@mipmap/dd_c" />
+                app:srcCompat="@mipmap/dd_c" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -164,6 +164,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginBottom="@dimen/dp_20"
-        android:src="@mipmap/combined_shape" />
+        app:srcCompat="@mipmap/combined_shape" />
 
 </LinearLayout>

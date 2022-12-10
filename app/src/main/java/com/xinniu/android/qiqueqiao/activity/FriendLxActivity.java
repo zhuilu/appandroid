@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -262,13 +262,13 @@ public class FriendLxActivity extends BaseActivity {
 
     private void sendToPhoto(String targetId, String sendPhoto) {
         Uri uri = ImageLoader.getImageUrl2Uri(sendPhoto);
-        //IMUtils.sendImageView(Conversation.ConversationType.PRIVATE, targetId, uri, uri, new IMUtils.SendResult() {
-            @Override
-            public void sendResult(String msg) {
-                ToastUtils.showCentetToast(FriendLxActivity.this, msg);
-                finish();
-            }
-        });
+//        IMUtils.sendImageView(Conversation.ConversationType.PRIVATE, targetId, uri, uri, new IMUtils.SendResult() {
+//            @Override
+//            public void sendResult(String msg) {
+//                ToastUtils.showCentetToast(FriendLxActivity.this, msg);
+//                finish();
+//            }
+//        });
 
 
     }

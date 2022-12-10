@@ -1,18 +1,17 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -21,11 +20,9 @@ import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -44,7 +41,7 @@ public class ActMemberActivity extends BaseActivity {
     RelativeLayout mnoMemberRl;
 
 
-    public static void start(Activity context){
+    public static void start(AppCompatActivity context){
         Intent intent = new Intent(context,ActMemberActivity.class);
         context.startActivityForResult(intent,106);
     }

@@ -1,25 +1,22 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.DialogInterface;
+import androidx.fragment.app.DialogFragment;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
 
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 
 /**
  * Created by yuchance on 2018/11/6.
@@ -107,6 +104,9 @@ public class DeleteReplyDialog extends DialogFragment {
     @Override
     public void dismiss() {
         super.dismiss();
+    }
+
+    public void show(FragmentManager supportFragmentManager, String viewphoto) {
     }
 
     public interface setOnClick{

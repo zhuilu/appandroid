@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:id="@+id/item_coop_call"
     android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackground"
     >
 
     <RelativeLayout
@@ -29,7 +29,7 @@
         android:id="@+id/item_index_nameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/item_index_recycler_img"
+        android:layout_toRightOf="@+id/item_index_recycler_img"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/dp_10"
         android:text="张飞"
@@ -51,9 +51,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/item_index_nameTv"
+        android:layout_toRightOf="@+id/item_index_nameTv"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@id/coop_detail_time"
+        android:layout_toLeftOf="@+id/coop_detail_time"
         >
 
     <TextView

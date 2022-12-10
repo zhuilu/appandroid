@@ -219,27 +219,27 @@ public class LoginNewActivity extends BaseActivity {
 //                    UserInfoHelper.getIntance().setHeadUrl(userInfoBean.get);
                     CompleteInfoActivity.start(LoginNewActivity.this, userInfoBean.token, userInfoBean.user_id, userInfoBean.rong_token);
                 } else {
-                    //IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
-
-                        @Override
-                        public void onSuccess(String s) {
-                            UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
-                            UserInfoHelper.getIntance().setToken(userInfoBean.token);
-                            UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
-                            dismissBookingToast();
-                            startActivity(new Intent(LoginNewActivity.this, MainActivity.class));
-
-                            finish();
-                        }
-
-                        @Override
-                        public void onFail(int errorCode) {
-                            ToastUtils.showCentetToast(LoginNewActivity.this, "登录失败");
-                            dismissBookingToast();
-                        }
-
-
-                    });
+//                    IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
+//
+//                        @Override
+//                        public void onSuccess(String s) {
+//                            UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
+//                            UserInfoHelper.getIntance().setToken(userInfoBean.token);
+//                            UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
+//                            dismissBookingToast();
+//                            startActivity(new Intent(LoginNewActivity.this, MainActivity.class));
+//
+//                            finish();
+//                        }
+//
+//                        @Override
+//                        public void onFail(int errorCode) {
+//                            ToastUtils.showCentetToast(LoginNewActivity.this, "登录失败");
+//                            dismissBookingToast();
+//                        }
+//
+//
+//                    });
 
                     Set<String> PushArray = new HashSet<>();
                     int userId = UserInfoHelper.getIntance().getUserId();

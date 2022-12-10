@@ -1,11 +1,8 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,6 +11,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.fragment.edit.PhoneEditFragment;
@@ -21,7 +22,9 @@ import com.xinniu.android.qiqueqiao.fragment.edit.PwdEditFragment;
 import com.xinniu.android.qiqueqiao.fragment.edit.SimpleEditFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
+
+import androidx.fragment.app.Fragment;
+//import androidx.appcompat.widget.Toolbar;
 
 /**
  * Created by qinlei
@@ -59,7 +62,7 @@ public class EditMineInfoActivity extends BaseActivity {
     private InputMethodManager imm;
 
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode, String title, String hint, String strEditText, int type) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode, String title, String hint, String strEditText, int type) {
         Intent starter = new Intent(context, EditMineInfoActivity.class);
         starter.putExtra(PARAM_TYPE, EDIT_SIMPLE);
         starter.putExtra(PARAM_TYPE_CHILD, type);
@@ -69,7 +72,7 @@ public class EditMineInfoActivity extends BaseActivity {
         context.startActivityForResult(starter, requestCode);
     }
 
-    public static void startPhoneEdit(Activity context, String title) {
+    public static void startPhoneEdit(AppCompatActivity context, String title) {
         Intent starter = new Intent(context, EditMineInfoActivity.class);
         starter.putExtra(PARAM_TYPE, EDIT_PHONE);
         starter.putExtra(PARAM_TITLE, title);

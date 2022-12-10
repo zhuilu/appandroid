@@ -2,17 +2,16 @@ package com.xinniu.android.qiqueqiao.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -21,18 +20,15 @@ import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.MyPushActivity;
 import com.xinniu.android.qiqueqiao.activity.SreachActivity;
-import com.xinniu.android.qiqueqiao.bean.CoopDetailBean;
 import com.xinniu.android.qiqueqiao.bean.IndexNewBean;
-import com.xinniu.android.qiqueqiao.customs.label.FlowLayout;
-import com.xinniu.android.qiqueqiao.customs.label.TagAdapter;
-import com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 
 import java.util.List;
 
-import io.rong.imageloader.utils.L;
+import androidx.annotation.Nullable;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/3/30.
@@ -58,7 +54,7 @@ public class IndexNewAdapter extends BaseQuickAdapter<IndexNewBean.ListBean, Bas
 //        this.isSearchPerch = isSearchPerch;
 //    }
 
-    public IndexNewAdapter(Activity context, int layoutResId, @Nullable List<IndexNewBean.ListBean> data, int lineType, int type) {
+    public IndexNewAdapter( Activity context, int layoutResId, @Nullable List<IndexNewBean.ListBean> data, int lineType, int type) {
         super(layoutResId, data);
         this.context = context;
         this.lineType = lineType;

@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Point;
 //import android.support.annotation.AttrRes;
 //import android.support.annotation.NonNull;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 //import android.support.annotation.StyleRes;
 //import android.support.v4.view.GestureDetectorCompat;
 //import android.support.v4.widget.ScrollerCompat;
@@ -22,6 +22,8 @@ import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
+
+import androidx.customview.widget.ViewDragHelper;
 
 import com.xinniu.android.qiqueqiao.R;
 

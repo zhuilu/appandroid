@@ -15,7 +15,6 @@
  */
 package com.xinniu.android.qiqueqiao.customs.wheelview.widget;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.TypedValue;
@@ -25,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 
 import com.xinniu.android.qiqueqiao.customs.wheelview.adapter.ArrayWheelAdapter;
 import com.xinniu.android.qiqueqiao.customs.wheelview.common.WheelConstants;

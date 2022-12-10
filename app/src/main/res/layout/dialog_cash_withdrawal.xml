@@ -27,7 +27,7 @@
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="@dimen/dp_21"
                     android:layout_marginRight="@dimen/dp_21"
-                    android:src="@mipmap/close" />
+                    psd:srcCompat="@mipmap/close" />
 
 
             </RelativeLayout>

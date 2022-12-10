@@ -1,12 +1,11 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.text.TextUtils;
 
-import com.xinniu.android.qiqueqiao.R;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by yuchance on 2018/11/4.
@@ -65,7 +64,7 @@ public class AlertDialogUtils {
 
 
     }
-    public static void AlertDialog(Activity context, String title, String leftMsg, String rightMsg, boolean style, final setOnClick setOnClick)
+    public static void AlertDialog(AppCompatActivity context, String title, String leftMsg, String rightMsg, boolean style, final setOnClick setOnClick)
     {
         if (!style){
             return;

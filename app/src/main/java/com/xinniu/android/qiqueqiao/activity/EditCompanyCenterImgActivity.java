@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-//import android.support.v7.widget.GridLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.EditResouceAdapter;
@@ -54,7 +56,7 @@ public class EditCompanyCenterImgActivity extends BaseActivity {
         return R.layout.activity_edit_company_center;
     }
 
-    public static void startForResult(Activity context, int requestCode) {
+    public static void startForResult(AppCompatActivity context, int requestCode) {
         Intent starter = new Intent(context, EditCompanyCenterImgActivity.class);
         starter.putExtra(PARAM_TYPE, requestCode);
         context.startActivityForResult(starter, requestCode);

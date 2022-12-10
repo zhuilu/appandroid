@@ -1,11 +1,12 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -17,15 +18,16 @@ import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
 
 import java.util.List;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/3/30.
  */
 
 public class RewardListAdapter extends BaseQuickAdapter<RewardListBean.ListBean, BaseViewHolder> {
-    private Activity context;
+    private AppCompatActivity context;
 
-    public RewardListAdapter(Activity context, int layoutResId, @Nullable List<RewardListBean.ListBean> data) {
+    public RewardListAdapter(AppCompatActivity context, int layoutResId, @Nullable List<RewardListBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
     }

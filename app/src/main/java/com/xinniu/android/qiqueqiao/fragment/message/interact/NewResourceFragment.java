@@ -1,8 +1,8 @@
 package com.xinniu.android.qiqueqiao.fragment.message.interact;
 
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.xinniu.android.qiqueqiao.R;
@@ -43,7 +43,7 @@ public class NewResourceFragment extends LazyBaseFragment{
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-        mIndexFragmentAdapter = new IndexNewAdapter(getActivity(), R.layout.item_index_new, resourceItems,0,1);
+        mIndexFragmentAdapter = new IndexNewAdapter(requireActivity(), R.layout.item_index_new, resourceItems,0,1);
         manager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.setAdapter(mIndexFragmentAdapter);

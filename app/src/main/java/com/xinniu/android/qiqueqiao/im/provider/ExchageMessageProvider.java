@@ -1,35 +1,22 @@
 package com.xinniu.android.qiqueqiao.im.provider;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-//import android.support.v4.app.ActivityCompat;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.TextUtils;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.im.message.ExchangeMessage;
-import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.utils.Logger;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
-import com.xinniu.android.qiqueqiao.utils.Utils;
 
-
-import io.rong.imkit.conversation.messgelist.provider.IMessageProvider;
-import io.rong.imlib.model.Message;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
+
+//import android.support.v4.app.ActivityCompat;
 
 /**
  * Created by lzq on 2017/12/14.
@@ -193,7 +180,7 @@ public class ExchageMessageProvider {
             }
             context.startActivity(intent1);
         } else {
-            EasyPermissions.requestPermissions((Activity)context,
+            EasyPermissions.requestPermissions((AppCompatActivity)context,
                     "系统需要获取获取您的电话权限",
                     11111, new String[]{Manifest.permission.CALL_PHONE});
         }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -22,7 +23,7 @@
                 android:layout_width="@dimen/tool_bar_head_long"
                 android:layout_height="@dimen/tool_bar_head_long"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
         </RelativeLayout>
 
         <TextView
@@ -45,7 +46,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:paddingRight="@dimen/padding_left_and_right"
-            android:src="@mipmap/zhuan_intransit"/>
+            app:srcCompat="@mipmap/zhuan_intransit"/>
         </RelativeLayout>
 
 
@@ -132,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|right"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/head_is_v32_32"
+                    app:srcCompat="@mipmap/head_is_v32_32"
                     android:visibility="gone" />
 
             </FrameLayout>
@@ -141,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/item_index_Fl">
+                android:layout_toRightOf="@+id/item_index_Fl">
 
                 <RelativeLayout
                     android:id="@+id/item_index_Rl"
@@ -177,9 +178,9 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_5"
-                        android:layout_toRightOf="@id/ll_name"
+                        android:layout_toRightOf="@+id/ll_name"
                         android:scaleType="matrix"
-                        android:src="@mipmap/vip_new_icon_company"
+                        app:srcCompat="@mipmap/vip_new_icon_company"
                         android:visibility="gone" />
 
                     <ImageView
@@ -188,7 +189,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_5"
-                        android:layout_toRightOf="@id/company_vip_img"
+                        android:layout_toRightOf="@+id/company_vip_img"
                         android:scaleType="matrix"
 
                         />
@@ -201,7 +202,7 @@
                         android:layout_marginLeft="@dimen/dp_5"
                         android:layout_toRightOf="@+id/item_index_vipImg"
                         android:scaleType="matrix"
-                        android:src="@mipmap/smrzbq"
+                        app:srcCompat="@mipmap/smrzbq"
                         android:visibility="gone" />
 
                     <TextView
@@ -210,7 +211,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="@dimen/dp_13"
-                        android:layout_toRightOf="@id/person_rz"
+                        android:layout_toRightOf="@+id/person_rz"
                         android:textColor="@color/text_color_AE"
                         android:textSize="@dimen/sp_11"
                         android:visibility="gone" />
@@ -222,7 +223,7 @@
                     android:id="@+id/item_index_position"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/item_index_Rl"
+                    android:layout_below="@+id/item_index_Rl"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_4"
                     android:layout_marginRight="@dimen/dp_20"
@@ -237,7 +238,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_15"
-                    android:src="@mipmap/goto_new" />
+                    app:srcCompat="@mipmap/goto_new" />
 
             </RelativeLayout>
 
@@ -293,7 +294,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/dp_7"
-                android:src="@mipmap/reward_type" />
+                app:srcCompat="@mipmap/reward_type" />
 
             <TextView
                 android:id="@+id/tv_type"
@@ -323,7 +324,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:src="@mipmap/reward" />
+                app:srcCompat="@mipmap/reward" />
 
             <TextView
                 android:layout_width="wrap_content"

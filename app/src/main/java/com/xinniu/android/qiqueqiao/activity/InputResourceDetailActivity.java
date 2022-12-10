@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +11,8 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -33,7 +34,7 @@ public class InputResourceDetailActivity extends BaseActivity {
     private static final String PARAM_TYPE_CHILD = "PARAM_TYPE_CHILD";
     InputMethodManager imm;
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode, String biaoti, String title, int type) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode, String biaoti, String title, int type) {
         Intent starter = new Intent(context, InputResourceDetailActivity.class);
         starter.putExtra(PARAM_TYPE_CHILD, type);
         starter.putExtra(PARAM_BT, biaoti);
@@ -93,7 +94,7 @@ public class InputResourceDetailActivity extends BaseActivity {
                 }
                 Intent intent = new Intent();
                 intent.putExtra("data", mpublishNeedet.getText().toString());
-                setResult(Activity.RESULT_OK, intent);
+                setResult(AppCompatActivity.RESULT_OK, intent);
                 finish();
                 break;
         }

@@ -1,6 +1,6 @@
 package com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alivc.player.VcPlayerLog;
 import com.xinniu.android.qiqueqiao.R;
@@ -16,7 +16,7 @@ public class VolumeDialog extends BaseGestureDialog {
     private static final String TAG = VolumeDialog.class.getSimpleName();
     private int initVolume = 0;
 
-    public VolumeDialog(Activity context, int percent) {
+    public VolumeDialog(AppCompatActivity context, int percent) {
         super(context);
         initVolume = percent;
         mImageView.setImageResource(R.drawable.alivc_volume_img);

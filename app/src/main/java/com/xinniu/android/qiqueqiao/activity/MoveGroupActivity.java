@@ -3,10 +3,10 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.MoveGroupAdapter;
@@ -27,6 +27,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class MoveGroupActivity extends BaseActivity {
     @BindView(R.id.item_lx_headimg)
     CircleImageView itemLxHeadimg;
@@ -41,7 +44,7 @@ public class MoveGroupActivity extends BaseActivity {
     private int mGroupId;//当前组的id
     private int user_id;
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode, int group_id, int user_id, String name, String position, String img_url) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode, int group_id, int user_id, String name, String position, String img_url) {
         Intent starter = new Intent(context, MoveGroupActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("group_id", group_id);

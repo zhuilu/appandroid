@@ -14,7 +14,7 @@
         />
 
     <LinearLayout
-        android:layout_toRightOf="@id/head_iv"
+        android:layout_toRightOf="@+id/head_iv"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:orientation="vertical"
@@ -49,7 +49,7 @@
         android:textColor="@drawable/bg_circle_apply_text"/>
     <TextView
         android:id="@+id/agree"
-        android:layout_toLeftOf="@id/refuse"
+        android:layout_toLeftOf="@+id/refuse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="同意"

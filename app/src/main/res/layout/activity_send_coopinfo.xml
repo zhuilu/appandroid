@@ -40,7 +40,7 @@
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tool_bar">
+        android:layout_below="@+id/tool_bar">
 
         <include layout="@layout/view_headview_refresh_two" />
 
@@ -65,7 +65,7 @@
         android:id="@+id/yperch_Rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:background="@color/white"
         android:visibility="gone">
 
@@ -85,7 +85,7 @@
             android:id="@+id/bgotoPush"
             android:layout_width="@dimen/dp_129"
             android:layout_height="@dimen/dp_36"
-            android:layout_below="@id/pushtv"
+            android:layout_below="@+id/pushtv"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/dp_100"
             android:layout_marginTop="@dimen/dp_20"

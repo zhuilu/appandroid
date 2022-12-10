@@ -3,7 +3,6 @@ package com.xinniu.android.qiqueqiao.adapter.base;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +10,18 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.scwang.smartrefresh.layout.util.DensityUtil;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.AddPictruActivity;
-import com.xinniu.android.qiqueqiao.activity.TakePhotoActivity;
 import com.xinniu.android.qiqueqiao.activity.TakePhotoTwoActivity;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.widget.ExplosionField;
 
 import java.util.ArrayList;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by lzq on 2018/1/17.
@@ -38,7 +40,7 @@ public class FeedBackImgViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
 
     public FeedBackImgViewAdapter(Context context, ArrayList<String> list, int max) {
-        mExplosionField = ExplosionField.attach2Window((Activity) context);
+        mExplosionField = ExplosionField.attach2Window((AppCompatActivity) context);
         this.mList = list;
         this.context = context;
         this.max = max;

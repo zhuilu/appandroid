@@ -22,7 +22,7 @@
                 android:layout_width="@dimen/tool_bar_head_long"
                 android:layout_height="@dimen/tool_bar_head_long"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
         </RelativeLayout>
 
         <TextView
@@ -46,7 +46,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:paddingRight="@dimen/padding_left_and_right"
-                android:src="@mipmap/zhuan_intransit" />
+                app:srcCompat="@mipmap/zhuan_intransit" />
         </RelativeLayout>
 
 
@@ -114,7 +114,7 @@
                     android:layout_height="@dimen/dp_19"
                     android:layout_centerVertical="true"
                     android:scaleType="centerInside"
-                    android:src="@mipmap/video_share" />
+                    app:srcCompat="@mipmap/video_share" />
 
             </RelativeLayout>
 
@@ -140,7 +140,7 @@
                         android:layout_height="@dimen/dp_19"
                         android:layout_gravity="center_vertical"
                         android:scaleType="centerInside"
-                        android:src="@mipmap/tell_cion_two" />
+                        app:srcCompat="@mipmap/tell_cion_two" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,7 +185,7 @@
                 android:layout_height="@dimen/dp_30"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_15"
-                android:layout_toLeftOf="@id/bleaveword_sendtv"
+                android:layout_toLeftOf="@+id/bleaveword_sendtv"
                 android:background="@drawable/bg_shape_coop_edit">
 
 
@@ -222,7 +222,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="@dimen/dp_20"></com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2>
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/mscrollview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -445,7 +445,7 @@
                         android:id="@+id/detail_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/detail_img"
+                        android:layout_below="@+id/detail_img"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_16"
                         android:text="还没有人评论，快来抢沙发吧..."
@@ -455,7 +455,7 @@
                         android:id="@+id/bleavewordx_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/detail_tv"
+                        android:layout_below="@+id/detail_tv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_20"
                         android:background="@drawable/bg_leaveword_sp"
@@ -466,7 +466,7 @@
                 </RelativeLayout>
 
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"

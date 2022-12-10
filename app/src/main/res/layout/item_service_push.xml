@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -30,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@id/item_typeimg"
+                android:layout_toRightOf="@+id/item_typeimg"
                 android:text="销售渠道"
                 android:textColor="@color/_333"
                 android:textSize="@dimen/sp_14" />
@@ -58,7 +59,7 @@
                     android:layout_width="@dimen/dp_19"
                     android:layout_height="@dimen/dp_19"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/service_push_more"
+                    app:srcCompat="@mipmap/service_push_more"
                     android:visibility="gone" />
 
             </LinearLayout>
@@ -172,7 +173,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:src="@mipmap/eye_icon" />
+                    app:srcCompat="@mipmap/eye_icon" />
 
                 <TextView
                     android:id="@+id/item_index_recycler_see"
@@ -221,7 +222,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_12"
-                android:src="@mipmap/goto_new" />
+                app:srcCompat="@mipmap/goto_new" />
 
             <TextView
                 android:id="@+id/tv_case_num"
@@ -265,7 +266,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_case"
+                android:layout_toLeftOf="@+id/bresource_case"
                 android:background="@drawable/seletor_textblue"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"
@@ -285,7 +286,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_up"
+                android:layout_toLeftOf="@+id/bresource_up"
                 android:background="@drawable/seletor_textblue"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"
@@ -306,7 +307,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_refreshTv"
+                android:layout_toLeftOf="@+id/bresource_refreshTv"
                 android:background="@drawable/selector_textgreen"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"
@@ -326,7 +327,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_4"
                 android:layout_marginRight="@dimen/dp_4"
-                android:layout_toLeftOf="@id/bresource_editTv"
+                android:layout_toLeftOf="@+id/bresource_editTv"
                 android:background="@drawable/seletor_textred"
                 android:gravity="center"
                 android:paddingLeft="@dimen/dp_10"

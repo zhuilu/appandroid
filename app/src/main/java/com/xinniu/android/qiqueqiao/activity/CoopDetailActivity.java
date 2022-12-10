@@ -1,7 +1,6 @@
 package com.xinniu.android.qiqueqiao.activity;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -10,16 +9,9 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -31,11 +23,21 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.FutureTarget;
-import com.bumptech.glide.request.animation.GlideAnimation;
+
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
 import com.google.gson.Gson;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -49,7 +51,6 @@ import com.xinniu.android.qiqueqiao.adapter.CoopDetailNeedeAdapter;
 import com.xinniu.android.qiqueqiao.adapter.CoopDetailOfferAdapter;
 import com.xinniu.android.qiqueqiao.adapter.CoopDetailPhotoAdapter;
 import com.xinniu.android.qiqueqiao.adapter.CoopHeadLxAdapter;
-import com.xinniu.android.qiqueqiao.adapter.PublicOfferTypeAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.bean.CoopDetailBean;
 import com.xinniu.android.qiqueqiao.bean.GoToCollectBean;
@@ -61,8 +62,6 @@ import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.customs.image.GlideSimpleLoader;
 import com.xinniu.android.qiqueqiao.customs.image.ImageWatcher;
 import com.xinniu.android.qiqueqiao.customs.image.ImageWatcherHelper;
-import com.xinniu.android.qiqueqiao.customs.label.FlowLayout;
-import com.xinniu.android.qiqueqiao.customs.label.TagAdapter;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipTwoDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLnewDialog;
@@ -84,7 +83,6 @@ import com.xinniu.android.qiqueqiao.request.converter.ResultDO;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.BitmapUtils;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.ShareUtils;
@@ -107,6 +105,14 @@ import butterknife.OnClick;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 import retrofit2.Call;
+
+//import android.support.annotation.NonNull;
+//import android.support.v4.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * 合作详情
@@ -343,7 +349,7 @@ public class CoopDetailActivity extends BaseActivity {
     }
 
 
-    public static void start(Activity context, int resourceId, int requestCode) {
+    public static void start(AppCompatActivity context, int resourceId, int requestCode) {
         Intent starter = new Intent(context, CoopDetailActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt(RESOURCEID, resourceId);
@@ -442,7 +448,7 @@ public class CoopDetailActivity extends BaseActivity {
                             }
                         }
                     });
-                    deleteReplyDialog.show(getFragmentManager(), "90");
+                    deleteReplyDialog.show(getSupportFragmentManager(), "90");
 
                 } else {
                     cpositon = groupPosition;
@@ -457,9 +463,7 @@ public class CoopDetailActivity extends BaseActivity {
                     sendType = 2;
                     ycoopLxwordRl.setVisibility(View.GONE);
                     imm.showSoftInput(mcoopSendEt, 0);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        mcoopSendEt.setShowSoftInputOnFocus(true);
-                    }
+                    mcoopSendEt.setShowSoftInputOnFocus(true);
 
                 }
             }
@@ -490,7 +494,7 @@ public class CoopDetailActivity extends BaseActivity {
 //
                         }
                     });
-                    deleteReplyDialog.show(getFragmentManager(), "90");
+                    deleteReplyDialog.show(getSupportFragmentManager(), "90");
                 } else {
                     cpositon = groupPosition;
                     nposition = childPosition;
@@ -551,12 +555,14 @@ public class CoopDetailActivity extends BaseActivity {
 
                             @Override
                             public void setOnClickMiddle() {
-                                Glide.with(CoopDetailActivity.this).load(uri).asBitmap().into(new SimpleTarget<Bitmap>() {
+                                Glide.with(CoopDetailActivity.this).asBitmap().load(uri).into(new SimpleTarget<Bitmap>() {
                                     @Override
-                                    public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                                         mQRBitmap = resource;
                                         requestPermission();
                                     }
+
+
                                 });
                             }
 
@@ -570,7 +576,7 @@ public class CoopDetailActivity extends BaseActivity {
 
                             }
                         });
-                        dialog.show(getFragmentManager(), "viewphoto");
+                        dialog.show(getSupportFragmentManager(), "viewphoto");
                     }
                 });
 
@@ -1787,7 +1793,7 @@ public class CoopDetailActivity extends BaseActivity {
                     .show(CoopDetailActivity.this);
         } else if (code == 301) {
             noLinkDialog = new NoLinkDialog(msg);
-            noLinkDialog.show(getFragmentManager(), "lx");
+            noLinkDialog.show(getSupportFragmentManager(), "lx");
 
 
         }

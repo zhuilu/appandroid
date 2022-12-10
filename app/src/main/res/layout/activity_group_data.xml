@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/bg_gray"
     >
@@ -27,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 />
 
         </RelativeLayout>
@@ -46,7 +47,7 @@
         android:id="@+id/mremindRl"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tool_bar_height"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:background="@drawable/bg_group_status">
         <TextView
             android:id="@+id/mremindTv"
@@ -66,7 +67,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/mremindRl"
+        android:layout_below="@+id/mremindRl"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -102,7 +103,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/mgroup_pernumtv"
+            android:layout_toLeftOf="@+id/mgroup_pernumtv"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_6"
             />
@@ -111,7 +112,7 @@
         android:id="@+id/group_Rlx"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_22"
-        android:layout_below="@id/nameRl">
+        android:layout_below="@+id/nameRl">
         <TextView
             android:id="@+id/mgroupCodeTv"
             android:layout_width="wrap_content"
@@ -125,7 +126,7 @@
             android:id="@+id/mgroup_typeTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/mgroupCodeTv"
+            android:layout_toRightOf="@+id/mgroupCodeTv"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_10"
             android:background="@drawable/bg_itemgroup_pernum"
@@ -135,7 +136,7 @@
             android:id="@+id/mgroup_cityTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/mgroup_typeTv"
+            android:layout_toRightOf="@+id/mgroup_typeTv"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_10"
             android:background="@drawable/bg_itemgroup_city"
@@ -150,7 +151,7 @@
         android:id="@+id/group_contentRl"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_22"
-        android:layout_below="@id/group_Rlx"
+        android:layout_below="@+id/group_Rlx"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginBottom="@dimen/dp_20"
         >
@@ -170,7 +171,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_100"
-        android:layout_below="@id/group_contentRl"
+        android:layout_below="@+id/group_contentRl"
         android:background="@color/bg_gray"
         >
         <TextView

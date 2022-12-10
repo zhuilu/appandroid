@@ -1,19 +1,19 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.scwang.smartrefresh.layout.util.DensityUtil;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.SelectCategory;
-import com.xinniu.android.qiqueqiao.bean.SourceScreenBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class ScreenOnlyAdapter extends BaseQuickAdapter<SelectCategory,BaseViewH
         }
         if (item.isCheck()){
             tv.setBackground(ContextCompat.getDrawable(mContext,R.drawable.bg_source_cell_two));
-            helper.setTextColor(R.id.item_source_celltv,ContextCompat.getColor(mContext,R.color.white));
+            helper.setTextColor(R.id.item_source_celltv, ContextCompat.getColor(mContext,R.color.white));
         }else {
             tv.setBackground(ContextCompat.getDrawable(mContext,R.drawable.bg_source_cell));
             helper.setTextColor(R.id.item_source_celltv,ContextCompat.getColor(mContext,R.color._888));

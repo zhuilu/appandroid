@@ -5,11 +5,13 @@ package com.xinniu.android.qiqueqiao.adapter.base;
  */
 
 import android.content.Context;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.xinniu.android.qiqueqiao.adapter.ViewHolder;
 

@@ -107,61 +107,61 @@ public class AccountPswActivity extends BaseActivity {
 //                            RequestManager.getInstance().center(null);
                             //IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
 
-                                @Override
-                                public void onFail(int errorCode) {
-                                    ToastUtils.showCentetToast(AccountPswActivity.this, "聊天服务器连接失败");
-                                    dismissBookingToast();
-                                }
-
-
-                                @Override
-                                public void onSuccess(String s) {
-                                    UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
-                                    UserInfoHelper.getIntance().setToken(userInfoBean.token);
-                                    UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
-                                    if (JPushInterface.isPushStopped(getApplicationContext())) {
-                                        JPushInterface.resumePush(getApplicationContext());
-                                    }
-                                    RequestManager.getInstance().getUserInfo(new RequestCallback<DetailedUserInfoBean>() {
-                                        @Override
-                                        public void requestStart(Call call) {
-                                            mCall = call;
-                                        }
-
-                                        @Override
-                                        public void onSuccess(DetailedUserInfoBean detailedUserInfoBean) {
-
-                                        }
-
-                                        @Override
-                                        public void onFailed(int code, String msg) {
-
-                                        }
-
-                                        @Override
-                                        public void requestEnd() {
-
-                                        }
-                                    });
-//                                    if (JPushInterface.isPushStopped(getApplicationContext())){
-                                    Set<String> PushArray = new HashSet<>();
-                                    int userId = UserInfoHelper.getIntance().getUserId();
-                                    PushArray.add(userId + "");
-                                    JPushInterface.resumePush(getApplicationContext());
-                                    JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
-                                    JPushInterface.setTags(getApplicationContext(), 0, PushArray);
+//                                @Override
+//                                public void onFail(int errorCode) {
+//                                    ToastUtils.showCentetToast(AccountPswActivity.this, "聊天服务器连接失败");
+//                                    dismissBookingToast();
+//                                }
+//
+//
+//                                @Override
+//                                public void onSuccess(String s) {
+//                                    UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
+//                                    UserInfoHelper.getIntance().setToken(userInfoBean.token);
+//                                    UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
+//                                    if (JPushInterface.isPushStopped(getApplicationContext())) {
+//                                        JPushInterface.resumePush(getApplicationContext());
 //                                    }
-
-
-                                    dismissBookingToast();
-                                    startActivity(new Intent(AccountPswActivity.this, MainActivity.class));
-                                    ComUtils.finishshortAll();
-
-                                }
-
-                            });
+//                                    RequestManager.getInstance().getUserInfo(new RequestCallback<DetailedUserInfoBean>() {
+//                                        @Override
+//                                        public void requestStart(Call call) {
+//                                            mCall = call;
+//                                        }
+//
+//                                        @Override
+//                                        public void onSuccess(DetailedUserInfoBean detailedUserInfoBean) {
+//
+//                                        }
+//
+//                                        @Override
+//                                        public void onFailed(int code, String msg) {
+//
+//                                        }
+//
+//                                        @Override
+//                                        public void requestEnd() {
+//
+//                                        }
+//                                    });
+////                                    if (JPushInterface.isPushStopped(getApplicationContext())){
+//                                    Set<String> PushArray = new HashSet<>();
+//                                    int userId = UserInfoHelper.getIntance().getUserId();
+//                                    PushArray.add(userId + "");
+//                                    JPushInterface.resumePush(getApplicationContext());
+//                                    JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
+//                                    JPushInterface.setTags(getApplicationContext(), 0, PushArray);
+////                                    }
+//
+//
+//                                    dismissBookingToast();
+//                                    startActivity(new Intent(AccountPswActivity.this, MainActivity.class));
+//                                    ComUtils.finishshortAll();
+//
+//                                }
+//
+//                            });
                         }
-                    }
+                    };
 
                     @Override
                     public void onFailed(int code, String msg) {

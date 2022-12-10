@@ -17,6 +17,10 @@ import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.annotation.ColorRes;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.core.content.ContextCompat;
+
 import com.xinniu.android.qiqueqiao.R;
 
 import java.util.Timer;
@@ -28,7 +32,7 @@ import java.util.TimerTask;
  * Created by yj on 2017/6/12.
  */
 
-public class VerificationCodeEditText extends android.support.v7.widget.AppCompatEditText implements
+public class VerificationCodeEditText extends AppCompatEditText implements
         VerificationAction, TextWatcher {
     private static final int DEFAULT_CURSOR_DURATION = 400;
 

@@ -1,32 +1,29 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.annotation.RequiresApi;
-//import android.support.v4.content.ContextCompat;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
-import com.xinniu.android.qiqueqiao.activity.MyPushActivity;
 import com.xinniu.android.qiqueqiao.activity.ServiceCaseIndexActivity;
 import com.xinniu.android.qiqueqiao.activity.ServiceDetailActivity;
-import com.xinniu.android.qiqueqiao.bean.MyPushBean;
 import com.xinniu.android.qiqueqiao.bean.MyServicePushBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.List;
+//import android.support.annotation.RequiresApi;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by qinlei
@@ -36,9 +33,9 @@ import java.util.List;
 
 public class MyServiceAdapter extends BaseQuickAdapter<MyServicePushBean.ListBean, BaseViewHolder> {
     private Callback callback;
-    private Activity mContext;
+    private AppCompatActivity mContext;
 
-    public MyServiceAdapter(Activity context, int layoutResId, @Nullable List<MyServicePushBean.ListBean> data) {
+    public MyServiceAdapter(AppCompatActivity context, int layoutResId, @Nullable List<MyServicePushBean.ListBean> data) {
         super(layoutResId, data);
         this.mContext = context;
     }

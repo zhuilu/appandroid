@@ -19,7 +19,7 @@
             android:layout_width="@dimen/tool_bar_head_long"
             android:layout_height="@dimen/tool_bar_head_long"
             android:layout_centerVertical="true"
-            android:src="@mipmap/img_title_back" />
+            app:srcCompat="@mipmap/img_title_back" />
 
         <TextView
             android:id="@+id/tool_bar_title"

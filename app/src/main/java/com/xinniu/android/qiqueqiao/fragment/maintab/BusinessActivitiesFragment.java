@@ -1,13 +1,15 @@
 package com.xinniu.android.qiqueqiao.fragment.maintab;
 
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -86,7 +88,7 @@ public class BusinessActivitiesFragment extends LazyBaseFragment {
             }
         });
         //推荐资源大类
-        mainActicityAdapter = new MainActicityAdapter(getActivity(), R.layout.item_main_activity_top, mDataTop);
+        mainActicityAdapter = new MainActicityAdapter((AppCompatActivity) getActivity(), R.layout.item_main_activity_top, mDataTop);
         LinearLayoutManager manager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         activityRecycler.setLayoutManager(manager);
         activityRecycler.setAdapter(mainActicityAdapter);
@@ -100,7 +102,7 @@ public class BusinessActivitiesFragment extends LazyBaseFragment {
         };
 
         activityRecyclerMore.setLayoutManager(linearLayoutManager);
-        mainEnentsTwoAdapter = new MainEnentsTwoAdapter(getActivity(), R.layout.item_main_activity_two, mDatas);
+        mainEnentsTwoAdapter = new MainEnentsTwoAdapter((AppCompatActivity) getActivity(), R.layout.item_main_activity_two, mDatas);
         mainEnentsTwoAdapter.setEnableLoadMore(true);
         activityRecyclerMore.setAdapter(mainEnentsTwoAdapter);
 
@@ -275,7 +277,7 @@ public class BusinessActivitiesFragment extends LazyBaseFragment {
 
                     }
                 })
-                .show(getActivity());
+                .show((AppCompatActivity) getActivity());
 
     }
 }

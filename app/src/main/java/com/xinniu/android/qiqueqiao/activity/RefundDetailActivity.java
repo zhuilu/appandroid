@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-import android.text.TextUtils;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,22 +11,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.CoopDetailPhotoAdapter;
 import com.xinniu.android.qiqueqiao.adapter.RefundDetailPhotoAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.GuaranteeOrderBean;
 import com.xinniu.android.qiqueqiao.bean.RefundDetailBean;
 import com.xinniu.android.qiqueqiao.customs.image.GlideSimpleLoader;
 import com.xinniu.android.qiqueqiao.customs.image.ImageWatcherHelper;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
-import com.xinniu.android.qiqueqiao.request.callback.GetGuaranteeOrderCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetRefundDetailCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
-import com.xinniu.android.qiqueqiao.utils.FullyGridLayoutManager;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.StatusBarCompat;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
@@ -42,6 +36,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 public class RefundDetailActivity extends BaseActivity {
     @BindView(R.id.tv_status)
@@ -112,7 +110,7 @@ public class RefundDetailActivity extends BaseActivity {
     private RefundDetailBean mBean;
     RefundDetailPhotoAdapter photoAdapter, photoAdapter1, photoAdapter2;
 
-    public static void startSimpleEidtForResult(Activity context, String order_sn, int id, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, String order_sn, int id, int requestCode) {
         Intent intent = new Intent(context, RefundDetailActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);
@@ -465,7 +463,7 @@ public class RefundDetailActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.bt_return:
                 Intent intent = new Intent();
-                setResult(Activity.RESULT_OK, intent);
+                setResult(AppCompatActivity.RESULT_OK, intent);
                 finish();
                 break;
             case R.id.tv_01:

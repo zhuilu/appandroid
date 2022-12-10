@@ -63,7 +63,7 @@
             android:id="@+id/view_source_scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/view_source_Ll"
+            android:layout_above="@+id/view_source_Ll"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_toRightOf="@id/item_source_sourcetype"
+                        android:layout_toRightOf="@+id/item_source_sourcetype"
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginLeft="@dimen/dp_10"

@@ -4,11 +4,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -21,7 +22,6 @@ import com.xinniu.android.qiqueqiao.request.callback.CommonCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetFriendStatusCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GoFriendApplyCallback;
 import com.xinniu.android.qiqueqiao.request.converter.ResultDO;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
@@ -179,9 +179,9 @@ public class LxSettingActivity extends BaseActivity {
                 break;
             case R.id.btoplx_check:
                 if (isTop) {
-                    IMUtils.setTop(targetId, false);
+//                    IMUtils.setTop(targetId, false);
                 } else {
-                    IMUtils.setTop(targetId, true);
+//                    IMUtils.setTop(targetId, true);
                 }
                 break;
             case R.id.bdislx_check:

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <RelativeLayout
@@ -14,7 +15,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 android:layout_centerInParent="true"
                 />
 
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bg_gray"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         >
         <RelativeLayout
             android:id="@+id/group_qrcodeRl"
@@ -65,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_1"
                     android:background="@color/line_color"
-                    android:layout_toLeftOf="@id/qrcode_sharetv"
+                    android:layout_toLeftOf="@+id/qrcode_sharetv"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginRight="@dimen/dp_28"
@@ -74,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_1"
                     android:background="@color/line_color"
-                    android:layout_toRightOf="@id/qrcode_sharetv"
+                    android:layout_toRightOf="@+id/qrcode_sharetv"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_28"
                     android:layout_marginRight="@dimen/dp_20"
@@ -86,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/dp_7"
-                android:layout_below="@id/qrcode_share"
+                android:layout_below="@+id/qrcode_share"
                 >
 
                 <TextView
@@ -137,7 +138,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_above="@id/group_qrcodeRl"
+            android:layout_above="@+id/group_qrcodeRl"
             >
 
             <LinearLayout
@@ -177,7 +178,7 @@
                         android:id="@+id/mgroup_nametv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/mgroup_headImg"
+                        android:layout_toRightOf="@+id/mgroup_headImg"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_10"
                         android:textColor="@color/text_color_1"
@@ -191,7 +192,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/group_messageRl"
+                    android:layout_below="@+id/group_messageRl"
                     android:layout_marginTop="@dimen/dp_5"
                     >
                     
@@ -204,7 +205,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mgroup_qrcodeImg"
+                        android:layout_below="@+id/mgroup_qrcodeImg"
                         android:text="扫一扫加入群聊"
                         android:textSize="@dimen/sp_12"
                         android:textColor="@color/_999"

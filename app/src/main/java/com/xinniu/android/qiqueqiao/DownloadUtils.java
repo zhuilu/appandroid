@@ -10,7 +10,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.widget.Toast;
-//import android.support.v4.content.FileProvider;
+
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,32 +72,32 @@ public class DownloadUtils {
         //通过下载的id查找
         query.setFilterById(downloadId);
         Cursor cursor = downloadManager.query(query);
-        if (cursor.moveToFirst()) {
-            int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
-            switch (status) {
-                //下载暂停
-                case DownloadManager.STATUS_PAUSED:
-                    break;
-                //下载延迟
-                case DownloadManager.STATUS_PENDING:
-                    break;
-                //正在下载
-                case DownloadManager.STATUS_RUNNING:
-                    break;
-                //下载完成
-                case DownloadManager.STATUS_SUCCESSFUL:
-                    //下载完成安装APK
-                    installAPK();
-                    cursor.close();
-                    break;
-                //下载失败
-                case DownloadManager.STATUS_FAILED:
-                    Toast.makeText(mContext, "下载失败", Toast.LENGTH_SHORT).show();
-                    cursor.close();
-                    mContext.unregisterReceiver(receiver);
-                    break;
-            }
-        }
+//        if (cursor.moveToFirst()) {
+//            int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
+//            switch (status) {
+//                //下载暂停
+//                case DownloadManager.STATUS_PAUSED:
+//                    break;
+//                //下载延迟
+//                case DownloadManager.STATUS_PENDING:
+//                    break;
+//                //正在下载
+//                case DownloadManager.STATUS_RUNNING:
+//                    break;
+//                //下载完成
+//                case DownloadManager.STATUS_SUCCESSFUL:
+//                    //下载完成安装APK
+//                    installAPK();
+//                    cursor.close();
+//                    break;
+//                //下载失败
+//                case DownloadManager.STATUS_FAILED:
+//                    Toast.makeText(mContext, "下载失败", Toast.LENGTH_SHORT).show();
+//                    cursor.close();
+//                    mContext.unregisterReceiver(receiver);
+//                    break;
+//            }
+//        }
     }
 
     private void installAPK() {

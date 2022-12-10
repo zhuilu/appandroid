@@ -67,7 +67,7 @@
                         android:id="@+id/mcompany_typeTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/company_headRl"
+                        android:layout_below="@+id/company_headRl"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_10"
                         android:background="@drawable/bg_company_type"
@@ -79,7 +79,7 @@
                         android:id="@+id/mcompany_brandname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mcompany_typeTv"
+                        android:layout_below="@+id/mcompany_typeTv"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_10"
                         android:textColor="@color/_333"
@@ -90,7 +90,7 @@
                         android:id="@+id/mcompany_companyname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/mcompany_brandname"
+                        android:layout_below="@+id/mcompany_brandname"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_marginBottom="@dimen/dp_15"
@@ -101,14 +101,14 @@
                         android:id="@+id/line1"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_10"
-                        android:layout_below="@id/mcompany_companyname"
+                        android:layout_below="@+id/mcompany_companyname"
                         android:background="@color/bg_gray" />
 
                     <RelativeLayout
                         android:id="@+id/bussinessRl"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_50"
-                        android:layout_below="@id/line1">
+                        android:layout_below="@+id/line1">
 
                         <View
                             android:id="@+id/imgv"
@@ -123,7 +123,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/dp_10"
-                            android:layout_toRightOf="@id/imgv"
+                            android:layout_toRightOf="@+id/imgv"
                             android:text="公司信息"
                             android:textColor="@color/_333"
                             android:textSize="@dimen/sp_18" />
@@ -134,14 +134,14 @@
                         android:id="@+id/line2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_0_2_5"
-                        android:layout_below="@id/bussinessRl"
+                        android:layout_below="@+id/bussinessRl"
                         android:background="@color/line_color" />
 
                     <RelativeLayout
                         android:id="@+id/companyinfoRl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/line2">
+                        android:layout_below="@+id/line2">
 
                         <TextView
                             android:id="@+id/tvbussinessinfo"
@@ -157,7 +157,7 @@
                             android:id="@+id/mcompany_introducetv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvbussinessinfo"
+                            android:layout_below="@+id/tvbussinessinfo"
                             android:layout_marginLeft="@dimen/dp_20"
                             android:layout_marginTop="@dimen/dp_15"
                             android:layout_marginRight="@dimen/dp_20"
@@ -181,7 +181,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
-                                android:src="@mipmap/pulldown" />
+                                app:srcCompat="@mipmap/pulldown" />
 
                         </RelativeLayout>
 
@@ -192,7 +192,7 @@
                         android:id="@+id/line3"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_0_2_5"
-                        android:layout_below="@id/companyinfoRl"
+                        android:layout_below="@+id/companyinfoRl"
                         android:layout_marginLeft="@dimen/dp_20"
                         android:layout_marginTop="@dimen/dp_15"
                         android:layout_marginRight="@dimen/dp_20"
@@ -202,7 +202,7 @@
                         android:id="@+id/mcompany_netRl"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_78"
-                        android:layout_below="@id/line3">
+                        android:layout_below="@+id/line3">
 
                         <TextView
                             android:id="@+id/tvbussinessnet"
@@ -218,7 +218,7 @@
                             android:id="@+id/mcompany_nettv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tvbussinessnet"
+                            android:layout_below="@+id/tvbussinessnet"
                             android:layout_marginLeft="@dimen/dp_20"
                             android:layout_marginTop="@dimen/dp_8"
                             android:textColor="@color/_666"
@@ -230,7 +230,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
                             android:layout_marginRight="@dimen/dp_20"
-                            android:src="@mipmap/goto_new" />
+                            app:srcCompat="@mipmap/goto_new" />
 
 
                     </RelativeLayout>
@@ -239,7 +239,7 @@
                         android:id="@+id/line4"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_0_2_5"
-                        android:layout_below="@id/mcompany_netRl"
+                        android:layout_below="@+id/mcompany_netRl"
                         android:layout_marginLeft="@dimen/dp_20"
                         android:layout_marginRight="@dimen/dp_20"
                         android:background="@color/line_color" />
@@ -248,7 +248,7 @@
                         android:id="@+id/memberRl"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_200"
-                        android:layout_below="@id/line4">
+                        android:layout_below="@+id/line4">
 
                         <TextView
                             android:id="@+id/tvbussinessmember"
@@ -267,7 +267,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="@dimen/dp_18"
                             android:layout_marginRight="@dimen/dp_20"
-                            android:src="@mipmap/goto_new" />
+                            app:srcCompat="@mipmap/goto_new" />
 
 
                         <TextView
@@ -276,7 +276,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dp_18"
                             android:layout_marginRight="@dimen/dp_3"
-                            android:layout_toLeftOf="@id/info_pointgo"
+                            android:layout_toLeftOf="@+id/info_pointgo"
                             android:text="查看全部"
                             android:textSize="@dimen/sp_12" />
 
@@ -285,7 +285,7 @@
                             android:id="@+id/mcompany_member_recycler"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp_134"
-                            android:layout_below="@id/tvbussinessmember"
+                            android:layout_below="@+id/tvbussinessmember"
                             android:layout_marginLeft="@dimen/dp_5"
                             android:layout_marginTop="@dimen/dp_20"
                             android:layout_marginRight="@dimen/dp_10"
@@ -299,7 +299,7 @@
                         android:id="@+id/servicell"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/memberRl"
+                        android:layout_below="@+id/memberRl"
                         android:orientation="vertical">
 
                         <RelativeLayout
@@ -320,7 +320,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="@dimen/dp_10"
-                                android:layout_toRightOf="@id/imgv2"
+                                android:layout_toRightOf="@+id/imgv2"
                                 android:text="公司服务"
                                 android:textColor="@color/_333"
                                 android:textSize="@dimen/sp_18" />
@@ -332,7 +332,7 @@
                                 android:layout_alignParentRight="true"
                                 android:layout_marginTop="@dimen/dp_18"
                                 android:layout_marginRight="@dimen/dp_20"
-                                android:src="@mipmap/goto_new" />
+                                app:srcCompat="@mipmap/goto_new" />
 
 
                             <TextView
@@ -341,7 +341,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/dp_18"
                                 android:layout_marginRight="@dimen/dp_3"
-                                android:layout_toLeftOf="@id/service_pointgo"
+                                android:layout_toLeftOf="@+id/service_pointgo"
                                 android:text="查看全部"
                                 android:textSize="@dimen/sp_12" />
 
@@ -462,7 +462,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="bottom|right"
-                                        android:src="@mipmap/head_is_v20_20"
+                                        app:srcCompat="@mipmap/head_is_v20_20"
                                         android:visibility="gone" />
 
 
@@ -501,7 +501,7 @@
                         android:id="@+id/resourceRl"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_50"
-                        android:layout_below="@id/servicell"
+                        android:layout_below="@+id/servicell"
                         android:layout_marginTop="@dimen/dp_8">
 
                         <View
@@ -517,7 +517,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/dp_10"
-                            android:layout_toRightOf="@id/imgv1"
+                            android:layout_toRightOf="@+id/imgv1"
                             android:text="公司资源"
                             android:textColor="@color/_333"
                             android:textSize="@dimen/sp_18" />
@@ -536,7 +536,7 @@
                     android:id="@+id/mcompany_resource_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/companyheadRl">
+                    android:layout_below="@+id/companyheadRl">
 
                 </com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView>
 
@@ -544,7 +544,7 @@
                     android:id="@+id/mcompany_infoImg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/companyheadRl"
+                    android:layout_below="@+id/companyheadRl"
                     android:background="@color/white"
                     android:visibility="gone">
 
@@ -598,7 +598,7 @@
         android:layout_marginLeft="@dimen/dp_14"
         android:layout_marginTop="@dimen/dp_32"
         android:alpha="1"
-        android:src="@mipmap/arrow_left_white_bg" />
+        app:srcCompat="@mipmap/arrow_left_white_bg" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -614,7 +614,7 @@
             android:layout_height="@dimen/dp_27"
             android:layout_gravity="center_vertical"
             android:alpha="1"
-            android:src="@mipmap/company_share" />
+            app:srcCompat="@mipmap/company_share" />
 
         <RelativeLayout
             android:id="@+id/yeditRl"
@@ -631,7 +631,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/company_editor" />
+                app:srcCompat="@mipmap/company_editor" />
 
         </RelativeLayout>
 

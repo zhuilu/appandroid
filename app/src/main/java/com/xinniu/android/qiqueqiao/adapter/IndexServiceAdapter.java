@@ -1,9 +1,11 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
+import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -14,6 +16,8 @@ import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 
 import java.util.List;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by yuchance on 2018/3/30.
  */
@@ -21,15 +25,15 @@ import java.util.List;
 public class IndexServiceAdapter extends BaseQuickAdapter<IndexServiceBean.ListBean, BaseViewHolder> {
 
 
-    private Activity context;
+    private Context context;
 
-    public IndexServiceAdapter(Activity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType, boolean isSearchPerch) {
+    public IndexServiceAdapter(Context context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType, boolean isSearchPerch) {
         super(layoutResId, data);
         this.context = context;
 
     }
 
-    public IndexServiceAdapter(Activity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType) {
+    public IndexServiceAdapter(Context context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType) {
         super(layoutResId, data);
         this.context = context;
 

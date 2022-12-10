@@ -14,7 +14,7 @@ import android.os.Handler;
 import android.os.Message;
 //import android.support.annotation.NonNull;
 //import android.support.v7.app.AlertDialog;
-//import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;

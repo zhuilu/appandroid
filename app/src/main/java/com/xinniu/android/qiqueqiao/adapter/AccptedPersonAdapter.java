@@ -1,34 +1,33 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
-import com.xinniu.android.qiqueqiao.activity.RewardDetailActivity;
 import com.xinniu.android.qiqueqiao.bean.AcceptedOrdersPersonBean;
-import com.xinniu.android.qiqueqiao.bean.RewardListBean;
-import com.xinniu.android.qiqueqiao.bean.TakeRewardBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
 
 import java.util.List;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/3/30.
  */
 
 public class AccptedPersonAdapter extends BaseQuickAdapter<AcceptedOrdersPersonBean.TakingOrderListBean, BaseViewHolder> {
-    private Activity context;
+    private AppCompatActivity context;
     private Callback callback;
 
-    public AccptedPersonAdapter(Activity context, int layoutResId, @Nullable List<AcceptedOrdersPersonBean.TakingOrderListBean> data) {
+    public AccptedPersonAdapter(AppCompatActivity context, int layoutResId, @Nullable List<AcceptedOrdersPersonBean.TakingOrderListBean> data) {
         super(layoutResId, data);
         this.context = context;
     }

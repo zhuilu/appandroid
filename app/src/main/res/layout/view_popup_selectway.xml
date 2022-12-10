@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
@@ -31,13 +33,13 @@
             android:layout_marginRight="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_25"
             android:scaleType="center"
-            android:src="@mipmap/closevip_icon" />
+            app:srcCompat="@mipmap/closevip_icon" />
 
         <RelativeLayout
             android:id="@+id/mpriceRl"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_65"
-            android:layout_below="@id/pop_titleTv">
+            android:layout_below="@+id/pop_titleTv">
 
             <TextView
                 android:id="@+id/mbuytitletv"
@@ -55,7 +57,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_15"
-                android:layout_toRightOf="@id/mbuytitletv"
+                android:layout_toRightOf="@+id/mbuytitletv"
                 android:gravity="right"
                 android:textColor="@color/king_color"
                 android:textSize="@dimen/sp_18" />
@@ -67,7 +69,7 @@
             android:id="@+id/line_view1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0_5"
-            android:layout_below="@id/mpriceRl"
+            android:layout_below="@+id/mpriceRl"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginRight="@dimen/dp_15"
             android:background="@color/line_color" />
@@ -76,7 +78,7 @@
             android:id="@+id/mtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_view1"
+            android:layout_below="@+id/line_view1"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_24"
             android:text="支付方式"
@@ -89,7 +91,7 @@
             android:id="@+id/popup_pay_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/mtitle"
+            android:layout_below="@+id/mtitle"
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginRight="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_30"
@@ -167,7 +169,7 @@
             android:id="@+id/line_view2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0_5"
-            android:layout_below="@id/popup_pay_rl"
+            android:layout_below="@+id/popup_pay_rl"
             android:background="@color/line_color"
             />
 
@@ -181,7 +183,7 @@
             android:layout_marginLeft="@dimen/dp_15"
             android:layout_marginRight="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_8"
-            android:layout_below="@id/line_view2">
+            android:layout_below="@+id/line_view2">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,7 +205,7 @@
                     android:id="@+id/mpay_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/view_pay_btnTv"
+                    android:layout_toRightOf="@+id/view_pay_btnTv"
 
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/sp_24"

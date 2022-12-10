@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -25,7 +26,7 @@
                 android:layout_width="@dimen/tool_bar_head_long"
                 android:layout_height="@dimen/tool_bar_head_long"
                 android:layout_gravity="center"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
         </LinearLayout>
 
         <TextView
@@ -47,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toLeftOf="@id/srearch_tv"
-            android:layout_toRightOf="@id/bt_return"
+            android:layout_toLeftOf="@+id/srearch_tv"
+            android:layout_toRightOf="@+id/bt_return"
             android:background="@drawable/shape_search_graybg"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -58,7 +59,7 @@
                 android:layout_height="35dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:src="@mipmap/search_black" />
+                app:srcCompat="@mipmap/search_black" />
 
             <com.xinniu.android.qiqueqiao.customs.ClearEditText
                 android:id="@+id/sreach_content_et"
@@ -137,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dp_15"
-                    android:layout_toLeftOf="@id/tvOrder"
+                    android:layout_toLeftOf="@+id/tvOrder"
                     android:drawableRight="@drawable/select_black_gray_arr"
                     android:drawablePadding="@dimen/dp_5"
                     android:text="地区"
@@ -149,7 +150,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/dp_5"
                     android:layout_marginRight="@dimen/dp_5"
-                    android:layout_toLeftOf="@id/tvSearched"
+                    android:layout_toLeftOf="@+id/tvSearched"
                     android:orientation="horizontal">
 
                     <RelativeLayout
@@ -280,7 +281,7 @@
             android:id="@+id/searchSwipe"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/thecoopRl">
+            android:layout_below="@+id/thecoopRl">
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -291,7 +292,7 @@
             <com.scwang.smartrefresh.layout.footer.ClassicsFooter
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_50"
-                android:layout_below="@id/recyclerView"
+                android:layout_below="@+id/recyclerView"
                 android:background="@color/white">
 
                 <pl.droidsonroids.gif.GifImageView
@@ -307,7 +308,7 @@
             android:id="@+id/yperch_Rl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/thecoopRl"
+            android:layout_below="@+id/thecoopRl"
             android:background="@color/white"
             android:visibility="gone">
 
@@ -321,13 +322,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/perchx_3" />
+                    app:srcCompat="@mipmap/perchx_3" />
 
                 <TextView
                     android:id="@+id/search_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/search_img"
+                    android:layout_below="@+id/search_img"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dp_5"
                     android:text="未搜索到相关合作信息"
@@ -338,7 +339,7 @@
                     android:id="@+id/search_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/search_text"
+                    android:layout_below="@+id/search_text"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dp_15"
                     android:text="试试联系专属服务经理，精准寻找资源"
@@ -348,7 +349,7 @@
                     android:id="@+id/bnoRec_lxx"
                     android:layout_width="@dimen/dp_129"
                     android:layout_height="@dimen/dp_36"
-                    android:layout_below="@id/search_content"
+                    android:layout_below="@+id/search_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dp_15"
                     android:layout_marginBottom="@dimen/dp_50"

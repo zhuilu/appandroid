@@ -1,12 +1,13 @@
 package com.xinniu.android.qiqueqiao.utils;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
@@ -23,7 +24,7 @@ public class StatusBarUtil {
      * @param activity
      */
     @TargetApi(19)
-    public static void transparencyBar(Activity activity){
+    public static void transparencyBar(AppCompatActivity activity){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -45,7 +46,7 @@ public class StatusBarUtil {
      * @param activity
      * @param colorId
      */
-    public static void setStatusBarColor(Activity activity,int colorId) {
+    public static void setStatusBarColor(AppCompatActivity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
@@ -66,7 +67,7 @@ public class StatusBarUtil {
      * @param activity
      * @return 1:MIUUI 2:Flyme 3:android6.0
      */
-    public static int StatusBarLightMode(Activity activity,boolean isDark){
+    public static int StatusBarLightMode(AppCompatActivity activity, boolean isDark){
         int result=0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if(MIUISetStatusBarLightMode(activity, isDark)){
@@ -87,7 +88,7 @@ public class StatusBarUtil {
      * @param activity
      * @param type 1:MIUUI 2:Flyme 3:android6.0
      */
-    public static void StatusBarLightMode(Activity activity,int type){
+    public static void StatusBarLightMode(AppCompatActivity activity, int type){
         if(type==1){
             MIUISetStatusBarLightMode(activity, true);
         }else if(type==2){
@@ -101,7 +102,7 @@ public class StatusBarUtil {
     /**
      * 状态栏暗色模式，清除MIUI、flyme或6.0以上版本状态栏黑色文字、图标
      */
-    public static void StatusBarDarkMode(Activity activity,int type){
+    public static void StatusBarDarkMode(AppCompatActivity activity, int type){
         if(type==1){
             MIUISetStatusBarLightMode(activity, false);
         }else if(type==2){
@@ -156,7 +157,7 @@ public class StatusBarUtil {
      * @return  boolean 成功执行返回true
      *
      */
-    public static boolean MIUISetStatusBarLightMode(Activity activity, boolean dark) {
+    public static boolean MIUISetStatusBarLightMode(AppCompatActivity activity, boolean dark) {
         boolean result = false;
         Window window=activity.getWindow();
         if (window != null) {
@@ -197,7 +198,7 @@ public class StatusBarUtil {
      */
     private static final int SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT = 0x00000010;
 
-    private static void setOPPOStatusTextColor(boolean lightStatusBar, Activity activity) {
+    private static void setOPPOStatusTextColor(boolean lightStatusBar, AppCompatActivity activity) {
         Window window = activity.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         int vis = window.getDecorView().getSystemUiVisibility();

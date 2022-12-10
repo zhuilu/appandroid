@@ -1,16 +1,16 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
@@ -21,8 +21,9 @@ import com.xinniu.android.qiqueqiao.utils.ComUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/10/9.
@@ -45,7 +46,7 @@ public class PerfectGroupActivity extends BaseActivity {
         return R.layout.activity_perfectgroup;
     }
 
-    public static void start(Activity context, String groupName, int groupId) {
+    public static void start(AppCompatActivity context, String groupName, int groupId) {
         Intent intent = new Intent(context, PerfectGroupActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("groupName",groupName);

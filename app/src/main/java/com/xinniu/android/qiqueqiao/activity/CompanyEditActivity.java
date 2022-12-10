@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -32,7 +31,6 @@ import com.xinniu.android.qiqueqiao.utils.TokePhotoUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;

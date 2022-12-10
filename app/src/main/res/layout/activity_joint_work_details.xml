@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,7 +17,7 @@
             android:layout_width="@dimen/tool_bar_head_long"
             android:layout_height="@dimen/tool_bar_head_long"
             android:layout_centerVertical="true"
-            android:src="@mipmap/img_title_back" />
+            app:srcCompat="@mipmap/img_title_back" />
 
         <TextView
             android:id="@+id/tool_bar_title"
@@ -33,18 +34,18 @@
             android:layout_height="@dimen/tool_bar_head_long"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/img_title_share" />
+            app:srcCompat="@mipmap/img_title_share" />
     </RelativeLayout>
 
    <androidx.recyclerview.widget.RecyclerView
-       android:layout_below="@id/tool_bar"
+       android:layout_below="@+id/tool_bar"
        android:id="@+id/tala_list"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:layout_above="@id/btn"
+       android:layout_above="@+id/btn"
        />
     <TextView
-        android:layout_below="@id/tala_list"
+        android:layout_below="@+id/tala_list"
         android:layout_marginTop="10dp"
         android:id="@+id/launched_bt"
         android:layout_width="match_parent"

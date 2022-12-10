@@ -2,8 +2,8 @@ package com.xinniu.android.qiqueqiao.fragment.tab;
 
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import androidx.viewpager.widget.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 import android.text.TextPaint;
 import android.util.TypedValue;
 import android.view.View;

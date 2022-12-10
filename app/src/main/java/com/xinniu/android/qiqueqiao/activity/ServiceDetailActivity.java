@@ -5,12 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -19,7 +13,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebChromeClient;
-import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
@@ -59,7 +52,6 @@ import com.xinniu.android.qiqueqiao.request.callback.InquireCallback;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.request.callback.TalkToUserCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.ServiceBannerImgLoader;
@@ -82,6 +74,19 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import retrofit2.Call;
+
+//import android.support.annotation.NonNull;
+//import android.support.v4.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 public class ServiceDetailActivity extends BaseActivity {
     @BindView(R.id.bcollect_tv)
@@ -341,7 +346,7 @@ public class ServiceDetailActivity extends BaseActivity {
                             }
                         }
                     });
-                    deleteReplyDialog.show(getFragmentManager(), "90");
+                    deleteReplyDialog.show(getSupportFragmentManager(), "90");
 
                 } else {
                     cpositon = groupPosition;
@@ -389,7 +394,7 @@ public class ServiceDetailActivity extends BaseActivity {
 //
                         }
                     });
-                    deleteReplyDialog.show(getFragmentManager(), "90");
+                    deleteReplyDialog.show(getSupportFragmentManager(), "90");
                 } else {
                     cpositon = groupPosition;
                     nposition = childPosition;
@@ -979,7 +984,7 @@ public class ServiceDetailActivity extends BaseActivity {
                     .show(ServiceDetailActivity.this);
         } else if (code == 301) {
             noLinkDialog = new NoLinkDialog(msg);
-            noLinkDialog.show(getFragmentManager(), "lx");
+            noLinkDialog.show(getSupportFragmentManager(), "lx");
 
 
         }

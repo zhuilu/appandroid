@@ -1,23 +1,14 @@
 package com.xinniu.android.qiqueqiao.activity;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-//import android.support.v4.app.FragmentTransaction;
-//import android.support.v7.app.AppCompatDialog;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatDialog;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -27,33 +18,19 @@ import com.xinniu.android.qiqueqiao.bean.MemberInfoBean;
 import com.xinniu.android.qiqueqiao.bean.UnReadBean;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLQRCodeDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLShareDialog;
-//import com.xinniu.android.qiqueqiao.im.TestConversationFragment;
-import com.xinniu.android.qiqueqiao.im.provider.HeadMessageProvider;
-import com.xinniu.android.qiqueqiao.im.provider.SecretPhoneNumProvider;
-
-import com.xinniu.android.qiqueqiao.im.provider.ServiceMessageProvider;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.GetGroupMemberCallback;
 import com.xinniu.android.qiqueqiao.request.callback.UnReadCircleCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.BitmapUtils;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
-import com.xinniu.android.qiqueqiao.utils.ReflectUtils;
 import com.xinniu.android.qiqueqiao.utils.ShareUtils;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-//import butterknife.ButterKnife;
-import io.rong.imkit.RongIM;
-//import io.rong.imkit.fragment.ConversationFragment;
-//import io.rong.imkit.widget.AutoRefreshListView;
-import io.rong.imlib.model.Conversation;
-import io.rong.imlib.model.UserInfo;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 

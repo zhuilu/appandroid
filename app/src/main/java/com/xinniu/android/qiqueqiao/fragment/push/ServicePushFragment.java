@@ -3,16 +3,18 @@ package com.xinniu.android.qiqueqiao.fragment.push;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.annotation.Nullable;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -28,7 +30,6 @@ import com.xinniu.android.qiqueqiao.bean.MyPushBean;
 import com.xinniu.android.qiqueqiao.bean.MyServicePushBean;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
 import com.xinniu.android.qiqueqiao.dialog.AlertDialogUtils;
-import com.xinniu.android.qiqueqiao.dialog.DeleteReplyDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
 import com.xinniu.android.qiqueqiao.request.callback.CommonCallback;
@@ -201,7 +202,7 @@ public class ServicePushFragment extends LazyBaseFragment {
 
     private void initAdapter() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAdapter = new MyServiceAdapter(getActivity(), R.layout.item_service_push, mData);
+        mAdapter = new MyServiceAdapter((AppCompatActivity) getActivity(), R.layout.item_service_push, mData);
         recyclerView.setAdapter(mAdapter);
         mAdapter.setCallback(new MyServiceAdapter.Callback() {
 
@@ -261,7 +262,7 @@ public class ServicePushFragment extends LazyBaseFragment {
 
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
 
                 } else {
                     ToastUtils.showCentetImgToast(getContext(), msg);
@@ -288,10 +289,10 @@ public class ServicePushFragment extends LazyBaseFragment {
                 toReleaseActivity(1);
                 break;
             case R.id.bmypush_buytop:
-                TopCardActivity.start(getActivity(), MYPUSHCODE);
+                TopCardActivity.start((AppCompatActivity) getActivity(), MYPUSHCODE);
                 break;
             case R.id.bmypush_buytop_2:
-                SuperExposureActivity.start(getActivity(), MYPUSHCODETWO);
+                SuperExposureActivity.start((AppCompatActivity) getActivity(), MYPUSHCODETWO);
                 break;
             default:
                 break;
@@ -311,7 +312,7 @@ public class ServicePushFragment extends LazyBaseFragment {
                 dismissBookingToast();
                 if (type == 2) {
                     //编辑
-                    PublishingServiceActivity.start(getActivity(), mData.get(mPosition).getId(), mData.get(mPosition).getP_name(), mData.get(mPosition).getP_id(), 1000);
+                    PublishingServiceActivity.start((AppCompatActivity) getActivity(), mData.get(mPosition).getId(), mData.get(mPosition).getP_name(), mData.get(mPosition).getP_id(), 1000);
                 } else {
                     PublishingServiceActivity.start(getActivity());
                 }
@@ -349,7 +350,7 @@ public class ServicePushFragment extends LazyBaseFragment {
 
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 }
             }
         });
@@ -410,7 +411,7 @@ public class ServicePushFragment extends LazyBaseFragment {
 
                             @Override
                             public void setRightOnClick(DialogInterface dialog) {
-                                TopCardActivity.start(getActivity(), MYPUSHCODE);
+                                TopCardActivity.start((AppCompatActivity) getActivity(), MYPUSHCODE);
                             }
                         });
                     }

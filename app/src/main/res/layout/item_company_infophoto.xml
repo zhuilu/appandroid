@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="@dimen/dp_110"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_110"
     android:layout_height="@dimen/dp_127"
     android:background="@drawable/bg_companyhead"
     android:layout_marginLeft="@dimen/dp_15"
@@ -33,7 +35,7 @@
             android:id="@+id/mcompany_isv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/head_is_v40_40"
+            app:srcCompat="@mipmap/head_is_v40_40"
             android:layout_gravity="right|bottom"
             />
 
@@ -43,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/company_headFl"
+        android:layout_below="@+id/company_headFl"
         android:layout_marginTop="@dimen/dp_10"
         android:text="成员"
         android:textSize="@dimen/sp_13"
@@ -54,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/mcompany_people_name"
+        android:layout_below="@+id/mcompany_people_name"
         android:layout_marginTop="@dimen/dp_6"
         android:text="销售总监"
         android:singleLine="true"

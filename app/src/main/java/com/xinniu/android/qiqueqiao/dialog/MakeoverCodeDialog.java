@@ -1,9 +1,8 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +11,6 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +19,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.ResgisterNewActivity;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.utils.YzmHelper;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/10/11.

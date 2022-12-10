@@ -8,7 +8,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-//import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -24,6 +23,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.alipay.sdk.app.PayTask;
 import com.tencent.mm.opensdk.modelpay.PayReq;
@@ -45,7 +46,6 @@ import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.request.callback.TalkPackageCallback;
 import com.xinniu.android.qiqueqiao.request.callback.VipBugCallback;
 import com.xinniu.android.qiqueqiao.request.callback.WechatPayCallback;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.Logger;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;

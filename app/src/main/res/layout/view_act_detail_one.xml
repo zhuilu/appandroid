@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -61,14 +62,14 @@
                         android:layout_height="@dimen/dp_1"
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/tv"
-                        android:src="@mipmap/left_line" />
+                        app:srcCompat="@mipmap/left_line" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_1"
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/tv"
-                        android:src="@mipmap/right_line" />
+                        app:srcCompat="@mipmap/right_line" />
 
 
                 </RelativeLayout>
@@ -77,7 +78,7 @@
                     android:id="@+id/tv_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/rlayout_01"
+                    android:layout_below="@+id/rlayout_01"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dp_13"
                     android:text=""
@@ -148,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="@dimen/dp_35"
-                android:src="@mipmap/bottom_biaoyu" />
+                app:srcCompat="@mipmap/bottom_biaoyu" />
 
         </LinearLayout>
 

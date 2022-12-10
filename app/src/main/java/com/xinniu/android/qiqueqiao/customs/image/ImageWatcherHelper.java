@@ -1,15 +1,20 @@
 package com.xinniu.android.qiqueqiao.customs.image;
 
 import android.net.Uri;
-//import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 //import android.support.v4.app.FragmentActivity;
 //import android.support.v4.app.FragmentManager;
-//import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
 
 import com.xinniu.android.qiqueqiao.R;
 

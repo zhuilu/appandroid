@@ -2,12 +2,13 @@ package com.xinniu.android.qiqueqiao.fragment.classroom;
 
 import android.os.Bundle;
 import android.os.Handler;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xinniu.android.qiqueqiao.R;
@@ -30,6 +31,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 public class ClassRoomCommentFragment extends LazyBaseFragment {
     @BindView(R.id.detail_img)
@@ -145,7 +149,7 @@ public class ClassRoomCommentFragment extends LazyBaseFragment {
 
                         }
                     });
-                    deleteReplyDialog.show(getActivity().getFragmentManager(), "90");
+                    deleteReplyDialog.show(getActivity().getSupportFragmentManager(), "90");
 
                 } else {
                     callBackListener.setClick(2, datas.get(position).getId(), datas.get(position).getRealname(), datas);

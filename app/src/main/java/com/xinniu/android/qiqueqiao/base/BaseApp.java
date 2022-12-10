@@ -1,14 +1,11 @@
 package com.xinniu.android.qiqueqiao.base;
 
-import android.app.Activity;
 import android.app.Application;
-import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.security.rp.RPSDK;
 import com.alivc.player.AliVcMediaPlayer;
@@ -19,40 +16,21 @@ import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
 import com.xinniu.android.qiqueqiao.DaoMaster;
 import com.xinniu.android.qiqueqiao.DaoSession;
-import com.xinniu.android.qiqueqiao.MainActivity;
-import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.RedPointHelper;
-import com.xinniu.android.qiqueqiao.activity.AddPictruActivity;
-import com.xinniu.android.qiqueqiao.activity.ChatActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
-import com.xinniu.android.qiqueqiao.activity.TopCardActivity;
-import com.xinniu.android.qiqueqiao.bean.GroupBean;
-import com.xinniu.android.qiqueqiao.bean.OtherUserInfo;
-import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
-import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.request.callback.GetOtherUserInfoCallback;
-import com.xinniu.android.qiqueqiao.request.callback.GroupInfoCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.Utils;
 import com.xinniu.android.qiqueqiao.utils.YzmHelper;
 import com.xinniu.android.qiqueqiao.utils.db.MySQLiteOpenHelper;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import cn.com.chinatelecom.account.api.CtAuth;
-import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.JPushInterface;
-import io.rong.imkit.RongIM;
-import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.Conversation;
-import io.rong.imlib.model.Message;
-import io.rong.imlib.model.MessageContent;
-import io.rong.message.InformationNotificationMessage;
 
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 
 /**
@@ -63,7 +41,7 @@ public class BaseApp extends Application {
 
     public static Context context;
     private static BaseApp instance;
-    public static Set<Activity> allActivities;
+    public static Set<AppCompatActivity> allActivities;
     //    public static boolean SKIP_WELCOME;
     private DaoSession daoSession;
     private static BaseApp application;
@@ -101,7 +79,7 @@ public class BaseApp extends Application {
         RedPointHelper.init(this);
         ImageLoader.init(this);
         Utils.init(this);
-        IMUtils.init(this);
+//        IMUtils.init(this);
         UMShareAPI.get(this);
         YzmHelper.init(this);
         PlatformConfig.setWeixin("wx430262a62d31dff9", "323df1385a2e217d6d15f7fd75902738");
@@ -125,14 +103,14 @@ public class BaseApp extends Application {
         return application;
     }
 
-    public void addActivitySet(Activity activity) {
+    public void addActivitySet(AppCompatActivity activity) {
         if (allActivities == null) {
             allActivities = new HashSet<>();
         }
         allActivities.add(activity);
     }
 
-    public void removeActivity(Activity activity) {
+    public void removeActivity(AppCompatActivity activity) {
         allActivities.remove(activity);
     }
 
@@ -146,7 +124,7 @@ public class BaseApp extends Application {
         JPushInterface.stopPush(this);
         JPushInterface.cleanTags(this, 0);
         JPushInterface.deleteAlias(this, 0);
-        IMUtils.rongLogout();
+//        IMUtils.rongLogout();
     }
 
     public static BaseApp getInstance() {

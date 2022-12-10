@@ -4,11 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +12,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -64,8 +66,10 @@ import com.xinniu.android.qiqueqiao.zxing.activity.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.listener.OnBannerListener;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import fj.mtsortbutton.lib.DynamicSoreView;
@@ -234,28 +238,28 @@ public class IndexNewFragment extends LazyBaseFragment {
         });
 
         //推荐资源大类
-        mainTypeAdapter = new MainTypeAdapter(getActivity(), R.layout.item_main_type, mResourceList);
+        mainTypeAdapter = new MainTypeAdapter((AppCompatActivity) getActivity(), R.layout.item_main_type, mResourceList);
         LinearLayoutManager manager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         mrecyclerType.setLayoutManager(manager);
         mrecyclerType.setAdapter(mainTypeAdapter);
         //公司服务
-        mainServiceAdapter = new MainServiceAdapter(getActivity(), R.layout.item_main_service, mServiceList);
+        mainServiceAdapter = new MainServiceAdapter((AppCompatActivity) getActivity(), R.layout.item_main_service, mServiceList);
         final LinearLayoutManager manager01 = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         companyServiceRecycler.setLayoutManager(manager01);
         companyServiceRecycler.setAdapter(mainServiceAdapter);
         //商务活动
-        mainEnentsAdapter = new MainEnentsAdapter(getActivity(), R.layout.item_main_activity, mEventList);
+        mainEnentsAdapter = new MainEnentsAdapter((AppCompatActivity) getActivity(), R.layout.item_main_activity, mEventList);
         final LinearLayoutManager manager02 = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         activityRecycler.setLayoutManager(manager02);
         activityRecycler.setAdapter(mainEnentsAdapter);
         //悬赏
-        mainRewardAdapter = new MainRewardAdapter(getActivity(), R.layout.item_main_reward, mRewardList);
+        mainRewardAdapter = new MainRewardAdapter((AppCompatActivity) getActivity(), R.layout.item_main_reward, mRewardList);
         LinearLayoutManager manager3 = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         rewardRecycler.setLayoutManager(manager3);
         rewardRecycler.setAdapter(mainRewardAdapter);
 
         //异业课堂
-        mainClassRoomAdapter = new MainClassRoomAdapter(getActivity(), R.layout.item_main_class, mVideoList);
+        mainClassRoomAdapter = new MainClassRoomAdapter((AppCompatActivity) getActivity(), R.layout.item_main_class, mVideoList);
         LinearLayoutManager manager4 = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         classRecycler.setLayoutManager(manager4);
         classRecycler.setAdapter(mainClassRoomAdapter);
@@ -275,12 +279,12 @@ public class IndexNewFragment extends LazyBaseFragment {
                     qrBt.setImageResource(R.mipmap.qrcode_gray);
                     sreachContentLl.setBackground(ContextCompat.getDrawable(mContext, R.drawable.shape_circle_search));
                     rSearch.setBackground(ContextCompat.getDrawable(mContext, R.drawable.shape_white_bg));
-                    StatusBarUtil.StatusBarLightMode(getActivity(), true);
+                    StatusBarUtil.StatusBarLightMode((AppCompatActivity) getActivity(), true);
                 } else {
                     rSearch.setBackground(null);
                     qrBt.setImageResource(R.mipmap.qrcode_white);
                     sreachContentLl.setBackground(ContextCompat.getDrawable(mContext, R.mipmap.search_bg));
-                    StatusBarUtil.StatusBarLightMode(getActivity(), false);
+                    StatusBarUtil.StatusBarLightMode((AppCompatActivity) getActivity(), false);
 
                 }
             }

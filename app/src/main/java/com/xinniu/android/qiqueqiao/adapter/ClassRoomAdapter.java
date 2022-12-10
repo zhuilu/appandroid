@@ -1,11 +1,9 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -19,15 +17,18 @@ import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+//import android.support.v4.content.ContextCompat;
+
 /**
  * Created by yuchance on 2018/10/9.
  */
 
 public class ClassRoomAdapter extends BaseQuickAdapter<ClassRoomListBean.ListBean, BaseViewHolder> {
-    private Activity context;
+    private AppCompatActivity context;
     private List<ClassRoomListBean.ListBean> mData = new ArrayList<>();
 
-    public ClassRoomAdapter(Activity context, int layoutResId, @Nullable List<ClassRoomListBean.ListBean> data) {
+    public ClassRoomAdapter(AppCompatActivity context, int layoutResId, @Nullable List<ClassRoomListBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
         this.mData = data;

@@ -1,7 +1,11 @@
 package com.xinniu.android.qiqueqiao.customs;
 
 import android.content.Context;
-//import android.support.v7.widget.LinearLayoutManager;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 public class ScrollLinearLayoutManager extends LinearLayoutManager {
     private boolean mCanVerticalScroll = true;

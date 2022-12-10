@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -24,7 +25,7 @@
             android:layout_width="@dimen/tool_bar_head_long"
             android:layout_height="@dimen/tool_bar_head_long"
 
-            android:src="@mipmap/img_tool_bar_close"
+            app:srcCompat="@mipmap/img_tool_bar_close"
             android:layout_centerVertical="true" />
 
         <TextView
@@ -37,7 +38,7 @@
     </RelativeLayout>
     </RelativeLayout>
     <FrameLayout
-        android:layout_below="@id/tool_barx"
+        android:layout_below="@+id/tool_barx"
         android:id="@+id/gallery_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

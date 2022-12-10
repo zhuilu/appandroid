@@ -1,11 +1,12 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -19,7 +20,6 @@ import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -56,7 +56,7 @@ public class GroupNewNoticeActivity extends BaseActivity {
     private String content;
     private int identity;
 
-    public static void start(Activity context, int groupId, String groupName, int identity) {
+    public static void start(AppCompatActivity context, int groupId, String groupName, int identity) {
         Intent intent = new Intent(context, GroupNewNoticeActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("groupId", groupId);

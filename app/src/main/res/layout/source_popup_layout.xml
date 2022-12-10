@@ -69,7 +69,7 @@
                 android:background="@drawable/selector_index_item_head_bg"/>
         </LinearLayout>
         <ListView
-            android:layout_below="@id/viewll"
+            android:layout_below="@+id/viewll"
             android:id="@+id/leftListView"
             android:layout_above="@+id/tvSubmit"
             android:dividerHeight="0dp"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"/>
         <ListView
-            android:layout_below="@id/viewll"
+            android:layout_below="@+id/viewll"
             android:id="@+id/rightListView"
             android:scrollbars="none"
             android:dividerHeight="0dp"

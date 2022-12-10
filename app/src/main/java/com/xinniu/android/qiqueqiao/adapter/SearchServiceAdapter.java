@@ -1,10 +1,10 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -16,6 +16,8 @@ import com.xinniu.android.qiqueqiao.utils.StringUtils;
 
 import java.util.List;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by yuchance on 2018/3/30.
  */
@@ -23,7 +25,7 @@ import java.util.List;
 public class SearchServiceAdapter extends BaseQuickAdapter<IndexServiceBean.ListBean, BaseViewHolder> {
 
 
-    private Activity context;
+    private AppCompatActivity context;
     private String keyWord;
 
 
@@ -34,13 +36,13 @@ public class SearchServiceAdapter extends BaseQuickAdapter<IndexServiceBean.List
     public void setKeyWord(String keyWord) {
         this.keyWord = keyWord;
     }
-    public SearchServiceAdapter(Activity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType, boolean isSearchPerch) {
+    public SearchServiceAdapter(AppCompatActivity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType, boolean isSearchPerch) {
         super(layoutResId, data);
         this.context = context;
 
     }
 
-    public SearchServiceAdapter(Activity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType) {
+    public SearchServiceAdapter(AppCompatActivity context, int layoutResId, @Nullable List<IndexServiceBean.ListBean> data, int lineType) {
         super(layoutResId, data);
         this.context = context;
 

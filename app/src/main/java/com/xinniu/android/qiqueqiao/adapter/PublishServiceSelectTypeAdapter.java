@@ -1,7 +1,7 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.SparseBooleanArray;
 import android.view.View;
 

@@ -1,12 +1,9 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,6 +11,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.xinniu.android.qiqueqiao.R;
@@ -58,7 +57,7 @@ public class ServiceDetailDescriptioActivity extends BaseActivity {
     private String mType = "1";//1是添加2是编辑
     InputMethodManager imm;
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode, String content, String title, String type) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode, String content, String title, String type) {
         Intent intent = new Intent(context, ServiceDetailDescriptioActivity.class);
         intent.putExtra("data", content);
         intent.putExtra("title", title);
@@ -251,7 +250,7 @@ public class ServiceDetailDescriptioActivity extends BaseActivity {
                 intent.putExtra("data", noteContent);
                 intent.putExtra("picture", jsonString);
                 intent.putExtra("originData", jsonString1);
-                setResult(Activity.RESULT_OK, intent);
+                setResult(AppCompatActivity.RESULT_OK, intent);
                 finish();
                 if (imm != null) {
                     imm.hideSoftInputFromWindow(etNewContent.getWindowToken(),

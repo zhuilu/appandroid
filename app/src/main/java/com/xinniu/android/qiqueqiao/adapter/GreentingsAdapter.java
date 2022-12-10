@@ -1,13 +1,12 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -15,7 +14,6 @@ import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.GreentingsBean;
 import com.xinniu.android.qiqueqiao.widget.SwipeMenuLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,7 +22,7 @@ import java.util.List;
 
 public class GreentingsAdapter extends BaseMultiItemQuickAdapter<GreentingsBean.SystemBean, BaseViewHolder> {
 
-    private Activity mContext;
+    private AppCompatActivity mContext;
 
     /**
      * Same as QuickAdapter#QuickAdapter(Context,int) but with
@@ -32,7 +30,7 @@ public class GreentingsAdapter extends BaseMultiItemQuickAdapter<GreentingsBean.
      *
      * @param data A new list is created out of this one to avoid mutable list
      */
-    public GreentingsAdapter(Activity context, List<GreentingsBean.SystemBean> data) {
+    public GreentingsAdapter(AppCompatActivity context, List<GreentingsBean.SystemBean> data) {
         super(data);
         this.mContext = context;
         addItemType(1, R.layout.item_grrentings);

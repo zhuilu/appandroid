@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/mscrollview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -233,7 +233,7 @@
                     android:id="@+id/mcompany_resource_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/companyheadRl">
+                    android:layout_below="@+id/companyheadRl">
 
                 </com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView>
                 </LinearLayout>
@@ -258,6 +258,6 @@
 
                 </RelativeLayout>
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

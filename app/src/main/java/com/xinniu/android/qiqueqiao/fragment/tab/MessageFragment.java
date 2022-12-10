@@ -1,9 +1,10 @@
 package com.xinniu.android.qiqueqiao.fragment.tab;
 
 import android.os.Bundle;
-//import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentTransaction;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;

@@ -70,8 +70,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_toLeftOf="@id/coop_reply_timetv"
-                    android:layout_toRightOf="@id/llayout_name">
+                    android:layout_toLeftOf="@+id/coop_reply_timetv"
+                    android:layout_toRightOf="@+id/llayout_name">
 
 
                     <TextView
@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_5"
-                        android:layout_toRightOf="@id/coop_reply_positiontv"
+                        android:layout_toRightOf="@+id/coop_reply_positiontv"
                         android:background="@drawable/bg_coop_comment"
                         android:gravity="left"
                         android:singleLine="true"
@@ -109,7 +109,7 @@
                 android:id="@+id/coop_reply_commentRl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/coop_reply_info"
+                android:layout_below="@+id/coop_reply_info"
                 android:layout_marginTop="@dimen/dp_3"
                 android:layout_marginBottom="@dimen/dp_7"
 
@@ -129,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_5"
-                    android:layout_toRightOf="@id/item_is_reply"
+                    android:layout_toRightOf="@+id/item_is_reply"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/sp_15" />
 
@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_marginRight="@dimen/dp_5"
-                    android:layout_toRightOf="@id/item_reply_name"
+                    android:layout_toRightOf="@+id/item_reply_name"
                     android:textColor="@color/text_color_1"
                     android:textSize="@dimen/sp_15" />
 
@@ -151,7 +151,7 @@
             android:id="@+id/comment_moreRl"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_42"
-            android:layout_below="@id/thecoopRl"
+            android:layout_below="@+id/thecoopRl"
             android:background="@color/bg_color_gray_F7F7F7">
 
             <TextView
@@ -167,7 +167,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0_5"
-            android:layout_below="@id/thecoopRl"
+            android:layout_below="@+id/thecoopRl"
             android:background="@color/line_color" />
     </RelativeLayout>
 

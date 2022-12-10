@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/view12"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/tool_bar_color">
@@ -25,7 +25,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/head_iv"
+            android:layout_toRightOf="@+id/head_iv"
             android:gravity="center"
             android:padding="5dp"
             android:textSize="14sp"
@@ -34,21 +34,21 @@
             android:ellipsize="end"/>
 
         <TextView
-            android:layout_below="@id/real_name_tv"
+            android:layout_below="@+id/real_name_tv"
             android:id="@+id/location_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/head_iv"
+            android:layout_toRightOf="@+id/head_iv"
             android:gravity="center"
             android:padding="5dp"
             android:textSize="12sp"
             android:textColor="#999999"/>
         <TextView
-            android:layout_below="@id/real_name_tv"
+            android:layout_below="@+id/real_name_tv"
             android:id="@+id/company_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/location_tv"
+            android:layout_toRightOf="@+id/location_tv"
             android:gravity="center"
             android:padding="5dp"
             android:textSize="12sp"
@@ -61,7 +61,7 @@
 
     <LinearLayout
         android:id="@+id/view13"
-        android:layout_below="@id/view12"
+        android:layout_below="@+id/view12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -117,7 +117,7 @@
 
     </LinearLayout>
     <TextView
-        android:layout_below="@id/view13"
+        android:layout_below="@+id/view13"
         android:layout_marginTop="10dp"
         android:id="@+id/talked_num"
         android:layout_width="match_parent"

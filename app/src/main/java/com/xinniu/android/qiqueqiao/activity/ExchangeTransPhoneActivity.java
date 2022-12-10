@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -27,7 +29,7 @@ public class ExchangeTransPhoneActivity extends BaseActivity {
     @BindView(R.id.edit_title)
     ClearEditText editTitle;
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode) {
         Intent intent = new Intent(context, ExchangeTransPhoneActivity.class);
         context.startActivityForResult(intent, requestCode);
     }

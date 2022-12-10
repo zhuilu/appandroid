@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_comment_infoRl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|bottom"
-                android:src="@mipmap/head_is_v20_20"
+                app:srcCompat="@mipmap/head_is_v20_20"
                 android:visibility="gone" />
 
         </FrameLayout>
@@ -79,8 +80,8 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_toLeftOf="@id/llayout_good"
-            android:layout_toRightOf="@id/item_comment_headFl">
+            android:layout_toLeftOf="@+id/llayout_good"
+            android:layout_toRightOf="@+id/item_comment_headFl">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,7 +132,7 @@
         android:id="@+id/item_commenttv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/goRl"
+        android:layout_below="@+id/goRl"
         android:layout_marginLeft="@dimen/dp_50"
         android:layout_marginTop="@dimen/dp_5"
         android:layout_marginRight="@dimen/dp_14"

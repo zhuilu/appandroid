@@ -1,14 +1,10 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.v7.widget.GridLayoutManager;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,28 +14,25 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.PublishNewActivity;
-import com.xinniu.android.qiqueqiao.adapter.PublicNeedTypeAdapter;
-import com.xinniu.android.qiqueqiao.adapter.ScreenOnlyAdapter;
 import com.xinniu.android.qiqueqiao.adapter.ScreenType1Adapter;
 import com.xinniu.android.qiqueqiao.adapter.ScreenTypeAdapter;
 import com.xinniu.android.qiqueqiao.bean.CellTagsBean;
-import com.xinniu.android.qiqueqiao.bean.SelectCategory;
-import com.xinniu.android.qiqueqiao.bean.SourceScreenBean;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
 import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
-import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 
-import java.util.ArrayList;
-import java.util.List;
+//import android.support.v7.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by yuchance on 2018/6/29.
  */
 
 public class ScreenTypeWindow extends PopupWindow implements PopupWindow.OnDismissListener {
-    private Activity activity;
+    private AppCompatActivity activity;
     private CellTagsBean datas = new CellTagsBean();
     private int mIndustryId = 0;
     private View industryView;
@@ -50,7 +43,7 @@ public class ScreenTypeWindow extends PopupWindow implements PopupWindow.OnDismi
     private int screenHeight;
     private NoScrollRecyclerView needrecyclerView;
 
-    public ScreenTypeWindow(Activity context, CellTagsBean datas) {
+    public ScreenTypeWindow(AppCompatActivity context, CellTagsBean datas) {
         this.activity = context;
         this.datas = datas;
         initWindow();

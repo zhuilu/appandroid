@@ -4,10 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -18,6 +14,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -44,7 +45,6 @@ import com.xinniu.android.qiqueqiao.request.callback.GoFriendApplyCallback;
 import com.xinniu.android.qiqueqiao.request.callback.TalkToUserCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.FullyLinearLayoutManager;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
@@ -60,6 +60,12 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+//import android.support.annotation.NonNull;
+//import android.support.v4.content.ContextCompat;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * Created by lzq on 2017/12/19.
@@ -530,7 +536,7 @@ public class PersonCentetActivity extends BaseActivity {
 
             }
         });
-        replyDialog.show(getFragmentManager(), "80");
+        replyDialog.show(getSupportFragmentManager(), "80");
 
     }
 
@@ -786,7 +792,7 @@ public class PersonCentetActivity extends BaseActivity {
                     .show(PersonCentetActivity.this);
         } else if (code == 301) {
             noLinkDialog = new NoLinkDialog(msg);
-            noLinkDialog.show(getFragmentManager(), "lx");
+            noLinkDialog.show(getSupportFragmentManager(), "lx");
 
         }
 

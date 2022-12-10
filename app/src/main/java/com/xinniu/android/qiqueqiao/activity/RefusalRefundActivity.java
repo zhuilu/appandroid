@@ -1,20 +1,15 @@
 package com.xinniu.android.qiqueqiao.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
-import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
-import com.bigkoo.pickerview.view.OptionsPickerView;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.base.CustomServiceImgViewAdapter;
 import com.xinniu.android.qiqueqiao.adapter.base.FeedBackImgViewAdapter;
@@ -41,6 +36,8 @@ import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 import top.zibin.luban.OnRenameListener;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 /**
  * 拒绝退款
  */
@@ -57,7 +54,7 @@ public class RefusalRefundActivity extends BaseActivity {
     private int mId;
 
 
-    public static void startSimpleEidtForResult(Activity context,  int id, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int id, int requestCode) {
         Intent intent = new Intent(context, RefusalRefundActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);

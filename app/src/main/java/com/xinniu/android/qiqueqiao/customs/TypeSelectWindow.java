@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
@@ -14,14 +13,14 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.IndexTypeSelectAdapter;
 import com.xinniu.android.qiqueqiao.adapter.base.BDBaseAdapter;
-import com.xinniu.android.qiqueqiao.base.BaseApp;
-import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.bean.SelectCategory;
+import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
-import com.xinniu.android.qiqueqiao.utils.ComUtils;
 import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ import java.util.List;
 
 public class TypeSelectWindow extends PopupWindow implements  PopupWindow.OnDismissListener,AdapterView.OnItemClickListener {
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private BDBaseAdapter bdBaseAdapter ;
     private View pView;
     View contentView;
@@ -43,7 +42,7 @@ public class TypeSelectWindow extends PopupWindow implements  PopupWindow.OnDism
     private List<SelectCategory> categoryList = new ArrayList<>();
     private int type;//
 
-    public TypeSelectWindow(Activity activity,List<SelectCategory> categoryList,int type){
+    public TypeSelectWindow(AppCompatActivity activity, List<SelectCategory> categoryList, int type){
         this.activity = activity;
         this.categoryList = categoryList;
         this.type = type;

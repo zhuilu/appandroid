@@ -145,34 +145,34 @@ public class ResgisterNewActivity extends BaseActivity {
                             });
                             int status = userInfoBean.status;
                             if (status == 0) {
-                                //IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
-                                    @Override
-                                    public void onSuccess(String s) {
-                                        UserInfoHelper.getIntance().setUsername(mresgistAccountEt.getText().toString());
-                                        UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
-                                        UserInfoHelper.getIntance().setToken(userInfoBean.token);
-                                        UserInfoHelper.getIntance().setRongyunToken(userInfoBean.rong_token);
-                                        UserInfoHelper.getIntance().setUsername(mresgistAccountEt.getText().toString());
-                                        if (JPushInterface.isPushStopped(getApplicationContext())){
-                                            Set<String> PushArray  = new HashSet<>();
-                                            int userId = UserInfoHelper.getIntance().getUserId();
-                                            PushArray.add(userId+"");
-                                            JPushInterface.resumePush(getApplicationContext());
-                                            JPushInterface.setAlias(getApplicationContext(),0,userId+"");
-                                            JPushInterface.setTags(getApplicationContext(),0,PushArray);
-                                        }
-                                        dismissBookingToast();
-                                        startActivity(new Intent(ResgisterNewActivity.this, MainActivity.class));
-                                        ComUtils.finishshortAll();
-
-                                    }
-
-                                    @Override
-                                    public void onFail(int errorCode) {
-                                        ToastUtils.showCentetToast(ResgisterNewActivity.this, "聊天服务器连接失败");
-                                        dismissBookingToast();
-                                    }
-                                });
+//                                IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
+//                                    @Override
+//                                    public void onSuccess(String s) {
+//                                        UserInfoHelper.getIntance().setUsername(mresgistAccountEt.getText().toString());
+//                                        UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
+//                                        UserInfoHelper.getIntance().setToken(userInfoBean.token);
+//                                        UserInfoHelper.getIntance().setRongyunToken(userInfoBean.rong_token);
+//                                        UserInfoHelper.getIntance().setUsername(mresgistAccountEt.getText().toString());
+//                                        if (JPushInterface.isPushStopped(getApplicationContext())){
+//                                            Set<String> PushArray  = new HashSet<>();
+//                                            int userId = UserInfoHelper.getIntance().getUserId();
+//                                            PushArray.add(userId+"");
+//                                            JPushInterface.resumePush(getApplicationContext());
+//                                            JPushInterface.setAlias(getApplicationContext(),0,userId+"");
+//                                            JPushInterface.setTags(getApplicationContext(),0,PushArray);
+//                                        }
+//                                        dismissBookingToast();
+//                                        startActivity(new Intent(ResgisterNewActivity.this, MainActivity.class));
+//                                        ComUtils.finishshortAll();
+//
+//                                    }
+//
+//                                    @Override
+//                                    public void onFail(int errorCode) {
+//                                        ToastUtils.showCentetToast(ResgisterNewActivity.this, "聊天服务器连接失败");
+//                                        dismissBookingToast();
+//                                    }
+//                                });
 
                             }else if (status == 1){
                                 UserInfoHelper.getIntance().setUsername(mresgistAccountEt.getText().toString());

@@ -1,6 +1,6 @@
 package com.xinniu.android.qiqueqiao.bean;
 
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;

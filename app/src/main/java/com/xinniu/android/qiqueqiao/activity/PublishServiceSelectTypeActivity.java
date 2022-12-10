@@ -3,20 +3,16 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
-import com.umeng.analytics.MobclickAgent;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.PublishSelectTypeAdapter;
 import com.xinniu.android.qiqueqiao.adapter.PublishServiceSelectTypeAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.GetReleaseTypeBean;
 import com.xinniu.android.qiqueqiao.bean.ServiceCategoryAndTag;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.request.callback.GetReleaseTypeCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetServiceCategoryAndTagCallback;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
 
@@ -25,6 +21,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * 发布服务-选择资源类型
@@ -39,7 +38,7 @@ public class PublishServiceSelectTypeActivity extends BaseActivity {
     private int mTypeId;
 
 
-    public static void startSimpleEidtForResult(Activity context, int requestCode,int id) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int requestCode, int id) {
         Intent starter = new Intent(context, PublishServiceSelectTypeActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);

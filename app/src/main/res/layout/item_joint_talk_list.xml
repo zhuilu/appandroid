@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/item_talk_iv"
+        android:layout_toRightOf="@+id/item_talk_iv"
         android:textSize="14sp"
         android:textColor="@color/black"
         android:maxLines="1"

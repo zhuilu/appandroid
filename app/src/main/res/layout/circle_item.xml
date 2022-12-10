@@ -42,7 +42,7 @@
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:layout_alignParentBottom="true"
-                    android:layout_toRightOf="@id/circle_title"
+                    android:layout_toRightOf="@+id/circle_title"
                     android:layout_marginBottom="15dp"
                     android:layout_marginLeft="5dp"/>
             </RelativeLayout>

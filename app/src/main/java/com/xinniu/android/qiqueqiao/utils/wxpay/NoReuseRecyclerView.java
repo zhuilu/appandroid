@@ -1,15 +1,18 @@
 package com.xinniu.android.qiqueqiao.utils.wxpay;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by yuchance on 2018/4/16.
  */
 
-public class NoReuseRecyclerView extends RecyclerView{
+public class NoReuseRecyclerView extends RecyclerView {
     public NoReuseRecyclerView(Context context) {
         super(context);
     }

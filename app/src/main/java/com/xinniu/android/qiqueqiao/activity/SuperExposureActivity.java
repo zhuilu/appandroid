@@ -10,12 +10,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alipay.sdk.app.PayTask;
 import com.tencent.mm.opensdk.modelpay.PayReq;
@@ -33,10 +34,7 @@ import com.xinniu.android.qiqueqiao.request.callback.GetTopCardCallback;
 import com.xinniu.android.qiqueqiao.request.callback.PayCallback;
 import com.xinniu.android.qiqueqiao.request.callback.VipBugCallback;
 import com.xinniu.android.qiqueqiao.request.callback.WechatPayCallback;
-import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
-import com.xinniu.android.qiqueqiao.utils.Logger;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import java.util.List;
@@ -44,6 +42,8 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * Created by yuchance on 2019/2/20.
@@ -128,7 +128,7 @@ public class SuperExposureActivity extends BaseActivity {
         mContext.startActivity(intent);
     }
 
-    public static void start(Activity context, int requestCode) {
+    public static void start(AppCompatActivity context, int requestCode) {
         Intent intent = new Intent(context, SuperExposureActivity.class);
         context.startActivityForResult(intent, requestCode);
     }

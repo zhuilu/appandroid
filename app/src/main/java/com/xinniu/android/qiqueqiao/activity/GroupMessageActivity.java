@@ -1,30 +1,28 @@
 package com.xinniu.android.qiqueqiao.activity;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.GroupMessageMemberAdapter;
 import com.xinniu.android.qiqueqiao.adapter.RecommendGroupAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.GroupBean;
 import com.xinniu.android.qiqueqiao.bean.GroupInfoBean;
 import com.xinniu.android.qiqueqiao.bean.SimilarGroupBean;
-import com.xinniu.android.qiqueqiao.customs.qldialog.QLQRCodeDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLShareDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
@@ -42,10 +40,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
+
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 /**
  * 群组资料

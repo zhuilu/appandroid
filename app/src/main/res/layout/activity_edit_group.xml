@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/white">
 
@@ -19,7 +20,7 @@
                 android:id="@+id/bt_finishImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 android:layout_centerInParent="true"
                 android:visibility="gone"
                 />
@@ -64,7 +65,7 @@
         android:id="@+id/mapply_forRl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:visibility="gone"
         android:background="@color/white"
         >
@@ -117,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/mgroup_introRl"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:background="@color/white"
         android:visibility="gone"
         >
@@ -144,7 +145,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         >
         <EditText
             android:id="@+id/mgroup_announcementEd"

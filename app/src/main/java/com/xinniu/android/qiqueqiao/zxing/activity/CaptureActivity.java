@@ -14,7 +14,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.provider.MediaStore;
-//import android.support.v7.app.AppCompatActivity;
+
 //import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -25,6 +25,9 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
@@ -139,7 +142,7 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
                     //获取选中图片的路径
                     Cursor cursor = getContentResolver().query(data.getData(), null, null, null, null);
                     if (cursor.moveToFirst()) {
-                        photo_path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
+//                        photo_path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
                     }
                     cursor.close();
 

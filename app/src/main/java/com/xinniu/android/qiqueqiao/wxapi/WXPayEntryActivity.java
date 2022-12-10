@@ -1,45 +1,16 @@
 package com.xinniu.android.qiqueqiao.wxapi;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Xml;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.modelpay.PayReq;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
-import com.xinniu.android.qiqueqiao.base.BaseApp;
-import com.xinniu.android.qiqueqiao.request.RequestManager;
-import com.xinniu.android.qiqueqiao.request.RetrofitHelper;
-import com.xinniu.android.qiqueqiao.utils.EncryptUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.utils.wxpay.WxUtils;
-import com.xinniu.android.qiqueqiao.utils.wxpay.entry.WxPay;
-import com.xinniu.android.qiqueqiao.utils.wxpay.entry.WxReq;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.util.Collections;
-import java.util.List;
-
-import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by ql
@@ -47,7 +18,7 @@ import retrofit2.Response;
  * Description:
  */
 
-public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
+public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEventHandler {
 
     private static final int WX_PAY_SUCCESS = 0;
     private static final int WX_PAY_FAIL = -1;

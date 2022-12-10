@@ -1,7 +1,8 @@
 package com.xinniu.android.qiqueqiao.vodplayer.view.gesture;
 
-import android.app.Activity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog.BrightnessDialog;
 import com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog.SeekDialog;
@@ -18,7 +19,7 @@ import com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog.VolumeDialog;
 public class GestureDialogManager {
 
     //用于构建手势用的dialog
-    private Activity mActivity;
+    private AppCompatActivity mActivity;
     //seek手势对话框
     private SeekDialog mSeekDialog = null;
     //亮度对话框
@@ -26,7 +27,7 @@ public class GestureDialogManager {
     //音量对话框
     private VolumeDialog mVolumeDialog = null;
 
-    public GestureDialogManager(Activity activity) {
+    public GestureDialogManager(AppCompatActivity activity) {
         mActivity = activity;
     }
 

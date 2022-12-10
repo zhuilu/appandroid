@@ -6,14 +6,15 @@ import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputConnectionWrapper;
-import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 /**
  * 这个是从stackOverFlow上面找到的解决方案，主要用途是处理软键盘回删按钮backSpace时回调OnKeyListener
  *
  * @author xmuSistone
  */
-public class DeletableEditText extends EditText {
+public class DeletableEditText extends AppCompatEditText {
 
     public DeletableEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);

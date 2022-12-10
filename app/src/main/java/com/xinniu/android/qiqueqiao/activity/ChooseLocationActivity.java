@@ -215,37 +215,37 @@ public class ChooseLocationActivity extends BaseActivity {
                     }
                 });
                 if (status == 0) {
-                    //IMUtils.connectIM(bean.getRong_token(), true, new ResultCallback<String>() {
-
-                        @Override
-                        public void onFail(int errorCode) {
-                            ToastUtils.showCentetToast(ChooseLocationActivity.this, "聊天服务器连接失败");
-                            dismissBookingToast();
-                        }
-
-
-                        @Override
-                        public void onSuccess(String s) {
-                            UserInfoHelper.getIntance().setUsername(mPhone);
-                            UserInfoHelper.getIntance().setUserId(bean.getUser_id());
-                            UserInfoHelper.getIntance().setToken(bean.getToken());
-                            UserInfoHelper.getIntance().setRongyunToken(bean.getRong_token());
-                            if (JPushInterface.isPushStopped(getApplicationContext())) {
-                                Set<String> PushArray = new HashSet<>();
-                                int userId = UserInfoHelper.getIntance().getUserId();
-                                PushArray.add(userId + "");
-                                JPushInterface.resumePush(getApplicationContext());
-                                JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
-                                JPushInterface.setTags(getApplicationContext(), 0, PushArray);
-                            }
-                            dismissBookingToast();
-                            startActivity(new Intent(ChooseLocationActivity.this, MainActivity.class));
-                            ComUtils.finishshortAll();
-
-                        }
-
-
-                    });
+//                    IMUtils.connectIM(bean.getRong_token(), true, new ResultCallback<String>() {
+//
+//                        @Override
+//                        public void onFail(int errorCode) {
+//                            ToastUtils.showCentetToast(ChooseLocationActivity.this, "聊天服务器连接失败");
+//                            dismissBookingToast();
+//                        }
+//
+//
+//                        @Override
+//                        public void onSuccess(String s) {
+//                            UserInfoHelper.getIntance().setUsername(mPhone);
+//                            UserInfoHelper.getIntance().setUserId(bean.getUser_id());
+//                            UserInfoHelper.getIntance().setToken(bean.getToken());
+//                            UserInfoHelper.getIntance().setRongyunToken(bean.getRong_token());
+//                            if (JPushInterface.isPushStopped(getApplicationContext())) {
+//                                Set<String> PushArray = new HashSet<>();
+//                                int userId = UserInfoHelper.getIntance().getUserId();
+//                                PushArray.add(userId + "");
+//                                JPushInterface.resumePush(getApplicationContext());
+//                                JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
+//                                JPushInterface.setTags(getApplicationContext(), 0, PushArray);
+//                            }
+//                            dismissBookingToast();
+//                            startActivity(new Intent(ChooseLocationActivity.this, MainActivity.class));
+//                            ComUtils.finishshortAll();
+//
+//                        }
+//
+//
+//                    });
                 } else if (status == 1) {
                     Constants.newcomer_package = bean.getNewcomer_package();//是否有新人礼包
                     UserInfoHelper.getIntance().setUsername(mPhone);

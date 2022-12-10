@@ -1,8 +1,9 @@
 package com.xinniu.android.qiqueqiao.vodplayer.view.gesturedialog;
 
-import android.app.Activity;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alivc.player.VcPlayerLog;
 import com.xinniu.android.qiqueqiao.R;
@@ -22,7 +23,7 @@ public class BrightnessDialog extends BaseGestureDialog {
     // 当前亮度。0~100
     private int mCurrentBrightness = 0;
 
-    public BrightnessDialog(Activity activity, int percent) {
+    public BrightnessDialog(AppCompatActivity activity, int percent) {
         super(activity);
 
         mCurrentBrightness = percent;
@@ -46,7 +47,7 @@ public class BrightnessDialog extends BaseGestureDialog {
      * @param activity 活动
      * @return 当前亮度百分比
      */
-    public static int getActivityBrightness(Activity activity) {
+    public static int getActivityBrightness(AppCompatActivity activity) {
         if (activity != null) {
             Window window = activity.getWindow();
             WindowManager.LayoutParams layoutParams = window.getAttributes();

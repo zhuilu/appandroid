@@ -1,30 +1,34 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.InviteFriendActivity;
 import com.xinniu.android.qiqueqiao.activity.VipV4ListActivity;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/9/10.
  */
 
 @SuppressLint("ValidFragment")
-public class    NoLinkDialog extends DialogFragment  {
+public class    NoLinkDialog extends DialogFragment {
 
     private String nolinkMsg;
 

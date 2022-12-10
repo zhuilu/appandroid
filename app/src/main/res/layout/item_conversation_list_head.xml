@@ -10,7 +10,7 @@
         android:layout_centerVertical="true"
         android:src="@mipmap/ic_launcher"/>
     <LinearLayout
-        android:layout_toRightOf="@id/head_iv"
+        android:layout_toRightOf="@+id/head_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

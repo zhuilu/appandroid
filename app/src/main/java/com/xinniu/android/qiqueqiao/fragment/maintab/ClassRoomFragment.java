@@ -1,9 +1,11 @@
 package com.xinniu.android.qiqueqiao.fragment.maintab;
 
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -59,7 +61,7 @@ public class ClassRoomFragment extends LazyBaseFragment {
         LinearLayoutManager manager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         mfragmentCompanyRecycler.setLayoutManager(manager);
         mListData = new ArrayList<>();
-        mClassRoomAdapter = new ClassRoomAdapter(getActivity(), R.layout.item_classroom_new, mListData);
+        mClassRoomAdapter = new ClassRoomAdapter((AppCompatActivity) getActivity(), R.layout.item_classroom_new, mListData);
         mfragmentCompanyRecycler.setAdapter(mClassRoomAdapter);
         mClassRoomAdapter.setOnclick(new ClassRoomAdapter.Onclick() {
             @Override

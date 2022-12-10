@@ -23,8 +23,8 @@
         />
 
     <LinearLayout
-        android:layout_toRightOf="@id/left_head_img_iv"
-        android:layout_toLeftOf="@id/right_head_img_iv"
+        android:layout_toRightOf="@+id/left_head_img_iv"
+        android:layout_toLeftOf="@+id/right_head_img_iv"
         android:id="@+id/root_item_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackground"
             card_view:cardCornerRadius="@dimen/dp_4"
             card_view:cardElevation="@dimen/dp_2"
             >

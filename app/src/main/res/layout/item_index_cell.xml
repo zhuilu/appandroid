@@ -16,7 +16,7 @@
         android:id="@+id/mtvItemCell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mimgItemCell"
+        android:layout_below="@+id/mimgItemCell"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_9"
         android:textColor="@color/text_color_1"

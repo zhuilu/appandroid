@@ -30,7 +30,7 @@
                 android:id="@+id/detail_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detail_img"
+                android:layout_below="@+id/detail_img"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_16"
                 android:text="还没有人评论，快来抢沙发吧..."
@@ -40,7 +40,7 @@
                 android:id="@+id/bleavewordx_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detail_tv"
+                android:layout_below="@+id/detail_tv"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_20"
                 android:background="@drawable/bg_leaveword_sp"
@@ -59,7 +59,7 @@
 
     </RelativeLayout>
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/mscrollview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,6 +70,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView>
 
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

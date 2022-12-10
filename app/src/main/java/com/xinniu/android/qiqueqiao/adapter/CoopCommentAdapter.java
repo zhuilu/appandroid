@@ -1,12 +1,6 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-import android.graphics.Paint;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,18 +10,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
+import androidx.core.content.ContextCompat;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.InquireBean;
-import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
-import com.xinniu.android.qiqueqiao.utils.FullyLinearLayoutManager;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
-import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

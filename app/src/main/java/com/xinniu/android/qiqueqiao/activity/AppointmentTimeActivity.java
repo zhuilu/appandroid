@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -70,7 +72,7 @@ public class AppointmentTimeActivity extends BaseActivity {
     private int fixedNum;
     private int mPosition;
 
-    public static void start(Activity context, int p_id, String p_name, int resource_id, int fixedNum, int position, int requestCode) {
+    public static void start(AppCompatActivity context, int p_id, String p_name, int resource_id, int fixedNum, int position, int requestCode) {
         Intent starter = new Intent(context, AppointmentTimeActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("p_id", p_id);

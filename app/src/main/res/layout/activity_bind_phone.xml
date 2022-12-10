@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -14,7 +15,7 @@
             android:layout_width="@dimen/tool_bar_head_long"
             android:layout_height="@dimen/tool_bar_head_long"
 
-            android:src="@mipmap/img_tool_bar_close"
+            app:srcCompat="@mipmap/img_tool_bar_close"
             android:layout_centerVertical="true" />
 
         <TextView
@@ -29,7 +30,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:orientation="vertical">
 
         <LinearLayout
@@ -46,7 +47,7 @@
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
-                android:src="@mipmap/login_phone" />
+                app:srcCompat="@mipmap/login_phone" />
 
             <com.xinniu.android.qiqueqiao.customs.ClearEditText
                 android:id="@+id/et_user_name"
@@ -78,7 +79,7 @@
                 android:layout_height="@dimen/login_item_icon_dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:src="@mipmap/login_yzm"
+                app:srcCompat="@mipmap/login_yzm"
                 android:layout_centerVertical="true"/>
 
             <EditText
@@ -86,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/head"
+                android:layout_toRightOf="@+id/head"
                 android:background="@null"
                 android:hint="请输入短信验证码"
                 android:textColor="@color/_333"
@@ -128,7 +129,7 @@
                 android:layout_height="@dimen/login_item_icon_dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:src="@mipmap/login_pwd"
+                app:srcCompat="@mipmap/login_pwd"
                 android:layout_gravity="center_vertical"/>
 
             <com.xinniu.android.qiqueqiao.widget.PwdEditText

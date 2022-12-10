@@ -5,10 +5,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-//import android.support.annotation.NonNull;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -16,12 +12,16 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebChromeClient;
-import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
@@ -58,6 +58,11 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+//import android.support.annotation.NonNull;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 public class ClassRoomDetailTwoActivity extends BaseActivity {
 
@@ -249,7 +254,7 @@ public class ClassRoomDetailTwoActivity extends BaseActivity {
 
                         }
                     });
-                    deleteReplyDialog.show(getFragmentManager(), "90");
+                    deleteReplyDialog.show(getSupportFragmentManager(), "90");
 
                 } else {
                     setClick(2, mDatas.get(position).getId(), mDatas.get(position).getRealname(), mDatas);

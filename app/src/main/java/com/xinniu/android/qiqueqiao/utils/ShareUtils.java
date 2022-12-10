@@ -1,8 +1,8 @@
 package com.xinniu.android.qiqueqiao.utils;
 
-import android.app.Activity;
-import android.content.Context;
 import android.graphics.Bitmap;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
@@ -20,7 +20,7 @@ import java.io.File;
  */
 
 public class ShareUtils {
-    public static void shareText(Activity activity,SHARE_MEDIA shareMedia,String content,UMShareListener shareListener){
+    public static void shareText(AppCompatActivity activity, SHARE_MEDIA shareMedia, String content, UMShareListener shareListener){
         if (!isInstall(activity,shareMedia)){
             return;
         }
@@ -31,7 +31,7 @@ public class ShareUtils {
                 .share();
     }
 
-    public static void shareWebUrl(Activity activity,String headUrl,SHARE_MEDIA shareMedia,String url,String title,String description,UMShareListener shareListener){
+    public static void shareWebUrl(AppCompatActivity activity, String headUrl, SHARE_MEDIA shareMedia, String url, String title, String description, UMShareListener shareListener){
         if (!isInstall(activity,shareMedia)){
             ToastUtils.showCentetImgToast(activity,"应用未安装");
             return;
@@ -58,7 +58,7 @@ public class ShareUtils {
                 .setCallback(shareListener)//回调监听器
                 .share();
     }
-    public static void shareWebUrl(Activity activity,SHARE_MEDIA shareMedia,String url,String title,String description,UMShareListener shareListener){
+    public static void shareWebUrl(AppCompatActivity activity, SHARE_MEDIA shareMedia, String url, String title, String description, UMShareListener shareListener){
         if (!isInstall(activity,shareMedia)){
 //            ToastUtils.showCentetImgToast(activity,"应用未安装");
             return;
@@ -77,7 +77,7 @@ public class ShareUtils {
                 .setCallback(shareListener)//回调监听器
                 .share();
     }
-    public static void shareImg(Activity activity, SHARE_MEDIA shareMedia, File file, UMShareListener shareListener){
+    public static void shareImg(AppCompatActivity activity, SHARE_MEDIA shareMedia, File file, UMShareListener shareListener){
         if (!isInstall(activity,shareMedia)){
             return;
         }
@@ -90,14 +90,14 @@ public class ShareUtils {
                 .setCallback(shareListener)//回调监听器
                 .share();
     }
-    public static boolean isInstall(Activity context,SHARE_MEDIA shareMedia){
+    public static boolean isInstall(AppCompatActivity context, SHARE_MEDIA shareMedia){
         if (UMShareAPI.get(context).isInstall(context,shareMedia)){
             return true;
         }else{
             return false;
         }
     }
-    public static void shareWxMini(Activity activity,SHARE_MEDIA shareMedia,String shareUrl,String title,String description,String miniUrl,UMShareListener shareListener){
+    public static void shareWxMini(AppCompatActivity activity, SHARE_MEDIA shareMedia, String shareUrl, String title, String description, String miniUrl, UMShareListener shareListener){
         UMMin umMin = new UMMin(shareUrl);
         UMImage imagelocal = new UMImage(activity,R.mipmap.app_white_share);
 //兼容低版本的网页链接
@@ -117,7 +117,7 @@ public class ShareUtils {
                 .setCallback(shareListener).share();
     }
 
-    public static void ShareLongImg(Activity activity, SHARE_MEDIA share_media, Bitmap bitmap,UMShareListener shareListener){
+    public static void ShareLongImg(AppCompatActivity activity, SHARE_MEDIA share_media, Bitmap bitmap, UMShareListener shareListener){
         //分享图片初始化
         UMImage image = new UMImage(activity,bitmap);
         //分享图片
@@ -126,7 +126,7 @@ public class ShareUtils {
 
     }
 
-    public static void ShareImg(Activity activity, SHARE_MEDIA share_media, String bitmap,UMShareListener shareListener){
+    public static void ShareImg(AppCompatActivity activity, SHARE_MEDIA share_media, String bitmap, UMShareListener shareListener){
         //分享图片初始化
         UMImage image = new UMImage(activity,bitmap);
         //分享图片

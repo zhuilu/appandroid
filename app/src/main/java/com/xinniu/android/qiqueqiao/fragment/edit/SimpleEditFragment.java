@@ -1,14 +1,13 @@
 package com.xinniu.android.qiqueqiao.fragment.edit;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;
@@ -18,9 +17,7 @@ import com.xinniu.android.qiqueqiao.utils.StringUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by qinlei
@@ -173,7 +170,7 @@ public class SimpleEditFragment extends LazyBaseFragment {
     private void commit() {
         Intent intent = new Intent();
         intent.putExtra("data", editText.getText().toString());
-        getActivity().setResult(Activity.RESULT_OK, intent);
+        getActivity().setResult(AppCompatActivity.RESULT_OK, intent);
         getActivity().finish();
     }
 

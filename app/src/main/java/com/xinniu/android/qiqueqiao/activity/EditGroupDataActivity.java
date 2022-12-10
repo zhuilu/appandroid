@@ -1,18 +1,17 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.DetailedUserInfoBean;
 import com.xinniu.android.qiqueqiao.bean.SelectCategory;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
@@ -24,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -56,7 +54,7 @@ public class EditGroupDataActivity extends BaseActivity {
     private OptionsPickerView industryPv;
     private int option = 0;
 
-    public static void start(Activity context, int groupId, String groupName, String groupIntro, String industry, int industryId, String groupCity, int groupCityId){
+    public static void start(AppCompatActivity context, int groupId, String groupName, String groupIntro, String industry, int industryId, String groupCity, int groupCityId){
         Intent intent = new Intent(context,EditGroupDataActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("groupId",groupId);

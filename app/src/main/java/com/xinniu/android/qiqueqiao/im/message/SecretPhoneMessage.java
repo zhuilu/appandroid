@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 
 import io.rong.common.ParcelUtils;
-import io.rong.imkit.model.ProviderTag;
+
 import io.rong.imlib.MessageTag;
 import io.rong.imlib.model.MessageContent;
 

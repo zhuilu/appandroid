@@ -10,9 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-//import android.support.annotation.NonNull;
-//import android.support.v4.app.Fragment;
-//import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -74,9 +71,7 @@ import com.xinniu.android.qiqueqiao.request.callback.VipPopupCallback;
 import com.xinniu.android.qiqueqiao.request.converter.ResultDO;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.PreferenceHelper;
-import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.StatusBarUtil;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.zxing.activity.CaptureActivity;
@@ -96,11 +91,14 @@ import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.OnClick;
 import cn.jpush.android.api.JPushInterface;
-import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.Conversation;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import retrofit2.Call;
+
+//import android.support.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+//import android.support.v7.app.AlertDialog;
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * 主界面
@@ -361,7 +359,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
     private void isNew() {
         if (Constants.newcomer_package == 1) {
             Constants.newcomer_package = 0;
-            newPersonPricilegesDialog.show(getFragmentManager(), "new");
+            newPersonPricilegesDialog.show(getSupportFragmentManager(), "new");
         }
     }
 
@@ -470,15 +468,15 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
 
                         if (actId != actedId) {
                             ActivityDialog actDialog = new ActivityDialog(imgPath, actId, jumpUrl);
-                            actDialog.show(getFragmentManager(), "act");
+                            actDialog.show(getSupportFragmentManager(), "act");
                         }
                     } else if (type == 2) {
                         ActivityDialog dialog = new ActivityDialog(imgPath, actId, jumpUrl);
-                        dialog.show(getFragmentManager(), "act");
+                        dialog.show(getSupportFragmentManager(), "act");
                     } else if (type == 3) {
                         if (isActTimeWeek()) {
                             ActivityDialog dialog = new ActivityDialog(imgPath, actId, jumpUrl);
-                            dialog.show(getFragmentManager(), "act");
+                            dialog.show(getSupportFragmentManager(), "act");
                         }
 
                     }
@@ -505,7 +503,7 @@ public class MainActivity extends BaseActivity implements ViewPager.OnPageChange
             if (!isFiveDayTime()) {
                 return;
             }
-            timeDialog.show(getFragmentManager(), "time");
+            timeDialog.show(getSupportFragmentManager(), "time");
         }
 
     }

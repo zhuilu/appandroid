@@ -1,17 +1,18 @@
 package com.xinniu.android.qiqueqiao.customs.qldialog;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDialog;
 
 import com.xinniu.android.qiqueqiao.R;
+
+import androidx.appcompat.app.AppCompatDialog;
 
 /**
  * Created by qinlei
@@ -184,7 +185,7 @@ public abstract class QLDialog extends AppCompatDialog {
             dialog.setOnShowListener(mOnShowListener);
         }
 
-        public void show(Activity activity) {
+        public void show(AppCompatActivity activity) {
             //处理当前弹窗依附的activity已经消失的情况
             if (activity == null) {
                 return;

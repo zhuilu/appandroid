@@ -12,9 +12,13 @@ import android.graphics.RectF;
 import android.graphics.Xfermode;
 import android.os.Build;
 //import android.support.annotation.ColorInt;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 //import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.utils.Utils;

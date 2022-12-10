@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_12"
         android:textColor="@drawable/selector_group_clastext"
-        android:layout_below="@id/item_addgroup_img"
+        android:layout_below="@+id/item_addgroup_img"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_8"
         />

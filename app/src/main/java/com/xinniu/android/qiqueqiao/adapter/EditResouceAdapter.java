@@ -3,29 +3,26 @@ package com.xinniu.android.qiqueqiao.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.util.DensityUtil;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.AddPictruActivity;
 import com.xinniu.android.qiqueqiao.activity.TakePhotoActivity;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
-import com.xinniu.android.qiqueqiao.utils.Logger;
-import com.xinniu.android.qiqueqiao.utils.ToastUtils;
-import com.xinniu.android.qiqueqiao.utils.TokePhotoUtils;
 import com.xinniu.android.qiqueqiao.widget.ExplosionField;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by lzq on 2018/1/17.
@@ -51,7 +48,7 @@ public class EditResouceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
 
     public EditResouceAdapter(Context context, ArrayList<String> list, int type) {
-        mExplosionField = ExplosionField.attach2Window((Activity) context);
+        mExplosionField = ExplosionField.attach2Window((AppCompatActivity) context);
         this.mList = list;
         this.context = context;
         this.type = type;
@@ -65,7 +62,7 @@ public class EditResouceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     public EditResouceAdapter(Context context, ArrayList<String> list, int type, int max) {
-        mExplosionField = ExplosionField.attach2Window((Activity) context);
+        mExplosionField = ExplosionField.attach2Window((AppCompatActivity) context);
         this.mList = list;
         this.context = context;
         this.type = type;

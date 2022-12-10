@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -45,7 +46,7 @@ public class EditCompanyChildActivity extends BaseActivity{
         }
         return R.layout.activity_company_url;
     }
-    public static void startForResult(Activity context, int requestCode,String hint) {
+    public static void startForResult(AppCompatActivity context, int requestCode, String hint) {
         Intent starter = new Intent(context, EditCompanyChildActivity.class);
         starter.putExtra(PARAM_TYPE, requestCode);
         starter.putExtra(PARAM_HINT, hint);
@@ -74,7 +75,7 @@ public class EditCompanyChildActivity extends BaseActivity{
     private void commit() {
         Intent intent = new Intent();
         intent.putExtra("data", mEditText.getText().toString());
-        setResult(Activity.RESULT_OK, intent);
+        setResult(AppCompatActivity.RESULT_OK, intent);
         finish();
     }
 }

@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
@@ -14,6 +13,8 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.IndexLeftSelectAdapter;
 import com.xinniu.android.qiqueqiao.adapter.IndexRightSelectAdapter;
@@ -21,7 +22,6 @@ import com.xinniu.android.qiqueqiao.bean.SelectCategory;
 import com.xinniu.android.qiqueqiao.common.Constants;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
 import com.xinniu.android.qiqueqiao.utils.DeviceUtils;
-import com.xinniu.android.qiqueqiao.utils.Logger;
 import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
 
@@ -35,7 +35,7 @@ import java.util.List;
 public class SourceSelectWindow extends PopupWindow implements PopupWindow.OnDismissListener,
         AdapterView.OnItemClickListener, View.OnClickListener {
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private ListView rightListView,leftListView;
     private IndexLeftSelectAdapter leftSelectAdapter;
     private IndexRightSelectAdapter rightSelectAdapter;
@@ -49,7 +49,7 @@ public class SourceSelectWindow extends PopupWindow implements PopupWindow.OnDis
     private TextView offerAndNeedTv;
     boolean isClickBtn;//是否点击确定按钮
 
-    public SourceSelectWindow(Activity activity,List<SelectCategory> leftList){
+    public SourceSelectWindow(AppCompatActivity activity, List<SelectCategory> leftList){
         this.activity = activity;
         this.leftList = leftList;
         initView();

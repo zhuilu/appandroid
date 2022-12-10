@@ -3,31 +3,29 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.MyDiscountRecordAdapter;
 import com.xinniu.android.qiqueqiao.adapter.MyTransactionOrdersAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
-import com.xinniu.android.qiqueqiao.bean.CashWithdrawalBean;
 import com.xinniu.android.qiqueqiao.bean.GuaranteeOrderBean;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipTwoDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
-import com.xinniu.android.qiqueqiao.request.callback.GetCashWithdrawalCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetGuaranteeOrderCallback;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 

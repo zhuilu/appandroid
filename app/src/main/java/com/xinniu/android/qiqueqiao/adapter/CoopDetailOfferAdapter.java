@@ -1,10 +1,10 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -17,16 +17,18 @@ import com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by yuchance on 2018/12/27.
  */
 
 public class CoopDetailOfferAdapter extends BaseQuickAdapter<CoopDetailBean.ProvideCategoryBean, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
     private List<CoopDetailBean.ProvideCategoryBean> mData = new ArrayList<>();
 
-    public CoopDetailOfferAdapter(Activity context, int layoutResId, @Nullable List<CoopDetailBean.ProvideCategoryBean> data) {
+    public CoopDetailOfferAdapter(AppCompatActivity context, int layoutResId, @Nullable List<CoopDetailBean.ProvideCategoryBean> data) {
         super(layoutResId, data);
         this.context = context;
         this.mData = data;

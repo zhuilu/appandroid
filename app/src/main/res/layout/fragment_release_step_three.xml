@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8">
@@ -44,7 +45,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginRight="5dp"
-                        android:src="@mipmap/img_release_need" />
+                        app:srcCompat="@mipmap/img_release_need" />
 
                     <ImageView
                         android:id="@+id/img2"
@@ -52,15 +53,15 @@
                         android:layout_height="15dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/img_item_enter"
+                        app:srcCompat="@mipmap/img_item_enter"
                         android:visibility="gone"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@id/img2"
-                        android:layout_toRightOf="@id/img1"
+                        android:layout_toLeftOf="@+id/img2"
+                        android:layout_toRightOf="@+id/img1"
                         android:orientation="vertical">
 
                         <TextView
@@ -138,7 +139,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginRight="5dp"
-                        android:src="@mipmap/img_release_offer" />
+                        app:srcCompat="@mipmap/img_release_offer" />
 
                     <ImageView
                         android:id="@+id/img4"
@@ -146,15 +147,15 @@
                         android:layout_height="15dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/img_item_enter"
+                        app:srcCompat="@mipmap/img_item_enter"
                         android:visibility="gone"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@id/img4"
-                        android:layout_toRightOf="@id/img3"
+                        android:layout_toLeftOf="@+id/img4"
+                        android:layout_toRightOf="@+id/img3"
                         android:orientation="vertical">
 
                         <TextView
@@ -231,7 +232,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginRight="5dp"
-                        android:src="@mipmap/img_release_mode" />
+                        app:srcCompat="@mipmap/img_release_mode" />
 
                     <ImageView
                         android:id="@+id/img6"
@@ -239,15 +240,15 @@
                         android:layout_height="15dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/img_item_enter"
+                        app:srcCompat="@mipmap/img_item_enter"
                         android:visibility="gone"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@id/img6"
-                        android:layout_toRightOf="@id/img5"
+                        android:layout_toLeftOf="@+id/img6"
+                        android:layout_toRightOf="@+id/img5"
                         android:orientation="vertical">
 
                         <TextView

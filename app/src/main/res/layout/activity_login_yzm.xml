@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/chevron"
+            app:srcCompat="@mipmap/chevron"
             android:layout_centerInParent="true"
             />
 
@@ -29,7 +29,7 @@
         android:textSize="@dimen/sp_28"
         android:layout_marginTop="@dimen/dp_40"
         android:layout_marginLeft="@dimen/dp_30"
-        android:layout_below="@id/bt_finish"
+        android:layout_below="@+id/bt_finish"
         />
 
     <TextView
@@ -60,7 +60,7 @@
         app:figures="6"
         app:selectedBackgroundColor="@android:color/white"
         app:verCodeMargin="14dp"
-        android:layout_below="@id/myzm_content"
+        android:layout_below="@+id/myzm_content"
         android:focusableInTouchMode="true"
         android:focusable="true"
         />
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/vip_info_color"
         android:textSize="@dimen/sp_14"
-        android:layout_below="@id/yzmVerEdit"
+        android:layout_below="@+id/yzmVerEdit"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/dp_30"
         android:layout_marginTop="@dimen/dp_24"
@@ -81,7 +81,7 @@
         android:id="@+id/mvoiceTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bsendYzmtv"
+        android:layout_below="@+id/bsendYzmtv"
         android:layout_marginTop="@dimen/dp_46"
         android:layout_centerHorizontal="true"
         android:text="没有收到短信验证码? 请尝试获取语音验证码"

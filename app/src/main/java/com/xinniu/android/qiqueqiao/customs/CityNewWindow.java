@@ -1,15 +1,10 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.annotation.Nullable;
-//import android.support.v7.widget.GridLayoutManager;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.LeftCityAdapter;
 import com.xinniu.android.qiqueqiao.adapter.RightCityAdapter;
@@ -36,7 +34,7 @@ import java.util.List;
 
 public class CityNewWindow extends PopupWindow {
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private int screenHeight;
     private List<CityV2Bean> leftCityList = new ArrayList<>();
     private List<CityV2Bean.ZlistBean> rightCityList = new ArrayList<>();
@@ -47,7 +45,7 @@ public class CityNewWindow extends PopupWindow {
     private int xpostion = 0;
 
 
-    public CityNewWindow(Activity context,List<CityV2Bean> leftCityList,int postion) {
+    public CityNewWindow(AppCompatActivity context, List<CityV2Bean> leftCityList, int postion) {
        this.activity = context;
        this.leftCityList = leftCityList;
        this.xpostion = postion;

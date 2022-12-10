@@ -114,7 +114,7 @@
         android:layout_marginRight="@dimen/dp_15"
         android:textSize="@dimen/sp_13"
         android:textColor="@color/_999"
-        android:layout_toRightOf="@id/groupintroTv"
+        android:layout_toRightOf="@+id/groupintroTv"
         android:maxLines="1"
         android:layout_marginLeft="@dimen/dp_10"
         android:gravity="right"

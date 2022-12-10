@@ -1,11 +1,13 @@
 package com.xinniu.android.qiqueqiao.fragment.message;
 
 import android.os.Bundle;
-//import com.google.android.material.tabs.TabLayout;
-//import android.support.v4.app.Fragment;
-//import androidx.viewpager.widget.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 
+
+import com.google.android.material.tabs.TabLayout;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.MainFragmentPagerAdapter;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;

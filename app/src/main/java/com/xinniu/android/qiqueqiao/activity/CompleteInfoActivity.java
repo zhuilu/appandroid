@@ -17,6 +17,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.DecodeHintType;
@@ -296,40 +298,40 @@ public class CompleteInfoActivity extends BaseActivity implements EasyPermission
 //                Logger.i("lzq","password : "+UserInfoHelper.getIntance().getPassword());
 //                login(UserInfoHelper.getIntance().getUserName(),UserInfoHelper.getIntance().getPassword());
 //                final String rong_token = UserInfoHelper.getIntance().getRongyunToken();
-                //IMUtils.connectIM(rongToken, true, new ResultCallback<String>() {
-
-                    @Override
-                    public void onSuccess(String s) {
-                        UserInfoHelper.getIntance().setUserId(userId);
-                        UserInfoHelper.getIntance().setToken(token);
-                        UserInfoHelper.getIntance().setRongyunToken(rongToken);
-
-                        if (JPushInterface.isPushStopped(getApplicationContext())) {
-                            Set<String> PushArray = new HashSet<>();
-                            int userId = UserInfoHelper.getIntance().getUserId();
-                            PushArray.add(userId + "");
-                            JPushInterface.resumePush(getApplicationContext());
-                            JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
-                            JPushInterface.setTags(getApplicationContext(), 0, PushArray);
-                        }
-                        Intent intent = new Intent(CompleteInfoActivity.this, MainActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("flag", 1);
-                        intent.putExtras(bundle);
-
-                        startActivity(intent);
-                        ComUtils.finishshortAll();
-                        dismissBookingToast();
-                    }
-
-                    @Override
-                    public void onFail(int errorCode) {
-                        ToastUtils.showCentetToast(CompleteInfoActivity.this, "聊天服务器连接失败");
-                        dismissBookingToast();
-                    }
-
-
-                });
+//                IMUtils.connectIM(rongToken, true, new ResultCallback<String>() {
+//
+//                    @Override
+//                    public void onSuccess(String s) {
+//                        UserInfoHelper.getIntance().setUserId(userId);
+//                        UserInfoHelper.getIntance().setToken(token);
+//                        UserInfoHelper.getIntance().setRongyunToken(rongToken);
+//
+//                        if (JPushInterface.isPushStopped(getApplicationContext())) {
+//                            Set<String> PushArray = new HashSet<>();
+//                            int userId = UserInfoHelper.getIntance().getUserId();
+//                            PushArray.add(userId + "");
+//                            JPushInterface.resumePush(getApplicationContext());
+//                            JPushInterface.setAlias(getApplicationContext(), 0, userId + "");
+//                            JPushInterface.setTags(getApplicationContext(), 0, PushArray);
+//                        }
+//                        Intent intent = new Intent(CompleteInfoActivity.this, MainActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("flag", 1);
+//                        intent.putExtras(bundle);
+//
+//                        startActivity(intent);
+//                        ComUtils.finishshortAll();
+//                        dismissBookingToast();
+//                    }
+//
+//                    @Override
+//                    public void onFail(int errorCode) {
+//                        ToastUtils.showCentetToast(CompleteInfoActivity.this, "聊天服务器连接失败");
+//                        dismissBookingToast();
+//                    }
+//
+//
+//                });
             }
 
             @Override

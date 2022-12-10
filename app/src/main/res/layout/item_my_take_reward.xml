@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -37,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|right"
-                    android:src="@mipmap/head_is_v32_32"
+                    app:srcCompat="@mipmap/head_is_v32_32"
                     android:visibility="gone" />
 
 
@@ -50,7 +51,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_marginRight="@dimen/dp_10"
-                android:layout_toRightOf="@id/item_index_recycler_Fl">
+                android:layout_toRightOf="@+id/item_index_recycler_Fl">
 
                 <LinearLayout
                     android:id="@+id/ll"
@@ -75,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/dp_4"
-                        android:layout_toRightOf="@id/lx_nametv"
+                        android:layout_toRightOf="@+id/lx_nametv"
                         android:scaleType="matrix" />
                 </LinearLayout>
 
@@ -83,7 +84,7 @@
                     android:id="@+id/lx_positiontv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ll"
+                    android:layout_below="@+id/ll"
                     android:layout_marginTop="@dimen/dp_2"
                     android:textColor="@color/text_color_AA"
                     android:textSize="@dimen/sp_12" />
@@ -131,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="@dimen/dp_10"
-                    android:src="@mipmap/reward" />
+                    app:srcCompat="@mipmap/reward" />
 
                 <TextView
                     android:layout_width="wrap_content"

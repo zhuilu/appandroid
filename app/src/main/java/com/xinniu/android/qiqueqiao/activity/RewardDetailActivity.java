@@ -3,7 +3,6 @@ package com.xinniu.android.qiqueqiao.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -11,13 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import com.google.gson.Gson;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.bean.HandlingFeeBean;
 import com.xinniu.android.qiqueqiao.bean.RewardDetailBean;
 import com.xinniu.android.qiqueqiao.common.Constants;
-import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipDialog;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipTwoDialog;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.GetRewardDetailCallback;

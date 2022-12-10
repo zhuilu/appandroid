@@ -2,21 +2,18 @@ package com.xinniu.android.qiqueqiao.receiver;
 
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
-//import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.core.app.NotificationCompat;
+
 import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.base.BaseApp;
 import com.xinniu.android.qiqueqiao.bean.NewsV2Bean;
-import com.xinniu.android.qiqueqiao.fragment.message.QQQConversationListFragment;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.GetNewsV2Callback;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
@@ -25,13 +22,9 @@ import com.xinniu.android.qiqueqiao.utils.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 import java.util.Iterator;
 
-import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.JPushInterface;
-
-import static com.xinniu.android.qiqueqiao.MainActivity.BROADCAST_ACTION;
 
 
 public class JGPushReceiver extends BroadcastReceiver {

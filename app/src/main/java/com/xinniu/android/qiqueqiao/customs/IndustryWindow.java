@@ -1,21 +1,20 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.v7.widget.GridLayoutManager;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.SourceScreenThreeAdapter;
@@ -27,6 +26,8 @@ import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+//import android.support.v7.widget.GridLayoutManager;
+
 /**
  * Created by yuchance on 2018/5/9.
  * 公司页面行业弹窗
@@ -34,7 +35,7 @@ import java.util.List;
 
 public class IndustryWindow extends PopupWindow implements PopupWindow.OnDismissListener{
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private List<SourceScreenBean.CompanyListBean> datas = new ArrayList<>();
     private int mIndustryId = 0;
     private String mIndustryName = "";
@@ -46,7 +47,7 @@ public class IndustryWindow extends PopupWindow implements PopupWindow.OnDismiss
     private int screenHeight;
     private String title;
 
-    public IndustryWindow(Activity context,List<SourceScreenBean.CompanyListBean> datas,String title) {
+    public IndustryWindow(AppCompatActivity context, List<SourceScreenBean.CompanyListBean> datas, String title) {
         this.activity = context;
         this.datas = datas;
         this.title = title;

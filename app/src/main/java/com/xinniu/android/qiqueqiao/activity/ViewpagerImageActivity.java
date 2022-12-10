@@ -5,15 +5,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import android.support.v4.app.FragmentManager;
-//import android.support.v4.app.FragmentStatePagerAdapter;
-//import androidx.viewpager.widget.ViewPager;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
+
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.customs.SimpleColorViewIndicate;
@@ -27,6 +31,11 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
+
+import androidx.fragment.app.Fragment;
+//import android.support.v4.app.FragmentManager;
+//import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by lzq on 2018/2/7.
@@ -126,9 +135,9 @@ public class ViewpagerImageActivity extends BaseActivity {
 
                         @Override
                         public void setOnClickMiddle() {
-                            Glide.with(ViewpagerImageActivity.this).load(url).asBitmap().into(new SimpleTarget<Bitmap>() {
+                            Glide.with(ViewpagerImageActivity.this).asBitmap().load(url).into(new SimpleTarget<Bitmap>() {
                                 @Override
-                                public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                                public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                                     mQRBitmap = resource;
                                     requestPermission();
                                 }
@@ -145,7 +154,7 @@ public class ViewpagerImageActivity extends BaseActivity {
 
                         }
                     });
-                    dialog.show(getFragmentManager(), "viewphoto");
+                    dialog.show(getSupportFragmentManager(), "viewphoto");
                 }
             });
             return imageFragment;

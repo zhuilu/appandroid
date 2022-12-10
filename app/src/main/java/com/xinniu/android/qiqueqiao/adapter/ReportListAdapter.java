@@ -1,7 +1,7 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.graphics.Typeface;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.CheckBox;

@@ -1,14 +1,13 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.widget.GridLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.CreateGroupClassifyAdapter;
@@ -18,7 +17,6 @@ import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AddGroupClassifyCallback;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-import com.xinniu.android.qiqueqiao.utils.FullyGridLayoutManager;
 import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
@@ -27,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -48,7 +45,7 @@ public class CreateGroupActivity extends BaseActivity {
         Intent intent = new Intent(context,CreateGroupActivity.class);
         context.startActivity(intent);
     }
-    public static void startx(Activity context){
+    public static void startx(AppCompatActivity context){
         Intent intent = new Intent(context,CreateGroupActivity.class);
         context.startActivityForResult(intent,501);
     }

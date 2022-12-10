@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.alipay.sdk.app.PayTask;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
@@ -41,7 +43,6 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -130,7 +131,7 @@ public class TopCardActivity extends BaseActivity {
         context.startActivity(intent);
     }
 
-    public static void start(Activity context, int requestCode) {
+    public static void start(AppCompatActivity context, int requestCode) {
         Intent intent = new Intent(context, TopCardActivity.class);
         context.startActivityForResult(intent, requestCode);
     }

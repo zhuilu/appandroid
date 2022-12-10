@@ -1,11 +1,13 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-//import android.support.v4.util.SparseArrayCompat;
-//import android.support.v7.widget.GridLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-//import android.support.v7.widget.StaggeredGridLayoutManager;
+
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.collection.SparseArrayCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 /**
  * Created by lzq on 2017/12/9.

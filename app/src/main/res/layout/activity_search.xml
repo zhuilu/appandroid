@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -25,7 +26,7 @@
                 android:layout_width="@dimen/tool_bar_head_long"
                 android:layout_height="@dimen/tool_bar_head_long"
                 android:layout_gravity="center"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
         </LinearLayout>
 
         <TextView
@@ -47,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:layout_toLeftOf="@id/srearch_tv"
-            android:layout_toRightOf="@id/bt_return"
+            android:layout_toLeftOf="@+id/srearch_tv"
+            android:layout_toRightOf="@+id/bt_return"
             android:background="@drawable/shape_search_graybg"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -58,7 +59,7 @@
                 android:layout_height="35dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:src="@mipmap/search_black" />
+                app:srcCompat="@mipmap/search_black" />
 
             <com.xinniu.android.qiqueqiao.customs.ClearEditText
                 android:id="@+id/sreach_content_et"
@@ -112,7 +113,7 @@
                 android:layout_height="16dp"
                 android:layout_gravity="right|center_vertical"
                 android:layout_marginRight="16dp"
-                android:src="@mipmap/delete_search_tag" />
+                app:srcCompat="@mipmap/delete_search_tag" />
         </FrameLayout>
 
         <View
@@ -206,7 +207,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:paddingRight="@dimen/dp_16"
-                android:src="@mipmap/goto_new" />
+                app:srcCompat="@mipmap/goto_new" />
 
             <TextView
                 android:id="@+id/tv_num"
@@ -250,7 +251,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:paddingRight="@dimen/dp_16"
-                android:src="@mipmap/goto_new" />
+                app:srcCompat="@mipmap/goto_new" />
 
 
         </RelativeLayout>

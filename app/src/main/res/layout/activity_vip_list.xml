@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -16,7 +17,7 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:padding="10dp"
-            android:src="@mipmap/img_title_back" />
+            app:srcCompat="@mipmap/img_title_back" />
 
         <TextView
             android:id="@+id/tool_bar_title"
@@ -56,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/head_iv"
+            android:layout_toRightOf="@+id/head_iv"
             android:textColor="@color/white"
             android:textSize="17sp"/>
 
@@ -68,16 +69,16 @@
             android:gravity="center_vertical"
             android:textColor="#C7E1FF"
             android:textSize="12sp"
-            android:layout_toRightOf="@id/name"
+            android:layout_toRightOf="@+id/name"
             android:paddingLeft="5dp"/>
 
         <TextView
             android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name"
+            android:layout_below="@+id/name"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/head_iv"
+            android:layout_toRightOf="@+id/head_iv"
             android:textColor="#C7E1FF"
             android:textSize="12sp"/>
     </RelativeLayout>

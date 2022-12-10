@@ -1,29 +1,27 @@
 package com.xinniu.android.qiqueqiao.fragment.push;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
-import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.AppointmentTimeActivity;
 import com.xinniu.android.qiqueqiao.activity.CertificationActivity;
 import com.xinniu.android.qiqueqiao.activity.CompanyEditActivity;
-import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
-import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.PublishNewActivity;
 import com.xinniu.android.qiqueqiao.activity.PublishSelectTypeActivity;
-import com.xinniu.android.qiqueqiao.activity.SreachActivity;
 import com.xinniu.android.qiqueqiao.activity.SuperExposureActivity;
 import com.xinniu.android.qiqueqiao.activity.TopCardActivity;
 import com.xinniu.android.qiqueqiao.adapter.MyPushAdapter;
@@ -40,7 +38,6 @@ import com.xinniu.android.qiqueqiao.request.callback.CommonCallback;
 import com.xinniu.android.qiqueqiao.request.callback.GetVerifyInfoCallback;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.request.converter.ResultDO;
-import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -112,7 +109,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
             @Override
             public void onMore(final int pos, String isUp) {
                 if (isUp.equals("1")) {
-                    PublishNewActivity.start(getActivity(), mData.get(pos).getId(), mData.get(pos).getP_name(), mData.get(pos).getP_id(), 1000);
+                    PublishNewActivity.start((AppCompatActivity) getActivity(), mData.get(pos).getId(), mData.get(pos).getP_name(), mData.get(pos).getP_id(), 1000);
                 } else if (isUp.equals("2")) {
                     showDeleteDialog(pos);
                 } else if (isUp.equals("3")) {
@@ -202,7 +199,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
             //跳到预约时间
             int p_id = mData.get(pos).getP_id();
             String p_name = mData.get(pos).getP_name();
-            AppointmentTimeActivity.start(getActivity(), p_id, p_name, mData.get(pos).getId(), fixedNum, pos, MYPUSHCODETHREE);
+            AppointmentTimeActivity.start((AppCompatActivity) getActivity(), p_id, p_name, mData.get(pos).getId(), fixedNum, pos, MYPUSHCODETHREE);
 
         } else {
             AlertDialogUtils.AlertDialog(getContext(), "置顶卡数量不足", "请购买置顶卡置顶您的合作信息", "取消", "去购买", new AlertDialogUtils.setOnClick() {
@@ -213,7 +210,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
 
                 @Override
                 public void setRightOnClick(DialogInterface dialog) {
-                    SuperExposureActivity.start(getActivity(), MYPUSHCODETWO);
+                    SuperExposureActivity.start((AppCompatActivity) getActivity(), MYPUSHCODETWO);
                 }
             });
         }
@@ -236,7 +233,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
 
                             }
                         })
-                        .show(getActivity());
+                        .show((AppCompatActivity) getActivity());
             }
 
             @Override
@@ -266,7 +263,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
                         delete(position);
                     }
                 })
-                .show(getActivity());
+                .show((AppCompatActivity) getActivity());
     }
 
     private void showDeleteV2Dialog(final int position) {
@@ -284,12 +281,12 @@ public class ResourcePushFragment extends LazyBaseFragment {
                         deleteResource(mData.get(position).getId());
                     }
                 })
-                .show(getActivity());
+                .show((AppCompatActivity) getActivity());
     }
 
     private void initAdapter() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAdapter = new MyPushAdapter(getActivity(), mData);
+        mAdapter = new MyPushAdapter((AppCompatActivity) getActivity(), mData);
         recyclerView.setAdapter(mAdapter);
     }
 
@@ -443,7 +440,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
 
                             @Override
                             public void setRightOnClick(DialogInterface dialog) {
-                                TopCardActivity.start(getActivity(), MYPUSHCODE);
+                                TopCardActivity.start((AppCompatActivity) getActivity(), MYPUSHCODE);
                             }
                         });
                     }
@@ -512,10 +509,10 @@ public class ResourcePushFragment extends LazyBaseFragment {
                 toReleaseActivity();
                 break;
             case R.id.bmypush_buytop:
-                TopCardActivity.start(getActivity(), MYPUSHCODE);
+                TopCardActivity.start((AppCompatActivity) getActivity(), MYPUSHCODE);
                 break;
             case R.id.bmypush_buytop_2:
-                SuperExposureActivity.start(getActivity(), MYPUSHCODETWO);
+                SuperExposureActivity.start((AppCompatActivity) getActivity(), MYPUSHCODETWO);
                 break;
             default:
                 break;
@@ -533,7 +530,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
             public void onSuccess(ResultDO resultDO) {
                 dismissBookingToast();
 //                startActivityForResult(new Intent(MyPushActivity.this, PublishActivity.class), MainActivity.RELEASE_SUCCESS);
-                PublishSelectTypeActivity.start(getActivity());
+                PublishSelectTypeActivity.start((AppCompatActivity) getActivity());
             }
 
             @Override
@@ -550,7 +547,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
 
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 } else if (code == 305) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                     builder.setMessage(msg);
@@ -587,7 +584,7 @@ public class ResourcePushFragment extends LazyBaseFragment {
                             CertificationActivity.start(getContext(), 1);
                         }
                     })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 }
             }
         });

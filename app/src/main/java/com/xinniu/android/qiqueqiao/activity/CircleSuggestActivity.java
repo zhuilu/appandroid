@@ -1,14 +1,13 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -39,7 +38,7 @@ public class CircleSuggestActivity extends BaseActivity{
 //        intent.putExtra("content",content);
 //        context.startActivityForResult(intent,REQUEST_CIRLE_SUGGEST);
 //    }
-    public static void start(Activity context, String content){
+    public static void start(AppCompatActivity context, String content){
         Intent intent = new Intent(context,CircleSuggestActivity.class);
 //        intent.putExtra("type",type);
         intent.putExtra("content",content);

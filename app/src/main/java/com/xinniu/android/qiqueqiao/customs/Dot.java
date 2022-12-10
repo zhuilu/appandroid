@@ -8,9 +8,11 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.widget.AppCompatRadioButton;
+
 import com.xinniu.android.qiqueqiao.R;
 
-public class Dot extends android.support.v7.widget.AppCompatRadioButton {
+public class Dot extends AppCompatRadioButton {
     /**
      * 放大放大倍数
      */

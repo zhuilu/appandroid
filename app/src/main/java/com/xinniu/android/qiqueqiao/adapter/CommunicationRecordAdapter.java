@@ -1,36 +1,27 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
-import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
-import com.xinniu.android.qiqueqiao.activity.MyPushActivity;
 import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
-import com.xinniu.android.qiqueqiao.activity.SreachActivity;
 import com.xinniu.android.qiqueqiao.bean.CommunicationRecordBean;
-import com.xinniu.android.qiqueqiao.bean.MainBean;
-import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
-import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/12/27.
@@ -38,12 +29,12 @@ import java.util.List;
 
 public class CommunicationRecordAdapter extends BaseQuickAdapter<CommunicationRecordBean.DataBean.ListBean, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
     ArrayList<String> images = new ArrayList<>();
 
     SparseArray<ImageView> imageGroupList= new SparseArray<>();
 
-    public CommunicationRecordAdapter(Activity context, int layoutResId, @Nullable List<CommunicationRecordBean.DataBean.ListBean> data) {
+    public CommunicationRecordAdapter(AppCompatActivity context, int layoutResId, @Nullable List<CommunicationRecordBean.DataBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
         imageGroupList.clear();

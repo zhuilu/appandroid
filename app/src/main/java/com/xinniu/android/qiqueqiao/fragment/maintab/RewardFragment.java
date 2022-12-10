@@ -3,25 +3,25 @@ package com.xinniu.android.qiqueqiao.fragment.maintab;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.app.AlertDialog;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
-import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.CertificationActivity;
 import com.xinniu.android.qiqueqiao.activity.CompanyEditActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.PublicRewardAvtivity;
-import com.xinniu.android.qiqueqiao.activity.PublishSelectTypeActivity;
 import com.xinniu.android.qiqueqiao.adapter.RewardListAdapter;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;
 import com.xinniu.android.qiqueqiao.bean.RewardListBean;
@@ -69,7 +69,7 @@ public class RewardFragment extends LazyBaseFragment {
     public void initViews(Bundle savedInstanceState) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(linearLayoutManager);
-        rewardListAdapter = new RewardListAdapter(getActivity(), R.layout.item_reward, datas);
+        rewardListAdapter = new RewardListAdapter((AppCompatActivity) getActivity(), R.layout.item_reward, datas);
         rv.setAdapter(rewardListAdapter);
         rv.setNestedScrollingEnabled(false);
 
@@ -193,7 +193,7 @@ public class RewardFragment extends LazyBaseFragment {
 
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 } else if (code == 305) {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -232,7 +232,7 @@ public class RewardFragment extends LazyBaseFragment {
                             CertificationActivity.start(getActivity(), 1);
                         }
                     })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 }
             }
         });

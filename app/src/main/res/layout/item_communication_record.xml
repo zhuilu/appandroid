@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/llayout_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -27,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
-                android:src="@mipmap/head_is_v32_32"
+                app:srcCompat="@mipmap/head_is_v32_32"
                 android:visibility="gone" />
 
 
@@ -68,7 +69,7 @@
             android:layout_marginLeft="@dimen/dp_12"
             android:layout_marginTop="@dimen/dp_21"
             android:includeFontPadding="false"
-            android:layout_toRightOf="@id/mitem_connect_fl"
+            android:layout_toRightOf="@+id/mitem_connect_fl"
             android:text="客服经理"
             android:textColor="@color/_333"
             android:textSize="@dimen/sp_14"
@@ -79,7 +80,7 @@
             android:id="@+id/mitem_connect_positiontv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/mitem_connect_fl"
+            android:layout_toRightOf="@+id/mitem_connect_fl"
             android:layout_marginBottom="@dimen/dp_19"
             android:layout_marginLeft="@dimen/dp_12"
             android:layout_alignParentBottom="true"

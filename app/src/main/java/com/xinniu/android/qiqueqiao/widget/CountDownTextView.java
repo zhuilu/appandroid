@@ -4,9 +4,13 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 //import android.support.annotation.ColorRes;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.xinniu.android.qiqueqiao.R;
 
@@ -14,7 +18,7 @@ import com.xinniu.android.qiqueqiao.R;
  * Created by yuchance on 2018/12/21.
  */
 
-public class CountDownTextView extends android.support.v7.widget.AppCompatTextView {
+public class CountDownTextView extends AppCompatTextView {
     /**
      * 提示文字
      */

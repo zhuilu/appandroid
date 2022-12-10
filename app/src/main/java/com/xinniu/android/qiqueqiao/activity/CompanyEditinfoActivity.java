@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +15,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.customs.ClearEditText;
@@ -28,7 +29,6 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -74,7 +74,7 @@ public class CompanyEditinfoActivity extends BaseActivity {
     private String imputtxt;
     private String content;
 
-    public static void startCompanyInfo(Activity context, String type, String typeValue, String content) {
+    public static void startCompanyInfo(AppCompatActivity context, String type, String typeValue, String content) {
         Intent intent = new Intent(context, CompanyEditinfoActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString(type, typeValue);
@@ -83,7 +83,7 @@ public class CompanyEditinfoActivity extends BaseActivity {
         context.startActivityForResult(intent, THEREQUESTCODE, bundle);
     }
 
-    public static void startCompanyInfo(Activity context, String type, String typeValue, String ofneStr, String ofneInfo) {
+    public static void startCompanyInfo(AppCompatActivity context, String type, String typeValue, String ofneStr, String ofneInfo) {
         Intent intent = new Intent(context, CompanyEditinfoActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString(type, typeValue);

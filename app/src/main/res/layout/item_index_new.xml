@@ -59,7 +59,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom|right"
-                            android:src="@mipmap/head_is_v20_20"
+                            app:srcCompat="@mipmap/head_is_v20_20"
                             android:visibility="gone" />
 
 
@@ -70,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/item_index_recycler_Fl"
+                        android:layout_toRightOf="@+id/item_index_recycler_Fl"
                         android:orientation="vertical">
 
                         <TextView
@@ -95,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/llayout_line"
+                        android:layout_toRightOf="@+id/llayout_line"
                         android:orientation="horizontal">
 
 
@@ -119,9 +119,9 @@
                             android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="@dimen/dp_5"
-                            android:layout_toRightOf="@id/item_index_position"
+                            android:layout_toRightOf="@+id/item_index_position"
                             android:scaleType="matrix"
-                            android:src="@mipmap/vip_new_icon_company"
+                            app:srcCompat="@mipmap/vip_new_icon_company"
                             android:visibility="gone" />
 
                         <ImageView
@@ -131,7 +131,7 @@
                             android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="@dimen/dp_5"
-                            android:layout_toRightOf="@id/item_index_new_company_v"
+                            android:layout_toRightOf="@+id/item_index_new_company_v"
                             android:scaleType="matrix" />
 
                         <ImageView
@@ -141,9 +141,9 @@
                             android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="@dimen/dp_5"
-                            android:layout_toRightOf="@id/item_index_new_kingimg"
+                            android:layout_toRightOf="@+id/item_index_new_kingimg"
                             android:scaleType="matrix"
-                            android:src="@mipmap/re_list"
+                            app:srcCompat="@mipmap/re_list"
                             android:visibility="gone" />
                     </LinearLayout>
                 </RelativeLayout>
@@ -317,9 +317,9 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="5dp"
-                        android:layout_toLeftOf="@id/item_index_recycler_answer"
+                        android:layout_toLeftOf="@+id/item_index_recycler_answer"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/tell_cion" />
+                        app:srcCompat="@mipmap/tell_cion" />
 
                     <TextView
                         android:id="@+id/item_index_recycler_see"
@@ -328,7 +328,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/dp_6"
                         android:layout_marginRight="@dimen/dp_14"
-                        android:layout_toLeftOf="@id/item_index_recycler_answer_icon"
+                        android:layout_toLeftOf="@+id/item_index_recycler_answer_icon"
                         android:text=""
                         android:textColor="@color/text_gray_color2"
                         android:textSize="@dimen/sp_11" />
@@ -337,9 +337,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@id/item_index_recycler_see"
+                        android:layout_toLeftOf="@+id/item_index_recycler_see"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/eye_icon" />
+                        app:srcCompat="@mipmap/eye_icon" />
 
                 </RelativeLayout>
 
@@ -361,7 +361,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@mipmap/search_perch"
+            app:srcCompat="@mipmap/search_perch"
             android:visibility="visible" />
     </RelativeLayout>
 
@@ -372,7 +372,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/dp_5"
         android:layout_marginRight="@dimen/dp_13"
-        android:src="@mipmap/promotion_resource"
+        app:srcCompat="@mipmap/promotion_resource"
         android:visibility="gone" />
 
 </RelativeLayout>

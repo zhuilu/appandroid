@@ -1,13 +1,12 @@
 package com.xinniu.android.qiqueqiao.fragment.message.interact;
 
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -17,7 +16,6 @@ import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.CareAdapter;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;
 import com.xinniu.android.qiqueqiao.bean.CareBean;
-import com.xinniu.android.qiqueqiao.divider.DividerItemDecoration;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.GetCareListCallback;
 import com.xinniu.android.qiqueqiao.utils.ShowUtils;
@@ -26,8 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * Created by lzq on 2017/12/8.

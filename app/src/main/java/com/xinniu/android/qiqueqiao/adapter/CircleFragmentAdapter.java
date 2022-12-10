@@ -2,8 +2,8 @@ package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;

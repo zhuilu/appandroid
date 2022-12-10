@@ -13,7 +13,7 @@
         android:id="@+id/member_nametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/member_circleImg"
+        android:layout_below="@+id/member_circleImg"
         android:layout_marginTop="@dimen/dp_7"
         android:layout_centerHorizontal="true"
         android:textSize="@dimen/sp_12"

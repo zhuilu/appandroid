@@ -16,7 +16,7 @@
       <ImageView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:src="@mipmap/chevron"
+          app:srcCompat="@mipmap/chevron"
           android:layout_alignParentLeft="true"
           android:layout_marginTop="@dimen/dp_16"
           android:layout_marginLeft="@dimen/dp_20"
@@ -39,7 +39,7 @@
        android:id="@+id/login_new_text_res"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_above="@id/login_new_text"
+       android:layout_above="@+id/login_new_text"
        android:text="@string/phone_res_login"
        android:layout_marginBottom="@dimen/dp_83"
        android:layout_marginLeft="@dimen/dp_36"
@@ -51,7 +51,7 @@
        android:id="@+id/login_new_text_accpwd"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_above="@id/login_new_text"
+       android:layout_above="@+id/login_new_text"
        android:text="@string/account_psw_login"
        android:layout_marginBottom="@dimen/dp_83"
        android:layout_marginRight="@dimen/dp_36"
@@ -64,7 +64,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="horizontal"
-       android:layout_above="@id/login_new_text_res"
+       android:layout_above="@+id/login_new_text_res"
        android:layout_marginBottom="@dimen/dp_20"
        android:layout_marginLeft="@dimen/dp_36"
        android:layout_marginRight="@dimen/dp_36"
@@ -102,7 +102,7 @@
        android:id="@+id/loginnew_wxlogin"
        android:layout_width="match_parent"
        android:layout_height="@dimen/dp_44"
-       android:layout_above="@id/login_new_Ll"
+       android:layout_above="@+id/login_new_Ll"
        android:layout_marginBottom="@dimen/dp_20"
        android:layout_marginLeft="@dimen/dp_36"
        android:layout_marginRight="@dimen/dp_36"
@@ -118,7 +118,7 @@
           android:id="@+id/login_new_wxicon"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:src="@mipmap/wx_icon"
+          app:srcCompat="@mipmap/wx_icon"
 
           />
       <TextView
@@ -139,9 +139,9 @@
    <ImageView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_below="@id/finish_img"
+       android:layout_below="@+id/finish_img"
        android:layout_centerHorizontal="true"
        android:layout_marginTop="97dp"
-       android:src="@mipmap/qiqueqiaologodl" />
+       app:srcCompat="@mipmap/qiqueqiaologodl" />
 
 </RelativeLayout>

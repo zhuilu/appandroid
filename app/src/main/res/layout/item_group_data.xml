@@ -68,7 +68,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_marginRight="@dimen/dp_20"
-                android:layout_toRightOf="@id/item_lx_headimg">
+                android:layout_toRightOf="@+id/item_lx_headimg">
                 <LinearLayout
                     android:id="@+id/ll"
                     android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                     android:id="@+id/lx_positiontv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ll"
+                    android:layout_below="@+id/ll"
                     android:layout_marginTop="@dimen/dp_3"
                     android:textColor="@color/text_color_AA"
                     android:textSize="@dimen/sp_12" />

@@ -1,11 +1,11 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -14,22 +14,22 @@ import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
 import com.xinniu.android.qiqueqiao.activity.RewardDetailActivity;
 import com.xinniu.android.qiqueqiao.bean.MainBean;
-import com.xinniu.android.qiqueqiao.bean.RewardListBean;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.StringUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.List;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/3/30.
  */
 
 public class MainRewardAdapter extends BaseQuickAdapter<MainBean.RewardBean, BaseViewHolder> {
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainRewardAdapter(Activity context, int layoutResId, @Nullable List<MainBean.RewardBean> data) {
+    public MainRewardAdapter(AppCompatActivity context, int layoutResId, @Nullable List<MainBean.RewardBean> data) {
         super(layoutResId, data);
         this.context = context;
     }

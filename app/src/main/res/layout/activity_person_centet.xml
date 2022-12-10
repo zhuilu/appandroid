@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -29,7 +30,7 @@
                     android:layout_width="@dimen/tool_bar_head_long"
                     android:layout_height="@dimen/tool_bar_head_long"
                     android:layout_gravity="center"
-                    android:src="@mipmap/img_title_back" />
+                    app:srcCompat="@mipmap/img_title_back" />
             </LinearLayout>
 
             <TextView
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/report_iconx"
+                app:srcCompat="@mipmap/report_iconx"
                 android:visibility="gone" />
 
             <ImageView
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/ic_more"
+                app:srcCompat="@mipmap/ic_more"
                 android:visibility="gone" />
 
 
@@ -197,8 +198,8 @@
         android:id="@+id/id_swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/yperson_selectRl"
-        android:layout_below="@id/tool_bar">
+        android:layout_above="@+id/yperson_selectRl"
+        android:layout_below="@+id/tool_bar">
 
         <com.xinniu.android.qiqueqiao.widget.CustomRefreshHeader2
             android:layout_width="match_parent"
@@ -276,7 +277,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="right|bottom"
-                                android:src="@mipmap/head_is_v40_40" />
+                                app:srcCompat="@mipmap/head_is_v40_40" />
                         </FrameLayout>
 
                         <RelativeLayout
@@ -285,8 +286,8 @@
                             android:layout_height="@dimen/dp_22"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="20dp"
-                            android:layout_toLeftOf="@id/care_Rl"
-                            android:layout_toRightOf="@id/head_fl">
+                            android:layout_toLeftOf="@+id/care_Rl"
+                            android:layout_toRightOf="@+id/head_fl">
 
                             <TextView
                                 android:id="@+id/real_name_tv"
@@ -306,9 +307,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="@dimen/dp_5"
-                                android:layout_toRightOf="@id/real_name_tv"
+                                android:layout_toRightOf="@+id/real_name_tv"
                                 android:scaleType="matrix"
-                                android:src="@mipmap/vip_new_icon_company"
+                                app:srcCompat="@mipmap/vip_new_icon_company"
                                 android:visibility="gone" />
 
                             <ImageView
@@ -317,7 +318,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="@dimen/dp_5"
-                                android:layout_toRightOf="@id/company_v"
+                                android:layout_toRightOf="@+id/company_v"
                                 android:scaleType="matrix" />
 
                             <ImageView
@@ -328,7 +329,7 @@
                                 android:layout_marginLeft="@dimen/dp_5"
                                 android:layout_toRightOf="@+id/person_kingImg"
                                 android:scaleType="matrix"
-                                android:src="@mipmap/smrzbq"
+                                app:srcCompat="@mipmap/smrzbq"
                                 android:visibility="gone" />
 
                             <TextView
@@ -337,7 +338,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginLeft="@dimen/dp_5"
-                                android:layout_toRightOf="@id/person_rz"
+                                android:layout_toRightOf="@+id/person_rz"
                                 android:ellipsize="end"
                                 android:singleLine="true"
                                 android:text="刚刚活跃"
@@ -350,11 +351,11 @@
                             android:id="@+id/location_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/real_name_ll"
+                            android:layout_below="@+id/real_name_ll"
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="@dimen/dp_5"
-                            android:layout_toLeftOf="@id/care_Rl"
-                            android:layout_toRightOf="@id/head_fl"
+                            android:layout_toLeftOf="@+id/care_Rl"
+                            android:layout_toRightOf="@+id/head_fl"
                             android:ellipsize="middle"
                             android:gravity="left"
                             android:singleLine="true"
@@ -366,9 +367,9 @@
                             android:id="@+id/camg_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/real_name_ll"
+                            android:layout_below="@+id/real_name_ll"
                             android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@id/location_tv"
+                            android:layout_toRightOf="@+id/location_tv"
                             android:gravity="center"
                             android:lines="1"
                             android:textColor="#999999"
@@ -382,7 +383,7 @@
                         android:id="@+id/ycompany_Rl"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_90"
-                        android:layout_below="@id/personrl"
+                        android:layout_below="@+id/personrl"
                         android:background="@color/white"
                         android:visibility="visible">
 
@@ -390,7 +391,7 @@
                             android:id="@+id/bgoto_company"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:foreground="?android:attr/selectableItemBackground">
+                            android:foreground="?attr/selectableItemBackground">
 
                             <RelativeLayout
                                 android:id="@+id/companyRl"
@@ -416,7 +417,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginRight="@dimen/dp_20"
-                                android:layout_toLeftOf="@id/companyRl"
+                                android:layout_toLeftOf="@+id/companyRl"
                                 android:orientation="vertical">
 
                                 <LinearLayout
@@ -470,7 +471,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp_59"
 
-                    android:layout_below="@id/view1"
+                    android:layout_below="@+id/view1"
                     android:background="@color/white">
 
 
@@ -489,7 +490,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/view2"
+                    android:layout_below="@+id/view2"
                     android:background="@color/bg_gray"
 
                     >
@@ -530,7 +531,7 @@
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_50"
-            android:layout_below="@id/recyclerView"
+            android:layout_below="@+id/recyclerView"
             android:background="@color/white">
 
             <pl.droidsonroids.gif.GifImageView

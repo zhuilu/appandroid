@@ -1,15 +1,10 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.app.AppCompatDialog;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -19,9 +14,17 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.animation.GlideAnimation;
+
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
@@ -57,6 +60,11 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+//import android.support.annotation.NonNull;
+//import android.support.v4.content.ContextCompat;
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 /**
  * Created by yuchance on 2018/5/7.
@@ -237,9 +245,9 @@ public class CompanyInfoActivity extends BaseActivity {
                 ShowUtils.showTextPerfect(mcompanyBrandname, bean.getBrand());
                 if (!TextUtils.isEmpty(bean.getLogo())) {
                     ShowUtils.showImgPerfect(mcompanyHeadicon, bean.getLogo(), 2);
-                    Glide.with(CompanyInfoActivity.this).load(bean.getLogo()).asBitmap().into(new SimpleTarget<Bitmap>() {
+                    Glide.with(CompanyInfoActivity.this).asBitmap().load(bean.getLogo()).into(new SimpleTarget<Bitmap>() {
                         @Override
-                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                             Bitmap scaledBitmap = Bitmap.createScaledBitmap(resource, resource.getWidth(), resource.getHeight() / 2, false);
                             Bitmap blurBitmap = FastBlur.doBlur(scaledBitmap, 100, true);
 //                            Bitmap blurBitmapx = FastBlur.doBlur(blurBitmap, 50, true);

@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@id/item_lx_headimg">
+                android:layout_toRightOf="@+id/item_lx_headimg">
 
                 <LinearLayout
                     android:id="@+id/ll"

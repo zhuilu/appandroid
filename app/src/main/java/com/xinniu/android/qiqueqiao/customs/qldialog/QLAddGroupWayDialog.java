@@ -1,11 +1,13 @@
 package com.xinniu.android.qiqueqiao.customs.qldialog;
 
 import android.content.Context;
-//import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
+
+
+import androidx.appcompat.app.AppCompatDialog;
 
 import com.xinniu.android.qiqueqiao.R;
 

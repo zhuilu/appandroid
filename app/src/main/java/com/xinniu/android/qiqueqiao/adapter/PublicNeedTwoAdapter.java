@@ -1,8 +1,8 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -12,16 +12,18 @@ import com.xinniu.android.qiqueqiao.bean.GetReleaseTemplateNewBean;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+
 /**
  * Created by yuchance on 2018/12/27.
  */
 
 public class PublicNeedTwoAdapter extends BaseQuickAdapter<GetReleaseTemplateNewBean.NeedCategoryBean.SystemCategoryBeanX.ListBeanXX, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
     private List<GetReleaseTemplateNewBean.NeedCategoryBean.SystemCategoryBeanX.ListBeanXX> mData = new ArrayList<>();
 
-    public PublicNeedTwoAdapter(Activity context, int layoutResId, @Nullable List<GetReleaseTemplateNewBean.NeedCategoryBean.SystemCategoryBeanX.ListBeanXX> data) {
+    public PublicNeedTwoAdapter(AppCompatActivity context, int layoutResId, @Nullable List<GetReleaseTemplateNewBean.NeedCategoryBean.SystemCategoryBeanX.ListBeanXX> data) {
         super(layoutResId, data);
         this.context = context;
         this.mData = data;

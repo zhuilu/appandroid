@@ -1,15 +1,18 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
+import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETWO;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.RequiresApi;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -24,7 +27,8 @@ import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
 import java.util.List;
 
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETWO;
+//import android.support.annotation.RequiresApi;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/12/12.
@@ -32,7 +36,7 @@ import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MY
 
 public class MyPushAdapter extends BaseMultiItemQuickAdapter<MyPushBean.ListBean, BaseViewHolder> {
     private Callback callback;
-    private Activity mContext;
+    private AppCompatActivity mContext;
     private String company;
 
     /**
@@ -41,7 +45,7 @@ public class MyPushAdapter extends BaseMultiItemQuickAdapter<MyPushBean.ListBean
      *
      * @param data A new list is created out of this one to avoid mutable list
      */
-    public MyPushAdapter(Activity context, List<MyPushBean.ListBean> data) {
+    public MyPushAdapter(AppCompatActivity context, List<MyPushBean.ListBean> data) {
         super(data);
         this.mContext = context;
         addItemType(MyPushBean.ListBean.COMMON, R.layout.item_my_push);

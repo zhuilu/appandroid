@@ -1,16 +1,23 @@
 package com.xinniu.android.qiqueqiao.activity;
 
+import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODE;
+import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETHREE;
+import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETWO;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v4.app.FragmentManager;
-//import android.support.v4.app.FragmentPagerAdapter;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.google.gson.Gson;
 import com.xinniu.android.qiqueqiao.R;
@@ -27,13 +34,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODE;
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETHREE;
-import static com.xinniu.android.qiqueqiao.fragment.push.ResourcePushFragment.MYPUSHCODETWO;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+//import android.support.v4.app.FragmentManager;
+//import android.support.v4.app.FragmentPagerAdapter;
 
 
 /**
@@ -64,7 +66,7 @@ public class MyPushActivity extends BaseActivity {
         context.startActivity(starter);
     }
 
-    public static void start(Activity context, int requestCode) {
+    public static void start(AppCompatActivity context, int requestCode) {
         Intent starter = new Intent(context, MyPushActivity.class);
         context.startActivityForResult(starter, requestCode);
     }

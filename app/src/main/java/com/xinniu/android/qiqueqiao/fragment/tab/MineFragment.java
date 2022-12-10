@@ -4,7 +4,6 @@ package com.xinniu.android.qiqueqiao.fragment.tab;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-//import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -16,6 +15,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.umeng.analytics.MobclickAgent;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
@@ -25,14 +27,12 @@ import com.xinniu.android.qiqueqiao.activity.CertificationActivity;
 import com.xinniu.android.qiqueqiao.activity.CommunicationRecordActivity;
 import com.xinniu.android.qiqueqiao.activity.CompanyEditActivity;
 import com.xinniu.android.qiqueqiao.activity.CompanyInfoActivity;
-import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.FeedbackActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.MineInfoActivity;
 import com.xinniu.android.qiqueqiao.activity.MyActListActivity;
 import com.xinniu.android.qiqueqiao.activity.MyCollectActivity;
 import com.xinniu.android.qiqueqiao.activity.MyCommentActivity;
-import com.xinniu.android.qiqueqiao.activity.MyGroupActivity;
 import com.xinniu.android.qiqueqiao.activity.MyPushActivity;
 import com.xinniu.android.qiqueqiao.activity.MyRewardActivity;
 import com.xinniu.android.qiqueqiao.activity.MyTransactionOrdersActivity;
@@ -56,7 +56,6 @@ import com.xinniu.android.qiqueqiao.utils.ShowUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 import com.xinniu.android.qiqueqiao.widget.CircleImageView;
 
-import butterknife.BindView;
 import butterknife.OnClick;
 import retrofit2.Call;
 
@@ -390,7 +389,7 @@ public class MineFragment extends LazyBaseFragment {
                                 public void onClick() {
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 } else {
 
                     if (mCenterBean.getUsers().getIs_cloud_auth() == 0) {
@@ -504,7 +503,7 @@ public class MineFragment extends LazyBaseFragment {
                                 public void onClick() {
                                 }
                             })
-                            .show(getActivity());
+                            .show((AppCompatActivity) getActivity());
                 } else {
 //                    switch (mCenterBean.getUsers().getIs_v()) {
 //

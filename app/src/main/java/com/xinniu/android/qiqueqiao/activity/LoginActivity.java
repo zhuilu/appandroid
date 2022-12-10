@@ -358,28 +358,28 @@ public class LoginActivity extends BaseActivity {
 //                    UserInfoHelper.getIntance().setHeadUrl(userInfoBean.get);
                     CompleteInfoActivity.start(LoginActivity.this, userInfoBean.token, userInfoBean.user_id, userInfoBean.rong_token);
                 } else {
-                    //IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
-
-
-                        @Override
-                        public void onFail(int errorCode) {
-                            ToastUtils.showCentetToast(LoginActivity.this, "登录失败");
-                            dismissBookingToast();
-                        }
-
-
-                        @Override
-                        public void onSuccess(String s) {
-                            UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
-                            UserInfoHelper.getIntance().setToken(userInfoBean.token);
-                            UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
-                            dismissBookingToast();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
-                            finish();
-                        }
-
-                    });
+//                    IMUtils.connectIM(userInfoBean.rong_token, true, new ResultCallback<String>() {
+//
+//
+//                        @Override
+//                        public void onFail(int errorCode) {
+//                            ToastUtils.showCentetToast(LoginActivity.this, "登录失败");
+//                            dismissBookingToast();
+//                        }
+//
+//
+//                        @Override
+//                        public void onSuccess(String s) {
+//                            UserInfoHelper.getIntance().setUserId(userInfoBean.user_id);
+//                            UserInfoHelper.getIntance().setToken(userInfoBean.token);
+//                            UserInfoHelper.getIntance().setRongyunToken(userInfoBean.getRong_token());
+//                            dismissBookingToast();
+//                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//
+//                            finish();
+//                        }
+//
+//                    });
 
                     Set<String> PushArray = new HashSet<>();
                     int userId = UserInfoHelper.getIntance().getUserId();

@@ -2,7 +2,7 @@ package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
 import android.media.Image;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 

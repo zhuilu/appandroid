@@ -1,10 +1,8 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -14,16 +12,20 @@ import com.xinniu.android.qiqueqiao.bean.GetReleaseTemplateNewBean;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 /**
  * Created by yuchance on 2018/12/27.
  */
 
 public class PublicOfferTwoAdapter extends BaseQuickAdapter<GetReleaseTemplateNewBean.ProvideCategoryBean.SystemCategoryBean.ListBean, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
     private List<GetReleaseTemplateNewBean.ProvideCategoryBean.SystemCategoryBean.ListBean> mData = new ArrayList<>();
 
-    public PublicOfferTwoAdapter(Activity context, int layoutResId, @Nullable List<GetReleaseTemplateNewBean.ProvideCategoryBean.SystemCategoryBean.ListBean> data) {
+    public PublicOfferTwoAdapter(AppCompatActivity context, int layoutResId, @Nullable List<GetReleaseTemplateNewBean.ProvideCategoryBean.SystemCategoryBean.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
         this.mData = data;

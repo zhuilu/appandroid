@@ -1,12 +1,13 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -56,7 +57,7 @@ public class SourceScreenAdapter extends BaseQuickAdapter<SourceScreenBean.Coope
 
         if (item.isCheck()){
             tv.setBackground(ContextCompat.getDrawable(mContext,R.drawable.bg_source_cell_two));
-            helper.setTextColor(R.id.item_source_celltv,ContextCompat.getColor(mContext,R.color.white));
+            helper.setTextColor(R.id.item_source_celltv, ContextCompat.getColor(mContext,R.color.white));
         }else {
             tv.setBackground(ContextCompat.getDrawable(mContext,R.drawable.bg_source_cell));
             helper.setTextColor(R.id.item_source_celltv,ContextCompat.getColor(mContext,R.color._888));

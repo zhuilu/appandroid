@@ -1,7 +1,7 @@
 package com.xinniu.android.qiqueqiao.divider;
 
 import android.graphics.Canvas;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 //import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.ViewGroup;
 

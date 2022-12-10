@@ -10,7 +10,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -21,6 +20,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.alivc.player.AliyunErrorCode;
 import com.alivc.player.VcPlayerLog;
@@ -47,12 +49,13 @@ import com.xinniu.android.qiqueqiao.vodplayer.view.quality.QualityView;
 import com.xinniu.android.qiqueqiao.vodplayer.view.speed.SpeedView;
 import com.xinniu.android.qiqueqiao.vodplayer.view.tipsview.TipsView;
 
-
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
+
+//import android.support.v4.content.ContextCompat;
 
 
 /*
@@ -471,8 +474,8 @@ public class AliyunVodPlayerView extends RelativeLayout {
      */
     private void initGestureDialogManager() {
         Context context = getContext();
-        if (context instanceof Activity) {
-            mGestureDialogManager = new GestureDialogManager((Activity) context);
+        if (context instanceof AppCompatActivity) {
+            mGestureDialogManager = new GestureDialogManager((AppCompatActivity) context);
         }
     }
 
@@ -1474,7 +1477,7 @@ public class AliyunVodPlayerView extends RelativeLayout {
         }
 
         Context context = getContext();
-        if (context instanceof Activity) {
+        if (context instanceof AppCompatActivity) {
             if (finalScreenMode == AliyunScreenMode.Full) {
 
                 mGestureView.setScreenLockStatus(false);
@@ -1482,7 +1485,7 @@ public class AliyunVodPlayerView extends RelativeLayout {
                 mControlView.hidemPlayStateBtn();
                 if (getLockPortraitMode() == null) {
                     //不是固定竖屏播放。
-                    ((Activity) context).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    ((AppCompatActivity) context).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                 } else {
                     //如果是固定全屏，那么直接设置view的布局，宽高
                     ViewGroup.LayoutParams aliVcVideoViewLayoutParams = getLayoutParams();
@@ -1496,7 +1499,7 @@ public class AliyunVodPlayerView extends RelativeLayout {
                 mControlView.showmPlayStateBtn();
                 if (getLockPortraitMode() == null) {
                     //不是固定竖屏播放。
-                    ((Activity) context).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    ((AppCompatActivity) context).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 } else {
                     //如果是固定全屏，那么直接设置view的布局，宽高
                     ViewGroup.LayoutParams aliVcVideoViewLayoutParams = getLayoutParams();

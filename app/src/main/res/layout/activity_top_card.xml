@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/bg_gray_F8">
 
@@ -18,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 />
 
         </RelativeLayout>
@@ -40,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:background="@color/white"
         >
 
@@ -48,9 +49,9 @@
     <ImageView
         android:layout_width="@dimen/dp_201"
         android:layout_height="@dimen/dp_150"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/top_perch"
+        app:srcCompat="@mipmap/top_perch"
         android:layout_marginTop="@dimen/dp_24"
         android:layout_gravity="center"
         />
@@ -112,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/mtop_pricetv"
+                android:layout_toRightOf="@+id/mtop_pricetv"
                 android:textColor="@color/text_color_search"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:textSize="@dimen/sp_12"
@@ -182,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/mtop_pricetwotv"
+                android:layout_toRightOf="@+id/mtop_pricetwotv"
                 android:textColor="@color/text_color_search"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:textSize="@dimen/sp_12"
@@ -248,7 +249,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/mtop_pricethreetv"
+                android:layout_toRightOf="@+id/mtop_pricethreetv"
                 android:textColor="@color/text_color_search"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:textSize="@dimen/sp_12"

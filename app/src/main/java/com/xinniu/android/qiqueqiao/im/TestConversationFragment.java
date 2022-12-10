@@ -4,8 +4,8 @@
 //import android.os.Bundle;
 //import android.os.Handler;
 //import android.os.Message;
-////import android.support.v7.widget.LinearLayoutManager;
-////import androidx.recyclerview.widget.RecyclerView;
+//import androidx.recyclerview.widget.LinearLayoutManager;
+//import androidx.recyclerview.widget.RecyclerView;
 //import android.util.Log;
 //import android.view.LayoutInflater;
 //import android.view.MotionEvent;
@@ -18,7 +18,7 @@
 //import android.widget.TextView;
 //
 //import androidx.recyclerview.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 //
 //import com.google.gson.Gson;
 //import com.google.gson.reflect.TypeToken;

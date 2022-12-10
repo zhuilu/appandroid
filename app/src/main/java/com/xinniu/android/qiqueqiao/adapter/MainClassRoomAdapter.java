@@ -1,32 +1,31 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ClassRoomDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.ClassRoomDetailTwoActivity;
-import com.xinniu.android.qiqueqiao.bean.ClassRoomListBean;
 import com.xinniu.android.qiqueqiao.bean.MainBean;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 
 import java.util.List;
 
+import androidx.annotation.Nullable;
+//import android.support.v4.content.ContextCompat;
+
 /**
  * Created by yuchance on 2018/10/9.
  */
 
 public class MainClassRoomAdapter extends BaseQuickAdapter<MainBean.VideoBean, BaseViewHolder> {
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainClassRoomAdapter(Activity context, int layoutResId, @Nullable List<MainBean.VideoBean> data) {
+    public MainClassRoomAdapter(AppCompatActivity context, int layoutResId, @Nullable List<MainBean.VideoBean> data) {
         super(layoutResId, data);
         this.context = context;
     }

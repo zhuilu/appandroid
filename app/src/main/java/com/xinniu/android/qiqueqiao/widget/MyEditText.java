@@ -8,11 +8,13 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
+import androidx.appcompat.widget.AppCompatEditText;
+
 /**
  * Created by yuchance on 2018/9/28.
  */
 
-public class MyEditText extends android.support.v7.widget.AppCompatEditText {
+public class MyEditText extends AppCompatEditText {
     public MyEditText(Context context) {
         super(context);
     }

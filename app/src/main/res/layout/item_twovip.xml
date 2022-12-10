@@ -52,7 +52,7 @@
             android:textColor="@color/text_color_1"
             android:textStyle="bold"
             android:minEms="2"
-            android:layout_toLeftOf="@id/tvItemMonth"
+            android:layout_toLeftOf="@+id/tvItemMonth"
 
             />
         <TextView
@@ -62,7 +62,7 @@
             android:text="¥"
             android:textColor="@color/text_color_1"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/item_vip_moneytv"
+            android:layout_toLeftOf="@+id/item_vip_moneytv"
             android:layout_marginRight="@dimen/dp_5"
             android:textSize="@dimen/sp_18"
             android:textStyle="bold"
@@ -74,7 +74,7 @@
             android:text="4000次沟通次数"
             android:textColor="@color/text_color_87"
             android:textSize="@dimen/sp_11"
-            android:layout_alignLeft="@id/item_twovip_month"
+            android:layout_alignLeft="@+id/item_twovip_month"
             android:layout_marginTop="@dimen/dp_6"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/dp_8"

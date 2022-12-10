@@ -1,14 +1,16 @@
 package com.xinniu.android.qiqueqiao.fragment.classroom;
 
 import android.os.Bundle;
-//import android.support.v4.widget.NestedScrollView;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
@@ -98,7 +100,7 @@ public class ClassRoomDetailFragment extends LazyBaseFragment {
             }
         };
         mcompanyResourceList.setLayoutManager(manager);
-        indexNewAdapter = new IndexNewTwoAdapter(getActivity(), R.layout.item_index_new, datas, 1);
+        indexNewAdapter = new IndexNewTwoAdapter((AppCompatActivity) getActivity(), R.layout.item_index_new, datas, 1);
         mcompanyResourceList.setAdapter(indexNewAdapter);
 
         getDetail();

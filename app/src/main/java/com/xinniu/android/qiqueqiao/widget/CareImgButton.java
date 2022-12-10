@@ -1,8 +1,11 @@
 package com.xinniu.android.qiqueqiao.widget;
 
 import android.content.Context;
-//import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.UserFollowBean;
@@ -15,7 +18,7 @@ import com.xinniu.android.qiqueqiao.utils.ToastUtils;
  * Created by lzq on 2018/3/5.
  */
 
-public class CareImgButton extends android.support.v7.widget.AppCompatImageView {
+public class CareImgButton extends AppCompatImageView {
     private Context context;
     public static final int FOLLOW_ACTION = 1;
     public static final int UNFOLLOW_ACTION = 2;

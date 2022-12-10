@@ -17,7 +17,7 @@
             android:textColor="@color/white"/>
     </LinearLayout>
     <RelativeLayout
-        android:id="@id/rc_item_conversation"
+        android:id="@+id/rc_item_conversation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_80"
         android:background="#fff"
@@ -59,7 +59,7 @@
 
         </FrameLayout>
         <RelativeLayout
-            android:layout_toRightOf="@id/head_Fl"
+            android:layout_toRightOf="@+id/head_Fl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -95,7 +95,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_23"
-                android:layout_below="@id/groupinfoRl"
+                android:layout_below="@+id/groupinfoRl"
                 >
                 <TextView
                     android:id="@+id/newremind"
@@ -109,7 +109,7 @@
                     android:id="@+id/mremindcontenttv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/newremind"
+                    android:layout_toRightOf="@+id/newremind"
                     android:layout_marginLeft="@dimen/dp_2"
                     android:textSize="@dimen/sp_13"
                     android:textColor="@color/_999"

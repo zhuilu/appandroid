@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
@@ -21,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron" />
+                app:srcCompat="@mipmap/chevron" />
         </RelativeLayout>
 
         <TextView
@@ -95,8 +96,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/super_exposure"
-        android:layout_below="@id/view"
+        android:layout_above="@+id/super_exposure"
+        android:layout_below="@+id/view"
         android:layout_marginBottom="@dimen/dp_10">
 
         <LinearLayout
@@ -136,7 +137,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_12"
                 android:scaleType="fitXY"
-                android:src="@mipmap/super_exposure" />
+                app:srcCompat="@mipmap/super_exposure" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -148,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_19"
                     android:layout_marginTop="@dimen/dp_22"
-                    android:src="@mipmap/top_card_logo" />
+                    app:srcCompat="@mipmap/top_card_logo" />
 
                 <LinearLayout
                     android:id="@+id/ll_01"
@@ -231,7 +232,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_19"
                     android:layout_marginTop="@dimen/dp_22"
-                    android:src="@mipmap/top_card_logo" />
+                    app:srcCompat="@mipmap/top_card_logo" />
 
                 <LinearLayout
                     android:id="@+id/ll_02"
@@ -313,7 +314,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_19"
                     android:layout_marginTop="@dimen/dp_22"
-                    android:src="@mipmap/top_card_logo" />
+                    app:srcCompat="@mipmap/top_card_logo" />
 
                 <LinearLayout
                     android:id="@+id/ll_03"

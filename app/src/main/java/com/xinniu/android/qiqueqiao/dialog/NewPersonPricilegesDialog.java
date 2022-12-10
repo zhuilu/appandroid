@@ -1,19 +1,21 @@
 package com.xinniu.android.qiqueqiao.dialog;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.xinniu.android.qiqueqiao.R;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/8/29.

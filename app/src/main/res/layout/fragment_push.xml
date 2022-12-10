@@ -64,7 +64,7 @@
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:src="@mipmap/ic_eye"
+                    app:srcCompat="@mipmap/ic_eye"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:layout_marginLeft="@dimen/dp_12" />
@@ -79,7 +79,7 @@
                     android:text="0" />
 
                 <ImageView
-                    android:src="@mipmap/ic_msg"
+                    app:srcCompat="@mipmap/ic_msg"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:layout_marginLeft="@dimen/dp_12" />

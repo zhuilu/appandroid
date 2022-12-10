@@ -1,7 +1,7 @@
 package com.xinniu.android.qiqueqiao.divider;
 
 //import android.support.v4.view.GestureDetectorCompat;
-//import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;

@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -8,12 +7,15 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.animation.GlideAnimation;
+
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
 import com.xinniu.android.qiqueqiao.R;
 
 import java.io.File;
@@ -104,11 +106,12 @@ public class ImageLoader {
 
     public static void loadImageGQ1(final String Url, final ImageView imageView) {
         Glide.with(mContext)
-                .load(TextUtils.isEmpty(Url) ? "http:" : Url)
                 .asBitmap()
+                .load(TextUtils.isEmpty(Url) ? "http:" : Url)
+
                 .into(new SimpleTarget<Bitmap>() {
                     @Override
-                    public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                         //加载完成后的处理
                         imageView.setImageBitmap(resource);
                         LocalCacheUtils.setLocalCache(Url, resource);
@@ -122,18 +125,7 @@ public class ImageLoader {
     }
 
     public static void loadImageCpGQ(String Url, ImageView imageView) {
-        Glide.with(mContext).load(TextUtils.isEmpty(Url) ? "http:" : Url).listener(new RequestListener<String, GlideDrawable>() {
-            @Override
-            public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                return false;
-            }
-
-            @Override
-            public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                return false;
-            }
-        })
-                .crossFade(2000)
+        Glide.with(mContext).load(TextUtils.isEmpty(Url) ? "http:" : Url)
                 .into(imageView);
     }
 
@@ -150,11 +142,12 @@ public class ImageLoader {
             imageView.setImageBitmap(LocalCacheUtils.getLocalCache(url));
         } else {
             Glide.with(mContext)
-                    .load(url)
                     .asBitmap()
+                    .load(url)
+
                     .into(new SimpleTarget<Bitmap>() {
                         @Override
-                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                             //加载完成后的处理
                             imageView.setImageBitmap(resource);
                             //   LocalCacheUtils.setLocalCache(url, resource);
@@ -244,9 +237,11 @@ public class ImageLoader {
 
     public static Bitmap getBitmap(String url) {
         final Bitmap[] bitmap = {null};
-        Glide.with(mContext).load(url).asBitmap().into(new SimpleTarget<Bitmap>() {
+        Glide.with(mContext).asBitmap().load(url).into(new SimpleTarget<Bitmap>() {
+
+
             @Override
-            public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                 bitmap[0] = resource;
             }
         });
@@ -273,7 +268,7 @@ public class ImageLoader {
     /**
      * 生成视图的预览
      */
-    public static Bitmap toImage(Activity activity, View v) {
+    public static Bitmap toImage(AppCompatActivity activity, View v) {
         Bitmap bitmap;
         View view = activity.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);

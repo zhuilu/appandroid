@@ -1,11 +1,12 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
@@ -16,13 +17,13 @@ import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
-//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
+
+//import com.xinniu.android.qiqueqiao.utils.IMUtils;
 
 /**
  * Created by yuchance on 2018/11/1.
@@ -37,7 +38,7 @@ public class MakeConvertcodeActivity extends BaseActivity {
      * 进入页面
      * @param context 进入此页面的Activity
      */
-    public static void start(Activity context) {
+    public static void start(AppCompatActivity context) {
         Intent intent = new Intent(context, MakeConvertcodeActivity.class);
         context.startActivityForResult(intent, 106);
     }

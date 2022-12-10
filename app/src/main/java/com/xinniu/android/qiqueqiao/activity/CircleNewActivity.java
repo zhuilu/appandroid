@@ -1,14 +1,12 @@
 package com.xinniu.android.qiqueqiao.activity;
 
-import android.app.AlertDialog;
-import android.app.ApplicationErrorReport;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.xinniu.android.qiqueqiao.R;
@@ -18,9 +16,10 @@ import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
 import com.xinniu.android.qiqueqiao.utils.ComUtils;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.rong.imlib.model.Conversation;
+
+//import android.support.v4.app.FragmentTransaction;
 
 
 /**

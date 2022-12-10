@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/bg_color_gray_F6F6F6"
     >
@@ -19,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 />
 
 
@@ -44,7 +45,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:orientation="vertical"
         >
         <RelativeLayout
@@ -68,7 +69,7 @@
                 android:id="@+id/arr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/goto_new"
+                app:srcCompat="@mipmap/goto_new"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_12"
@@ -77,8 +78,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/mcircle_headImg"
-                android:layout_toLeftOf="@id/arr"
+                android:layout_toRightOf="@+id/mcircle_headImg"
+                android:layout_toLeftOf="@+id/arr"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_marginRight="@dimen/dp_10"
                 android:layout_centerVertical="true"
@@ -94,7 +95,7 @@
                     android:id="@+id/misvip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/mnametv"
+                    android:layout_toRightOf="@+id/mnametv"
                     android:layout_marginTop="@dimen/dp_6"
                     android:layout_marginLeft="@dimen/dp_5"
                     />
@@ -102,7 +103,7 @@
                     android:id="@+id/mpostion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/mnametv"
+                    android:layout_below="@+id/mnametv"
                     android:layout_marginTop="@dimen/dp_5"
                     />
 
@@ -198,7 +199,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_12"
-                android:src="@mipmap/goto_new"
+                app:srcCompat="@mipmap/goto_new"
                 />
 
 

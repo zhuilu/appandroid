@@ -1,37 +1,31 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.CoopDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.MyPushActivity;
-import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
 import com.xinniu.android.qiqueqiao.activity.SreachActivity;
 import com.xinniu.android.qiqueqiao.bean.MainBean;
-import com.xinniu.android.qiqueqiao.customs.NiceImageView;
-import com.xinniu.android.qiqueqiao.customs.label.FlowLayout;
-import com.xinniu.android.qiqueqiao.customs.label.TagAdapter;
-import com.xinniu.android.qiqueqiao.customs.label.TagFlowLayout;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
-import com.xinniu.android.qiqueqiao.utils.StringUtils;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 
 import java.util.List;
+//import android.support.v4.content.ContextCompat;
 
 /**
  * Created by yuchance on 2018/12/27.
@@ -39,9 +33,9 @@ import java.util.List;
 
 public class MainResoureAdapter extends BaseQuickAdapter<MainBean.RecommendNavBean.ResourcesBean, BaseViewHolder> {
 
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainResoureAdapter(Activity context, int layoutResId, @Nullable List<MainBean.RecommendNavBean.ResourcesBean> data) {
+    public MainResoureAdapter(AppCompatActivity context, int layoutResId, @Nullable List<MainBean.RecommendNavBean.ResourcesBean> data) {
         super(layoutResId, data);
         this.context = context;
     }

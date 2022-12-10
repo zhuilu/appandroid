@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -23,13 +24,13 @@
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:layout_gravity="top"
-                android:src="@mipmap/coop_one_top"/>
+                app:srcCompat="@mipmap/coop_one_top"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="fitXY"
                     android:layout_gravity="bottom"
-                    android:src="@mipmap/coop_one_bottom"/>
+                    app:srcCompat="@mipmap/coop_one_bottom"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,7 +97,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="right|bottom"
-                                        android:src="@mipmap/head_is_v56_56"
+                                        app:srcCompat="@mipmap/head_is_v56_56"
                                         android:visibility="visible" />
 
 
@@ -279,7 +280,7 @@
                                 android:layout_marginTop="@dimen/dp_13"
                                 android:layout_marginRight="@dimen/dp_25"
                                 android:layout_marginBottom="@dimen/dp_12"
-                                android:src="@color/gray_light" />
+                                app:srcCompat="@color/gray_light" />
 
 
                         </RelativeLayout>
@@ -296,7 +297,7 @@
                     android:layout_gravity="center_horizontal|bottom"
                     android:layout_marginBottom="@dimen/dp_22"
                     android:layout_marginTop="@dimen/dp_19"
-                    android:src="@mipmap/bottom_biaoyu_3" />
+                    app:srcCompat="@mipmap/bottom_biaoyu_3" />
             </FrameLayout>
 
 

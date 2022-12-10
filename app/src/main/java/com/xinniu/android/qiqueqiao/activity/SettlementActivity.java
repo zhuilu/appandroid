@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.customs.qldialog.QLTipTwoDialog;
@@ -35,7 +37,7 @@ public class SettlementActivity extends BaseActivity {
     private int mId;
     private String price;
 
-    public static void startSimpleEidtForResult(Activity context, int id, String price, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int id, String price, int requestCode) {
         Intent intent = new Intent(context, SettlementActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);

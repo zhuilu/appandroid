@@ -23,7 +23,7 @@
                 android:id="@+id/bt_return"
                 android:layout_width="@dimen/tool_bar_head_long"
                 android:layout_height="@dimen/tool_bar_head_long"
-                android:src="@mipmap/img_tool_bar_close"
+                app:srcCompat="@mipmap/img_tool_bar_close"
                 android:layout_centerVertical="true"/>
             <TextView
                 android:text="城市选择"
@@ -37,7 +37,7 @@
 
 
     <FrameLayout
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

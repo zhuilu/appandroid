@@ -6,15 +6,12 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.annotation.RequiresApi;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.utils.StatusBarUtil;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 /**
  * Created by yuchance on 2018/7/26.

@@ -1,13 +1,10 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.widget.GridLayoutManager;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,6 +15,10 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.SourceScreenThreeAdapter;
 import com.xinniu.android.qiqueqiao.adapter.SourceScreentwoAdapter;
@@ -26,13 +27,16 @@ import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
 import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import com.xinniu.android.qiqueqiao.utils.ResouceHelper;
 
+//import android.support.v4.content.ContextCompat;
+//import android.support.v7.widget.GridLayoutManager;
+
 /**
  * Created by yuchance on 2018/4/13.
  */
 
 public class SourceScreenWindow extends PopupWindow implements PopupWindow.OnDismissListener {
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private View screenView;
     private RelativeLayout listRoot;
     private SourceScreenBean datas;
@@ -45,7 +49,7 @@ public class SourceScreenWindow extends PopupWindow implements PopupWindow.OnDis
     private TextView offerneed;
 
 
-    public SourceScreenWindow(Activity activity, SourceScreenBean list) {
+    public SourceScreenWindow(AppCompatActivity activity, SourceScreenBean list) {
         this.activity = activity;
         this.datas = list;
         initWindow();

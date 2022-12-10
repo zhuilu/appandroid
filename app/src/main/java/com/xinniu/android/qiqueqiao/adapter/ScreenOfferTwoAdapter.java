@@ -1,17 +1,19 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
+
 import android.content.Context;
-//import android.support.annotation.Nullable;
-//import android.support.v4.content.ContextCompat;
+
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.bean.CellTagsBean;
-import com.xinniu.android.qiqueqiao.bean.GetReleaseTemplateNewBean;
+
 
 import java.util.ArrayList;
 import java.util.List;

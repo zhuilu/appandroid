@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mitem_connect_Rl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:src="@mipmap/head_is_v32_32"
+            app:srcCompat="@mipmap/head_is_v32_32"
             android:visibility="gone" />
 
         <RelativeLayout
@@ -69,7 +70,7 @@
         android:layout_marginLeft="@dimen/dp_12"
         android:layout_marginTop="@dimen/dp_13"
         android:includeFontPadding="false"
-        android:layout_toRightOf="@id/mitem_connect_fl"
+        android:layout_toRightOf="@+id/mitem_connect_fl"
         android:text="客服经理"
         android:textColor="@color/text_color_1"
         android:textSize="@dimen/sp_15"
@@ -80,10 +81,10 @@
         android:id="@+id/ll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mitem_connect_nametv"
+        android:layout_below="@+id/mitem_connect_nametv"
         android:layout_marginLeft="@dimen/dp_12"
         android:layout_marginTop="@dimen/dp_4"
-        android:layout_toRightOf="@id/mitem_connect_fl"
+        android:layout_toRightOf="@+id/mitem_connect_fl"
         android:orientation="horizontal">
 
         <ImageView
@@ -93,7 +94,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginRight="@dimen/dp_4"
             android:visibility="gone"
-            android:src="@mipmap/connect_phone" />
+            app:srcCompat="@mipmap/connect_phone" />
 
         <TextView
             android:id="@+id/mitem_connect_positiontv"
@@ -111,10 +112,10 @@
         android:id="@+id/mitem_connect_potentialtv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll"
+        android:layout_below="@+id/ll"
         android:layout_marginLeft="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_5"
-        android:layout_toRightOf="@id/mitem_connect_fl" />
+        android:layout_toRightOf="@+id/mitem_connect_fl" />
 
 
     <View

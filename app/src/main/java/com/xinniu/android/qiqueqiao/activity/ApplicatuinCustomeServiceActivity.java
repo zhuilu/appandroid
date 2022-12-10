@@ -5,12 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
@@ -40,6 +42,8 @@ import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 import top.zibin.luban.OnRenameListener;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * 申请客服介入
@@ -78,7 +82,7 @@ public class ApplicatuinCustomeServiceActivity extends BaseActivity {
         context.startActivity(starter);
     }
 
-    public static void startSimpleEidtForResult(Activity context, String type, int id, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, String type, int id, int requestCode) {
         Intent intent = new Intent(context, ApplicatuinCustomeServiceActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("type", type);

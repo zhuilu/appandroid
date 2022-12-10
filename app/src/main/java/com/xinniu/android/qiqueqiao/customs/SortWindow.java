@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -13,19 +12,20 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
 
 public class SortWindow extends PopupWindow implements PopupWindow.OnDismissListener {
-    private Activity activity;
+    private AppCompatActivity activity;
     private View screenView;
     private LinearLayout llayoutRoot;
     private int mSearchSortOrder;
 
-    public SortWindow(Activity activity, int id) {
+    public SortWindow(AppCompatActivity activity, int id) {
         this.activity = activity;
         this.mSearchSortOrder = id;
         initWindow();

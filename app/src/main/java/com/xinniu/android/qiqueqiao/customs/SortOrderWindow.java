@@ -1,23 +1,20 @@
 package com.xinniu.android.qiqueqiao.customs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-//import android.support.v7.widget.GridLayoutManager;
-//import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.R;
-import com.xinniu.android.qiqueqiao.adapter.ScreenOnlyAdapter;
 import com.xinniu.android.qiqueqiao.adapter.SortOrderAdapter;
 import com.xinniu.android.qiqueqiao.bean.SelectCategory;
 import com.xinniu.android.qiqueqiao.utils.AnimationUtil;
@@ -26,12 +23,15 @@ import com.xinniu.android.qiqueqiao.utils.NoScrollRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+//import android.support.v7.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 /**
  * Created by yuchance on 2018/8/31.
  */
 
 public class SortOrderWindow extends PopupWindow implements PopupWindow.OnDismissListener {
-    private Activity activity;
+    private AppCompatActivity activity;
     private List<SelectCategory> datas = new ArrayList<>();
     private int mIndustryId = 0;
     private String mIndustryName = "";
@@ -43,7 +43,7 @@ public class SortOrderWindow extends PopupWindow implements PopupWindow.OnDismis
     private int screenHeight;
     private String title;
 
-    public SortOrderWindow(Activity context, List<SelectCategory> datas) {
+    public SortOrderWindow(AppCompatActivity context, List<SelectCategory> datas) {
         this.activity = context;
         this.datas = datas;
         initWindow();

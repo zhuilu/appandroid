@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/bg_color_gray_F6F6F6"
@@ -20,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 />
 
 
@@ -42,7 +43,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         >
     
     <RelativeLayout
@@ -58,7 +59,7 @@
             android:layout_height="@dimen/dp_41"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_15"
-            android:src="@mipmap/refrsh_card"
+            app:srcCompat="@mipmap/refrsh_card"
             />
 
         <ImageView
@@ -67,18 +68,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/goto_new"
+            app:srcCompat="@mipmap/goto_new"
             android:layout_marginRight="@dimen/dp_12"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/top_img"
+            android:layout_toRightOf="@+id/top_img"
             android:layout_centerVertical="true"
             android:orientation="vertical"
             android:layout_marginLeft="@dimen/dp_15"
-            android:layout_toLeftOf="@id/topgoto_img"
+            android:layout_toLeftOf="@+id/topgoto_img"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -117,7 +118,7 @@
             android:id="@+id/supershow_img"
             android:layout_width="@dimen/dp_41"
             android:layout_height="@dimen/dp_41"
-            android:src="@mipmap/top_card"
+            app:srcCompat="@mipmap/top_card"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_15"
             />
@@ -127,18 +128,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/goto_new"
+            app:srcCompat="@mipmap/goto_new"
             android:layout_marginRight="@dimen/dp_12"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/supershow_img"
+            android:layout_toRightOf="@+id/supershow_img"
             android:layout_centerVertical="true"
             android:orientation="vertical"
             android:layout_marginLeft="@dimen/dp_15"
-            android:layout_toLeftOf="@id/supershow_gotoimg"
+            android:layout_toLeftOf="@+id/supershow_gotoimg"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -176,7 +177,7 @@
                 android:id="@+id/cardingshow_img"
                 android:layout_width="@dimen/dp_41"
                 android:layout_height="@dimen/dp_41"
-                android:src="@mipmap/carding_card"
+                app:srcCompat="@mipmap/carding_card"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_15"
                 />
@@ -186,18 +187,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/goto_new"
+                app:srcCompat="@mipmap/goto_new"
                 android:layout_marginRight="@dimen/dp_12"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/cardingshow_img"
+                android:layout_toRightOf="@+id/cardingshow_img"
                 android:layout_centerVertical="true"
                 android:orientation="vertical"
                 android:layout_marginLeft="@dimen/dp_15"
-                android:layout_toLeftOf="@id/cardingshow_gotoimg"
+                android:layout_toLeftOf="@+id/cardingshow_gotoimg"
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -236,7 +237,7 @@
             android:id="@+id/lx_limitimg"
             android:layout_width="@dimen/dp_41"
             android:layout_height="@dimen/dp_41"
-            android:src="@mipmap/dataplus"
+            app:srcCompat="@mipmap/dataplus"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dp_15"
             />
@@ -246,18 +247,18 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/goto_new"
+            app:srcCompat="@mipmap/goto_new"
             android:layout_marginRight="@dimen/dp_12"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/lx_limitimg"
+            android:layout_toRightOf="@+id/lx_limitimg"
             android:layout_centerVertical="true"
             android:orientation="vertical"
             android:layout_marginLeft="@dimen/dp_15"
-            android:layout_toLeftOf="@id/lx_limit_gotoimg"
+            android:layout_toLeftOf="@+id/lx_limit_gotoimg"
             >
             <TextView
                 android:layout_width="wrap_content"

@@ -5,11 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 //import android.support.v7.widget.AppCompatRatingBar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.appcompat.widget.AppCompatRatingBar;
 
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;

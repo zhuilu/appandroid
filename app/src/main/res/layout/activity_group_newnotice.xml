@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@color/white"
     >
@@ -16,7 +17,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/chevron"
+                app:srcCompat="@mipmap/chevron"
                 android:layout_centerInParent="true"
                 />
 
@@ -53,7 +54,7 @@
        android:id="@+id/groupRl"
        android:layout_width="match_parent"
        android:layout_height="@dimen/dp_70"
-       android:layout_below="@id/tool_bar"
+       android:layout_below="@+id/tool_bar"
        >
 
        <com.xinniu.android.qiqueqiao.widget.CircleImageView
@@ -67,7 +68,7 @@
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_toRightOf="@id/groupheadImg"
+           android:layout_toRightOf="@+id/groupheadImg"
            android:layout_marginLeft="@dimen/dp_10"
            android:layout_centerVertical="true"
            android:layout_marginRight="@dimen/dp_15"
@@ -85,7 +86,7 @@
                android:id="@+id/mmemberPostion"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_toRightOf="@id/mmemberName"
+               android:layout_toRightOf="@+id/mmemberName"
                android:text=" · 客户经理"
                android:textSize="@dimen/sp_14"
                android:textColor="@color/text_color_AA"
@@ -94,7 +95,7 @@
                android:id="@+id/mgroupTimetv"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_below="@id/mmemberName"
+               android:layout_below="@+id/mmemberName"
                android:layout_marginTop="@dimen/dp_4"
                android:textSize="@dimen/sp_12"
                android:textColor="@color/text_color_AA"
@@ -115,13 +116,13 @@
         android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0_5"
-        android:layout_below="@id/tool_bar"
+        android:layout_below="@+id/tool_bar"
         />
     <View
         android:id="@+id/line2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0_5"
-        android:layout_below="@id/groupRl"
+        android:layout_below="@+id/groupRl"
         />
     <RelativeLayout
         android:id="@+id/explainRl"
@@ -149,8 +150,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_9"
-        android:layout_below="@id/line2"
-        android:layout_above="@id/explainRl"
+        android:layout_below="@+id/line2"
+        android:layout_above="@+id/explainRl"
         >
 
         <TextView

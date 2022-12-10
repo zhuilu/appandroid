@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -27,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@mipmap/back_new" />
+                    app:srcCompat="@mipmap/back_new" />
 
             </RelativeLayout>
 
@@ -52,8 +53,8 @@
                 android:layout_height="@dimen/dp_30"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp_15"
-                android:layout_toLeftOf="@id/bcompany_searchTv"
-                android:layout_toRightOf="@id/back_title"
+                android:layout_toLeftOf="@+id/bcompany_searchTv"
+                android:layout_toRightOf="@+id/back_title"
                 android:background="@drawable/shape_search_bg">
 
                 <ImageView
@@ -62,7 +63,7 @@
                     android:layout_height="@dimen/dp_17"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_7"
-                    android:src="@mipmap/search_gray" />
+                    app:srcCompat="@mipmap/search_gray" />
 
                 <EditText
                     android:id="@+id/mcompany_searchEt"
@@ -70,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_14"
-                    android:layout_toRightOf="@id/search_img"
+                    android:layout_toRightOf="@+id/search_img"
                     android:background="@null"
                     android:hint="搜公司"
                     android:imeOptions="actionSearch"
@@ -90,7 +91,7 @@
         android:id="@+id/mrefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/company_search_Rl">
+        android:layout_below="@+id/company_search_Rl">
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -123,7 +124,7 @@
         android:id="@+id/yperch_Rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/company_search_Rl"
+        android:layout_below="@+id/company_search_Rl"
         android:background="@color/white"
         android:visibility="gone">
 
@@ -137,13 +138,13 @@
                 android:layout_width="@dimen/dp_103"
                 android:layout_height="@dimen/dp_103"
                 android:layout_centerHorizontal="true"
-                android:src="@mipmap/search_no_perch" />
+                app:srcCompat="@mipmap/search_no_perch" />
 
             <TextView
                 android:id="@+id/search_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/search_imgx"
+                android:layout_below="@+id/search_imgx"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_20"
                 android:text="未搜索到相关合作信息"
@@ -154,7 +155,7 @@
                 android:id="@+id/search_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/search_text"
+                android:layout_below="@+id/search_text"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_15"
                 android:text="试试联系专属服务经理，精准寻找企业"
@@ -164,7 +165,7 @@
                 android:id="@+id/bnoRec_lx"
                 android:layout_width="@dimen/dp_129"
                 android:layout_height="@dimen/dp_36"
-                android:layout_below="@id/search_content"
+                android:layout_below="@+id/search_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginBottom="@dimen/dp_50"

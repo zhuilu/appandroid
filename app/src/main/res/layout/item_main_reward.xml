@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_14"
             android:layout_marginTop="@dimen/dp_12"
-            android:src="@mipmap/main_reward" />
+            app:srcCompat="@mipmap/main_reward" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -70,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_toRightOf="@id/item_index_recycler_img"
+                    android:layout_toRightOf="@+id/item_index_recycler_img"
                     android:orientation="vertical">
 
                     <TextView
@@ -94,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@id/llayout_line"
+                    android:layout_toRightOf="@+id/llayout_line"
 
                     android:ellipsize="middle"
                     android:singleLine="true"
@@ -118,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="@dimen/dp_10"
-                    android:src="@mipmap/reward" />
+                    app:srcCompat="@mipmap/reward" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -1,8 +1,8 @@
 package com.xinniu.android.qiqueqiao.adapter;
 
-import android.app.Activity;
-//import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -10,13 +10,14 @@ import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.bean.ActivityColumnListBean;
-import com.xinniu.android.qiqueqiao.bean.MainBean;
 import com.xinniu.android.qiqueqiao.user.UserInfoHelper;
 import com.xinniu.android.qiqueqiao.utils.ImageLoader;
 import com.xinniu.android.qiqueqiao.utils.RoundImageView;
 import com.xinniu.android.qiqueqiao.utils.TimeUtils;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by yuchance on 2018/3/30.
@@ -25,9 +26,9 @@ import java.util.List;
 public class MainEnentsNewAdapter extends BaseQuickAdapter<ActivityColumnListBean.ListBean.ActivityListBean, BaseViewHolder> {
 
 
-    private Activity context;
+    private AppCompatActivity context;
 
-    public MainEnentsNewAdapter(Activity context, int layoutResId, @Nullable List<ActivityColumnListBean.ListBean.ActivityListBean> data) {
+    public MainEnentsNewAdapter(AppCompatActivity context, int layoutResId, @Nullable List<ActivityColumnListBean.ListBean.ActivityListBean> data) {
         super(layoutResId, data);
         this.context = context;
 

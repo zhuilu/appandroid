@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="@dimen/dp_80"
     android:background="@color/white"
     android:layout_marginTop="@dimen/dp_0_5"
@@ -12,13 +13,13 @@
         android:layout_height="@dimen/dp_50"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/dp_15"
-        android:src="@color/bg_gray"
+        app:srcCompat="@color/bg_gray"
         />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/maddgroupImg"
+        android:layout_toRightOf="@+id/maddgroupImg"
         android:layout_marginLeft="@dimen/dp_15"
         android:layout_centerVertical="true"
         >
@@ -33,7 +34,7 @@
             android:id="@+id/maddgroupCitytv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/maddgroupNametv"
+            android:layout_below="@+id/maddgroupNametv"
             android:layout_marginTop="@dimen/dp_4"
             android:textSize="@dimen/sp_10"
             android:background="@drawable/bg_itemgroup_city"
@@ -43,8 +44,8 @@
             android:id="@+id/maddgroupNumtv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/maddgroupNametv"
-            android:layout_toRightOf="@id/maddgroupCitytv"
+            android:layout_below="@+id/maddgroupNametv"
+            android:layout_toRightOf="@+id/maddgroupCitytv"
             android:layout_marginTop="@dimen/dp_4"
             android:layout_marginLeft="@dimen/dp_5"
             android:textSize="@dimen/sp_10"
@@ -55,7 +56,7 @@
             android:id="@+id/maddgroupInfotv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/maddgroupCitytv"
+            android:layout_below="@+id/maddgroupCitytv"
             android:textSize="@dimen/sp_12"
             android:textColor="@color/_999"
             android:layout_marginTop="@dimen/dp_4"

@@ -1,6 +1,5 @@
 package com.xinniu.android.qiqueqiao.utils;
 
-import android.app.Activity;
 import android.app.AppOpsManager;
 import android.app.Dialog;
 import android.content.Context;
@@ -11,9 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-//import android.support.annotation.RequiresApi;
-//import android.support.v4.app.NotificationManagerCompat;
-//import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -28,8 +24,12 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
+
 import com.scwang.smartrefresh.layout.util.DensityUtil;
-import com.xinniu.android.qiqueqiao.MainActivity;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.activity.AcceptedOrdersPersonActivity;
 import com.xinniu.android.qiqueqiao.activity.ApproveCardActivity;
@@ -43,7 +43,6 @@ import com.xinniu.android.qiqueqiao.activity.InviteFriendActivity;
 import com.xinniu.android.qiqueqiao.activity.LoginNewActivity;
 import com.xinniu.android.qiqueqiao.activity.NewResourceActivity;
 import com.xinniu.android.qiqueqiao.activity.PersonCentetActivity;
-import com.xinniu.android.qiqueqiao.activity.PropStoreActivity;
 import com.xinniu.android.qiqueqiao.activity.RewardDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.RewardOrderDetailActivity;
 import com.xinniu.android.qiqueqiao.activity.SelectionResourceActivity;
@@ -69,6 +68,9 @@ import java.util.Map;
 
 import retrofit2.Call;
 
+//import android.support.annotation.RequiresApi;
+//import android.support.v4.app.NotificationManagerCompat;
+//import android.support.v4.content.ContextCompat;
 
 
 /**
@@ -79,7 +81,7 @@ import retrofit2.Call;
 
 public class ComUtils {
 
-    public static List<Activity> activities = new ArrayList<>();
+    public static List<AppCompatActivity> activities = new ArrayList<>();
 
     public static boolean isLoginCheckPass(Context context, EditText usernameEt, EditText pwdEt) {
         if (StringUtils.isEmpty(usernameEt.getText())) {
@@ -170,16 +172,16 @@ public class ComUtils {
         return true;
     }
 
-    public static void addActivity(Activity activity) {
+    public static void addActivity(AppCompatActivity activity) {
         activities.add(activity);
     }
 
-    public void removeActivity(Activity activity) {
+    public void removeActivity(AppCompatActivity activity) {
         activities.remove(activity);
     }
 
     public static void finishshortAll() {
-        for (Activity activity : activities) {
+        for (AppCompatActivity activity : activities) {
             if (!activity.isFinishing()) {
                 activity.finish();
             }
@@ -244,7 +246,7 @@ public class ComUtils {
         return context.getResources().getDisplayMetrics().widthPixels;
     }
 
-    public static void setWindowStatusBarColor(Activity activity, int colorResId) {
+    public static void setWindowStatusBarColor(AppCompatActivity activity, int colorResId) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 Window window = activity.getWindow();

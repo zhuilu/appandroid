@@ -1,22 +1,22 @@
 package com.xinniu.android.qiqueqiao.fragment.reward;
 
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.xinniu.android.qiqueqiao.R;
 import com.xinniu.android.qiqueqiao.adapter.MyPublicRewardAdapter;
-import com.xinniu.android.qiqueqiao.adapter.MyTakeRewardAdapter;
 import com.xinniu.android.qiqueqiao.base.LazyBaseFragment;
 import com.xinniu.android.qiqueqiao.bean.MyPublicRewardBean;
-import com.xinniu.android.qiqueqiao.bean.TakeRewardBean;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.RequestCallback;
 import com.xinniu.android.qiqueqiao.utils.ToastUtils;
@@ -145,7 +145,7 @@ public class PublicRewardFragment extends LazyBaseFragment {
 
     private void initAdapter() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAdapter = new MyPublicRewardAdapter(getActivity(), R.layout.item_my_public_reward, mData);
+        mAdapter = new MyPublicRewardAdapter((AppCompatActivity) getActivity(), R.layout.item_my_public_reward, mData);
         recyclerView.setAdapter(mAdapter);
 
 

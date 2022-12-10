@@ -1,23 +1,25 @@
 package com.xinniu.android.qiqueqiao.utils;
 
+import static android.os.Environment.DIRECTORY_PICTURES;
+
 import android.Manifest;
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Environment;
 import android.provider.MediaStore;
-//import android.support.v4.app.Fragment;
-//import android.support.v4.content.FileProvider;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
 
 import com.xinniu.android.qiqueqiao.BuildConfig;
-import com.xinniu.android.qiqueqiao.R;
 
 import java.io.File;
 
-import static android.os.Environment.DIRECTORY_PICTURES;
+import androidx.fragment.app.Fragment;
+//import android.support.v4.content.FileProvider;
 
 /**
  * Created by qinlei
@@ -84,7 +86,7 @@ public class TokePhotoUtils {
      * 拍照
      * @param context
      */
-    public void tokePhoto(Activity context) {
+    public void tokePhoto(AppCompatActivity context) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -97,7 +99,7 @@ public class TokePhotoUtils {
      * 拍照
      * @param context
      */
-    public void tokePhotoTwo(Activity context) {
+    public void tokePhotoTwo(AppCompatActivity context) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -123,7 +125,7 @@ public class TokePhotoUtils {
      * 相册选择
      * @param context
      */
-    public void chooseGallary(Activity context) {
+    public void chooseGallary(AppCompatActivity context) {
         Intent intent = new Intent(Intent.ACTION_PICK,
                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         context.startActivityForResult(intent, GALLERY_REQUEST);
@@ -144,7 +146,7 @@ public class TokePhotoUtils {
      * @param uri
      * @param request
      */
-    public void cropRawPhotoTwo(Activity context, Uri uri, int request) {
+    public void cropRawPhotoTwo(AppCompatActivity context, Uri uri, int request) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -169,7 +171,7 @@ public class TokePhotoUtils {
      * @param uri
      * @param request
      */
-    public void cropRawPhoto(Activity context, Uri uri, int request) {
+    public void cropRawPhoto(AppCompatActivity context, Uri uri, int request) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -193,7 +195,7 @@ public class TokePhotoUtils {
      * @param uri
      * @param request
      */
-    public void cropRawPhotoThree(Activity context, Uri uri, int request) {
+    public void cropRawPhotoThree(AppCompatActivity context, Uri uri, int request) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);

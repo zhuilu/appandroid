@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-//import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
@@ -21,7 +23,6 @@ import com.xinniu.android.qiqueqiao.adapter.base.CustomServiceImgViewAdapter;
 import com.xinniu.android.qiqueqiao.adapter.base.FeedBackImgViewAdapter;
 import com.xinniu.android.qiqueqiao.base.BaseActivity;
 import com.xinniu.android.qiqueqiao.bean.GuaranteeDetailBean;
-import com.xinniu.android.qiqueqiao.bean.GuaranteeOrderBean;
 import com.xinniu.android.qiqueqiao.bean.UploadBean;
 import com.xinniu.android.qiqueqiao.request.RequestManager;
 import com.xinniu.android.qiqueqiao.request.callback.AllResultDoCallback;
@@ -46,6 +47,8 @@ import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 import top.zibin.luban.OnRenameListener;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ApplicationRefundAvtivity extends BaseActivity {
     @BindView(R.id.btn_submit)
@@ -101,7 +104,7 @@ public class ApplicationRefundAvtivity extends BaseActivity {
     private int mId;
     private GuaranteeDetailBean mBean;
 
-    public static void startSimpleEidtForResult(Activity context, int id, String data, int requestCode) {
+    public static void startSimpleEidtForResult(AppCompatActivity context, int id, String data, int requestCode) {
         Intent intent = new Intent(context, ApplicationRefundAvtivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);

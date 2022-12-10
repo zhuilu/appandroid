@@ -3,7 +3,6 @@ package com.xinniu.android.qiqueqiao.widget;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -12,6 +11,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xinniu.android.qiqueqiao.utils.Utils;
 
@@ -118,7 +119,7 @@ public class ExplosionField extends View {
      * @param activity
      * @return
      */
-    public static ExplosionField attach2Window(Activity activity) {
+    public static ExplosionField attach2Window(AppCompatActivity activity) {
         //rootView是一个FrameLayout，也可以使用activityactivity.getWindow().getDecorView()来获取，获取到的是用户通过setContentView设置的 布局 的 父布局
         ViewGroup rootView = (ViewGroup) activity.findViewById(Window.ID_ANDROID_CONTENT);
         System.out.println("rootview = "+rootView);

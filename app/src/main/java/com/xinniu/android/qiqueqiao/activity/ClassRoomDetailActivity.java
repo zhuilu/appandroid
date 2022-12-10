@@ -6,11 +6,11 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-//import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 //import android.support.v4.app.FragmentManager;
 //import android.support.v4.app.FragmentPagerAdapter;
-//import androidx.viewpager.widget.ViewPager;
-//import android.support.v7.app.AppCompatDialog;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -25,6 +25,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.aliyun.vodplayer.media.AliyunVidSts;
 import com.aliyun.vodplayer.media.IAliyunVodPlayer;

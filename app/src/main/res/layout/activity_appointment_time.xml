@@ -29,7 +29,7 @@
                     android:layout_width="@dimen/tool_bar_head_long"
                     android:layout_height="@dimen/tool_bar_head_long"
                     android:layout_gravity="center"
-                    android:src="@mipmap/img_title_back" />
+                    calendarview:srcCompat="@mipmap/img_title_back" />
             </LinearLayout>
 
             <TextView

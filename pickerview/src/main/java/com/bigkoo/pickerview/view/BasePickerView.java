@@ -1,6 +1,5 @@
 package com.bigkoo.pickerview.view;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,6 +17,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.PopupWindow;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.configure.PickerOptions;
@@ -101,7 +102,7 @@ public class BasePickerView {
             //如果只是要显示在屏幕的下方
             //decorView是activity的根View,包含 contentView 和 titleView
             if (mPickerOptions.decorView == null) {
-                mPickerOptions.decorView = (ViewGroup) ((Activity) context).getWindow().getDecorView();
+                mPickerOptions.decorView = (ViewGroup) ((AppCompatActivity) context).getWindow().getDecorView();
             }
             //将控件添加到decorView中
             rootView = (ViewGroup) layoutInflater.inflate(R.layout.layout_basepickerview, mPickerOptions.decorView, false);

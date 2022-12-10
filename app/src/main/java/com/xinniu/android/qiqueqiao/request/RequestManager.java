@@ -1607,7 +1607,7 @@ public class RequestManager {
                     }
                     if (response.body().getCode() == ResponseCode.OK) {
                         if (response.body().getData() != null) {
-                            IMUtils.setTop(String.valueOf(response.body().getData().getUsers().getF_id()));
+//                            IMUtils.setTop(String.valueOf(response.body().getData().getUsers().getF_id()));
                         }
                         UserInfoHelper.getIntance().setCenterBean(response.body().getData());
                         UserInfoHelper.getIntance().setF_id(response.body().getData().getUsers().getF_id());
