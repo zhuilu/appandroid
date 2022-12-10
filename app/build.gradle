@@ -44,7 +44,7 @@ android {
 
 
         ndk {
-            abiFilters "armeabi", "x86", "armeabi-v7a"
+            abiFilters "arm64-v8a","armeabi-v7a"  //API level 7及以上版本的SDK
         }
 
         lintOptions {

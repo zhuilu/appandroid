@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.alibaba.security.rp.RPSDK;
 import com.alivc.player.AliVcMediaPlayer;
 import com.alivc.player.VcPlayerLog;
 import com.umeng.analytics.MobclickAgent;
@@ -54,7 +53,7 @@ public class BaseApp extends Application {
         instance = this;
         JPushInterface.setDebugMode(true);//推送环境
         JPushInterface.init(this);//推送init
-        RPSDK.initialize(this);//人脸认证
+//        RPSDK.initialize(this);//人脸认证
 
 
         UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "");//友盟统计初始化

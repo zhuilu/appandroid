@@ -55,9 +55,11 @@ public class QQQConversationListFragment extends ConversationListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        mList = (ListView) view.findViewById(io.rong.imkit.R.id.rc_list);
-        LinearLayout fcLl = (LinearLayout) view.findViewById(R.id.rc_conversation_list_empty_layout);
-        fcLl.setVisibility(View.GONE);
+        mList = (ListView) view.findViewById(R.id.rc_list);
+        LinearLayout fcLl = view.findViewById(R.id.rc_conversation_list_empty_layout);
+        if (fcLl != null) {
+            fcLl.setVisibility(View.GONE);
+        }
         return view;
     }
 
